@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README_zh.md)
+
 # Holo UI Vault
 
 > An Agent-First, curated code repository providing production-ready UI primitives, design tokens, and interaction patterns. Built to empower autonomous coding agents and developers to retrieve, compose, and assemble user interfaces with zero code hallucinations and minimal token overhead.
