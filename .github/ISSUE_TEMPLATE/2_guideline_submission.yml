@@ -1,0 +1,68 @@
+name: Design System / Guideline Submission
+description: Submit or propose an authoritative design system specification, CSS tokens, or foundations
+title: "[Guideline]: "
+labels: ["guidelines", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose or submit an authoritative design language specification (Type B contribution).
+        Note: Do not submit synthetic or fabricated code snippets for official design systems.
+        Retain verified tokens, parameters, and foundation references. Strictly no emojis.
+
+  - type: input
+    id: system_name
+    attributes:
+      label: Design System Name
+      description: Name of the design language (e.g., `material-design-3`, `fluent-2`, `linear-dark`).
+      placeholder: Fluent Design System
+    validations:
+      required: true
+
+  - type: input
+    id: authority_source
+    attributes:
+      label: Authority / Official Documentation Source
+      description: Link to the primary source or official specifications portal.
+      placeholder: https://developer.microsoft.com/fluentui/
+    validations:
+      required: true
+
+  - type: textarea
+    id: aesthetic_dna
+    attributes:
+      label: Aesthetic DNA & Visual Characteristics
+      description: Summarize the core philosophy, materials, elevation, curvature, and typography rules.
+      placeholder: |
+        - Philosophy: Connected, adaptive, depth-driven interfaces.
+        - Surface / Materials: Acrylic blur, Mica alt, subtle border elevation.
+        - Geometry: 4px/8px standard radii, fluent motion curves.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tokens_and_files
+    attributes:
+      label: Assets Included
+      description: Specify the planned token files, foundation documents, and agent prompt preset.
+      placeholder: |
+        - guidelines/<system>/tokens/tokens.css
+        - guidelines/<system>/foundations/typography.md
+        - guidelines/<system>/foundations/materials.md
+        - guidelines/<system>/PROMPT_PRESET.md
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: compliance_checklist
+    attributes:
+      label: Compliance Checklist
+      options:
+        - label: CSS tokens are exported as standalone CSS custom properties without bundler dependencies.
+          required: true
+        - label: The system includes anti-hallucination prompt presets for autonomous coding agents.
+          required: true
+        - label: Registered under by_style in INDEX.json with explicit when_to_use and when_not_to_use rules.
+          required: true
+        - label: Strict emoji ban is respected (zero emojis in documentation, commit, or files).
+          required: true

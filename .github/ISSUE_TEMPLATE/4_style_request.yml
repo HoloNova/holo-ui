@@ -1,0 +1,48 @@
+name: UI Library Request / Proposal
+description: Propose a high-quality UI site or design system to be curated and onboarded into the vault
+title: "[Proposal]: "
+labels: ["proposal", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to suggest an outstanding, niche, or aesthetic UI library/site for curation.
+        Remember: Strictly no emojis in documentation or proposal text.
+
+  - type: input
+    id: library_name
+    attributes:
+      label: Proposed Library or Design System Name
+      description: Name of the project or site.
+      placeholder: Vercel Geist / Raycast UI / Ant Design Mobile
+    validations:
+      required: true
+
+  - type: input
+    id: site_url
+    attributes:
+      label: Source URL
+      description: Link to the live site or repository.
+      placeholder: https://example.com/ui
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_curate
+    attributes:
+      label: Rationale & Aesthetic Differentiation
+      description: Why does this library deserve inclusion? How does it differ from existing systems?
+      placeholder: |
+        - Visual identity: Monospace-first, brutalist, or spatial computing.
+        - Problem it solves for AI Agents: Provides clean primitive components for terminal dashboards.
+    validations:
+      required: true
+
+  - type: textarea
+    id: key_components
+    attributes:
+      label: Key Components or Patterns of Interest
+      description: Which components or tokens are most valuable to extract?
+      placeholder: Command bar, status indicator badges, audio waveforms, interactive logs.
+    validations:
+      required: false

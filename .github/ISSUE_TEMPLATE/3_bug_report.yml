@@ -1,0 +1,49 @@
+name: Bug Report / Defect
+description: Report a broken snippet, invalid CSS variable, missing index path, or script error
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue. Please provide sufficient detail so we can reproduce and fix it promptly.
+        Remember: Strictly no emojis in documentation or issue content.
+
+  - type: input
+    id: affected_file
+    attributes:
+      label: Affected File or Component
+      description: Exact file path or component identifier (e.g., `beautifului-components/components/ai-states/thinking-state.snippet.html`).
+      placeholder: INDEX.json / components/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Defect Description
+      description: Clearly explain what went wrong or which behavior is unexpected.
+      placeholder: The thinking-state component does not collapse correctly when clicking the chevron...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps or minimal HTML test harness demonstrating the bug.
+      placeholder: |
+        1. Copy the snippet into an empty HTML file.
+        2. Link shared/base.css.
+        3. Observe that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should have happened according to specifications.
+      placeholder: The panel should transition smoothly from grid-template-rows 0fr to 1fr.
+    validations:
+      required: true

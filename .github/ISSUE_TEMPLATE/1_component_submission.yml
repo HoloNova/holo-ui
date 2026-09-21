@@ -1,0 +1,86 @@
+name: Component Primitive Submission
+description: Propose or submit a new UI component primitive (.snippet.html + .meta.md)
+title: "[Component]: "
+labels: ["component", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a new component primitive.
+        Please review `CONTRIBUTING.md` and `STYLE_AND_SELECTION_GUIDE.md` before proceeding.
+        Remember: Strictly no emojis in documentation or code.
+
+  - type: input
+    id: component_id
+    attributes:
+      label: Component Identifier
+      description: Lowercase kebab-case identifier (e.g., `model-switch`, `audio-waveform`).
+      placeholder: my-component
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target_category
+    attributes:
+      label: Functional Category
+      description: Select the functional grouping in INDEX.json.
+      options:
+        - ai_reasoning_and_states
+        - inputs_and_prompts
+        - human_in_the_loop_and_tools
+        - data_and_diff
+        - cards_and_knowledge
+        - navigation_and_presentation
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: style_taxonomy
+    attributes:
+      label: Design Style
+      description: The visual style system this component adheres to.
+      options:
+        - ai_native_productivity (Beautiful UI / Linear style)
+        - apple_human_interface (Apple HIG style)
+        - New Style (proposing a new style system)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description_and_scenarios
+    attributes:
+      label: Component Description and Scenarios
+      description: Describe what the component does, when an Agent should select it (`recommended_when`), and when it should NOT be used.
+      placeholder: |
+        - Purpose: Expandable thinking panel for streaming LLM reasoning.
+        - Recommended When: The LLM outputs step-by-step thinking traces.
+        - When Not to Use: Simple single-turn Q&A without reasoning traces.
+    validations:
+      required: true
+
+  - type: textarea
+    id: file_manifest
+    attributes:
+      label: Target File Paths
+      description: List the proposed relative paths for snippet, metadata, and styles.
+      placeholder: |
+        - <library-name>/components/<category>/<id>.snippet.html
+        - <library-name>/components/<category>/<id>.meta.md
+        - <library-name>/shared/base.css (if new variables/animations are needed)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: quality_checklist
+    attributes:
+      label: Quality & Compliance Checklist
+      options:
+        - label: The component uses semantic HTML and standard CSS custom properties (no hard framework runtime locks).
+          required: true
+        - label: The snippet contains only the pure component DOM (no demo chrome or copy buttons).
+          required: true
+        - label: The entry has been formatted for addition to INDEX.json (both by_style and by_function).
+          required: true
+        - label: Strict emoji ban is respected (zero emojis in documentation, comments, or files).
+          required: true

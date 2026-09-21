@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Holo UI Vault Discussions & Selection Guide
+    url: https://github.com/HoloNova/holo-ui/blob/main/STYLE_AND_SELECTION_GUIDE.md
+    about: Read the anti-over-assembly rules and style taxonomy before submitting.
