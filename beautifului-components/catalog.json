@@ -1,0 +1,428 @@
+{
+  "version": "1.0.0",
+  "source": "https://www.beautifului.dev/",
+  "synced_at": "2026-09-21",
+  "description": "Beautiful UI — Crafted primitives for AI-native interfaces",
+  "tech_stack": {
+    "css_framework": "Tailwind CSS v4.3.3",
+    "fonts": ["Inter", "JetBrains Mono"],
+    "cdn": {
+      "tailwind": "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4",
+      "inter_font": "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900&display=swap",
+      "jetbrains_font": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800&display=swap"
+    },
+    "required_files": ["shared/base.css"]
+  },
+  "agent_entry_point": "COMPONENTS_GUIDE.md",
+  "components": [
+    {
+      "id": "loading-state",
+      "number": 1,
+      "name": "Loading State",
+      "description": "Pixel-grid loader with shimmer and elapsed time. Shows AI is working. Multiple variants: pixel drive, dots, orbit, surfer animations.",
+      "category": "ai-states",
+      "tags": ["loading", "animation", "shimmer", "pixel", "status", "spinner", "progress", "ai"],
+      "variants": ["Drive", "Dots", "Orbit", "Surfer"],
+      "use_cases": ["Show AI processing state", "Replace loading spinners", "Display elapsed time"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/ai-states/loading-state.snippet.html",
+        "meta": "components/ai-states/loading-state.meta.md",
+        "demo": "components/ai-states/loading-state.demo.html"
+      },
+      "animations": ["pixel-on", "shimmer-text"]
+    },
+    {
+      "id": "thinking-state",
+      "number": 2,
+      "name": "Thinking",
+      "description": "Expandable thinking traces showing AI reasoning steps. Collapsible accordion with shimmer heading. Variants: Steps, Reasoning, Search, Coding.",
+      "category": "ai-states",
+      "tags": ["thinking", "expandable", "traces", "collapsible", "ai", "reasoning", "steps", "accordion"],
+      "variants": ["Steps", "Reasoning", "Search", "Coding"],
+      "use_cases": ["Show AI thinking process", "Display reasoning chain", "Log tool call steps"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/ai-states/thinking-state.snippet.html",
+        "meta": "components/ai-states/thinking-state.meta.md",
+        "demo": "components/ai-states/thinking-state.demo.html"
+      },
+      "animations": ["shimmer-text"]
+    },
+    {
+      "id": "streaming-text",
+      "number": 3,
+      "name": "Streaming Text",
+      "description": "Streamed AI answer with blinking cursor, inline sources list, action buttons (copy, retry, thumbs), and follow-up suggestions.",
+      "category": "ai-states",
+      "tags": ["streaming", "text", "sources", "follow-ups", "chat", "ai-response", "cursor", "markdown"],
+      "variants": [],
+      "use_cases": ["Display streaming AI responses", "Show sources/citations", "Add follow-up suggestions"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/ai-states/streaming-text.snippet.html",
+        "meta": "components/ai-states/streaming-text.meta.md",
+        "demo": "components/ai-states/streaming-text.demo.html"
+      },
+      "animations": ["caret-blink", "fade-in"]
+    },
+    {
+      "id": "approval-card",
+      "number": 4,
+      "name": "Approval Card",
+      "description": "Human-in-the-loop card for agent questions. Multi-step question flow with radio options, custom text input, Skip/Continue buttons, and progress indicator.",
+      "category": "interaction",
+      "tags": ["approval", "human-in-the-loop", "card", "form", "question", "hitl", "radio", "modal", "decision"],
+      "variants": [],
+      "use_cases": ["Ask user to approve agent actions", "Multi-step form questions", "Confirmation dialogs"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/interaction/approval-card.snippet.html",
+        "meta": "components/interaction/approval-card.meta.md",
+        "demo": "components/interaction/approval-card.demo.html"
+      },
+      "animations": ["fade-up", "pop-in"]
+    },
+    {
+      "id": "tool-chips",
+      "number": 5,
+      "name": "Tool Chips",
+      "description": "Compact chips showing agent tool calls and code edits. Collapsible list with file path, action type, and line counts.",
+      "category": "interaction",
+      "tags": ["chips", "tool-calls", "code", "compact", "agent", "file-edit", "collapsible"],
+      "variants": [],
+      "use_cases": ["Show agent tool calls", "Display file edits", "Log agent actions compactly"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/interaction/tool-chips.snippet.html",
+        "meta": "components/interaction/tool-chips.meta.md",
+        "demo": "components/interaction/tool-chips.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "task-rows",
+      "number": 6,
+      "name": "Task Rows",
+      "description": "Live agent task status rows. Each row shows task name, progress count, status badge (Completed/Running/Failed), and expandable sub-task details.",
+      "category": "task-management",
+      "tags": ["tasks", "status", "running", "completed", "failed", "agent", "progress", "expandable", "live"],
+      "variants": [],
+      "use_cases": ["Display agent task queue", "Show parallel task progress", "Task monitoring dashboard"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/task-management/task-rows.snippet.html",
+        "meta": "components/task-management/task-rows.meta.md",
+        "demo": "components/task-management/task-rows.demo.html"
+      },
+      "animations": ["spin", "pop-in", "fade-up"]
+    },
+    {
+      "id": "chat-composer",
+      "number": 7,
+      "name": "Chat",
+      "description": "Full chat conversation interface with message bubbles, agent/user distinction, timestamps, and an input composer.",
+      "category": "input",
+      "tags": ["chat", "composer", "input", "message", "conversation", "bubbles", "ai-chat"],
+      "variants": [],
+      "use_cases": ["Full chat UI", "Conversation thread display", "Agent-user dialogue"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/input/chat-composer.snippet.html",
+        "meta": "components/input/chat-composer.meta.md",
+        "demo": "components/input/chat-composer.demo.html"
+      },
+      "animations": ["fade-up"]
+    },
+    {
+      "id": "prompt-bar",
+      "number": 8,
+      "name": "Prompt Bar",
+      "description": "Floating prompt input bar with attach, voice, and send controls. Used as the primary AI input interface.",
+      "category": "input",
+      "tags": ["prompt", "input", "bar", "search", "ai-input", "send", "attach", "textarea"],
+      "variants": [],
+      "use_cases": ["Main AI prompt interface", "Command/search bar", "Message composer"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/input/prompt-bar.snippet.html",
+        "meta": "components/input/prompt-bar.meta.md",
+        "demo": "components/input/prompt-bar.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "recommendation-card",
+      "number": 9,
+      "name": "Recommendation Card",
+      "description": "Card suggesting next actions, insights, or content recommendations. Icon + title + description layout with CTA button.",
+      "category": "cards",
+      "tags": ["recommendation", "card", "suggestion", "next-action", "cta", "insight"],
+      "variants": [],
+      "use_cases": ["Agent action suggestions", "Content recommendations", "Next-step prompts"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/cards/recommendation-card.snippet.html",
+        "meta": "components/cards/recommendation-card.meta.md",
+        "demo": "components/cards/recommendation-card.demo.html"
+      },
+      "animations": ["fade-up"]
+    },
+    {
+      "id": "context-cards",
+      "number": 10,
+      "name": "Context Cards",
+      "description": "Cards showing contextual information like file previews, web pages, or data snippets used as AI context.",
+      "category": "cards",
+      "tags": ["context", "card", "information", "preview", "attachment", "file", "url"],
+      "variants": [],
+      "use_cases": ["Show attached context", "File/URL previews", "RAG source display"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/cards/context-cards.snippet.html",
+        "meta": "components/cards/context-cards.meta.md",
+        "demo": "components/cards/context-cards.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "diff-table",
+      "number": 11,
+      "name": "Diff Table",
+      "description": "Side-by-side diff view for code changes, with line numbers, added/removed line highlighting.",
+      "category": "data",
+      "tags": ["diff", "table", "comparison", "code", "changes", "git", "before-after"],
+      "variants": [],
+      "use_cases": ["Show code changes", "Before/after comparisons", "Agent file edits review"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/data/diff-table.snippet.html",
+        "meta": "components/data/diff-table.meta.md",
+        "demo": "components/data/diff-table.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "records-table",
+      "number": 12,
+      "name": "Records Table",
+      "description": "Full-featured data table with sortable headers, row selection checkboxes, tags, company logos, strength meters, and footer calculations.",
+      "category": "data",
+      "tags": ["table", "records", "data", "list", "sortable", "selectable", "database"],
+      "variants": [],
+      "use_cases": ["Data records display", "CRM-like data views", "Agent-fetched data tables"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/data/records-table.snippet.html",
+        "meta": "components/data/records-table.meta.md",
+        "demo": "components/data/records-table.demo.html"
+      },
+      "animations": ["records-pulse"]
+    },
+    {
+      "id": "filter-table",
+      "number": 13,
+      "name": "Filter Table",
+      "description": "Table with filter bar, status badges, priority levels, and search functionality.",
+      "category": "data",
+      "tags": ["table", "filter", "search", "data", "status", "badge", "priority"],
+      "variants": [],
+      "use_cases": ["Filterable data lists", "Task/issue trackers", "Searchable records"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/data/filter-table.snippet.html",
+        "meta": "components/data/filter-table.meta.md",
+        "demo": "components/data/filter-table.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "sidebar-nav",
+      "number": 14,
+      "name": "Sidebar Nav",
+      "description": "Collapsible sidebar navigation with icon + label rows, workspace switcher, and smooth collapse animation.",
+      "category": "navigation",
+      "tags": ["sidebar", "navigation", "nav", "menu", "collapsible", "icon", "workspace"],
+      "variants": [],
+      "use_cases": ["App sidebar navigation", "Section navigation", "Workspace/project switcher"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/navigation/sidebar-nav.snippet.html",
+        "meta": "components/navigation/sidebar-nav.meta.md",
+        "demo": "components/navigation/sidebar-nav.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "search",
+      "number": 15,
+      "name": "Search",
+      "description": "Search input with keyboard shortcut hint, results dropdown with sections, and keyboard navigation.",
+      "category": "input",
+      "tags": ["search", "input", "dropdown", "results", "keyboard", "cmdk", "command-palette"],
+      "variants": [],
+      "use_cases": ["Global search", "Command palette", "Quick navigation"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/input/search.snippet.html",
+        "meta": "components/input/search.meta.md",
+        "demo": "components/input/search.demo.html"
+      },
+      "animations": ["pop-in"]
+    },
+    {
+      "id": "flowchart",
+      "number": 16,
+      "name": "Flowchart",
+      "description": "Interactive flowchart/diagram with nodes, edges, zoom, and pan. Shows agent workflow or process steps.",
+      "category": "visualization",
+      "tags": ["flowchart", "diagram", "visual", "graph", "nodes", "edges", "workflow", "process"],
+      "variants": [],
+      "use_cases": ["Agent workflow visualization", "Process diagrams", "Decision trees"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/visualization/flowchart.snippet.html",
+        "meta": "components/visualization/flowchart.meta.md",
+        "demo": "components/visualization/flowchart.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "insight-cards",
+      "number": 17,
+      "name": "Insight Cards",
+      "description": "Dashboard metric cards with sparkline charts, trend indicators, percentage changes, and interactive tooltips.",
+      "category": "cards",
+      "tags": ["insight", "card", "metric", "data", "dashboard", "chart", "sparkline", "trend", "kpi"],
+      "variants": [],
+      "use_cases": ["Data dashboards", "KPI displays", "Analytics summaries"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/cards/insight-cards.snippet.html",
+        "meta": "components/cards/insight-cards.meta.md",
+        "demo": "components/cards/insight-cards.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "code-block",
+      "number": 18,
+      "name": "Code Block",
+      "description": "Syntax-highlighted code display with language label, copy button, line numbers, and dark background.",
+      "category": "code",
+      "tags": ["code", "syntax", "highlight", "block", "display", "copy", "language", "monospace"],
+      "variants": [],
+      "use_cases": ["Display code snippets", "Show agent-generated code", "Command/script output"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/code/code-block.snippet.html",
+        "meta": "components/code/code-block.meta.md",
+        "demo": "components/code/code-block.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "fine-tune-card",
+      "number": 19,
+      "name": "Fine-tune Card",
+      "description": "Card for AI model fine-tuning configuration with dataset upload, parameter sliders, and training progress.",
+      "category": "cards",
+      "tags": ["fine-tune", "card", "model", "configuration", "ai", "training", "parameters", "ml"],
+      "variants": [],
+      "use_cases": ["Model training UI", "AI configuration panels", "Fine-tuning workflows"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/cards/fine-tune-card.snippet.html",
+        "meta": "components/cards/fine-tune-card.meta.md",
+        "demo": "components/cards/fine-tune-card.demo.html"
+      },
+      "animations": []
+    },
+    {
+      "id": "selection-actions",
+      "number": 20,
+      "name": "Selection Actions",
+      "description": "Floating contextual toolbar that appears when items are selected. Shows count, action buttons (edit, delete, tag, export), and dismiss.",
+      "category": "interaction",
+      "tags": ["selection", "actions", "contextual", "bulk", "toolbar", "floating", "popup"],
+      "variants": [],
+      "use_cases": ["Bulk action on selected rows", "Contextual toolbar", "Multi-select operations"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/interaction/selection-actions.snippet.html",
+        "meta": "components/interaction/selection-actions.meta.md",
+        "demo": "components/interaction/selection-actions.demo.html"
+      },
+      "animations": ["pop-in", "fade-up"]
+    },
+    {
+      "id": "agent-screen",
+      "number": 21,
+      "name": "Agent Screen",
+      "description": "Full agent desktop/screen layout with sidebar, main panel, task list, and agent activity feed.",
+      "category": "layout",
+      "tags": ["agent", "screen", "layout", "desktop", "full-page", "dashboard", "shell"],
+      "variants": [],
+      "use_cases": ["Full agent UI shell", "Agent workspace layout", "Desktop app layout"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/layout/agent-screen.snippet.html",
+        "meta": "components/layout/agent-screen.meta.md",
+        "demo": "components/layout/agent-screen.demo.html"
+      },
+      "animations": ["fade-up", "pop-in"]
+    }
+  ],
+  "categories": {
+    "ai-states": {
+      "label": "AI States",
+      "description": "Components for showing AI processing, thinking, and response states",
+      "components": ["loading-state", "thinking-state", "streaming-text"]
+    },
+    "interaction": {
+      "label": "Interaction",
+      "description": "User interaction and human-in-the-loop components",
+      "components": ["approval-card", "tool-chips", "selection-actions"]
+    },
+    "task-management": {
+      "label": "Task Management",
+      "description": "Task status and workflow components",
+      "components": ["task-rows"]
+    },
+    "input": {
+      "label": "Input",
+      "description": "Input and prompt components",
+      "components": ["chat-composer", "prompt-bar", "search"]
+    },
+    "cards": {
+      "label": "Cards",
+      "description": "Card-based information display components",
+      "components": ["recommendation-card", "context-cards", "insight-cards", "fine-tune-card"]
+    },
+    "data": {
+      "label": "Data Display",
+      "description": "Tables and data visualization components",
+      "components": ["diff-table", "records-table", "filter-table"]
+    },
+    "navigation": {
+      "label": "Navigation",
+      "description": "Navigation structure components",
+      "components": ["sidebar-nav"]
+    },
+    "visualization": {
+      "label": "Visualization",
+      "description": "Visual diagram and chart components",
+      "components": ["flowchart"]
+    },
+    "code": {
+      "label": "Code",
+      "description": "Code display and highlighting components",
+      "components": ["code-block"]
+    },
+    "layout": {
+      "label": "Layout",
+      "description": "Full-page layout components",
+      "components": ["agent-screen"]
+    }
+  }
+}

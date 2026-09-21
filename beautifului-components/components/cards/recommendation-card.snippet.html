@@ -1,0 +1,106 @@
+<!--
+  Component: Recommendation Card
+  Source: https://www.beautifului.dev/#recommendation-card
+  Category: cards
+  Description: Agent suggestion card with confidence meter, proposed action, and Alternatives/Accept buttons.
+  Dependencies: shared/base.css (CSS vars + animations), Tailwind CSS v4
+-->
+
+<div class="w-full max-w-95 overflow-hidden rounded-card bg-surface shadow-card">
+  <!-- Card body -->
+  <div class="primitive-card-pad" style="padding:12px">
+    <span class="text-[14px] font-medium text-ink">Want me to place this restock order?</span>
+    <p class="mt-1.5 min-h-12 text-[13px] leading-relaxed text-ink-2" style="animation:fade-in 180ms ease-out both">
+      Reorder waffle cones from
+      <!-- Inline supplier chip -->
+      <span class="mx-0.5 inline-flex items-center gap-1 rounded-full bg-field
+        py-px pl-[3px] pr-1.5 align-middle shadow-hairline">
+        <span class="flex size-4 shrink-0 items-center justify-center rounded-full
+          text-[9px] font-semibold leading-none text-white" style="background:#e08a3c">C</span>
+        <span class="text-[12px] font-medium text-ink">Cone King</span>
+      </span>
+      with lead time
+      <!-- Inline badge -->
+      <span class="mx-0.5 inline-flex items-center rounded-full px-1.5 py-0
+        align-middle text-[12px] font-medium bg-green-tint text-green"
+        style="box-shadow:0 0 0 1px color-mix(in oklch, var(--green) 28%, transparent)">7 days</span>
+    </p>
+  </div>
+
+  <!-- Expandable alternatives panel -->
+  <div class="grid transition-[grid-template-rows,opacity] duration-300"
+    style="grid-template-rows:0fr;opacity:0;transition-timing-function:cubic-bezier(0.16, 1, 0.3, 1)">
+    <div class="overflow-hidden">
+      <div class="border-t border-line bg-surface px-2 py-2">
+        <p class="px-1.5 pb-1 text-[11px] font-medium text-ink-3">Other options</p>
+        <!-- Alternative 1 — medium confidence -->
+        <button type="button"
+          class="flex w-full items-center gap-2.5 rounded-control px-1.5 py-1.5 text-left transition-colors duration-100 hover:bg-hover">
+          <span class="flex items-end gap-0.5">
+            <span class="w-1 rounded-full" style="height:10px;background:var(--orange)"></span>
+            <span class="w-1 rounded-full" style="height:10px;background:var(--orange)"></span>
+            <span class="w-1 rounded-full" style="height:10px;background:var(--line-strong)"></span>
+          </span>
+          <span class="min-w-0 flex-1 truncate text-[12.5px] text-ink">Switch to Vanilla Madagascar</span>
+          <span class="shrink-0 text-[11px] text-ink-3">Needs review</span>
+        </button>
+        <!-- Alternative 2 — low confidence -->
+        <button type="button"
+          class="flex w-full items-center gap-2.5 rounded-control px-1.5 py-1.5 text-left transition-colors duration-100 hover:bg-hover">
+          <span class="flex items-end gap-0.5">
+            <span class="w-1 rounded-full" style="height:10px;background:var(--line-strong)"></span>
+            <span class="w-1 rounded-full" style="height:10px;background:var(--line-strong)"></span>
+            <span class="w-1 rounded-full" style="height:10px;background:var(--line-strong)"></span>
+          </span>
+          <span class="min-w-0 flex-1 truncate text-[12.5px] text-ink">Full restock across every SKU</span>
+          <span class="shrink-0 text-[11px] text-ink-3">No signal</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card footer -->
+  <div class="flex items-center justify-between gap-3 bg-surface" style="padding:10px">
+    <!-- Confidence meter -->
+    <span class="flex items-center gap-2">
+      <span class="flex items-end gap-0.5">
+        <span class="w-1 rounded-full" style="height:10px;background:var(--green)"></span>
+        <span class="w-1 rounded-full" style="height:10px;background:var(--green)"></span>
+        <span class="w-1 rounded-full" style="height:10px;background:var(--green)"></span>
+      </span>
+      <span class="text-[12.5px] font-medium text-ink-2">High confidence</span>
+    </span>
+    <!-- Action buttons -->
+    <span class="-mr-0.5 flex items-center gap-2">
+      <!-- Alternatives toggle -->
+      <button aria-expanded="false"
+        class="inline-flex items-center justify-center font-medium select-none
+          transition-[transform,background-color,opacity] duration-150 ease-out active:scale-[0.96]
+          bg-surface text-ink shadow-btn hover:bg-inset
+          h-[27px] rounded-full gap-1.5 px-2.5 text-[12.5px]">
+        Alternatives
+      </button>
+      <!-- Accept button -->
+      <button
+        class="inline-flex items-center justify-center font-medium select-none
+          transition-[transform,background-color,opacity] duration-150 ease-out active:scale-[0.96]
+          bg-accent text-white hover:bg-accent-ink
+          shadow-[inset_0_1px_0_rgba(255,255,255,0.14)]
+          h-[27px] px-3 rounded-full gap-1.5 text-[12.5px]">
+        Accept
+      </button>
+    </span>
+  </div>
+</div>
+
+<!--
+JAVASCRIPT — toggle alternatives panel:
+  const altBtn = document.querySelector('button[aria-expanded]');
+  const panel = document.querySelector('.grid');
+  altBtn.addEventListener('click', () => {
+    const isOpen = altBtn.getAttribute('aria-expanded') === 'true';
+    altBtn.setAttribute('aria-expanded', !isOpen);
+    panel.style.gridTemplateRows = isOpen ? '0fr' : '1fr';
+    panel.style.opacity = isOpen ? '0' : '1';
+  });
+-->

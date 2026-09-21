@@ -1,0 +1,132 @@
+<!--
+  Component: Chat Composer
+  Source: https://www.beautifului.dev/#chat-composer
+  Category: input
+  Description: Tabbed chat panel with reasoning replies and a composer input.
+  Dependencies: shared/base.css (CSS vars + animations), Tailwind CSS v4
+  Note: The tab switching and input enable/disable state require JavaScript.
+-->
+
+<div class="flex h-[288px] w-full max-w-95 flex-col self-start overflow-hidden rounded-[14px] bg-surface shadow-card">
+  <!-- Tab bar -->
+  <div class="flex shrink-0 items-center justify-between border-b border-line p-1.5">
+    <div class="flex items-center">
+      <!-- Active tab -->
+      <button type="button" aria-pressed="true"
+        class="rounded-[6px] px-2 py-[3px] text-[13px] text-ink transition-[background-color,opacity] duration-100 bg-field">
+        Flavors
+      </button>
+      <!-- Inactive tab -->
+      <button type="button" aria-pressed="false"
+        class="rounded-[6px] px-2 py-[3px] text-[13px] text-ink transition-[background-color,opacity] duration-100 opacity-50 hover:opacity-75">
+        Suppliers
+      </button>
+    </div>
+    <!-- Toolbar actions -->
+    <div class="flex items-center gap-1">
+      <!-- New chat button -->
+      <button type="button" aria-label="New chat"
+        class="flex size-6 items-center justify-center rounded-[6px] text-ink-3 transition-colors duration-100 hover:bg-hover hover:text-ink-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+      </button>
+      <!-- History button -->
+      <button type="button" aria-label="History"
+        class="flex size-6 items-center justify-center rounded-[6px] text-ink-3 transition-colors duration-100 hover:bg-hover hover:text-ink-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 7v5l3 2"/>
+        </svg>
+      </button>
+      <!-- More options -->
+      <button type="button" aria-label="More options"
+        class="flex size-6 items-center justify-center rounded-[6px] text-ink-3 transition-colors duration-100 hover:bg-hover hover:text-ink-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <g fill="currentColor" stroke="none">
+            <circle cx="5" cy="12" r="1.8"/>
+            <circle cx="12" cy="12" r="1.8"/>
+            <circle cx="19" cy="12" r="1.8"/>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Messages list -->
+  <div class="flex min-h-0 flex-1 flex-col gap-2.5 overflow-y-auto px-3 pt-2.5 pb-1">
+    <!-- User message (right-aligned) -->
+    <div class="flex justify-end pl-14">
+      <div class="rounded-xl bg-field px-3 py-1.5 text-[13px] leading-[1.4] text-ink
+        transition-[opacity,transform] duration-300"
+        style="opacity:1;transform:translateY(0);transition-timing-function:cubic-bezier(0.23, 1, 0.32, 1)">
+        Compare mint chip to last summer
+      </div>
+    </div>
+
+    <!-- Agent reply (left-aligned, with header) -->
+    <div class="flex w-full flex-col gap-1.5 transition-[opacity,filter,transform] duration-400"
+      style="opacity:1;filter:blur(0);transform:scale(1);transform-origin:top left;transition-timing-function:cubic-bezier(0.23, 1, 0.32, 1);animation:fade-up 400ms cubic-bezier(0.23,1,0.32,1) both">
+      <!-- Agent step header -->
+      <div class="flex items-center gap-1 text-[12px] leading-[1.3]">
+        <span class="font-medium text-ink">Sales History</span>
+        <span class="text-ink-2">Flavor Data</span>
+        <span class="text-ink">for 4s</span>
+      </div>
+      <!-- Agent reply text -->
+      <p class="text-[13px] leading-normal text-ink">
+        Pulled 3 summers of mint chip sales for comparison.
+      </p>
+    </div>
+
+    <!-- Second agent message -->
+    <div class="flex w-full flex-col gap-1.5 transition-[opacity,filter,transform] duration-400"
+      style="opacity:1;filter:blur(0);transform:scale(1);transform-origin:top left;animation:fade-up 400ms cubic-bezier(0.23,1,0.32,1) both">
+      <div class="flex items-center gap-1 text-[12px] leading-[1.3]">
+        <span class="font-medium text-ink">Comparison</span>
+        <span class="text-ink-2">Trend Detection</span>
+        <span class="text-ink">for 2s</span>
+      </div>
+      <p class="text-[13px] leading-normal text-ink">
+        Mint chip is up 12% with stronger weekend peaks.
+      </p>
+    </div>
+  </div>
+
+  <!-- Composer input -->
+  <div class="mt-auto shrink-0 p-1.5">
+    <div role="presentation"
+      class="flex cursor-text flex-col gap-2 rounded-control border border-line bg-field p-2.5
+        shadow-[0_1px_2px_rgba(0,0,0,0.035)] transition-[border-color,box-shadow] duration-150
+        focus-within:border-line-strong focus-within:shadow-[0_1px_2px_rgba(0,0,0,0.025)]">
+      <input
+        placeholder="Prompt or tag a flavor with @"
+        aria-label="Chat prompt"
+        class="min-h-4.5 bg-transparent text-[13px] leading-[1.4] text-ink outline-none placeholder:text-ink-3"
+        value=""
+      />
+      <div class="flex items-center justify-end">
+        <!-- Send button (enabled when input has value) -->
+        <button type="button" aria-label="Send" disabled
+          class="flex size-7 items-center justify-center rounded-[8px] transition-[background-color,color,transform] duration-200 enabled:active:scale-[0.96]"
+          style="background:var(--line-strong);color:var(--ink-2)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+JAVASCRIPT — enable send button when input has text:
+  const input = document.querySelector('input[aria-label="Chat prompt"]');
+  const send = document.querySelector('button[aria-label="Send"]');
+  input.addEventListener('input', () => {
+    const hasText = input.value.trim().length > 0;
+    send.disabled = !hasText;
+    send.style.background = hasText ? 'var(--ink)' : 'var(--line-strong)';
+    send.style.color = hasText ? 'var(--canvas)' : 'var(--ink-2)';
+  });
+-->

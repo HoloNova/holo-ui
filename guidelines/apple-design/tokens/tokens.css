@@ -1,0 +1,269 @@
+/**
+ * Apple Design System — Core CSS Design Tokens
+ * Source: Apple Human Interface Guidelines (HIG)
+ * Platforms: iOS, iPadOS, macOS, visionOS
+ *
+ * Usage:
+ *   Include this file in your HTML: <link rel="stylesheet" href="tokens/tokens.css">
+ *   Supports automatic Light / Dark mode switching based on prefers-color-scheme or .dark class.
+ */
+
+:root {
+  /* --------------------------------------------------------------------------
+   * 1. TYPOGRAPHY SYSTEM (San Francisco Scale)
+   * -------------------------------------------------------------------------- */
+  --apple-font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --apple-font-mono: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --apple-font-serif: "New York", Palatino, Georgia, "Times New Roman", serif;
+
+  /* Type Scale: Size / Line-Height / Letter-Spacing */
+  --apple-text-large-title: 34px / 41px;
+  --apple-tracking-large-title: 0.37px;
+
+  --apple-text-title-1: 28px / 34px;
+  --apple-tracking-title-1: 0.36px;
+
+  --apple-text-title-2: 22px / 28px;
+  --apple-tracking-title-2: 0.35px;
+
+  --apple-text-title-3: 20px / 25px;
+  --apple-tracking-title-3: 0.38px;
+
+  --apple-text-headline: 600 17px / 22px;
+  --apple-tracking-headline: -0.41px;
+
+  --apple-text-body: 400 17px / 22px;
+  --apple-tracking-body: -0.41px;
+
+  --apple-text-callout: 16px / 21px;
+  --apple-tracking-callout: -0.32px;
+
+  --apple-text-subheadline: 15px / 20px;
+  --apple-tracking-subheadline: -0.24px;
+
+  --apple-text-footnote: 13px / 18px;
+  --apple-tracking-footnote: -0.08px;
+
+  --apple-text-caption-1: 12px / 16px;
+  --apple-tracking-caption-1: 0px;
+
+  --apple-text-caption-2: 11px / 13px;
+  --apple-tracking-caption-2: 0.07px;
+
+  /* --------------------------------------------------------------------------
+   * 2. CORNER RADII (Apple Continuous Curvature / Squircle)
+   * -------------------------------------------------------------------------- */
+  --apple-radius-xs: 6px;       /* Badges, micro tags */
+  --apple-radius-sm: 8px;       /* Small buttons, toolbars */
+  --apple-radius-md: 12px;      /* Standard buttons, search inputs, list cells */
+  --apple-radius-lg: 16px;      /* Cards, grouped list insets */
+  --apple-radius-xl: 22px;      /* Dialogs, large action sheets */
+  --apple-radius-2xl: 28px;     /* Full modal sheets, floating panels */
+  --apple-radius-pill: 9999px;  /* Capsule tags, segmented controls */
+
+  /* --------------------------------------------------------------------------
+   * 3. TOUCH & INTERACTION TARGETS
+   * -------------------------------------------------------------------------- */
+  --apple-min-touch-target: 44px; /* Apple HIG Golden Rule: Minimum 44x44pt hit target */
+  --apple-spacing-unit: 8px;     /* 8pt Base Spatial Grid */
+
+  /* --------------------------------------------------------------------------
+   * 4. SPRING ANIMATIONS & EASINGS (Apple Fluid Curves)
+   * -------------------------------------------------------------------------- */
+  /* Standard Interactive Spring (Sheet slide, button pop, modal expand) */
+  --apple-ease-spring: cubic-bezier(0.25, 1, 0.5, 1);
+  /* Snappy Feedback (Toggle switch, micro interaction) */
+  --apple-ease-snappy: cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Natural Smooth Deceleration */
+  --apple-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --apple-duration-fast: 180ms;
+  --apple-duration-normal: 320ms;
+  --apple-duration-slow: 450ms;
+
+  /* --------------------------------------------------------------------------
+   * 5. LIGHT THEME COLORS (Default)
+   * -------------------------------------------------------------------------- */
+  /* Primary Tint Accent (Apple System Blue) */
+  --apple-accent: #007AFF;
+  --apple-accent-rgb: 0, 122, 255;
+  --apple-accent-tint: rgba(0, 122, 255, 0.12);
+
+  /* System Palette */
+  --apple-red: #FF3B30;
+  --apple-orange: #FF9500;
+  --apple-yellow: #FFCC00;
+  --apple-green: #34C759;
+  --apple-mint: #00C7BE;
+  --apple-teal: #30B0C7;
+  --apple-cyan: #32ADE6;
+  --apple-blue: #007AFF;
+  --apple-indigo: #5856D6;
+  --apple-purple: #AF52DE;
+  --apple-pink: #FF2D55;
+  --apple-brown: #A2845E;
+
+  /* System Grays */
+  --apple-gray-1: #8E8E93;
+  --apple-gray-2: #AEAEB2;
+  --apple-gray-3: #C7C7CC;
+  --apple-gray-4: #D1D1D6;
+  --apple-gray-5: #E5E5EA;
+  --apple-gray-6: #F2F2F7;
+
+  /* Semantic Labels (Text Hierarchy) */
+  --apple-label-primary: #000000;
+  --apple-label-secondary: rgba(60, 60, 67, 0.60);
+  --apple-label-tertiary: rgba(60, 60, 67, 0.30);
+  --apple-label-quaternary: rgba(60, 60, 67, 0.18);
+
+  /* Semantic Backgrounds */
+  --apple-bg-primary: #FFFFFF;
+  --apple-bg-secondary: #F2F2F7;
+  --apple-bg-tertiary: #FFFFFF;
+
+  /* Grouped Backgrounds (iOS Settings / Form style) */
+  --apple-bg-grouped-primary: #F2F2F7;
+  --apple-bg-grouped-secondary: #FFFFFF;
+  --apple-bg-grouped-tertiary: #F2F2F7;
+
+  /* Separators & Hairlines */
+  --apple-separator: rgba(60, 60, 67, 0.29);
+  --apple-separator-opaque: #C6C6C8;
+  --apple-hairline-border: 0.5px solid var(--apple-separator);
+
+  /* Materials & Blurs */
+  --apple-material-thin: rgba(255, 255, 255, 0.65);
+  --apple-material-regular: rgba(255, 255, 255, 0.78);
+  --apple-material-thick: rgba(255, 255, 255, 0.92);
+  --apple-blur-thin: blur(16px) saturate(180%);
+  --apple-blur-regular: blur(25px) saturate(190%);
+  --apple-blur-thick: blur(35px) saturate(200%);
+
+  /* Liquid Glass (WWDC 2025 Spec) */
+  --apple-glass-bg: rgba(255, 255, 255, 0.68);
+  --apple-glass-border: rgba(255, 255, 255, 0.5);
+  --apple-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+
+  /* Shadows */
+  --apple-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --apple-shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --apple-shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --apple-shadow-sheet: 0 -4px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+ * 6. DARK THEME OVERRIDES
+ * -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --apple-accent: #0A84FF;
+    --apple-accent-rgb: 10, 132, 255;
+    --apple-accent-tint: rgba(10, 132, 255, 0.18);
+
+    --apple-red: #FF453A;
+    --apple-orange: #FF9F0A;
+    --apple-yellow: #FFD60A;
+    --apple-green: #30D158;
+    --apple-mint: #63E6E2;
+    --apple-teal: #40C8E0;
+    --apple-cyan: #64D2FF;
+    --apple-blue: #0A84FF;
+    --apple-indigo: #5E5CE6;
+    --apple-purple: #BF5AF2;
+    --apple-pink: #FF375F;
+    --apple-brown: #AC8E68;
+
+    --apple-gray-1: #8E8E93;
+    --apple-gray-2: #636366;
+    --apple-gray-3: #48484A;
+    --apple-gray-4: #3A3A3C;
+    --apple-gray-5: #2C2C2E;
+    --apple-gray-6: #1C1C1E;
+
+    --apple-label-primary: #FFFFFF;
+    --apple-label-secondary: rgba(235, 235, 245, 0.60);
+    --apple-label-tertiary: rgba(235, 235, 245, 0.30);
+    --apple-label-quaternary: rgba(235, 235, 245, 0.16);
+
+    --apple-bg-primary: #000000;
+    --apple-bg-secondary: #1C1C1E;
+    --apple-bg-tertiary: #2C2C2E;
+
+    --apple-bg-grouped-primary: #000000;
+    --apple-bg-grouped-secondary: #1C1C1E;
+    --apple-bg-grouped-tertiary: #2C2C2E;
+
+    --apple-separator: rgba(84, 84, 88, 0.65);
+    --apple-separator-opaque: #38383A;
+    --apple-hairline-border: 0.5px solid var(--apple-separator);
+
+    --apple-material-thin: rgba(28, 28, 30, 0.65);
+    --apple-material-regular: rgba(28, 28, 30, 0.82);
+    --apple-material-thick: rgba(28, 28, 30, 0.94);
+
+    --apple-glass-bg: rgba(30, 30, 32, 0.72);
+    --apple-glass-border: rgba(255, 255, 255, 0.12);
+    --apple-glass-shadow: 0 10px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    --apple-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --apple-shadow-md: 0 6px 18px rgba(0, 0, 0, 0.4);
+    --apple-shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.55);
+    --apple-shadow-sheet: 0 -4px 32px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.dark, [data-theme="dark"] {
+  --apple-accent: #0A84FF;
+  --apple-accent-rgb: 10, 132, 255;
+  --apple-accent-tint: rgba(10, 132, 255, 0.18);
+
+  --apple-red: #FF453A;
+  --apple-orange: #FF9F0A;
+  --apple-yellow: #FFD60A;
+  --apple-green: #30D158;
+  --apple-mint: #63E6E2;
+  --apple-teal: #40C8E0;
+  --apple-cyan: #64D2FF;
+  --apple-blue: #0A84FF;
+  --apple-indigo: #5E5CE6;
+  --apple-purple: #BF5AF2;
+  --apple-pink: #FF375F;
+  --apple-brown: #AC8E68;
+
+  --apple-gray-1: #8E8E93;
+  --apple-gray-2: #636366;
+  --apple-gray-3: #48484A;
+  --apple-gray-4: #3A3A3C;
+  --apple-gray-5: #2C2C2E;
+  --apple-gray-6: #1C1C1E;
+
+  --apple-label-primary: #FFFFFF;
+  --apple-label-secondary: rgba(235, 235, 245, 0.60);
+  --apple-label-tertiary: rgba(235, 235, 245, 0.30);
+  --apple-label-quaternary: rgba(235, 235, 245, 0.16);
+
+  --apple-bg-primary: #000000;
+  --apple-bg-secondary: #1C1C1E;
+  --apple-bg-tertiary: #2C2C2E;
+
+  --apple-bg-grouped-primary: #000000;
+  --apple-bg-grouped-secondary: #1C1C1E;
+  --apple-bg-grouped-tertiary: #2C2C2E;
+
+  --apple-separator: rgba(84, 84, 88, 0.65);
+  --apple-separator-opaque: #38383A;
+  --apple-hairline-border: 0.5px solid var(--apple-separator);
+
+  --apple-material-thin: rgba(28, 28, 30, 0.65);
+  --apple-material-regular: rgba(28, 28, 30, 0.82);
+  --apple-material-thick: rgba(28, 28, 30, 0.94);
+
+  --apple-glass-bg: rgba(30, 30, 32, 0.72);
+  --apple-glass-border: rgba(255, 255, 255, 0.12);
+  --apple-glass-shadow: 0 10px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  --apple-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --apple-shadow-md: 0 6px 18px rgba(0, 0, 0, 0.4);
+  --apple-shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.55);
+  --apple-shadow-sheet: 0 -4px 32px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,29 @@
+{
+  "snapshot_at": "2026-09-21T13:08:00+08:00",
+  "css_hash": "916c3f25c8795666",
+  "css_url": "/_next/static/css/916c3f25c8795666.css",
+  "component_count": 21,
+  "components": [
+    {"id": "loading-state", "name": "Loading State"},
+    {"id": "thinking-state", "name": "Thinking"},
+    {"id": "streaming-text", "name": "Streaming Text"},
+    {"id": "approval-card", "name": "Approval Card"},
+    {"id": "tool-chips", "name": "Tool Chips"},
+    {"id": "task-rows", "name": "Task Rows"},
+    {"id": "chat-composer", "name": "Chat"},
+    {"id": "prompt-bar", "name": "Prompt Bar"},
+    {"id": "recommendation-card", "name": "Recommendation Card"},
+    {"id": "context-cards", "name": "Context Cards"},
+    {"id": "diff-table", "name": "Diff Table"},
+    {"id": "records-table", "name": "Records Table"},
+    {"id": "filter-table", "name": "Filter Table"},
+    {"id": "sidebar-nav", "name": "Sidebar Nav"},
+    {"id": "search", "name": "Search"},
+    {"id": "flowchart", "name": "Flowchart"},
+    {"id": "insight-cards", "name": "Insight Cards"},
+    {"id": "code-block", "name": "Code Block"},
+    {"id": "fine-tune-card", "name": "Fine-tune Card"},
+    {"id": "selection-actions", "name": "Selection Actions"},
+    {"id": "agent-screen", "name": "Agent Screen"}
+  ]
+}

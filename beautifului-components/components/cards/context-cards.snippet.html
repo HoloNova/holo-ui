@@ -1,0 +1,76 @@
+<!--
+  Component: Context Cards
+  Source: https://www.beautifului.dev/#context-cards
+  Category: cards
+  Description: RAG knowledge chunks with source pills, character counts, and file type badges.
+  Dependencies: shared/base.css (CSS vars + animations), Tailwind CSS v4
+-->
+
+<div class="flex w-full max-w-95 flex-col gap-2">
+  <!-- Header with total chunk count -->
+  <div class="flex items-center gap-2 px-0.5" style="animation:fade-in 400ms ease-out both">
+    <span class="text-[13px] font-semibold text-ink">All chunks</span>
+    <span class="inline-flex h-5 items-center rounded-md bg-inset px-1.5
+      text-[11.5px] font-medium text-ink-2 shadow-hairline tabular-nums">32</span>
+  </div>
+
+  <!-- Context card 1 -->
+  <div class="overflow-hidden rounded-card bg-surface shadow-card"
+    style="animation:fade-up 400ms cubic-bezier(0.23,1,0.32,1) 0ms both">
+    <!-- Card header bar -->
+    <div class="flex items-center gap-2.5 border-b border-line" style="padding:10px 12px">
+      <span class="flex min-w-0 items-center gap-1.5 text-[13px] font-medium text-ink">
+        <!-- Lines icon -->
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h10"/>
+        </svg>
+        <span class="truncate">Vendor onboarding rule</span>
+      </span>
+      <span class="ml-auto shrink-0 text-[12px] text-ink-3 tabular-nums">290 characters</span>
+    </div>
+    <!-- Content -->
+    <p class="px-3 pt-2 pb-1 text-[12.5px] leading-relaxed text-ink-2">
+      Cold-chain certification must be verified before a new dairy can be added to the reorder workflow.
+    </p>
+    <!-- Source file pill -->
+    <div class="px-3 pb-3">
+      <span class="inline-flex h-6 items-center gap-1.5 rounded-full bg-inset px-2
+        text-[12px] font-medium text-ink-2 shadow-btn
+        transition-[opacity,transform,background-color] duration-300 hover:bg-hover">
+        <span class="flex size-3.5 items-center justify-center rounded-[4px] bg-red text-[7px] font-bold text-white">PDF</span>
+        Dairy Onboarding SOP.pdf
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7M7 7h10v10"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- Context card 2 -->
+  <div class="overflow-hidden rounded-card bg-surface shadow-card"
+    style="animation:fade-up 400ms cubic-bezier(0.23,1,0.32,1) 100ms both">
+    <div class="flex items-center gap-2.5 border-b border-line" style="padding:10px 12px">
+      <span class="flex min-w-0 items-center gap-1.5 text-[13px] font-medium text-ink">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h10"/>
+        </svg>
+        <span class="truncate">Seasonal demand row</span>
+      </span>
+      <span class="ml-auto shrink-0 text-[12px] text-ink-3 tabular-nums">1,250 characters</span>
+    </div>
+    <p class="px-3 pt-2 pb-1 text-[12.5px] leading-relaxed text-ink-2">
+      Q4 velocity table: pistachio +18%, vanilla +6%, rocky road -11%; retire flavors below 40 scoops weekly.
+    </p>
+    <div class="px-3 pb-3">
+      <span class="inline-flex h-6 items-center gap-1.5 rounded-full bg-inset px-2
+        text-[12px] font-medium text-ink-2 shadow-btn
+        transition-[opacity,transform,background-color] duration-300 hover:bg-hover">
+        <span class="flex size-3.5 items-center justify-center rounded-[4px] bg-green text-[7px] font-bold text-white">CSV</span>
+        Sales Velocity Export.csv
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 17L17 7M7 7h10v10"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>

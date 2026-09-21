@@ -1,0 +1,98 @@
+<!--
+  Component: Approval Card
+  Source: https://www.beautifului.dev/#approval-card
+  Category: interaction
+  Description: Human-in-the-loop card. Agent asks questions before taking action.
+  Dependencies: shared/base.css, Tailwind CSS v4
+-->
+
+<div class="w-full max-w-80">
+  <div class="relative overflow-hidden rounded-card bg-surface shadow-card" style="animation:fade-up 380ms cubic-bezier(0.23,1,0.32,1) both">
+    <!-- Dismiss button -->
+    <button type="button" aria-label="Dismiss" class="primitive-icon-button absolute right-2.5 top-2.5 z-10 text-ink-3 transition-colors duration-100 hover:bg-hover hover:text-ink">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Card content -->
+    <div class="primitive-card-pad">
+      <div class="overflow-hidden" aria-live="polite">
+        <div style="display:flex;flex-direction:column;gap:26px;transform:translate3d(0, 0px, 0);will-change:transform">
+          <!-- Question slide -->
+          <div style="opacity:1">
+            <!-- Question title -->
+            <div class="pr-7 text-[14px] font-medium text-ink">
+              How many items should we process?
+            </div>
+
+            <!-- Radio options (glide menu) -->
+            <div class="group/glide-menu relative mt-2.5 flex flex-col gap-1">
+              <!-- Hover highlight (positioned via JS) -->
+              <span aria-hidden="true" class="pointer-events-none absolute inset-x-0 rounded-control bg-hover" style="top:0;height:0;opacity:0;transition:top 220ms cubic-bezier(0.23,1,0.32,1), height 220ms cubic-bezier(0.23,1,0.32,1), opacity 150ms ease"></span>
+
+              <!-- Option 1 -->
+              <button type="button" data-menu-row="true" aria-pressed="false" class="relative z-10 flex items-center gap-1.5 rounded-control pl-1 pr-2 py-1 text-left transition-colors duration-100">
+                <span class="flex size-4 shrink-0 items-center justify-center rounded-full shadow-[inset_0_0_0_1.5px_var(--line-strong)] text-transparent transition-colors duration-200">
+                  <span class="size-1.5 rounded-full bg-canvas transition-transform duration-200" style="transform:scale(0)"></span>
+                </span>
+                <span class="text-[13px] leading-none text-ink-2 transition-colors duration-200">Small batch (10)</span>
+              </button>
+
+              <!-- Option 2 -->
+              <button type="button" data-menu-row="true" aria-pressed="false" class="relative z-10 flex items-center gap-1.5 rounded-control pl-1 pr-2 py-1 text-left transition-colors duration-100">
+                <span class="flex size-4 shrink-0 items-center justify-center rounded-full shadow-[inset_0_0_0_1.5px_var(--line-strong)] text-transparent transition-colors duration-200">
+                  <span class="size-1.5 rounded-full bg-canvas transition-transform duration-200" style="transform:scale(0)"></span>
+                </span>
+                <span class="text-[13px] leading-none text-ink-2 transition-colors duration-200">Full batch (100)</span>
+              </button>
+
+              <!-- Option 3 -->
+              <button type="button" data-menu-row="true" aria-pressed="false" class="relative z-10 flex items-center gap-1.5 rounded-control pl-1 pr-2 py-1 text-left transition-colors duration-100">
+                <span class="flex size-4 shrink-0 items-center justify-center rounded-full shadow-[inset_0_0_0_1.5px_var(--line-strong)] text-transparent transition-colors duration-200">
+                  <span class="size-1.5 rounded-full bg-canvas transition-transform duration-200" style="transform:scale(0)"></span>
+                </span>
+                <span class="text-[13px] leading-none text-ink-2 transition-colors duration-200">Custom amount</span>
+              </button>
+
+              <!-- Custom text input option -->
+              <label data-menu-row="true" class="relative z-10 flex items-center gap-1.5 rounded-control pl-1 pr-2 py-1 transition-colors duration-100">
+                <input
+                  placeholder="Something else…"
+                  aria-label="Custom answer"
+                  class="min-w-0 flex-1 bg-transparent pl-1.5 text-[13px] text-ink outline-none placeholder:text-ink-3"
+                  value=""
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card footer -->
+    <div class="primitive-card-footer flex items-center justify-between gap-3">
+      <!-- Pagination -->
+      <div class="flex items-center gap-1 text-ink-3">
+        <button type="button" aria-label="Previous question" disabled class="flex size-[18px] items-center justify-center rounded-[5px] transition-colors duration-100 enabled:hover:text-ink disabled:opacity-30">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+          </svg>
+        </button>
+        <span class="inline-flex items-center text-[12px] font-medium tabular-nums text-ink-3" style="letter-spacing:-0.1px;line-height:1">
+          <span>1</span><span> </span><span>/</span><span> </span><span>3</span>
+        </span>
+        <button type="button" aria-label="Next question" class="flex size-[18px] items-center justify-center rounded-[5px] transition-colors duration-100 enabled:hover:text-ink disabled:opacity-30">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Action buttons -->
+      <div class="-mr-0.5 flex items-center gap-1.5">
+        <button class="inline-flex items-center justify-center font-medium select-none transition-[transform,background-color,opacity] duration-150 ease-out active:scale-[0.96] bg-hover-2 text-ink hover:bg-line-strong h-[27px] px-3 text-[13px] leading-none rounded-full">Skip</button>
+        <button class="inline-flex items-center justify-center font-medium select-none transition-[transform,background-color,opacity] duration-150 ease-out active:scale-[0.96] disabled:opacity-50 disabled:pointer-events-none bg-accent text-white hover:bg-accent-ink shadow-[inset_0_1px_0_rgba(255,255,255,0.14)] h-[27px] px-3 text-[13px] leading-none rounded-full" disabled>Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

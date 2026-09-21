@@ -1,0 +1,71 @@
+<!--
+  Component: Search
+  Source: https://www.beautifului.dev/#search
+  Category: input
+  Description: Search input with keyboard shortcut hint and results dropdown.
+  Dependencies: shared/base.css, Tailwind CSS v4
+-->
+
+<!-- Search trigger button (shown in toolbar) -->
+<button
+  type="button"
+  class="flex h-8 items-center gap-2 rounded-control border border-line bg-surface px-2.5 text-[12.5px] text-ink-2 shadow-btn transition-colors duration-100 hover:bg-hover hover:text-ink"
+>
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+  </svg>
+  <span>Search</span>
+  <!-- Keyboard shortcut hint -->
+  <kbd class="ml-1 flex items-center gap-0.5 font-mono text-[11px] text-ink-3">
+    <span>⌘</span><span>K</span>
+  </kbd>
+</button>
+
+<!-- Search dropdown/modal (show on click/keyboard shortcut) -->
+<div class="relative w-full max-w-md" style="animation:pop-in 150ms cubic-bezier(0.23,1,0.32,1) both">
+  <div class="overflow-hidden rounded-[14px] bg-surface shadow-overlay">
+    <!-- Search input -->
+    <div class="flex items-center gap-2 border-b border-line px-3 py-2.5">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <input
+        type="text"
+        placeholder="Search..."
+        autofocus
+        class="min-w-0 flex-1 bg-transparent text-[13px] text-ink outline-none placeholder:text-ink-3"
+      />
+      <kbd class="flex items-center rounded bg-hover px-1.5 py-0.5 font-mono text-[11px] text-ink-3">Esc</kbd>
+    </div>
+
+    <!-- Results list -->
+    <div class="max-h-72 overflow-y-auto p-1.5">
+      <!-- Section label -->
+      <p class="px-2 py-1 text-[11px] font-medium uppercase tracking-[0.08em] text-ink-3">Recent</p>
+
+      <!-- Result item -->
+      <button class="flex w-full items-center gap-2.5 rounded-[8px] px-2 py-2 text-left text-[13px] text-ink transition-colors duration-100 hover:bg-hover">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>
+        </svg>
+        <span class="min-w-0 flex-1 truncate">Project README.md</span>
+        <span class="text-[11.5px] text-ink-3">Docs</span>
+      </button>
+
+      <!-- Result item 2 -->
+      <button class="flex w-full items-center gap-2.5 rounded-[8px] px-2 py-2 text-left text-[13px] text-ink transition-colors duration-100 hover:bg-hover">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+          <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+        </svg>
+        <span class="min-w-0 flex-1 truncate">Last conversation</span>
+        <span class="text-[11.5px] text-ink-3">History</span>
+      </button>
+    </div>
+
+    <!-- Footer hint -->
+    <div class="border-t border-line px-3 py-2 flex items-center gap-3 text-[11.5px] text-ink-3">
+      <span class="flex items-center gap-1"><kbd class="font-mono">↑↓</kbd> navigate</span>
+      <span class="flex items-center gap-1"><kbd class="font-mono">↵</kbd> select</span>
+    </div>
+  </div>
+</div>

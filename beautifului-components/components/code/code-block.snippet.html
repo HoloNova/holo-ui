@@ -1,0 +1,42 @@
+<!--
+  Component: Code Block
+  Source: https://www.beautifului.dev/#code-block
+  Category: code
+  Description: Syntax-highlighted code block with copy button and language label.
+  Dependencies: shared/base.css, Tailwind CSS v4
+-->
+
+<div class="w-full overflow-hidden rounded-window bg-[oklch(22%_0.004_264)] shadow-raised">
+  <!-- Header bar -->
+  <div class="flex items-center justify-between border-b border-[oklch(30%_0.006_258)] px-4 py-2.5">
+    <span class="font-mono text-[12px] text-[oklch(54%_0.01_264)]">typescript</span>
+    <!-- Copy button -->
+    <button
+      type="button"
+      aria-label="Copy code"
+      class="flex items-center gap-1.5 rounded-control px-2 py-1 text-[11.5px] text-[oklch(54%_0.01_264)] transition-colors duration-100 hover:bg-[oklch(28%_0.006_271)] hover:text-[oklch(73%_0.008_260)]"
+    >
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="12" height="12" rx="2.5"/>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      Copy
+    </button>
+  </div>
+
+  <!-- Code content -->
+  <pre class="overflow-x-auto p-4 text-[13px] leading-relaxed"><code class="font-mono text-[oklch(87%_0.005_264)]"><span style="color:oklch(68%_0.173_253)">const</span> <span style="color:oklch(78%_0.113_248)">response</span> <span style="color:oklch(68%_0.173_253)">=</span> <span style="color:oklch(70%_0.154_153)">await</span> <span style="color:oklch(87%_0.005_264)">agent</span><span style="color:oklch(54%_0.01_264)">.</span><span style="color:oklch(78%_0.113_248)">run</span><span style="color:oklch(54%_0.01_264)">(</span><span style="color:oklch(74%_0.156_55)">{</span>
+  <span style="color:oklch(87%_0.005_264)">prompt</span><span style="color:oklch(54%_0.01_264)">:</span> <span style="color:oklch(70%_0.154_153)">'Analyze this dataset'</span><span style="color:oklch(54%_0.01_264)">,</span>
+  <span style="color:oklch(87%_0.005_264)">tools</span><span style="color:oklch(54%_0.01_264)">:</span> <span style="color:oklch(54%_0.01_264)">[</span><span style="color:oklch(87%_0.005_264)">searchTool</span><span style="color:oklch(54%_0.01_264)">,</span> <span style="color:oklch(87%_0.005_264)">codeTool</span><span style="color:oklch(54%_0.01_264)">],</span>
+<span style="color:oklch(74%_0.156_55)">}</span><span style="color:oklch(54%_0.01_264)">);</span></code></pre>
+</div>
+
+<!--
+COPY FUNCTIONALITY:
+  document.querySelector('[aria-label="Copy code"]').addEventListener('click', async (btn) => {
+    const code = document.querySelector('code').textContent;
+    await navigator.clipboard.writeText(code);
+    btn.currentTarget.textContent = 'Copied!';
+    setTimeout(() => btn.currentTarget.innerHTML = '...Copy', 1500);
+  });
+-->

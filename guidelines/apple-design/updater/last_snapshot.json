@@ -1,0 +1,37 @@
+{
+  "snapshot_at": "2026-09-21T14:11:00+08:00",
+  "content_hash": "d78ae9b2d903f006",
+  "videos": [
+    {
+      "url": "/videos/play/wwdc2025/219/",
+      "title": ""
+    },
+    {
+      "url": "/videos/play/wwdc2025/356/",
+      "title": ""
+    },
+    {
+      "url": "/videos/play/wwdc2025/220/",
+      "title": ""
+    },
+    {
+      "url": "/videos/play/wwdc2025/361/",
+      "title": ""
+    },
+    {
+      "url": "/videos/play/wwdc2025/359/",
+      "title": ""
+    },
+    {
+      "url": "/videos/play/wwdc2025/208/",
+      "title": ""
+    }
+  ],
+  "featured_tools": [
+    "Fonts",
+    "SF Symbols",
+    "Icon Composer"
+  ],
+  "etag": "",
+  "last_modified": ""
+}

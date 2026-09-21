@@ -1,0 +1,88 @@
+<!--
+  Component: Prompt Bar
+  Source: https://www.beautifului.dev/#prompt-bar
+  Category: input
+  Description: AI prompt composer with model picker, dictation, and send controls.
+  Dependencies: shared/base.css (CSS vars + animations), Tailwind CSS v4
+  Note: The canvas background effect requires JavaScript (optional, cosmetic only).
+        The textarea auto-expands with field-sizing:content (CSS).
+-->
+
+<div class="relative w-full max-w-105">
+  <!-- Main prompt bar -->
+  <div class="relative isolate flex flex-col overflow-hidden border border-line bg-surface
+    shadow-card transition-[border-color,border-radius] duration-150 focus-within:border-line-strong
+    gap-1.5 p-1.5 rounded-[14px]">
+
+    <!-- Grid layout: [attach] [textarea] [model-picker] [mic] [send] -->
+    <div class="grid items-end gap-x-1 gap-y-1.5
+      grid-cols-[28px_minmax(0,1fr)_auto_28px_28px]">
+
+      <!-- Attach button (col 1) -->
+      <button type="button" aria-label="Add attachments and sources" aria-expanded="false"
+        class="flex size-7 shrink-0 items-center justify-center justify-self-start
+          text-ink-3 transition-[background-color,color,transform] duration-150
+          hover:bg-hover hover:text-ink active:scale-[0.94] rounded-[8px] col-start-1 row-start-1">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+      </button>
+
+      <!-- Textarea (col 2) -->
+      <textarea rows="1" placeholder="Write a message…" aria-label="Prompt"
+        class="min-h-7 px-1 py-[5px] text-[13px] leading-[18px] min-w-0 w-full resize-none
+          bg-transparent text-ink outline-none [overflow-wrap:anywhere]
+          placeholder:text-ink-3 col-start-2 row-start-1"
+        style="field-sizing:content;max-height:200px"
+      ></textarea>
+
+      <!-- Model picker (col 3) -->
+      <button type="button" aria-expanded="false" aria-label="Choose model"
+        class="flex h-7 shrink-0 items-center gap-1 px-1.5 text-[12px] font-medium
+          text-ink-2 transition-colors duration-150 hover:bg-hover hover:text-ink
+          rounded-[8px] col-start-3 row-start-1">
+        Vanilla 1
+        <span class="text-ink-3">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </span>
+      </button>
+
+      <!-- Mic/dictation button (col 4) -->
+      <button type="button" aria-label="Start dictation" aria-pressed="false"
+        class="flex size-7 shrink-0 items-center justify-center
+          transition-[background-color,color,transform] duration-150
+          active:scale-[0.94] rounded-[8px] text-ink-3 hover:bg-hover hover:text-ink
+          col-start-4 row-start-1">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/>
+        </svg>
+      </button>
+
+      <!-- Send button (col 5, disabled until text entered) -->
+      <button type="button" aria-label="Send" disabled
+        class="flex size-7 shrink-0 items-center justify-center
+          transition-[background-color,color,transform] duration-200
+          enabled:active:scale-[0.94] rounded-[8px] col-start-5 row-start-1"
+        style="background:var(--line-strong);color:var(--ink-2)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--
+JAVASCRIPT — enable send button when textarea has text:
+  const textarea = document.querySelector('textarea[aria-label="Prompt"]');
+  const sendBtn = document.querySelector('button[aria-label="Send"]');
+  textarea.addEventListener('input', () => {
+    const hasText = textarea.value.trim().length > 0;
+    sendBtn.disabled = !hasText;
+    sendBtn.style.background = hasText ? 'var(--ink)' : 'var(--line-strong)';
+    sendBtn.style.color = hasText ? 'var(--canvas)' : 'var(--ink-2)';
+  });
+-->

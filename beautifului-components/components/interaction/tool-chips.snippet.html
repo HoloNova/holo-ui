@@ -1,0 +1,44 @@
+<!--
+  Component: Tool Chips
+  Source: https://www.beautifului.dev/#tool-chips
+  Description: Compact chips for agent tool calls and code edits.
+  Dependencies: shared/base.css, Tailwind CSS v4
+-->
+
+<!-- Collapsible tool call list -->
+<div class="min-h-[220px] w-full max-w-80 pb-1">
+  <!-- Expand/collapse toggle -->
+  <button type="button" aria-expanded="true" class="-mx-1.5 flex w-fit items-center gap-1.5 rounded-control px-1.5 py-1 text-[12.5px] text-ink-2 transition-colors duration-100 hover:bg-hover-2">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200" style="transform:rotate(0deg)">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+    <span class="tabular-nums">4 tool calls, 2 messages</span>
+  </button>
+
+  <!-- Chips list -->
+  <div class="grid transition-[grid-template-rows,opacity] duration-300" style="grid-template-rows:1fr;opacity:1">
+    <div class="-mx-1 overflow-hidden px-1.5 pb-1">
+      <div class="mt-1.5 flex flex-col gap-1">
+        <!-- Tool chip item: File edit -->
+        <div class="flex items-center gap-2 rounded-chip bg-hover px-2 py-1">
+          <!-- Edit icon -->
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+          <span class="min-w-0 flex-1 truncate font-mono text-[11.5px] text-ink-2">src/components/Button.tsx</span>
+          <span class="shrink-0 text-[11px] text-ink-3">+12 -3</span>
+        </div>
+
+        <!-- Tool chip item: Search/read -->
+        <div class="flex items-center gap-2 rounded-chip bg-hover px-2 py-1">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <span class="min-w-0 flex-1 truncate font-mono text-[11.5px] text-ink-2">search_files("*.tsx")</span>
+          <span class="shrink-0 text-[11px] text-ink-3">8 results</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
