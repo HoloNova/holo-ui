@@ -1,4 +1,4 @@
-# 🎬 WWDC 官方精选设计视频与核心要点 (WWDC Design Sessions)
+# WWDC Featured Design Sessions and Core Takeaways
 
 > **本文件整合自**：`developer.apple.com/design/` Featured Design Videos  
 > **核心用途**：将苹果官方资深设计师在 WWDC 上分享的重磅设计思想直接提炼为核心知识要点，省去逐个观看 40 分钟视频的时间。

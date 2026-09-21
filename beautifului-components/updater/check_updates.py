@@ -203,10 +203,10 @@ def update_log(result: dict, log: dict) -> dict:
 def print_result(result: dict, cached: bool = False):
     """Pretty-print the result to stdout."""
     status = result.get("status", "unknown")
-    icon   = {"up-to-date": "✅", "update-available": "🔔", "error": "❌"}.get(status, "❓")
+    icon   = {"up-to-date": "[OK]", "update-available": "[UPDATE]", "error": "[ERROR]"}.get(status, "[?]")
 
     if cached:
-        print(f"{icon} [{status.upper()}] (cached — use --force to re-check)")
+        print(f"{icon} [{status.upper()}] (cached -- use --force to re-check)")
         return
 
     print(f"\n{icon} Status: {status.upper()}")
@@ -220,24 +220,24 @@ def print_result(result: dict, cached: bool = False):
 
     changes = result.get("changes", [])
     if not changes:
-        print("   No changes detected — local library is current.")
+        print("   No changes detected -- local library is current.")
     else:
         print(f"   Changes detected ({len(changes)}):")
         for c in changes:
             t = c["type"]
             if t == "css_updated":
-                print(f"     • CSS updated: {c['old_hash'][:8]}... → {c['new_hash'][:8]}...")
+                print(f"     * CSS updated: {c['old_hash'][:8]}... -> {c['new_hash'][:8]}...")
             elif t == "components_added":
                 for item in c["items"]:
-                    print(f"     ➕ New component: {item['name']} (#{item['id']})")
+                    print(f"     [+] New component: {item['name']} (#{item['id']})")
             elif t == "components_removed":
                 for item in c["items"]:
-                    print(f"     ➖ Removed: {item['name']} (#{item['id']})")
+                    print(f"     [-] Removed: {item['name']} (#{item['id']})")
             elif t == "components_renamed":
                 for item in c["items"]:
-                    print(f"     ✏️  Renamed: {item['old_name']} → {item['new_name']}")
+                    print(f"     [*] Renamed: {item['old_name']} -> {item['new_name']}")
         print()
-        print("   💡 Run sync to update local library:")
+        print("   Run sync to update local library:")
         print("      python updater/sync_components.py")
 
 
@@ -263,7 +263,7 @@ def main():
         if args.json:
             print(json.dumps(cached_result, ensure_ascii=False, indent=2))
         else:
-            print(f"⏱  Last checked {age:.1f} days ago (cache valid for {CACHE_DAYS} days).")
+            print(f"[*] Last checked {age:.1f} days ago (cache valid for {CACHE_DAYS} days).")
             print_result(cached_result, cached=True)
         sys.exit(0)
 
@@ -279,7 +279,7 @@ def main():
         print_result(result)
 
     if args.auto_sync and result.get("status") == "update-available":
-        print("\n💡 Auto-sync reminder: run python updater/sync_components.py")
+        print("\n[*] Auto-sync reminder: run python updater/sync_components.py")
 
     # Exit code: 0=ok, 1=update available, 2=error
     code_map = {"up-to-date": 0, "update-available": 1, "error": 2}

@@ -1,4 +1,4 @@
-# 🛠️ Apple 官方设计工具与资源全集 (Official Design Resources)
+# Apple Official Design Tools and Resources (Official Design Resources)
 
 > **本文件整合自**：`https://developer.apple.com/design/resources/` 与 `https://developer.apple.com/design/`  
 > **核心用途**：离线掌握苹果官方提供的全部设计原件、官方 Figma/Sketch 模板、字体包及专用设计工具，无需再回原网页查找。

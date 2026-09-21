@@ -209,7 +209,7 @@ def main():
             for c in result["changes"]:
                 print(f"        - {c['type']}")
         else:
-            print("    [✓] Local guidelines are up-to-date with Apple Design.")
+            print("    [OK] Local guidelines are up-to-date with Apple Design.")
 
     sys.exit(0 if result.get("status") == "up-to-date" else 1)
 

@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Holo UI Vault — Unified Dual-Dimension Index",
+  "version": "1.0.0",
+  "description": "Agent-First bidirectional index connecting design styles, component functions, concrete file locations, and harmonization rules. Optimized for low-token, zero-ambiguity retrieval.",
+  "context_guards": {
+    "rules": [
+      "DO NOT read beautifului-components/index.html (32KB human visual preview, wastes tokens).",
+      "DO NOT recursively scan directories. Retrieve only the exact snippet or token file needed.",
+      "Single-task retrieval budget: maximum 1 snippet file + 1 shared CSS file."
+    ]
+  },
+  "by_style": {
+    "ai_native_productivity": {
+      "name": "AI-Native Productivity (Source: Beautiful UI)",
+      "aesthetic": "Cold neutral, dark-first, high information density, 0.5px hairlines, tabular figures, subtle shimmer transitions.",
+      "when_to_use": [
+        "LLM reasoning and thinking chain display (thinking-state)",
+        "Token streaming with source citations (streaming-text)",
+        "Agent tool call and file modification chips (tool-chips)",
+        "Human-in-the-loop permission and confirmation flow (approval-card)",
+        "Multi-modal prompt composition (prompt-bar)",
+        "Code and data revision comparison (diff-table)",
+        "AI SaaS, agent dashboards, terminal/CLI-inspired web apps"
+      ],
+      "when_not_to_use": [
+        "Generic ecommerce stores, landing pages, children apps, casual mobile games"
+      ],
+      "shared_style": "beautifului-components/shared/base.css",
+      "components": {
+        "loading-state": "beautifului-components/components/ai-states/loading-state.snippet.html",
+        "thinking-state": "beautifului-components/components/ai-states/thinking-state.snippet.html",
+        "streaming-text": "beautifului-components/components/ai-states/streaming-text.snippet.html",
+        "approval-card": "beautifului-components/components/interaction/approval-card.snippet.html",
+        "tool-chips": "beautifului-components/components/interaction/tool-chips.snippet.html",
+        "selection-actions": "beautifului-components/components/interaction/selection-actions.snippet.html",
+        "task-rows": "beautifului-components/components/task-management/task-rows.snippet.html",
+        "chat-composer": "beautifului-components/components/input/chat-composer.snippet.html",
+        "prompt-bar": "beautifului-components/components/input/prompt-bar.snippet.html",
+        "search": "beautifului-components/components/input/search.snippet.html",
+        "recommendation-card": "beautifului-components/components/cards/recommendation-card.snippet.html",
+        "context-cards": "beautifului-components/components/cards/context-cards.snippet.html",
+        "insight-cards": "beautifului-components/components/cards/insight-cards.snippet.html",
+        "fine-tune-card": "beautifului-components/components/cards/fine-tune-card.snippet.html",
+        "diff-table": "beautifului-components/components/data/diff-table.snippet.html",
+        "records-table": "beautifului-components/components/data/records-table.snippet.html",
+        "filter-table": "beautifului-components/components/data/filter-table.snippet.html",
+        "sidebar-nav": "beautifului-components/components/navigation/sidebar-nav.snippet.html",
+        "flowchart": "beautifului-components/components/visualization/flowchart.snippet.html",
+        "code-block": "beautifului-components/components/code/code-block.snippet.html",
+        "agent-screen": "beautifului-components/components/layout/agent-screen.snippet.html"
+      }
+    },
+    "apple_human_interface": {
+      "name": "Apple Human Interface (Source: Apple HIG)",
+      "aesthetic": "Humanist, tactile spatial depth, continuous squircle curvature, liquid glass blur, spring physics, 44pt touch friendliness.",
+      "when_to_use": [
+        "Consumer-facing applications, mobile web apps and PWAs",
+        "System settings, preference panels, grouped form lists",
+        "Contextual overlays: Action Sheets, Bottom Sheets, Alerts",
+        "Tactile card layouts with soft shadows and inner specular highlights",
+        "Interfaces prioritizing readability, visual breathing room, and accessibility"
+      ],
+      "when_not_to_use": [
+        "Ultra-dense financial ticker screens, raw hacker CLI terminals"
+      ],
+      "tokens_css": "guidelines/apple-design/tokens/tokens.css",
+      "prompt_preset": "guidelines/apple-design/PROMPT_PRESET.md",
+      "foundations": {
+        "typography": "guidelines/apple-design/foundations/typography.md",
+        "materials": "guidelines/apple-design/foundations/materials-and-vibrancy.md",
+        "layout_and_touch": "guidelines/apple-design/foundations/layout-and-touch.md",
+        "motion_and_spring": "guidelines/apple-design/foundations/motion-and-spring.md"
+      },
+      "patterns": {
+        "modals_and_sheets": "guidelines/apple-design/patterns/modals-and-sheets.md"
+      },
+      "resources": {
+        "official_downloads": "guidelines/apple-design/resources/official-downloads.md",
+        "wwdc_videos": "guidelines/apple-design/resources/wwdc-design-videos.md",
+        "hig_component_index": "guidelines/apple-design/resources/hig-component-index.md"
+      }
+    }
+  },
+  "by_function": {
+    "ai_reasoning_and_states": {
+      "description": "Visual indicators for AI processing, reasoning, and token generation.",
+      "items": [
+        {
+          "id": "loading-state",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/ai-states/loading-state.snippet.html",
+          "recommended_when": "General AI processing without granular step-by-step reasoning."
+        },
+        {
+          "id": "thinking-state",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/ai-states/thinking-state.snippet.html",
+          "recommended_when": "LLM emits step-by-step reasoning, tool call logs, or chain-of-thought."
+        },
+        {
+          "id": "streaming-text",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/ai-states/streaming-text.snippet.html",
+          "recommended_when": "Real-time token streaming with inline sources and action toolbars."
+        }
+      ]
+    },
+    "inputs_and_prompts": {
+      "description": "User message composers, prompt bars, and search inputs.",
+      "items": [
+        {
+          "id": "prompt-bar",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/input/prompt-bar.snippet.html",
+          "recommended_when": "Single-line or expanding AI prompt input with model selector and attachments."
+        },
+        {
+          "id": "chat-composer",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/input/chat-composer.snippet.html",
+          "recommended_when": "Full conversational panel with tab switching and message history."
+        },
+        {
+          "id": "search",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/input/search.snippet.html",
+          "recommended_when": "Quick command palette modal with keyboard shortcut indicator."
+        }
+      ]
+    },
+    "human_in_the_loop_and_tools": {
+      "description": "User permission gates, action approval, and agent tool execution logs.",
+      "items": [
+        {
+          "id": "approval-card",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/interaction/approval-card.snippet.html",
+          "recommended_when": "Agent requires explicit human confirmation before executing high-risk actions."
+        },
+        {
+          "id": "task-rows",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/task-management/task-rows.snippet.html",
+          "recommended_when": "Tracking multi-step agent execution progress with running, completed, and failed states."
+        },
+        {
+          "id": "tool-chips",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/interaction/tool-chips.snippet.html",
+          "recommended_when": "Displaying file edits, external API calls, and line counts compactly."
+        },
+        {
+          "id": "selection-actions",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/interaction/selection-actions.snippet.html",
+          "recommended_when": "Contextual floating toolbar appearing above highlighted text."
+        }
+      ]
+    },
+    "data_and_diff": {
+      "description": "Tabular records, status filtering, and version comparison.",
+      "items": [
+        {
+          "id": "diff-table",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/data/diff-table.snippet.html",
+          "recommended_when": "Displaying before/after data changes proposed by an agent."
+        },
+        {
+          "id": "records-table",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/data/records-table.snippet.html",
+          "recommended_when": "Complex CRM/database view with sticky columns, tags, and calculations."
+        },
+        {
+          "id": "filter-table",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/data/filter-table.snippet.html",
+          "recommended_when": "Task and issue tracking tables with status badges (Todo, Progress, Done)."
+        }
+      ]
+    },
+    "cards_and_knowledge": {
+      "description": "RAG chunk previews, metric insights, and suggestions.",
+      "items": [
+        {
+          "id": "recommendation-card",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/cards/recommendation-card.snippet.html",
+          "recommended_when": "Agent proactive suggestion with confidence meter and alternative choices."
+        },
+        {
+          "id": "context-cards",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/cards/context-cards.snippet.html",
+          "recommended_when": "RAG retrieval chunk display with file badges and character counts."
+        },
+        {
+          "id": "insight-cards",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/cards/insight-cards.snippet.html",
+          "recommended_when": "Time-series chart with crosshair tracker, delta percentage, and tooltip."
+        },
+        {
+          "id": "fine-tune-card",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/cards/fine-tune-card.snippet.html",
+          "recommended_when": "Model hyperparameter adjustment controls (temperature, top_p)."
+        }
+      ]
+    },
+    "navigation_and_presentation": {
+      "description": "Structural sidebars, workflow graphs, and virtual viewports.",
+      "items": [
+        {
+          "id": "sidebar-nav",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/navigation/sidebar-nav.snippet.html",
+          "recommended_when": "Collapsible application sidebar with workspace switcher."
+        },
+        {
+          "id": "flowchart",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/visualization/flowchart.snippet.html",
+          "recommended_when": "Branching decision trees and multi-step agent execution graphs."
+        },
+        {
+          "id": "code-block",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/code/code-block.snippet.html",
+          "recommended_when": "Dark-themed code viewer with title bar, line numbers, and copy action."
+        },
+        {
+          "id": "agent-screen",
+          "style": "ai_native_productivity",
+          "file": "beautifului-components/components/layout/agent-screen.snippet.html",
+          "recommended_when": "Demonstrating computer-use agents driving a virtual browser."
+        }
+      ]
+    }
+  },
+  "style_harmonization": {
+    "principle": "Beautiful UI provides interaction skeletons; Apple HIG provides visual tokens and physics. They can be seamlessly blended without conflict.",
+    "rules": [
+      "When embedding Beautiful UI components into an Apple-themed project, map container radii to var(--apple-radius-lg) or var(--apple-radius-xl).",
+      "Replace dark solid surfaces with Apple Liquid Glass material: background: var(--apple-material-regular); backdrop-filter: var(--apple-blur-regular);",
+      "Ensure all clickable elements satisfy the Apple 44pt minimum touch boundary.",
+      "Adopt Apple Spring curve: transition-timing-function: var(--apple-ease-spring);",
+      "Maintain a single primary style hierarchy per viewport. Do not mix sharp brutalist elements with soft squircles."
+    ]
+  }
+}

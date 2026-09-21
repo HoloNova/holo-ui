@@ -1,120 +1,163 @@
-# 🧭 UI 风格图谱与防过度组装指南 (Style Taxonomy & Anti-Over-Assembly Guide)
+# Style Taxonomy and Anti-Over-Assembly Guide
 
-> **核心目标**：解决“AI 缺乏设计审美常识、容易胡乱堆砌组件、把简单界面做成过度组装的四不像”的问题。  
-> 无论是人类开发者决策，还是 AI Agent 自动化生成界面，在选型前**必须阅读本指南**。
+> [!IMPORTANT]
+> **Core Objective**: Prevent AI agents from assembling incompatible design languages, hallucinating unsupported styles, or over-engineering simple user requests into cluttered, unusable interfaces. Both developers and autonomous coding agents MUST review this guide prior to selecting components.
 
 ---
 
-## 🎨 第一部分：已收录设计体系风格图谱 (Style Taxonomy)
+## 1. Style Taxonomy & Design Quadrants
 
-不同的 UI 体系有截然不同的**设计语境（Context）**与**视觉 DNA**。严禁将不同语境的组件无脑杂糅在一起。
+Different design languages originate from distinct engineering and cultural contexts. Blindly mixing their visual tokens produces incoherent, broken user experiences.
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                                 风格定位象限图                                   │
-│                                                                                 │
-│                       高拟物感 / 物理质感 / 空间感                              │
-│                                      │                                          │
-│                                      │   🍎 Apple Design (HIG)                  │
-│                                      │   (人文科技 / 空间计算 / Liquid Glass)   │
-│                                      │                                          │
-│   消费级 / 优雅生活 ─────────────────┼───────────────── 极客 / 专业生产力       │
-│                                      │                                          │
-│                                      │   ⚡ Beautiful UI                        │
-│                                      │   (Linear风格 / AI-Native / 极简冷峻)    │
-│                                      │                                          │
-│                       高抽象度 / 扁平极简 / 单色科技                            │
-└─────────────────────────────────────────────────────────────────────────────────┘
++---------------------------------------------------------------------------------+
+|                              Style Positioning Map                              |
+|                                                                                 |
+|                        Tactile Depth / Materials / Spatial                      |
+|                                      |                                          |
+|                                      |   Apple Human Interface (HIG)            |
+|                                      |   Humanist / Spatial / Liquid Glass      |
+|                                      |                                          |
+|   Consumer / Lifestyle ──────────────┼────────────── Geek / High-Density SaaS   |
+|                                      |                                          |
+|                                      |   AI-Native Productivity (Beautiful UI)  |
+|                                      |   Linear Dark / Monochromatic / Crisp    |
+|                                      |                                          |
+|                        Flat Minimal / Tabular / Monochromatic                   |
++---------------------------------------------------------------------------------+
 ```
 
-### 1. `beautifului-components`：极简黑白 AI-Native 生产力风格
-- **核心代名词**：Linear 风格、Raycast 质感、冷峻科技感、开发者工具、Dark-first。
-- **视觉特征**：
-  - **色彩**：极度克制的黑白灰基底（OKLCH 色彩空间），只用极少量的细微强调色（Cyan, Purple, Amber）。
-  - **线条与质感**：0.5px 发丝边框、虚线分割（`border-dashed`）、高密度数据、等宽数字（`tabular-nums`）。
-  - **动画**：文字微光流光（`shimmer-text`）、微小光标闪烁、像素网格加载器。
-- **✅ 最适合场景**：
-  - AI 编码助手面板、Agent 思考链路展示、后台管理数据看板、开发者 CLI 工具配套 Web UI、技术文档与代码生成器。
-- **❌ 绝对严禁使用的场景**：
-  - 电商零售网站、儿童教育软件、娱乐休闲小游戏、母婴或生活服务类产品（会显得过于压抑和冷冰冰）。
+### Style A: AI-Native Productivity (`beautifului-components`)
+- **Visual DNA**: Linear aesthetic, Raycast precision, cold neutral tones, OKLCH palette, dark-first default.
+- **Key Signatures**:
+  - 0.5px hairline dividers, dashed micro-borders (`border-dashed`).
+  - High information density, monospace / tabular numbers (`tabular-nums`).
+  - Shimmer text transitions (`shimmer-text`), discreet caret blinking, micro-action bars.
+- **Applicable Scenarios**:
+  - LLM coding assistant workspaces and thinking traces.
+  - Multi-step agent execution monitors and tool call inspectors.
+  - AI prompt bars, model parameter tuning, token usage metrics.
+  - Developer dashboards, CLI companion web interfaces, markdown code diff viewers.
+- **Incompatible Scenarios**:
+  - Generic e-commerce storefronts, children education portals, casual gaming, warm lifestyle apps.
+
+### Style B: Apple Human Interface (`guidelines/apple-design`)
+- **Visual DNA**: Humanist elegance, liquid glass materials, squircle curvature, ambient lighting adaptation.
+- **Key Signatures**:
+  - Continuous curve squircles (`border-radius: 16px ~ 28px`).
+  - Specular edge highlights and multi-layer backdrop blur (`backdrop-filter: blur(20px)`).
+  - Physics-based spring curves (`cubic-bezier(0.25, 1, 0.5, 1)`), 44pt accessible touch targets.
+- **Applicable Scenarios**:
+  - Consumer mobile web apps and Progressive Web Apps (PWAs).
+  - Grouped setting lists, account profile sheets, interactive bottom sheets.
+  - Media playback controls, personal journaling, task checklists.
+- **Incompatible Scenarios**:
+  - Ultra-dense financial trading terminals, raw hacker CLI logs (excessive padding and rounded corners reduce line efficiency).
 
 ---
 
-### 2. `guidelines/apple-design`：人文科技、流动空间与圆角质感风格
-- **核心代名词**：iOS / macOS 原生质感、毛玻璃（Blur / Vibrancy）、超椭圆（Squircle）、高触感反馈。
-- **视觉特征**：
-  - **色彩**：明亮的系统强调色（System Blue, Green, Mint），高度支持环境光的深浅自适应。
-  - **材质**：层次分明的半透明毛玻璃、Liquid Glass 内折射镜面高光、大圆角（16px~28px）。
-  - **交互**：基于物理真实阻尼的弹簧动效（Spring Damping）、按下时 3% 的微下沉缩放（Scale down）。
-- **✅ 最适合场景**：
-  - 移动端 Web 应用（PWA）、个人待办记事、音乐播放器、系统设置面板、个人主页与消费级产品。
-- **❌ 绝对严禁使用的场景**：
-  - 极端高密度股票行情交易屏、纯黑客风终端控制台（苹果风的留白与大圆角会降低超密集信息的展现效率）。
+## 2. Anti-Over-Assembly Rules
 
----
+A common failure mode of AI coding agents is **gratuitous feature stacking**: when asked for a simple chat input, the agent adds an expandable thinking panel, multi-step approval modal, context cards, and a CRM table all on one screen.
 
-## 🛑 第二部分：AI 防过度组装四大天条 (Anti-Over-Assembly Rules)
+Agents must enforce the following four engineering constraints:
 
-很多 AI 编写界面时最容易犯的错误就是 **“堆砌炫技”** —— 用户只要一个简单的反馈输入框，AI 却把“思维链折叠 + 审批卡片 + 3步单选 + CRM表格”全部塞进去。
+### Rule 1: Occam's UI Razor
+> **Entities must not be multiplied beyond necessity.**
 
-**请严格遵守以下四大天条：**
+- If the user asks for **"a quick prompt or search input"**:
+  - Use: `beautifului-components/components/input/prompt-bar.snippet.html`
+  - Never assemble: `chat-composer.snippet.html` (heavy compound workspace with tabs and thread panels).
+- If the user asks for **"a loading indicator"**:
+  - Use: `beautifului-components/components/ai-states/loading-state.snippet.html`
+  - Never assemble: `thinking-state.snippet.html` (multi-step accordion) unless step-by-step reasoning logs are explicitly streamed.
 
-### 天条 1：奥卡姆剃刀原则（Occam's UI Razor）
-> **若无必要，勿增实体。**
+### Rule 2: Single Design Hierarchy
+> **Never construct a "Frankenstein" interface by mixing conflicting tokens.**
 
-- 用户只要 **“一个发消息的输入框”**：
-  - 推荐：`components/input/prompt-bar.snippet.html`（轻量单条输入）。
-  - 严禁：直接硬塞 `components/input/chat-composer.snippet.html`（这是包含会话历史、模型切换、多标签的复合重型面板）。
-- 用户只要 **“一个加载中的菊花/提示”**：
-  - 推荐：`components/ai-states/loading-state.snippet.html`（单行动画）。
-  - 严禁：在用户没要求看推理链时，强行插入 `thinking-state.snippet.html`（思考步骤折叠），制造视觉垃圾。
+- Incompatible: Nesting a sharp 0.5px dashed border inside an Apple 28px liquid-glass squircle container with Material Design floating action buttons.
+- Standard Approach:
+  - If building an **AI-Native Workspace**: Keep 6px ~ 10px corner radii, dark surface tokens, and hairline borders uniform throughout.
+  - If building an **Apple HIG Experience**: Rely on `guidelines/apple-design/tokens/tokens.css` for typography, spring timing, and backdrop materials across all elements.
 
----
+### Rule 3: Motion Restraint
+> **Never exceed one continuous loop animation per viewport.**
 
-### 天条 2：风格严禁“科学怪人式混搭”（No Style Frankenstein）
-> **一个页面只能有一个“灵魂风格”。**
+- Having multiple simultaneous shimmers, spinning arcs, and pulsing beacons causes visual fatigue and degrades perceived product quality.
+- Animations must be transient: play shimmer effects only during active LLM inference, then transition immediately to static states once generation completes.
 
-- ❌ **错误范例**：一个卡片的外框用 Apple 的 24px 大圆角与毛玻璃，里面嵌套 Beautiful UI 的 0.5px 锐利虚线框和黑客像素网格，按钮又是 Material Design 浮动按钮。
-- ✅ **正确做法**：
-  - 选定 **Beautiful UI** 路线：整页统一保持 6px~10px 小圆角、深色背景、OKLCH 灰阶和发丝虚线。
-  - 选定 **Apple** 路线：整页统一采用 16px~22px 平滑超椭圆、44pt 触控基准、Liquid Glass 玻璃材质和弹簧动效。
+### Rule 4: Specialized Primitives are Not Default Layouts
+> **Complex components must be reserved strictly for their designated domain.**
 
----
-
-### 天条 3：循环动效单一原则（Motion Restraint）
-> **同一个视口内，无限循环的动画不得超过 1 个。**
-
-- 界面上如果有太多微光流光（`shimmer-text`）、闪烁光标（`caret-blink`）、旋转菊花和波浪扩散，用户的眼睛会极度疲劳，界面丧失专业感。
-- **动效应是“瞬态触发”而非“常态狂欢”**：仅在等待推理时播放微光，生成完毕立即转为静态文本。
-
----
-
-### 天条 4：按需降级原则（Graceful Complexity）
-> **复杂组件是特殊场景的“特种部队”，绝非通用标配。**
-
-| 复杂组件 | 它的唯一适用场景 | 什么时候绝不要用？ |
+| Specialized Component | Single Permitted Scenario | Prohibited Usage |
 |:---|:---|:---|
-| **`agent-screen`** | 仅用于展示“AI 正在模拟操作远程浏览器/虚拟电脑桌面” | 普通网页排版、普通图片展示 |
-| **`approval-card`** | 仅用于“AI 即将执行高风险动作，需要人类逐项确认/拦截” | 普通表单提交、普通问答对话 |
-| **`records-table`** | 仅用于多字段企业级 CRM 列表、带筛选和复杂数值计算 | 普通 3~5 行的小展示列表 |
-| **`flowchart`** | 仅用于复杂状态分支决策图 | 普通的 1-2-3 步骤说明（用文字列表即可） |
+| `components/layout/agent-screen.snippet.html` | Autonomous browser / computer-use simulation | Standard dashboard layout, image preview |
+| `components/interaction/approval-card.snippet.html` | Critical irreversible actions requiring human confirmation | Standard form submit, basic alert message |
+| `components/data/records-table.snippet.html` | Complex CRM / database tables with math and filtering | Simple 3-row static list |
+| `components/visualization/flowchart.snippet.html` | Complex multi-branch logic and state machines | Linear 3-step text tutorials |
 
 ---
 
-## 🎯 第三部分：常见业务意图与推荐组件对照树
+## 3. Style Harmonization Pattern
 
-当人类提出以下需求时，请按照下表进行**克制选型**：
+When you need the **interaction logic of Beautiful UI** inside an **Apple-themed application**, harmonize the tokens rather than mixing styles abruptly.
 
 ```
-用户需求意图                      最精简推荐组件                          严禁堆砌的过度组件
-───────────────────────────────────────────────────────────────────────────────────────────
-"做个简单的 AI 搜索或指令输入"   --> input/prompt-bar                  --> ❌ 不要堆 chat-composer
-"展示完整的对话聊天窗口"         --> input/chat-composer               --> ❌ 不要堆 approval-card
-"展示 AI 正在思考/推理"          --> ai-states/thinking-state          --> ❌ 不要堆 records-table
-"用户需要审核/放行 AI 的操作"     --> interaction/approval-card         --> ❌ 不要堆 flowchart
-"展示工具调用、修改了哪些文件"   --> interaction/tool-chips            --> ❌ 不要堆 agent-screen
-"展示多条异步任务的进度"         --> task-management/task-rows         --> ❌ 不要堆 diff-table
-"代码对比与修改前后查看"         --> data/diff-table                   --> ❌ 不要堆 records-table
-"展示复杂企业级业务数据表格"     --> data/records-table 或 filter-table --> ❌ 不要堆 context-cards
-"高质感 iOS 设置/卡片面板"       --> guidelines/apple-design (tokens)  --> ❌ 不要混用 beautifului
++------------------------------------+
+|  Beautiful UI                      |
+|  (Interactive Skeleton)            |
+|  - Collapsible panels              |
+|  - Expandable thinking rows        |
+|  - Tool call chips                 |
++-----------------+------------------+
+                  |
+                  v [Apply Apple Design Tokens]
++------------------------------------+
+|  Apple HIG Visual Layer            |
+|  - var(--apple-radius-lg)          |
+|  - var(--apple-material-regular)   |
+|  - var(--apple-blur-regular)       |
+|  - var(--apple-ease-spring)        |
++------------------------------------+
 ```
+
+### Harmonization Code Example
+
+```css
+/* Import Apple Design Tokens */
+@import "guidelines/apple-design/tokens/tokens.css";
+
+/* Harmonize Beautiful UI component container to Apple Material */
+.beautifului-container {
+  /* Replace sharp dark background with Apple frosted material */
+  background: var(--apple-material-regular) !important;
+  backdrop-filter: var(--apple-blur-regular) !important;
+  -webkit-backdrop-filter: var(--apple-blur-regular) !important;
+
+  /* Replace 8px hairline border with Apple squircle radius and subtle specular border */
+  border-radius: var(--apple-radius-xl) !important;
+  border: 1px solid var(--apple-separator) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+
+  /* Replace linear ease with Apple spring physics */
+  transition-timing-function: var(--apple-ease-spring) !important;
+}
+```
+
+---
+
+## 4. Intent-to-Component Decision Matrix
+
+Refer to this matrix to select the leanest viable component for any given user prompt:
+
+| User Intent | Minimal Recommended File | Prohibited Over-Assembly |
+|:---|:---|:---|
+| "Single-line AI prompt or quick search" | `beautifului-components/components/input/prompt-bar.snippet.html` | `input/chat-composer.snippet.html` |
+| "Full conversational chat window" | `beautifului-components/components/input/chat-composer.snippet.html` | `interaction/approval-card.snippet.html` |
+| "Display AI reasoning chain" | `beautifului-components/components/ai-states/thinking-state.snippet.html` | `data/records-table.snippet.html` |
+| "Human confirmation before risky tool execution" | `beautifului-components/components/interaction/approval-card.snippet.html` | `visualization/flowchart.snippet.html` |
+| "Compact display of executed tools / file edits" | `beautifului-components/components/interaction/tool-chips.snippet.html` | `layout/agent-screen.snippet.html` |
+| "Display multi-step asynchronous task statuses" | `beautifului-components/components/task-management/task-rows.snippet.html` | `data/diff-table.snippet.html` |
+| "Before/after code or text comparison" | `beautifului-components/components/data/diff-table.snippet.html` | `data/records-table.snippet.html` |
+| "Multi-column data record view with filters" | `beautifului-components/components/data/records-table.snippet.html` | `cards/context-cards.snippet.html` |
+| "iOS-style tactile settings or action sheet" | `guidelines/apple-design/tokens/tokens.css` + `patterns/` | `beautifului-components/` (raw) |

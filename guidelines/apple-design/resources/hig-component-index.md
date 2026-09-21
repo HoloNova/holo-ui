@@ -1,4 +1,4 @@
-# 🧩 Apple HIG 全部组件与模式总览 (Complete HIG Component Index)
+# Apple HIG Component and Pattern Index (Complete HIG Component Index)
 
 > **本文件整合自**：`https://developer.apple.com/design/human-interface-guidelines/components`  
 > **核心用途**：离线掌握苹果官方全套 40+ 核心交互组件的设计规则、适用场景与设计禁忌，作为做交互决策时的快速字典。

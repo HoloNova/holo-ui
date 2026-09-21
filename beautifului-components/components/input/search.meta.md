@@ -6,11 +6,11 @@
 
 ## Description
 A spotlight-style quick search modal and command palette. Features:
-- Trigger button with keyboard shortcut badge (`⌘K` / `Ctrl+K`)
+- Trigger button with keyboard shortcut badge (`Cmd+K` / `Ctrl+K`)
 - Modal dialog with clean translucent backdrop
 - Search input with search icon, live clear button, and category filters
 - Categorized result sections (Actions, Documents, Components)
-- Keyboard navigation indicator (`↑↓ to navigate, ↵ to select, esc to close`)
+- Keyboard navigation indicator (`Up/Down to navigate, Enter to select, Esc to close`)
 
 ## Dependencies
 - `shared/base.css` — for CSS custom properties (`--canvas`, `--surface`, `--line`, `--ink`)
@@ -22,7 +22,7 @@ A spotlight-style quick search modal and command palette. Features:
 <button type="button" class="flex h-9 items-center gap-2 rounded-control bg-field px-3 text-ink-3 shadow-btn hover:bg-hover">
   <svg width="14" height="14">...</svg>
   <span class="text-[13px]">Search...</span>
-  <kbd class="ml-auto rounded bg-surface px-1.5 py-0.5 text-[11px] text-ink-3">⌘K</kbd>
+  <kbd class="ml-auto rounded bg-surface px-1.5 py-0.5 text-[11px] text-ink-3">Cmd+K</kbd>
 </button>
 
 <!-- Modal Container (toggle visibility on open) -->

@@ -6,13 +6,13 @@
 > **Font stack**: Inter (sans-serif) + JetBrains Mono (monospace)
 
 > [!CAUTION]
-> **🤖 Agent Context Guard: DO NOT READ `index.html`!**  
+> **Agent Context Guard: DO NOT READ `index.html`!**  
 > `index.html` is an 800-line human visual preview file (32KB). Reading it will waste 8,000+ context tokens.  
 > To integrate a component, **read ONLY its specific `*.snippet.html` file** and `shared/base.css`.
 
 ---
 
-## 🤖 How to Use This Library (Agent Workflow)
+## How to Use This Library (Agent Workflow)
 
 ### Step 1: Find a component path
 Check the table below or query `catalog.json` by tag:
@@ -40,7 +40,7 @@ components/<category>/<component-id>.demo.html
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 beautifului-components/
@@ -104,7 +104,7 @@ Each component has **3 files**:
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Required Setup
 Include these in every page that uses a Beautiful UI component:
@@ -186,7 +186,7 @@ Add class `dark` to `<html>` or any container element:
 
 ---
 
-## 📋 Component Quick Reference
+## Component Quick Reference
 
 | # | ID | Name | Direct Snippet File Path | Key Tags |
 |---|----|----|--------------------------|---------|
@@ -214,7 +214,7 @@ Add class `dark` to `<html>` or any container element:
 
 ---
 
-## ⚡ Common Patterns
+## Common Patterns
 
 ### Shimmer Loading Text
 ```html
@@ -245,7 +245,7 @@ localStorage.setItem('bui-theme', isDark ? 'dark' : 'light');
 
 ---
 
-## 🔄 Source Site Update Detection
+## Source Site Update Detection
 
 A built-in detection script monitors [beautifului.dev](https://www.beautifului.dev/) for changes, new components, or CSS updates:
 

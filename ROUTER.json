@@ -1,39 +1,67 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "name": "Holo UI Vault — AI Agent Context-Efficient Router",
+  "name": "Holo UI Vault — Agent Router",
   "version": "1.0.0",
-  "description": "极简快速分发路由表。供 AI Agent 在 1 次读取内完成精准定位，杜绝全库扫描与上下文膨胀。",
+  "description": "Fast lookup router for AI Agents. Single-read dispatch to eliminate directory scanning and token waste.",
+  "master_index": "INDEX.json",
+  "selection_guide": "STYLE_AND_SELECTION_GUIDE.md",
   "context_guards": {
-    "anti_over_assembly_guide": "STYLE_AND_SELECTION_GUIDE.md (选型前必读：防过度组装天条与风格象限)",
+    "anti_over_assembly_guide": "STYLE_AND_SELECTION_GUIDE.md",
     "strict_rules": [
-      "🛑 严禁过度组装：单一输入框需求绝不堆砌复合聊天窗，无推理需求绝不强塞 thinking-state",
-      "🛑 严禁风格混搭：Apple 圆角毛玻璃绝不与 Beautiful UI 冷色虚线发丝边框杂糅",
-      "🛑 严禁读取 beautifului-components/index.html（32KB 人类画廊页面，严重浪费上下文且对代码集成无用）",
-      "🛑 严禁对仓库进行递归目录扫描或全量读取所有 markdown 文件",
-      "🎯 单次任务应只定点读取：1 个目标 snippet.html + 对应 shared/base.css（如需）",
-      "🎯 设计知识需求应只定点读取：PROMPT_PRESET.md 或对应单个 foundation 文档"
+      "Rule 1: Review STYLE_AND_SELECTION_GUIDE.md to prevent over-assembly.",
+      "Rule 2: Do not read beautifului-components/index.html (32KB preview gallery; wastes context tokens).",
+      "Rule 3: Do not recursively scan directories. Use direct snippet paths.",
+      "Rule 4: Limit retrieval to 1 snippet file and 1 shared CSS file per task.",
+      "Rule 5: For Apple design tasks, retrieve only PROMPT_PRESET.md or tokens.css."
     ]
   },
   "intent_dispatch": [
     {
       "intent": "ai_agent_ui_components",
-      "keywords": ["ai states", "thinking", "loading", "streaming", "approval", "prompt bar", "chat", "chips", "table"],
+      "style": "ai_native_productivity",
+      "keywords": [
+        "ai states",
+        "thinking",
+        "loading",
+        "streaming",
+        "approval",
+        "prompt bar",
+        "chat",
+        "chips",
+        "table"
+      ],
       "library": "beautifului-components",
       "direct_entry": "beautifului-components/catalog.json",
       "shared_style": "beautifului-components/shared/base.css",
-      "recommended_action": "直接从下面的 component_lookup 查取单个 snippet 路径，勿读 index.html"
+      "recommended_action": "Read target snippet from component_lookup directly. Do not load index.html."
     },
     {
       "intent": "apple_style_generation",
-      "keywords": ["apple style", "ios style", "hig", "mac style", "liquid glass", "squircle", "44pt", "苹果风格"],
+      "style": "apple_human_interface",
+      "keywords": [
+        "apple style",
+        "ios style",
+        "hig",
+        "mac style",
+        "liquid glass",
+        "squircle",
+        "44pt"
+      ],
       "library": "guidelines/apple-design",
       "rules_prompt": "guidelines/apple-design/PROMPT_PRESET.md",
       "css_tokens": "guidelines/apple-design/tokens/tokens.css",
-      "recommended_action": "写代码时只读取 PROMPT_PRESET.md 或 tokens.css，勿全量读取 foundations 与 resources"
+      "recommended_action": "Retrieve only PROMPT_PRESET.md or tokens.css when generating code."
     },
     {
       "intent": "apple_design_knowledge_lookup",
-      "keywords": ["typography scale", "materials blur", "spring physics", "modal sheet rules", "figma download"],
+      "style": "apple_human_interface",
+      "keywords": [
+        "typography scale",
+        "materials blur",
+        "spring physics",
+        "modal sheet rules",
+        "figma download"
+      ],
       "sub_routes": {
         "typography": "guidelines/apple-design/foundations/typography.md",
         "materials_blur": "guidelines/apple-design/foundations/materials-and-vibrancy.md",
