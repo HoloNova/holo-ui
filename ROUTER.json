@@ -1,80 +1,37 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "name": "Holo UI Vault — Agent Router",
-  "version": "1.0.0",
-  "description": "Fast lookup router for AI Agents. Single-read dispatch to eliminate directory scanning and token waste.",
-  "master_index": "INDEX.json",
-  "selection_guide": "STYLE_AND_SELECTION_GUIDE.md",
-  "context_guards": {
-    "anti_over_assembly_guide": "STYLE_AND_SELECTION_GUIDE.md",
-    "strict_rules": [
-      "Rule 1: Review STYLE_AND_SELECTION_GUIDE.md to prevent over-assembly.",
-      "Rule 2: Do not read beautifului-components/index.html (32KB preview gallery; wastes context tokens).",
-      "Rule 3: Do not recursively scan directories. Use direct snippet paths.",
-      "Rule 4: Limit retrieval to 1 snippet file and 1 shared CSS file per task.",
-      "Rule 5: For Apple design tasks, retrieve only PROMPT_PRESET.md or tokens.css."
-    ]
-  },
-  "intent_dispatch": [
-    {
-      "intent": "ai_agent_ui_components",
-      "style": "ai_native_productivity",
-      "keywords": [
-        "ai states",
-        "thinking",
-        "loading",
-        "streaming",
-        "approval",
-        "prompt bar",
-        "chat",
-        "chips",
-        "table"
-      ],
-      "library": "beautifului-components",
-      "direct_entry": "beautifului-components/catalog.json",
-      "shared_style": "beautifului-components/shared/base.css",
-      "recommended_action": "Read target snippet from component_lookup directly. Do not load index.html."
-    },
-    {
-      "intent": "apple_style_generation",
-      "style": "apple_human_interface",
-      "keywords": [
-        "apple style",
-        "ios style",
-        "hig",
-        "mac style",
-        "liquid glass",
-        "squircle",
-        "44pt"
-      ],
-      "library": "guidelines/apple-design",
-      "rules_prompt": "guidelines/apple-design/PROMPT_PRESET.md",
-      "css_tokens": "guidelines/apple-design/tokens/tokens.css",
-      "recommended_action": "Retrieve only PROMPT_PRESET.md or tokens.css when generating code."
-    },
-    {
-      "intent": "apple_design_knowledge_lookup",
-      "style": "apple_human_interface",
-      "keywords": [
-        "typography scale",
-        "materials blur",
-        "spring physics",
-        "modal sheet rules",
-        "figma download"
-      ],
-      "sub_routes": {
-        "typography": "guidelines/apple-design/foundations/typography.md",
-        "materials_blur": "guidelines/apple-design/foundations/materials-and-vibrancy.md",
-        "layout_touch": "guidelines/apple-design/foundations/layout-and-touch.md",
-        "motion_spring": "guidelines/apple-design/foundations/motion-and-spring.md",
-        "modals_sheets": "guidelines/apple-design/patterns/modals-and-sheets.md",
-        "official_downloads": "guidelines/apple-design/resources/official-downloads.md",
-        "wwdc_videos": "guidelines/apple-design/resources/wwdc-design-videos.md",
-        "hig_component_index": "guidelines/apple-design/resources/hig-component-index.md"
-      }
-    }
+  "name": "Holo UI Vault — Agent Router v2",
+  "version": "2.0.0",
+  "context_guards": [
+    "DO NOT read beautifului-components/index.html (32KB preview, wastes tokens).",
+    "DO NOT scan directories. Use paths from this file or manifests.",
+    "Budget: max 1 snippet + 1 shared CSS per task.",
+    "For ambiguous requests, read the relevant *.manifest.json from the style entry below.",
+    "Review STYLE_AND_SELECTION_GUIDE.md only when mixing multiple styles."
   ],
-  "component_lookup": {
+  "styles": {
+    "ai_native_productivity": {
+      "desc": "Dark-first, cold neutral, 0.5px hairlines, AI SaaS dashboards, agent workspaces",
+      "manifest": "beautifului-components/beautifului.manifest.json",
+      "shared_css": "beautifului-components/shared/base.css"
+    },
+    "apple_human_interface": {
+      "desc": "Liquid glass, squircles, spring physics, 44pt touch, consumer mobile apps",
+      "manifest": "guidelines/apple-design/apple-design.manifest.json",
+      "tokens_css": "guidelines/apple-design/tokens/tokens.css"
+    },
+    "kinetic_motion_tactile": {
+      "desc": "Spring damping, 3D orbits, kinetic text, Lilac/Orange, landing pages, hero sections",
+      "manifest": "rewampui-components/rewampui.manifest.json",
+      "shared_css": "rewampui-components/shared/base.css",
+      "tokens_css": "rewampui-components/shared/tokens.css"
+    }
+  },
+  "keywords": {
+    "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows": "ai_native_productivity",
+    "apple|ios|hig|liquid glass|squircle|44pt|mac style|visionos": "apple_human_interface",
+    "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile"
+  },
+  "components": {
     "loading-state": "beautifului-components/components/ai-states/loading-state.snippet.html",
     "thinking-state": "beautifului-components/components/ai-states/thinking-state.snippet.html",
     "streaming-text": "beautifului-components/components/ai-states/streaming-text.snippet.html",
@@ -95,6 +52,38 @@
     "sidebar-nav": "beautifului-components/components/navigation/sidebar-nav.snippet.html",
     "flowchart": "beautifului-components/components/visualization/flowchart.snippet.html",
     "code-block": "beautifului-components/components/code/code-block.snippet.html",
-    "agent-screen": "beautifului-components/components/layout/agent-screen.snippet.html"
-  }
+    "agent-screen": "beautifului-components/components/layout/agent-screen.snippet.html",
+    "slide-to-confirm-button": "rewampui-components/components/buttons/slide-to-confirm-button.snippet.jsx",
+    "shimmer-button": "rewampui-components/components/buttons/shimmer-button.snippet.jsx",
+    "rainbow-button": "rewampui-components/components/buttons/rainbow-button.snippet.jsx",
+    "googly-eyes-button": "rewampui-components/components/buttons/googly-eyes-button.snippet.jsx",
+    "gloss-button": "rewampui-components/components/buttons/gloss-button.snippet.jsx",
+    "chrome-border-button": "rewampui-components/components/buttons/chrome-border-button.snippet.jsx",
+    "book-a-call-button": "rewampui-components/components/buttons/book-a-call-button.snippet.jsx",
+    "neumorphic-download-button": "rewampui-components/components/buttons/neumorphic-download-button.snippet.jsx",
+    "day-night-sky-toggle": "rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx",
+    "landscape-orb-toggle": "rewampui-components/components/toggles/landscape-orb-toggle.snippet.jsx",
+    "glass-orb-toggle": "rewampui-components/components/toggles/glass-orb-toggle.snippet.tsx",
+    "morph-search-capsule": "rewampui-components/components/search-bars/morph-search-capsule.snippet.jsx",
+    "animated-search-demo": "rewampui-components/components/search-bars/animated-search-demo.snippet.jsx",
+    "kinetic-reel-text": "rewampui-components/components/text/kinetic-reel-text.snippet.jsx",
+    "split-text-reveal": "rewampui-components/components/text/split-text-reveal.snippet.jsx",
+    "character-scramble-text": "rewampui-components/components/text/character-scramble-text.snippet.jsx",
+    "spotlight-text": "rewampui-components/components/text/spotlight-text.snippet.jsx",
+    "flip-3-d-text": "rewampui-components/components/text/flip-3-d-text.snippet.jsx",
+    "typewriter-text": "rewampui-components/components/text/typewriter-text.snippet.jsx",
+    "velocity-marquee-text": "rewampui-components/components/text/velocity-marquee-text.snippet.jsx",
+    "arch-card-carousel": "rewampui-components/components/cards/arch-card-carousel.snippet.tsx",
+    "editorial-3-d-orbit-carousel": "rewampui-components/components/cards/editorial-3-d-orbit-carousel.snippet.jsx",
+    "perspective-flip-deck": "rewampui-components/components/cards/perspective-flip-deck.snippet.jsx",
+    "diagonal-card-stack": "rewampui-components/components/cards/diagonal-card-stack.snippet.jsx",
+    "fluid-morph-orb": "rewampui-components/components/ai-ui/fluid-morph-orb.snippet.tsx",
+    "marbled-fluid-orb": "rewampui-components/components/ai-ui/marbled-fluid-orb.snippet.tsx",
+    "particle-dot-orb": "rewampui-components/components/ai-ui/particle-dot-orb.snippet.tsx",
+    "hero-morph-navbar": "rewampui-components/components/navbars/hero-morph-navbar.snippet.jsx",
+    "magnetic-pill-navbar": "rewampui-components/components/navbars/magnetic-pill-navbar.snippet.jsx",
+    "pill-expand-navbar": "rewampui-components/components/navbars/pill-expand-navbar.snippet.jsx"
+  },
+  "selection_guide": "STYLE_AND_SELECTION_GUIDE.md",
+  "master_index": "INDEX.json"
 }
