@@ -46,6 +46,7 @@ The repository provides structured indices tailored for machine lookup and devel
 |:---|:---|:---|:---:|:---|:---:|
 | [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native Productivity (Dark-first, 0.5px hairlines, thinking states, prompt bars) | 21 | Tailwind CSS v4 + OKLCH Tokens | Complete |
 | [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | Kinetic Motion & Tactile Physics (Spring physics, 3D card orbits, fluid AI orbs, slide-to-confirm) | 30 | React 19 + Framer Motion + Three.js | Complete |
+| [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | Micro-Motion Loaders & Spinners (Pure CSS/SVG, zero-runtime, a11y reduced-motion, radial, dots, radar) | 29 | Pure HTML/SVG + CSS Custom Properties | Complete |
 
 ### B. Authoritative Design Systems & Tokens
 
@@ -100,6 +101,21 @@ holo-ui/
 |       |-- cards/                   # arch-carousel, 3d-orbit, flip-deck, etc.
 |       |-- navbars/                 # hero-morph, magnetic-pill, pill-expand
 |       `-- ai-ui/                   # fluid-morph-orb, marbled-fluid, particle-dot
+|
+|-- loadingdev-components/           # Component library: Micro-Motion Loaders & Spinners
+|   |-- catalog.json                 # Machine manifest of 29 indicators
+|   |-- loadingdev.manifest.json     # Agent fast router manifest
+|   |-- COMPONENTS_GUIDE.md          # Integration guide and CSS variables
+|   |-- index.html                   # Offline preview gallery (Human developer use only)
+|   |-- shared/
+|   |   `-- base.css                 # 29 pure CSS @keyframes animations and variables
+|   `-- components/
+|       |-- radial/                  # ld-arc, ld-ring, ld-comet, ld-dual, ld-radar, etc.
+|       |-- dots/                    # ld-bouncing-dots, ld-linear-dots, ld-eclipse, etc.
+|       |-- classic/                 # ld-classic, ld-classic-v2, ld-loading
+|       |-- geometric/               # ld-blocks, ld-gather, ld-swirl, ld-morph, etc.
+|       |-- wave-pulse/              # ld-pulse, ld-ripple, ld-cascade, ld-wave
+|       `-- orbital/                 # ld-atom, ld-orbit
 |
 `-- guidelines/apple-design/         # Design specification: Apple Human Interface
     |-- tokens/

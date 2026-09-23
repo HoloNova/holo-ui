@@ -24,12 +24,18 @@
       "manifest": "rewampui-components/rewampui.manifest.json",
       "shared_css": "rewampui-components/shared/base.css",
       "tokens_css": "rewampui-components/shared/tokens.css"
+    },
+    "micro_motion_indicators": {
+      "desc": "Minimalist, zero-runtime, pure CSS/SVG micro-indicators, button spinners, typing dots, radar scans",
+      "manifest": "loadingdev-components/loadingdev.manifest.json",
+      "shared_css": "loadingdev-components/shared/base.css"
     }
   },
   "keywords": {
     "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows": "ai_native_productivity",
     "apple|ios|hig|liquid glass|squircle|44pt|mac style|visionos": "apple_human_interface",
-    "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile"
+    "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile",
+    "spinner|loader|loading indicator|micro motion|arc|atom|bouncing dots|radar|ripple|comet|snake|blocks|gather|pulse|wave|circular dots|classic spinner|eclipse|leap": "micro_motion_indicators"
   },
   "components": {
     "loading-state": "beautifului-components/components/ai-states/loading-state.snippet.html",
@@ -82,7 +88,36 @@
     "particle-dot-orb": "rewampui-components/components/ai-ui/particle-dot-orb.snippet.tsx",
     "hero-morph-navbar": "rewampui-components/components/navbars/hero-morph-navbar.snippet.jsx",
     "magnetic-pill-navbar": "rewampui-components/components/navbars/magnetic-pill-navbar.snippet.jsx",
-    "pill-expand-navbar": "rewampui-components/components/navbars/pill-expand-navbar.snippet.jsx"
+    "pill-expand-navbar": "rewampui-components/components/navbars/pill-expand-navbar.snippet.jsx",
+    "ld-arc": "loadingdev-components/components/radial/ld-arc.snippet.html",
+    "ld-ring": "loadingdev-components/components/radial/ld-ring.snippet.html",
+    "ld-comet": "loadingdev-components/components/radial/ld-comet.snippet.html",
+    "ld-dual": "loadingdev-components/components/radial/ld-dual.snippet.html",
+    "ld-trace": "loadingdev-components/components/radial/ld-trace.snippet.html",
+    "ld-snake": "loadingdev-components/components/radial/ld-snake.snippet.html",
+    "ld-radar": "loadingdev-components/components/radial/ld-radar.snippet.html",
+    "ld-clock": "loadingdev-components/components/radial/ld-clock.snippet.html",
+    "ld-compass": "loadingdev-components/components/radial/ld-compass.snippet.html",
+    "ld-bouncing-dots": "loadingdev-components/components/dots/ld-bouncing-dots.snippet.html",
+    "ld-circular-dots": "loadingdev-components/components/dots/ld-circular-dots.snippet.html",
+    "ld-linear-dots": "loadingdev-components/components/dots/ld-linear-dots.snippet.html",
+    "ld-eclipse": "loadingdev-components/components/dots/ld-eclipse.snippet.html",
+    "ld-leap": "loadingdev-components/components/dots/ld-leap.snippet.html",
+    "ld-slide": "loadingdev-components/components/dots/ld-slide.snippet.html",
+    "ld-classic": "loadingdev-components/components/classic/ld-classic.snippet.html",
+    "ld-classic-v2": "loadingdev-components/components/classic/ld-classic-v2.snippet.html",
+    "ld-loading": "loadingdev-components/components/classic/ld-loading.snippet.html",
+    "ld-blocks": "loadingdev-components/components/geometric/ld-blocks.snippet.html",
+    "ld-gather": "loadingdev-components/components/geometric/ld-gather.snippet.html",
+    "ld-swirl": "loadingdev-components/components/geometric/ld-swirl.snippet.html",
+    "ld-morph": "loadingdev-components/components/geometric/ld-morph.snippet.html",
+    "ld-flip": "loadingdev-components/components/geometric/ld-flip.snippet.html",
+    "ld-pulse": "loadingdev-components/components/wave-pulse/ld-pulse.snippet.html",
+    "ld-ripple": "loadingdev-components/components/wave-pulse/ld-ripple.snippet.html",
+    "ld-cascade": "loadingdev-components/components/wave-pulse/ld-cascade.snippet.html",
+    "ld-wave": "loadingdev-components/components/wave-pulse/ld-wave.snippet.html",
+    "ld-atom": "loadingdev-components/components/orbital/ld-atom.snippet.html",
+    "ld-orbit": "loadingdev-components/components/orbital/ld-orbit.snippet.html"
   },
   "selection_guide": "STYLE_AND_SELECTION_GUIDE.md",
   "master_index": "INDEX.json"

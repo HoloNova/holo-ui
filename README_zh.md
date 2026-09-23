@@ -46,6 +46,7 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 |:---|:---|:---|:---:|:---|:---:|
 | [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native 生产力风格（暗色优先、0.5px 发丝线、思考展开链、Prompt Bar） | 21 | Tailwind CSS v4 + OKLCH Tokens | 完整就绪 |
 | [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | 动态物理动效风格（弹簧物理、3D 轨道卡片、动态流体 Orb、滑动确认） | 30 | React 19 + Framer Motion + Three.js | 完整就绪 |
+| [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | 微动效与微状态指示器（纯 CSS/SVG、零运行时、a11y 低动效适配、单线圆弧、点阵、雷达） | 29 | Pure HTML/SVG + CSS Custom Properties | 完整就绪 |
 
 ### B. 权威设计系统与 Tokens
 
@@ -102,6 +103,21 @@ holo-ui/
 |       |-- cards/                   # arch-carousel, 3d-orbit, flip-deck, etc.
 |       |-- navbars/                 # hero-morph, magnetic-pill, pill-expand
 |       `-- ai-ui/                   # fluid-morph-orb, marbled-fluid, particle-dot
+|
+|-- loadingdev-components/           # 组件库：微动效与微状态指示器
+|   |-- catalog.json                 # 29 款指示器元数据与参数清单
+|   |-- loadingdev.manifest.json     # Agent 极速路由 Manifest
+|   |-- COMPONENTS_GUIDE.md          # 库专属接入指引与 CSS 变量规范
+|   |-- index.html                   # 离线画廊预览（人类开发者专用，Agent 勿读）
+|   |-- shared/
+|   |   `-- base.css                 # 29 款纯 CSS @keyframes 动画与 --ld-* 变量
+|   `-- components/
+|       |-- radial/                  # ld-arc, ld-ring, ld-comet, ld-dual, ld-radar, etc.
+|       |-- dots/                    # ld-bouncing-dots, ld-linear-dots, ld-eclipse, etc.
+|       |-- classic/                 # ld-classic, ld-classic-v2, ld-loading
+|       |-- geometric/               # ld-blocks, ld-gather, ld-swirl, ld-morph, etc.
+|       |-- wave-pulse/              # ld-pulse, ld-ripple, ld-cascade, ld-wave
+|       `-- orbital/                 # ld-atom, ld-orbit
 |
 `-- guidelines/apple-design/         # 设计规范：Apple Human Interface
     |-- tokens/

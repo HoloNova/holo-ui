@@ -1,0 +1,405 @@
+{
+  "style": "micro_motion_indicators",
+  "aesthetic": "Minimalist, zero-runtime, pure CSS/SVG, hairline strokes, pixel matrices, spring/harmonic motion",
+  "shared_css": "shared/base.css",
+  "tech": "Pure HTML/SVG + CSS Custom Properties (zero JavaScript runtime)",
+  "items": [
+    {
+      "id": "ld-arc",
+      "group": "radial",
+      "tags": [
+        "arc",
+        "spinner",
+        "radial",
+        "button",
+        "inline",
+        "minimal"
+      ],
+      "when": "Compact button submitting, inline text status, search input trailing icon",
+      "size_range": "14px - 28px"
+    },
+    {
+      "id": "ld-ring",
+      "group": "radial",
+      "tags": [
+        "ring",
+        "circle",
+        "radial",
+        "track",
+        "refresh",
+        "modal"
+      ],
+      "when": "Pull-to-refresh headers, modal dialog content loading, form submission",
+      "size_range": "16px - 32px"
+    },
+    {
+      "id": "ld-comet",
+      "group": "radial",
+      "tags": [
+        "comet",
+        "glow",
+        "conic",
+        "gradient",
+        "ai",
+        "streaming"
+      ],
+      "when": "AI prompt generation buffer, token streaming warmup, high-tech crypto verification",
+      "size_range": "20px - 40px"
+    },
+    {
+      "id": "ld-dual",
+      "group": "radial",
+      "tags": [
+        "dual",
+        "counter",
+        "concentric",
+        "sync",
+        "handshake"
+      ],
+      "when": "Two-way data sync (cloud <-> local), bidirectional handshakes, compilation processes",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-trace",
+      "group": "radial",
+      "tags": [
+        "trace",
+        "perimeter",
+        "squircle",
+        "card",
+        "skeleton",
+        "border"
+      ],
+      "when": "Card container loading, skeleton avatar placeholders, bounding box scanning",
+      "size_range": "24px - 48px"
+    },
+    {
+      "id": "ld-snake",
+      "group": "radial",
+      "tags": [
+        "snake",
+        "elastic",
+        "buffer",
+        "video",
+        "stream",
+        "network"
+      ],
+      "when": "Network bandwidth buffering, video/audio segment preloading, elastic wait times",
+      "size_range": "18px - 32px"
+    },
+    {
+      "id": "ld-radar",
+      "group": "radial",
+      "tags": [
+        "radar",
+        "sonar",
+        "scan",
+        "discovery",
+        "bluetooth",
+        "agent-search"
+      ],
+      "when": "Device/bluetooth discovery, agent web exploration tool, security auditing",
+      "size_range": "24px - 48px"
+    },
+    {
+      "id": "ld-clock",
+      "group": "radial",
+      "tags": [
+        "clock",
+        "time",
+        "cron",
+        "schedule",
+        "long-running",
+        "timeout"
+      ],
+      "when": "Scheduled cron jobs, backup progress, SLA countdowns, time-series aggregation",
+      "size_range": "18px - 32px"
+    },
+    {
+      "id": "ld-compass",
+      "group": "radial",
+      "tags": [
+        "compass",
+        "heading",
+        "navigation",
+        "alignment",
+        "geo"
+      ],
+      "when": "Map orientation alignment, sensor calibration, directional positioning",
+      "size_range": "18px - 32px"
+    },
+    {
+      "id": "ld-bouncing-dots",
+      "group": "dots",
+      "tags": [
+        "dots",
+        "bouncing",
+        "typing",
+        "chat",
+        "message",
+        "conversational"
+      ],
+      "when": "Chat bubble typing indicator ('Agent is typing...'), comment drafting, live messaging",
+      "size_range": "16px - 28px"
+    },
+    {
+      "id": "ld-circular-dots",
+      "group": "dots",
+      "tags": [
+        "circular-dots",
+        "led",
+        "rotary",
+        "dial",
+        "boot",
+        "widget"
+      ],
+      "when": "Application initialization, dashboard widget initial load, firmware flashing",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-linear-dots",
+      "group": "dots",
+      "tags": [
+        "linear-dots",
+        "ellipsis",
+        "inline",
+        "table",
+        "button-text",
+        "subtle"
+      ],
+      "when": "Inline button text suffix (e.g., 'Saving...'), table cell updates, status bar footers",
+      "size_range": "14px - 20px"
+    },
+    {
+      "id": "ld-eclipse",
+      "group": "dots",
+      "tags": [
+        "eclipse",
+        "binary",
+        "dual-star",
+        "ab-testing",
+        "transfer"
+      ],
+      "when": "Model comparison (A/B testing), token/asset balance transfers, dual-agent collaboration",
+      "size_range": "20px - 32px"
+    },
+    {
+      "id": "ld-leap",
+      "group": "dots",
+      "tags": [
+        "leap",
+        "queue",
+        "pipeline",
+        "staged",
+        "progress",
+        "hop"
+      ],
+      "when": "Job queue advancement, ingestion pipeline step transitions, background task workers",
+      "size_range": "18px - 28px"
+    },
+    {
+      "id": "ld-slide",
+      "group": "dots",
+      "tags": [
+        "slide",
+        "puzzle",
+        "reorder",
+        "grid-shift",
+        "shuffle"
+      ],
+      "when": "Layout rearrangement, card sorting/re-indexing, database partition re-balancing",
+      "size_range": "18px - 28px"
+    },
+    {
+      "id": "ld-classic",
+      "group": "classic",
+      "tags": [
+        "classic",
+        "apple",
+        "ios",
+        "macos",
+        "bars",
+        "system"
+      ],
+      "when": "Standard system-level waiting state, iOS hybrid mobile web views, modal confirmation",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-classic-v2",
+      "group": "classic",
+      "tags": [
+        "classic-v2",
+        "ticks",
+        "desktop",
+        "modern",
+        "nav"
+      ],
+      "when": "Modern desktop web apps, top header navigation bars, developer dashboard status",
+      "size_range": "16px - 28px"
+    },
+    {
+      "id": "ld-loading",
+      "group": "classic",
+      "tags": [
+        "loading",
+        "pixel",
+        "retro",
+        "brand",
+        "square-ring"
+      ],
+      "when": "Tech devtools, retro cyber interfaces, platform brand loading mark",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-blocks",
+      "group": "geometric",
+      "tags": [
+        "blocks",
+        "matrix",
+        "grid",
+        "spreadsheet",
+        "batch",
+        "compute"
+      ],
+      "when": "Spreadsheet math calculation, batch image processing, matrix data transformation",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-gather",
+      "group": "geometric",
+      "tags": [
+        "gather",
+        "docking",
+        "bundle",
+        "package",
+        "assembly",
+        "compile"
+      ],
+      "when": "Module bundling (Webpack/Vite), package resolution, dependency build stage",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-swirl",
+      "group": "geometric",
+      "tags": [
+        "swirl",
+        "loop",
+        "etl",
+        "pipeline",
+        "cache",
+        "cycle"
+      ],
+      "when": "Data ETL pipelines, cache preheating, cyclic checksum validation",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-morph",
+      "group": "geometric",
+      "tags": [
+        "morph",
+        "shape-shift",
+        "convert",
+        "topology",
+        "vector"
+      ],
+      "when": "File format conversion, view mode toggle (grid to list), vectorization rendering",
+      "size_range": "18px - 32px"
+    },
+    {
+      "id": "ld-flip",
+      "group": "geometric",
+      "tags": [
+        "flip",
+        "3d",
+        "tumble",
+        "card-flip",
+        "render",
+        "perspective"
+      ],
+      "when": "3D model loading, flashcard generation, shader compilation",
+      "size_range": "18px - 32px"
+    },
+    {
+      "id": "ld-pulse",
+      "group": "wave-pulse",
+      "tags": [
+        "pulse",
+        "heartbeat",
+        "beacon",
+        "ping",
+        "live",
+        "status"
+      ],
+      "when": "Live server status, WebSocket connection heartbeat, ambient sensor ping",
+      "size_range": "16px - 32px"
+    },
+    {
+      "id": "ld-ripple",
+      "group": "wave-pulse",
+      "tags": [
+        "ripple",
+        "acoustic",
+        "voice",
+        "listening",
+        "broadcast"
+      ],
+      "when": "Voice assistant listening state ('Listening...'), audio recording, broadcast signal sending",
+      "size_range": "24px - 48px"
+    },
+    {
+      "id": "ld-cascade",
+      "group": "wave-pulse",
+      "tags": [
+        "cascade",
+        "spiral",
+        "nested",
+        "fan-out",
+        "heavy-job"
+      ],
+      "when": "High-throughput asynchronous job orchestration, fan-out query execution",
+      "size_range": "20px - 36px"
+    },
+    {
+      "id": "ld-wave",
+      "group": "wave-pulse",
+      "tags": [
+        "wave",
+        "equalizer",
+        "audio",
+        "voice-playback",
+        "speech",
+        "vu-meter"
+      ],
+      "when": "Voice speech synthesis (TTS) playback, audio stream buffering, music playback activity",
+      "size_range": "16px - 32px"
+    },
+    {
+      "id": "ld-atom",
+      "group": "orbital",
+      "tags": [
+        "atom",
+        "orbital",
+        "quantum",
+        "physics",
+        "ai-deep-thinking",
+        "neural"
+      ],
+      "when": "Deep neural reasoning, scientific simulations, complex quantum/AI computation",
+      "size_range": "24px - 48px"
+    },
+    {
+      "id": "ld-orbit",
+      "group": "orbital",
+      "tags": [
+        "orbit",
+        "satellite",
+        "cluster",
+        "distributed",
+        "sync",
+        "cloud"
+      ],
+      "when": "Distributed server cluster synchronization, multi-region database replication",
+      "size_range": "20px - 36px"
+    }
+  ]
+}

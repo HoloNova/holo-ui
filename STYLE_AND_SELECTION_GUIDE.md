@@ -72,6 +72,20 @@ Different design languages originate from distinct engineering and cultural cont
   - Data-dense financial spreadsheets or static admin backends where constant motion introduces distraction.
   - Strict zero-JavaScript low-bandwidth environments.
 
+### Style D: Micro-Motion Loaders & Spinners (`loadingdev-components`)
+- **Visual DNA**: Pure CSS/SVG, zero-runtime, hairline single strokes, 3x3 pixel matrices, and 3D quantum wireframes.
+- **Key Signatures**:
+  - Standard CSS custom properties: `--ld-size`, `--ld-duration`, `--ld-play-state`, `--ld-step`.
+  - Built-in `@media (prefers-reduced-motion: reduce)` accessibility guards on all 29 indicators.
+  - Automatic color inheritance via `currentColor` without CSS hardcoding.
+- **Applicable Scenarios**:
+  - Button submission feedback and inline action states (`ld-arc`, `ld-ring`, `ld-linear-dots`).
+  - Conversational chat bubble typing indicators (`ld-bouncing-dots`).
+  - Specialized tool execution states: web search/security scanning (`ld-radar`), module bundling (`ld-gather`), neural inference (`ld-atom`), audio playback/transcription (`ld-wave`, `ld-ripple`).
+- **Incompatible Scenarios**:
+  - Full multi-step thinking traces with collapsible reasoning trees (use `thinking-state` from Beautiful UI).
+  - High-impact hero assistant companion avatars (use 3D Fluid Orbs from Rewamp UI).
+
 ---
 
 ## 2. Anti-Over-Assembly Rules
@@ -86,7 +100,10 @@ Agents must enforce the following four engineering constraints:
 - If the user asks for **"a quick prompt or search input"**:
   - Use: `beautifului-components/components/input/prompt-bar.snippet.html`
   - Never assemble: `chat-composer.snippet.html` (heavy compound workspace with tabs and thread panels).
-- If the user asks for **"a loading indicator"**:
+- If the user asks for **"a button spinner or inline action loading"**:
+  - Use: `loadingdev-components/components/radial/ld-arc.snippet.html` or `ld-linear-dots.snippet.html`
+  - Never assemble: `beautifului-components/components/ai-states/loading-state.snippet.html` (compound 3x3 pixel grid with timer intended for card-level AI reasoning) or heavy 3D fluid orbs.
+- If the user asks for **"card-level AI processing with elapsed time"**:
   - Use: `beautifului-components/components/ai-states/loading-state.snippet.html`
   - Never assemble: `thinking-state.snippet.html` (multi-step accordion) unless step-by-step reasoning logs are explicitly streamed.
 
@@ -162,6 +179,32 @@ When you need the **interaction logic of Beautiful UI** inside an **Apple-themed
 }
 ```
 
+### Harmonizing Micro-Motion Indicators with Other Systems
+
+Because `loadingdev-components` are pure CSS/SVG and rely on `currentColor`, they can be embedded directly into Beautiful UI and Apple HIG interfaces without token collisions:
+
+```html
+<!-- Harmonizing with Beautiful UI Dark Buttons -->
+<button class="bg-neutral-900 border border-neutral-800 text-neutral-200 px-3 py-1.5 rounded-lg flex items-center gap-2">
+  <span>Saving</span>
+  <svg class="ld-arc" style="--ld-size: 16px;" viewBox="0 0 24 24" fill="none">
+    <circle class="ld-arc-spin" cx="12" cy="12" r="10" stroke="currentColor" stroke-dasharray="18 44.8" stroke-linecap="round" stroke-width="2.5"></circle>
+  </svg>
+</button>
+
+<!-- Harmonizing with Apple HIG Liquid Glass Sheets -->
+<div style="background: var(--apple-material-regular); backdrop-filter: var(--apple-blur-regular); border-radius: var(--apple-radius-lg); padding: 16px; display: flex; align-items: center; gap: 12px;">
+  <span style="color: var(--apple-accent-blue);">
+    <!-- ld-ring seamlessly adapts to Apple HIG blue tint -->
+    <svg class="ld-ring" style="--ld-size: 20px;" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" opacity="0.2" r="10" stroke="currentColor" stroke-width="2.5"></circle>
+      <circle class="ld-ring-spin" cx="12" cy="12" r="10" stroke="currentColor" stroke-dasharray="16 46.8" stroke-linecap="round" stroke-width="2.5"></circle>
+    </svg>
+  </span>
+  <span style="font-family: -apple-system; font-size: 14px; color: var(--apple-text-primary);">Syncing with iCloud</span>
+</div>
+```
+
 ---
 
 ## 4. Intent-to-Component Decision Matrix
@@ -186,4 +229,11 @@ Refer to this matrix to select the leanest viable component for any given user p
 | "3D arched image/case study carousel" | `rewampui-components/components/cards/arch-card-carousel.snippet.tsx` | Static grid gallery |
 | "Interactive 3D fluid AI companion avatar" | `rewampui-components/components/ai-ui/fluid-morph-orb.snippet.tsx` | Heavy multi-panel workspace |
 | "Day/night atmospheric theme toggle" | `rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx` | Full page reload / complex modal |
+| "Inline button spinner or quick form submit" | `loadingdev-components/components/radial/ld-arc.snippet.html` | `beautifului-components/components/ai-states/loading-state.snippet.html` |
+| "Chat bubble typing indicator ('Typing...')" | `loadingdev-components/components/dots/ld-bouncing-dots.snippet.html` | `beautifului-components/components/ai-states/thinking-state.snippet.html` |
+| "Device discovery / agent tool web scanning" | `loadingdev-components/components/radial/ld-radar.snippet.html` | Heavy 3D backgrounds |
+| "Deep neural calculation / quantum physics" | `loadingdev-components/components/orbital/ld-atom.snippet.html` | Static spinners |
+| "Voice assistant listening state ('Listening...')"| `loadingdev-components/components/wave-pulse/ld-ripple.snippet.html` | `rewampui-components/components/ai-ui/fluid-morph-orb.snippet.tsx` |
+| "Audio playback / TTS stream buffering" | `loadingdev-components/components/wave-pulse/ld-wave.snippet.html` | Full audio player embed |
+
 

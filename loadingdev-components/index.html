@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--
+  HOLO UI VAULT - HUMAN DEVELOPER PREVIEW ONLY
+  AGENT CONTEXT GUARD: AI AGENTS DO NOT READ THIS FILE!
+  Use catalog.json, loadingdev.manifest.json, or target *.snippet.html instead.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading.dev Micro-Motion Loaders - Holo UI Vault</title>
+  <link rel="stylesheet" href="shared/base.css">
+  <style>
+    :root {
+      --bg: #0d0f12;
+      --card-bg: #14171d;
+      --card-border: #232832;
+      --text: #f0f3f6;
+      --text-muted: #8b949e;
+      --accent: #f97316;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 24px;
+    }
+    header {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+    h1 { font-size: 28px; font-weight: 600; margin-bottom: 8px; }
+    p { color: var(--text-muted); font-size: 14px; }
+    .grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      height: 180px;
+      transition: border-color 0.2s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+    }
+    .spinner-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+    }
+    .card-footer {
+      border-top: 1px solid var(--card-border);
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-title { font-size: 13px; font-weight: 500; }
+    .card-id { font-size: 11px; color: var(--text-muted); font-family: monospace; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Micro-Motion Loaders & Spinners</h1>
+    <p>29 Pure CSS/SVG loading indicators curated from loading.dev for Holo UI Vault.</p>
+  </header>
+  <div class="grid">
+    
+    <div class="card" data-name="arc">
+      <div class="spinner-stage">
+        <svg class="ld-arc" aria-hidden="true" role="presentation" viewBox="0 0 24 24" fill="none" style="--ld-size: 24px;">
+  <circle class="ld-arc-spin" cx="12" cy="12" r="10" stroke="currentColor" stroke-dasharray="18 44.8" stroke-linecap="round" stroke-width="2.5"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Arc</span>
+        <span class="card-id">ld-arc</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="ring">
+      <div class="spinner-stage">
+        <svg class="ld-ring" aria-hidden="true" role="presentation" viewBox="0 0 24 24" fill="none" style="--ld-size: 24px;">
+  <circle cx="12" cy="12" opacity="0.2" r="10" stroke="currentColor" stroke-width="2.5"></circle>
+  <circle class="ld-ring-spin" cx="12" cy="12" r="10" stroke="currentColor" stroke-dasharray="16 46.8" stroke-linecap="round" stroke-width="2.5"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Ring</span>
+        <span class="card-id">ld-ring</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="comet">
+      <div class="spinner-stage">
+        <div class="ld-comet" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-comet-spin">
+    <div class="ld-comet-tail"></div>
+    <div class="ld-comet-head"></div>
+  </div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Comet</span>
+        <span class="card-id">ld-comet</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="dual">
+      <div class="spinner-stage">
+        <svg class="ld-dual" aria-hidden="true" role="presentation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" style="--ld-size: 24px;">
+  <circle class="ld-dual-spin" cx="12" cy="12" r="10" stroke-dasharray="18 44.8"></circle>
+  <circle class="ld-dual-inner ld-dual-spin" cx="12" cy="12" r="5.5" stroke-dasharray="10 24.6"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Dual</span>
+        <span class="card-id">ld-dual</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="trace">
+      <div class="spinner-stage">
+        <svg class="ld-trace" aria-hidden="true" role="presentation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="--ld-size: 24px;">
+  <rect x="2.5" y="2.5" width="19" height="19" rx="5" opacity="0.2"></rect>
+  <rect class="ld-trace-spin" x="2.5" y="2.5" width="19" height="19" rx="5" stroke-dasharray="15 50.13" stroke-linecap="round"></rect>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Trace</span>
+        <span class="card-id">ld-trace</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="snake">
+      <div class="spinner-stage">
+        <svg class="ld-snake" aria-hidden="true" role="presentation" viewBox="0 0 24 24" fill="none" style="--ld-size: 24px;">
+  <g class="ld-snake-spin">
+    <circle class="ld-snake-dash" cx="12" cy="12" r="10" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></circle>
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Snake</span>
+        <span class="card-id">ld-snake</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="radar">
+      <div class="spinner-stage">
+        <svg class="ld-radar" aria-hidden="true" role="presentation" viewBox="0 0 16 16" fill="none" style="--ld-size: 24px;">
+  <defs>
+    <radialGradient id="ld-radar-beam" cx="8" cy="8" r="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0.3334" stop-color="currentColor"></stop>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+  <circle cx="8" cy="8" fill="currentColor" opacity="0.2" r="8"></circle>
+  <circle cx="8" cy="8" opacity="0.2" r="5.5" stroke="currentColor"></circle>
+  <path class="ld-radar-spin" d="M8 0C9.50657 0 10.9824 0.425672 12.2578 1.22754C13.5333 2.02953 14.557 3.17533 15.21 4.5332C15.8629 5.89107 16.1193 7.40626 15.9492 8.90332C15.7791 10.4001 15.1896 11.8184 14.249 12.9951L10.4707 9.69922C10.8037 9.21598 11 8.63123 11 8C11 6.34315 9.65685 5 8 5V0Z" fill="url(#ld-radar-beam)"></path>
+  <circle cx="8" cy="8" fill="currentColor" r="2"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Radar</span>
+        <span class="card-id">ld-radar</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="clock">
+      <div class="spinner-stage">
+        <svg class="ld-clock" aria-hidden="true" role="presentation" viewBox="0 0 16 16" fill="none" style="--ld-size: 24px;">
+  <circle cx="8" cy="8" fill="currentColor" opacity="0.1" r="8"></circle>
+  <path class="ld-clock-spin" d="M11.1937 2.92061C10.5206 2.49739 9.77304 2.21397 8.9954 2.08314C8.45076 1.99151 8 2.44772 8 3V7.20324C8 7.49211 8.12492 7.76686 8.34259 7.95677L11.8999 11.0603C12.3287 11.4344 12.9913 11.378 13.2643 10.8787C13.6356 10.1998 13.8736 9.45248 13.9617 8.67713C14.0892 7.55433 13.8971 6.41834 13.4074 5.39993C12.9177 4.38152 12.1503 3.5221 11.1937 2.92061Z" fill="currentColor"></path>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Clock</span>
+        <span class="card-id">ld-clock</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="compass">
+      <div class="spinner-stage">
+        <svg class="ld-compass" aria-hidden="true" role="presentation" viewBox="0 0 16 16" fill="none" style="--ld-size: 24px;">
+  <g class="ld-compass-ticks" fill="currentColor">
+    <path d="M7.33334 0.666667C7.33334 0.298477 7.63181 0 8 0C8.36819 0 8.66667 0.298477 8.66667 0.666667V3.33333C8.66667 3.70152 8.36819 4 8 4C7.63181 4 7.33334 3.70152 7.33334 3.33333V0.666667Z"></path>
+    <path d="M12.6667 8.66667C12.2985 8.66667 12 8.3682 12 8.00001C12 7.63182 12.2985 7.33334 12.6667 7.33334H15.3333C15.7015 7.33334 16 7.63182 16 8.00001C16 8.3682 15.7015 8.66667 15.3333 8.66667H12.6667Z"></path>
+    <path d="M7.33333 12.6667C7.33333 12.2985 7.63181 12 8 12C8.36819 12 8.66667 12.2985 8.66667 12.6667V15.3333C8.66667 15.7015 8.36819 16 8 16C7.63181 16 7.33333 15.7015 7.33333 15.3333V12.6667Z"></path>
+    <path d="M0.666667 8.66667C0.298477 8.66667 1.60941e-08 8.3682 0 8.00001C-1.60941e-08 7.63182 0.298477 7.33334 0.666667 7.33334H3.33333C3.70152 7.33334 4 7.63182 4 8.00001C4 8.3682 3.70152 8.66667 3.33333 8.66667H0.666667Z"></path>
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Compass</span>
+        <span class="card-id">ld-compass</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="bouncing dots">
+      <div class="spinner-stage">
+        <div class="ld-bouncing-dots" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-bouncing-dots-dot" style="--ld-step: 0;"></div>
+  <div class="ld-bouncing-dots-dot" style="--ld-step: 1;"></div>
+  <div class="ld-bouncing-dots-dot" style="--ld-step: 2;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Bouncing dots</span>
+        <span class="card-id">ld-bouncing-dots</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="circular dots">
+      <div class="spinner-stage">
+        <svg class="ld-circular-dots" aria-hidden="true" role="presentation" viewBox="0 0 16 16" fill="currentColor" style="--ld-size: 24px;">
+  <circle class="ld-circular-dots-dot" cx="8" cy="1.5" r="1.5" style="--ld-step: 0;"></circle>
+  <circle class="ld-circular-dots-dot" cx="12.5962" cy="3.4038" r="1.5" style="--ld-step: 1;"></circle>
+  <circle class="ld-circular-dots-dot" cx="14.5" cy="8" r="1.5" style="--ld-step: 2;"></circle>
+  <circle class="ld-circular-dots-dot" cx="12.5962" cy="12.5962" r="1.5" style="--ld-step: 3;"></circle>
+  <circle class="ld-circular-dots-dot" cx="8" cy="14.5" r="1.5" style="--ld-step: 4;"></circle>
+  <circle class="ld-circular-dots-dot" cx="3.4038" cy="12.5962" r="1.5" style="--ld-step: 5;"></circle>
+  <circle class="ld-circular-dots-dot" cx="1.5" cy="8" r="1.5" style="--ld-step: 6;"></circle>
+  <circle class="ld-circular-dots-dot" cx="3.4038" cy="3.4038" r="1.5" style="--ld-step: 7;"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Circular dots</span>
+        <span class="card-id">ld-circular-dots</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="linear dots">
+      <div class="spinner-stage">
+        <div class="ld-linear-dots" aria-hidden="true" style="--ld-size: 20px;">
+  <div class="ld-linear-dots-dot" style="--ld-step: 0;"></div>
+  <div class="ld-linear-dots-dot" style="--ld-step: 1;"></div>
+  <div class="ld-linear-dots-dot" style="--ld-step: 2;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Linear dots</span>
+        <span class="card-id">ld-linear-dots</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="eclipse">
+      <div class="spinner-stage">
+        <div class="ld-eclipse" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-eclipse-dot" style="--ld-step: 0;"></div>
+  <div class="ld-eclipse-dot" style="--ld-step: 1;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Eclipse</span>
+        <span class="card-id">ld-eclipse</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="leap">
+      <div class="spinner-stage">
+        <div class="ld-leap" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-leap-wrapper" style="--ld-step: 0;"><div class="ld-leap-dot"></div></div>
+  <div class="ld-leap-wrapper" style="--ld-step: 1;"><div class="ld-leap-dot"></div></div>
+  <div class="ld-leap-wrapper" style="--ld-step: 2;"><div class="ld-leap-dot"></div></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Leap</span>
+        <span class="card-id">ld-leap</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="slide">
+      <div class="spinner-stage">
+        <div class="ld-slide" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-slide-dot" style="--ld-step: 0; --ld-slide-rest: translate(0, 0);"></div>
+  <div class="ld-slide-dot" style="--ld-step: 1; --ld-slide-rest: translate(158.8%, 0);"></div>
+  <div class="ld-slide-dot" style="--ld-step: 2; --ld-slide-rest: translate(158.8%, 158.8%);"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Slide</span>
+        <span class="card-id">ld-slide</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="classic">
+      <div class="spinner-stage">
+        <div class="ld-classic" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-classic-inner">
+    <div class="ld-classic-bar" style="--ld-step: 0;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 1;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 2;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 3;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 4;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 5;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 6;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 7;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 8;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 9;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 10;"></div>
+    <div class="ld-classic-bar" style="--ld-step: 11;"></div>
+  </div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Classic</span>
+        <span class="card-id">ld-classic</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="classic v2">
+      <div class="spinner-stage">
+        <svg class="ld-classic-v2" aria-hidden="true" role="presentation" viewBox="0 0 16 16" fill="none" style="--ld-size: 24px;">
+  <g fill="currentColor">
+    <path class="ld-classic-v2-tick" d="M7.33334 0.666667C7.33334 0.298477 7.63181 0 8 0C8.36819 0 8.66667 0.298477 8.66667 0.666667V3.33333C8.66667 3.70152 8.36819 4 8 4C7.63181 4 7.33334 3.70152 7.33334 3.33333V0.666667Z" style="--ld-step: 0;"></path>
+    <path class="ld-classic-v2-tick" d="M11.7712 5.17154C11.5109 5.43189 11.0888 5.43189 10.8284 5.17154C10.5681 4.91119 10.5681 4.48908 10.8284 4.22873L12.714 2.34311C12.9744 2.08276 13.3965 2.08276 13.6568 2.34311C13.9172 2.60346 13.9172 3.02557 13.6568 3.28592L11.7712 5.17154Z" style="--ld-step: 1;"></path>
+    <path class="ld-classic-v2-tick" d="M12.6667 8.66667C12.2985 8.66667 12 8.36819 12 8.00001C12 7.63182 12.2985 7.33334 12.6667 7.33334H15.3333C15.7015 7.33334 16 7.63182 16 8.00001C16 8.36819 15.7015 8.66667 15.3333 8.66667H12.6667Z" style="--ld-step: 2;"></path>
+    <path class="ld-classic-v2-tick" d="M10.8284 11.7713C10.5681 11.5109 10.5681 11.0888 10.8284 10.8284C11.0888 10.5681 11.5109 10.5681 11.7712 10.8284L13.6568 12.7141C13.9172 12.9744 13.9172 13.3965 13.6568 13.6569C13.3965 13.9172 12.9744 13.9172 12.714 13.6569L10.8284 11.7713Z" style="--ld-step: 3;"></path>
+    <path class="ld-classic-v2-tick" d="M7.33333 12.6667C7.33333 12.2985 7.63181 12 8 12C8.36819 12 8.66667 12.2985 8.66667 12.6667V15.3333C8.66667 15.7015 8.36819 16 8 16C7.63181 16 7.33333 15.7015 7.33333 15.3333V12.6667Z" style="--ld-step: 4;"></path>
+    <path class="ld-classic-v2-tick" d="M3.28594 13.6569C3.02559 13.9172 2.60348 13.9172 2.34313 13.6569C2.08278 13.3965 2.08278 12.9744 2.34313 12.714L4.22875 10.8284C4.4891 10.5681 4.91121 10.5681 5.17156 10.8284C5.43191 11.0888 5.43191 11.5109 5.17156 11.7712L3.28594 13.6569Z" style="--ld-step: 5;"></path>
+    <path class="ld-classic-v2-tick" d="M0.666667 8.66667C0.298477 8.66667 1.60941e-08 8.36819 0 8.00001C-1.60941e-08 7.63182 0.298477 7.33334 0.666667 7.33334H3.33333C3.70152 7.33334 4 7.63182 4 8.00001C4 8.36819 3.70152 8.66667 3.33333 8.66667H0.666667Z" style="--ld-step: 6;"></path>
+    <path class="ld-classic-v2-tick" d="M2.34315 3.28594C2.0828 3.02559 2.0828 2.60348 2.34315 2.34314C2.6035 2.08279 3.02561 2.08279 3.28596 2.34313L5.17158 4.22875C5.43193 4.4891 5.43193 4.91121 5.17158 5.17156C4.91123 5.43191 4.48912 5.43191 4.22877 5.17156L2.34315 3.28594Z" style="--ld-step: 7;"></path>
+  </g>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Classic v2</span>
+        <span class="card-id">ld-classic-v2</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="loading">
+      <div class="spinner-stage">
+        <svg class="ld-loading" aria-hidden="true" role="presentation" viewBox="0 0 15 15" fill="currentColor" style="--ld-size: 24px;">
+  <g opacity="1" transform="translate(12 6)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.9" transform="translate(10 2)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.8" transform="translate(6 0)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.7" transform="translate(2 2)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.6" transform="translate(0 6)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.5" transform="translate(2 10)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.4" transform="translate(6 12)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+  <g opacity="0.3" transform="translate(10 10)"><rect x="0" y="0" width="1" height="1"></rect><rect x="2" y="0" width="1" height="1"></rect><rect x="0" y="2" width="1" height="1"></rect><rect x="2" y="2" width="1" height="1"></rect></g>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Loading</span>
+        <span class="card-id">ld-loading</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="blocks">
+      <div class="spinner-stage">
+        <div class="ld-blocks" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 0;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 1;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 2;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 1;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 2;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 3;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 2;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 3;"></div>
+  <div class="ld-blocks-cell ld-blocks-cell-diagonal" style="--ld-step: 4;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Blocks</span>
+        <span class="card-id">ld-blocks</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="gather">
+      <div class="spinner-stage">
+        <div class="ld-gather" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-gather-group">
+    <div class="ld-gather-block" style="--ld-gather-x: 1; --ld-gather-y: 1;"></div>
+    <div class="ld-gather-block" style="--ld-gather-x: -1; --ld-gather-y: 1;"></div>
+    <div class="ld-gather-block" style="--ld-gather-x: 1; --ld-gather-y: -1;"></div>
+    <div class="ld-gather-block" style="--ld-gather-x: -1; --ld-gather-y: -1;"></div>
+  </div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Gather</span>
+        <span class="card-id">ld-gather</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="swirl">
+      <div class="spinner-stage">
+        <div class="ld-swirl" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-swirl-cell" style="--ld-step: 0;"></div>
+  <div class="ld-swirl-cell" style="--ld-step: 1;"></div>
+  <div class="ld-swirl-cell" style="--ld-step: 2;"></div>
+  <div class="ld-swirl-cell" style="--ld-step: 7;"></div>
+  <div></div>
+  <div class="ld-swirl-cell" style="--ld-step: 3;"></div>
+  <div class="ld-swirl-cell" style="--ld-step: 6;"></div>
+  <div class="ld-swirl-cell" style="--ld-step: 5;"></div>
+  <div class="ld-swirl-cell" style="--ld-step: 4;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Swirl</span>
+        <span class="card-id">ld-swirl</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="morph">
+      <div class="spinner-stage">
+        <div class="ld-morph" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-morph-shape"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Morph</span>
+        <span class="card-id">ld-morph</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="flip">
+      <div class="spinner-stage">
+        <div class="ld-flip" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-flip-face"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Flip</span>
+        <span class="card-id">ld-flip</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="pulse">
+      <div class="spinner-stage">
+        <svg class="ld-pulse" aria-hidden="true" role="presentation" viewBox="0 0 16 16" fill="none" style="--ld-size: 24px;">
+  <circle class="ld-pulse-ring" cx="8" cy="8" fill="currentColor" r="8"></circle>
+  <circle cx="8" cy="8" fill="currentColor" r="2"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Pulse</span>
+        <span class="card-id">ld-pulse</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="ripple">
+      <div class="spinner-stage">
+        <div class="ld-ripple" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-ripple-ring ld-ripple-ring-out" style="--ld-step: 0;"></div>
+  <div class="ld-ripple-ring ld-ripple-ring-out" style="--ld-step: 1;"></div>
+  <div class="ld-ripple-ring ld-ripple-ring-out" style="--ld-step: 2;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Ripple</span>
+        <span class="card-id">ld-ripple</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="cascade">
+      <div class="spinner-stage">
+        <svg class="ld-cascade" aria-hidden="true" role="presentation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" style="--ld-size: 24px;">
+  <circle class="ld-cascade-arc" cx="12" cy="12" r="10.5" stroke-dasharray="16.493361431346415 49.480084294039244" style="--ld-step: 0;"></circle>
+  <circle class="ld-cascade-arc" cx="12" cy="12" r="7" stroke-dasharray="10.995574287564276 32.98672286269283" style="--ld-step: 1;"></circle>
+  <circle class="ld-cascade-arc" cx="12" cy="12" r="3.5" stroke-dasharray="5.497787143782138 16.493361431346415" style="--ld-step: 2;"></circle>
+</svg>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Cascade</span>
+        <span class="card-id">ld-cascade</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="wave">
+      <div class="spinner-stage">
+        <div class="ld-wave" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-wave-bar ld-wave-bar-center" style="--ld-step: 0;"></div>
+  <div class="ld-wave-bar ld-wave-bar-center" style="--ld-step: 1;"></div>
+  <div class="ld-wave-bar ld-wave-bar-center" style="--ld-step: 2;"></div>
+  <div class="ld-wave-bar ld-wave-bar-center" style="--ld-step: 3;"></div>
+  <div class="ld-wave-bar ld-wave-bar-center" style="--ld-step: 4;"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Wave</span>
+        <span class="card-id">ld-wave</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="atom">
+      <div class="spinner-stage">
+        <div class="ld-atom" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-atom-shell"></div>
+  <div class="ld-atom-orbit" style="--ld-atom-tilt: 0deg;">
+    <div class="ld-atom-spin" style="--ld-step: 0;"><div class="ld-atom-ring"></div></div>
+  </div>
+  <div class="ld-atom-orbit" style="--ld-atom-tilt: 60deg;">
+    <div class="ld-atom-spin" style="--ld-step: 1;"><div class="ld-atom-ring"></div></div>
+  </div>
+  <div class="ld-atom-orbit" style="--ld-atom-tilt: 120deg;">
+    <div class="ld-atom-spin" style="--ld-step: 2;"><div class="ld-atom-ring"></div></div>
+  </div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Atom</span>
+        <span class="card-id">ld-atom</span>
+      </div>
+    </div>
+
+    <div class="card" data-name="orbit">
+      <div class="spinner-stage">
+        <div class="ld-orbit" aria-hidden="true" style="--ld-size: 24px;">
+  <div class="ld-orbit-dot"></div>
+  <div class="ld-orbit-track ld-orbit-spin"></div>
+</div>
+      </div>
+      <div class="card-footer">
+        <span class="card-title">Orbit</span>
+        <span class="card-id">ld-orbit</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

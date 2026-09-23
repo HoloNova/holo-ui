@@ -1,0 +1,792 @@
+{
+  "version": "1.0.0",
+  "source": "https://loading.dev/",
+  "synced_at": "2026-09-23",
+  "description": "Loading.dev — Minimalist micro-motion loading indicators and SVG spinners",
+  "license": "MIT",
+  "tech_stack": {
+    "css_framework": "Pure CSS Variables + SVG / Semantic HTML",
+    "runtime_dependencies": "None",
+    "required_files": [
+      "shared/base.css"
+    ],
+    "accessibility": "Built-in prefers-reduced-motion support"
+  },
+  "agent_entry_point": "COMPONENTS_GUIDE.md",
+  "components": [
+    {
+      "id": "ld-arc",
+      "number": 1,
+      "name": "Arc",
+      "description": "Single open stroke rotating in a circle.",
+      "category": "radial",
+      "metaphor": "Minimal open circular stroke sweeping 360 degrees.",
+      "tags": [
+        "arc",
+        "spinner",
+        "radial",
+        "button",
+        "inline",
+        "minimal"
+      ],
+      "default_duration_ms": 800,
+      "recommended_size": "14px - 28px",
+      "when_to_use": "Compact button submitting, inline text status, search input trailing icon",
+      "when_not_to_use": "Large fullscreen splash screens where hairline stroke feels too thin",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-arc.snippet.html",
+        "meta": "components/radial/ld-arc.meta.md"
+      }
+    },
+    {
+      "id": "ld-ring",
+      "number": 2,
+      "name": "Ring",
+      "description": "Delicate arc rotating in a faint circular track.",
+      "category": "radial",
+      "metaphor": "Luminous halo orbiting a dim concentric ring.",
+      "tags": [
+        "ring",
+        "circle",
+        "radial",
+        "track",
+        "refresh",
+        "modal"
+      ],
+      "default_duration_ms": 800,
+      "recommended_size": "16px - 32px",
+      "when_to_use": "Pull-to-refresh headers, modal dialog content loading, form submission",
+      "when_not_to_use": "Extremely tight 12px inline badges",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-ring.snippet.html",
+        "meta": "components/radial/ld-ring.meta.md"
+      }
+    },
+    {
+      "id": "ld-comet",
+      "number": 3,
+      "name": "Comet",
+      "description": "Full ring fading into a smooth luminous tail.",
+      "category": "radial",
+      "metaphor": "Comet head with radiant fading conic-gradient streak.",
+      "tags": [
+        "comet",
+        "glow",
+        "conic",
+        "gradient",
+        "ai",
+        "streaming"
+      ],
+      "default_duration_ms": 700,
+      "recommended_size": "20px - 40px",
+      "when_to_use": "AI prompt generation buffer, token streaming warmup, high-tech crypto verification",
+      "when_not_to_use": "Ultra-dense tabular data rows",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-comet.snippet.html",
+        "meta": "components/radial/ld-comet.meta.md"
+      }
+    },
+    {
+      "id": "ld-dual",
+      "number": 4,
+      "name": "Dual",
+      "description": "Two concentric arcs rotating in counter-opposing directions.",
+      "category": "radial",
+      "metaphor": "Planetary counter-rotating gears in mechanical equilibrium.",
+      "tags": [
+        "dual",
+        "counter",
+        "concentric",
+        "sync",
+        "handshake"
+      ],
+      "default_duration_ms": 1000,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Two-way data sync (cloud <-> local), bidirectional handshakes, compilation processes",
+      "when_not_to_use": "Simple unidirectional instantaneous requests",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-dual.snippet.html",
+        "meta": "components/radial/ld-dual.meta.md"
+      }
+    },
+    {
+      "id": "ld-trace",
+      "number": 5,
+      "name": "Trace",
+      "description": "Dash tracing the boundary outline of a rounded square.",
+      "category": "radial",
+      "metaphor": "Laser beam inspecting the perimeter of a squircle card.",
+      "tags": [
+        "trace",
+        "perimeter",
+        "squircle",
+        "card",
+        "skeleton",
+        "border"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "24px - 48px",
+      "when_to_use": "Card container loading, skeleton avatar placeholders, bounding box scanning",
+      "when_not_to_use": "Circular badge contexts where rectangular geometry clashes",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-trace.snippet.html",
+        "meta": "components/radial/ld-trace.meta.md"
+      }
+    },
+    {
+      "id": "ld-snake",
+      "number": 6,
+      "name": "Snake",
+      "description": "Elastic arc stretching and contracting as it revolves.",
+      "category": "radial",
+      "metaphor": "Fluid chord dynamically extending and snapping back along a circle.",
+      "tags": [
+        "snake",
+        "elastic",
+        "buffer",
+        "video",
+        "stream",
+        "network"
+      ],
+      "default_duration_ms": 1400,
+      "recommended_size": "18px - 32px",
+      "when_to_use": "Network bandwidth buffering, video/audio segment preloading, elastic wait times",
+      "when_not_to_use": "Strict fixed-interval micro-delays",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-snake.snippet.html",
+        "meta": "components/radial/ld-snake.meta.md"
+      }
+    },
+    {
+      "id": "ld-radar",
+      "number": 7,
+      "name": "Radar",
+      "description": "Radial gradient sweep with concentric distance rings.",
+      "category": "radial",
+      "metaphor": "Active sonar/radar sweep scanning for targets in 360 degrees.",
+      "tags": [
+        "radar",
+        "sonar",
+        "scan",
+        "discovery",
+        "bluetooth",
+        "agent-search"
+      ],
+      "default_duration_ms": 1500,
+      "recommended_size": "24px - 48px",
+      "when_to_use": "Device/bluetooth discovery, agent web exploration tool, security auditing",
+      "when_not_to_use": "Minimalist button spinners",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-radar.snippet.html",
+        "meta": "components/radial/ld-radar.meta.md"
+      }
+    },
+    {
+      "id": "ld-clock",
+      "number": 8,
+      "name": "Clock",
+      "description": "Single clock hand sweeping steadily around a subtle face.",
+      "category": "radial",
+      "metaphor": "Precision chronograph sweeping time.",
+      "tags": [
+        "clock",
+        "time",
+        "cron",
+        "schedule",
+        "long-running",
+        "timeout"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "18px - 32px",
+      "when_to_use": "Scheduled cron jobs, backup progress, SLA countdowns, time-series aggregation",
+      "when_not_to_use": "Sub-second instant network responses",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-clock.snippet.html",
+        "meta": "components/radial/ld-clock.meta.md"
+      }
+    },
+    {
+      "id": "ld-compass",
+      "number": 9,
+      "name": "Compass",
+      "description": "Four cardinal ticks rotating and snapping 90 degrees.",
+      "category": "radial",
+      "metaphor": "Magnetic needle calibrating and locking onto headings.",
+      "tags": [
+        "compass",
+        "heading",
+        "navigation",
+        "alignment",
+        "geo"
+      ],
+      "default_duration_ms": 500,
+      "recommended_size": "18px - 32px",
+      "when_to_use": "Map orientation alignment, sensor calibration, directional positioning",
+      "when_not_to_use": "Unoriented generic form saving",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/radial/ld-compass.snippet.html",
+        "meta": "components/radial/ld-compass.meta.md"
+      }
+    },
+    {
+      "id": "ld-bouncing-dots",
+      "number": 10,
+      "name": "Bouncing dots",
+      "description": "Three staggered dots bouncing harmonically up and down.",
+      "category": "dots",
+      "metaphor": "Conversational typing bubble activity.",
+      "tags": [
+        "dots",
+        "bouncing",
+        "typing",
+        "chat",
+        "message",
+        "conversational"
+      ],
+      "default_duration_ms": 500,
+      "recommended_size": "16px - 28px",
+      "when_to_use": "Chat bubble typing indicator ('Agent is typing...'), comment drafting, live messaging",
+      "when_not_to_use": "Vertical-height-constrained table rows where bounce clips cells",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/dots/ld-bouncing-dots.snippet.html",
+        "meta": "components/dots/ld-bouncing-dots.meta.md"
+      }
+    },
+    {
+      "id": "ld-circular-dots",
+      "number": 11,
+      "name": "Circular dots",
+      "description": "Eight dots arranged in a ring, the brightest stepping around.",
+      "category": "dots",
+      "metaphor": "Rotary LED dial with sequential illumination.",
+      "tags": [
+        "circular-dots",
+        "led",
+        "rotary",
+        "dial",
+        "boot",
+        "widget"
+      ],
+      "default_duration_ms": 800,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Application initialization, dashboard widget initial load, firmware flashing",
+      "when_not_to_use": "Inline text flow",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/dots/ld-circular-dots.snippet.html",
+        "meta": "components/dots/ld-circular-dots.meta.md"
+      }
+    },
+    {
+      "id": "ld-linear-dots",
+      "number": 12,
+      "name": "Linear dots",
+      "description": "Three in-line dots lighting up sequentially from left to right without vertical displacement.",
+      "category": "dots",
+      "metaphor": "Gentle pulsating ellipsis (...) in place.",
+      "tags": [
+        "linear-dots",
+        "ellipsis",
+        "inline",
+        "table",
+        "button-text",
+        "subtle"
+      ],
+      "default_duration_ms": 900,
+      "recommended_size": "14px - 20px",
+      "when_to_use": "Inline button text suffix (e.g., 'Saving...'), table cell updates, status bar footers",
+      "when_not_to_use": "Large prominent hero sections",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/dots/ld-linear-dots.snippet.html",
+        "meta": "components/dots/ld-linear-dots.meta.md"
+      }
+    },
+    {
+      "id": "ld-eclipse",
+      "number": 13,
+      "name": "Eclipse",
+      "description": "Two dots trading positions with 3D depth-scaling and opacity shift.",
+      "category": "dots",
+      "metaphor": "Binary star system passing in front and behind each other.",
+      "tags": [
+        "eclipse",
+        "binary",
+        "dual-star",
+        "ab-testing",
+        "transfer"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "20px - 32px",
+      "when_to_use": "Model comparison (A/B testing), token/asset balance transfers, dual-agent collaboration",
+      "when_not_to_use": "Simple solitary item loading",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/dots/ld-eclipse.snippet.html",
+        "meta": "components/dots/ld-eclipse.meta.md"
+      }
+    },
+    {
+      "id": "ld-leap",
+      "number": 14,
+      "name": "Leap",
+      "description": "Three dots in a line, the trailing dot hopping over its peers to the front.",
+      "category": "dots",
+      "metaphor": "Leapfrog progression through a stage pipeline.",
+      "tags": [
+        "leap",
+        "queue",
+        "pipeline",
+        "staged",
+        "progress",
+        "hop"
+      ],
+      "default_duration_ms": 1800,
+      "recommended_size": "18px - 28px",
+      "when_to_use": "Job queue advancement, ingestion pipeline step transitions, background task workers",
+      "when_not_to_use": "Instantaneous micro-feedback under 200ms",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/dots/ld-leap.snippet.html",
+        "meta": "components/dots/ld-leap.meta.md"
+      }
+    },
+    {
+      "id": "ld-slide",
+      "number": 15,
+      "name": "Slide",
+      "description": "Three dots sequentially sliding into the vacant corner of a square.",
+      "category": "dots",
+      "metaphor": "15-puzzle sliding tiles rotating around a perimeter.",
+      "tags": [
+        "slide",
+        "puzzle",
+        "reorder",
+        "grid-shift",
+        "shuffle"
+      ],
+      "default_duration_ms": 2400,
+      "recommended_size": "18px - 28px",
+      "when_to_use": "Layout rearrangement, card sorting/re-indexing, database partition re-balancing",
+      "when_not_to_use": "Standard linear text labels",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/dots/ld-slide.snippet.html",
+        "meta": "components/dots/ld-slide.meta.md"
+      }
+    },
+    {
+      "id": "ld-classic",
+      "number": 16,
+      "name": "Classic",
+      "description": "Twelve radial bars with stepped decay in opacity.",
+      "category": "classic",
+      "metaphor": "Apple iOS/macOS UIActivityIndicatorView radial wheel.",
+      "tags": [
+        "classic",
+        "apple",
+        "ios",
+        "macos",
+        "bars",
+        "system"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Standard system-level waiting state, iOS hybrid mobile web views, modal confirmation",
+      "when_not_to_use": "Futuristic dark-mode AI terminal aesthetics",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/classic/ld-classic.snippet.html",
+        "meta": "components/classic/ld-classic.meta.md"
+      }
+    },
+    {
+      "id": "ld-classic-v2",
+      "number": 17,
+      "name": "Classic v2",
+      "description": "Eight streamlined tick marks with two bright cursors stepping along the ring.",
+      "category": "classic",
+      "metaphor": "Modernized high-contrast radial tick indicator.",
+      "tags": [
+        "classic-v2",
+        "ticks",
+        "desktop",
+        "modern",
+        "nav"
+      ],
+      "default_duration_ms": 800,
+      "recommended_size": "16px - 28px",
+      "when_to_use": "Modern desktop web apps, top header navigation bars, developer dashboard status",
+      "when_not_to_use": "Ornate whimsical consumer apps",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/classic/ld-classic-v2.snippet.html",
+        "meta": "components/classic/ld-classic-v2.meta.md"
+      }
+    },
+    {
+      "id": "ld-loading",
+      "number": 18,
+      "name": "Loading",
+      "description": "The loading.dev signature mark, block ring with leading highlight.",
+      "category": "classic",
+      "metaphor": "Chunky 8-bit digital pixel wheel.",
+      "tags": [
+        "loading",
+        "pixel",
+        "retro",
+        "brand",
+        "square-ring"
+      ],
+      "default_duration_ms": 1000,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Tech devtools, retro cyber interfaces, platform brand loading mark",
+      "when_not_to_use": "Strict clinical corporate enterprise forms",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/classic/ld-loading.snippet.html",
+        "meta": "components/classic/ld-loading.meta.md"
+      }
+    },
+    {
+      "id": "ld-blocks",
+      "number": 19,
+      "name": "Blocks",
+      "description": "Nine blocks shrinking and growing in a sweep across a 3x3 grid.",
+      "category": "geometric",
+      "metaphor": "Cellular automaton or matrix spreadsheet calculation wave.",
+      "tags": [
+        "blocks",
+        "matrix",
+        "grid",
+        "spreadsheet",
+        "batch",
+        "compute"
+      ],
+      "default_duration_ms": 1300,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Spreadsheet math calculation, batch image processing, matrix data transformation",
+      "when_not_to_use": "Narrow text inline label spaces",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/geometric/ld-blocks.snippet.html",
+        "meta": "components/geometric/ld-blocks.meta.md"
+      }
+    },
+    {
+      "id": "ld-gather",
+      "number": 20,
+      "name": "Gather",
+      "description": "Four blocks pulling together, turning 90 degrees, and pushing apart.",
+      "category": "geometric",
+      "metaphor": "Mechanical docking, packaging, and module assembly.",
+      "tags": [
+        "gather",
+        "docking",
+        "bundle",
+        "package",
+        "assembly",
+        "compile"
+      ],
+      "default_duration_ms": 1600,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Module bundling (Webpack/Vite), package resolution, dependency build stage",
+      "when_not_to_use": "Single continuous streaming data feeds",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/geometric/ld-gather.snippet.html",
+        "meta": "components/geometric/ld-gather.meta.md"
+      }
+    },
+    {
+      "id": "ld-swirl",
+      "number": 21,
+      "name": "Swirl",
+      "description": "A bright cell chasing its trail around a 3x3 square perimeter.",
+      "category": "geometric",
+      "metaphor": "Circuit loop cycling around a static central node.",
+      "tags": [
+        "swirl",
+        "loop",
+        "etl",
+        "pipeline",
+        "cache",
+        "cycle"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Data ETL pipelines, cache preheating, cyclic checksum validation",
+      "when_not_to_use": "Sub-16px miniature icons",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/geometric/ld-swirl.snippet.html",
+        "meta": "components/geometric/ld-swirl.meta.md"
+      }
+    },
+    {
+      "id": "ld-morph",
+      "number": 22,
+      "name": "Morph",
+      "description": "A square rounding smoothly into a circle and back while rotating.",
+      "category": "geometric",
+      "metaphor": "Topological 2D shape interpolation.",
+      "tags": [
+        "morph",
+        "shape-shift",
+        "convert",
+        "topology",
+        "vector"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "18px - 32px",
+      "when_to_use": "File format conversion, view mode toggle (grid to list), vectorization rendering",
+      "when_not_to_use": "Strict non-polymorphic basic waiting states",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/geometric/ld-morph.snippet.html",
+        "meta": "components/geometric/ld-morph.meta.md"
+      }
+    },
+    {
+      "id": "ld-flip",
+      "number": 23,
+      "name": "Flip",
+      "description": "A 3D square tumbling over on one axis, then the other.",
+      "category": "geometric",
+      "metaphor": "3D tumbling cube face with perspective.",
+      "tags": [
+        "flip",
+        "3d",
+        "tumble",
+        "card-flip",
+        "render",
+        "perspective"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "18px - 32px",
+      "when_to_use": "3D model loading, flashcard generation, shader compilation",
+      "when_not_to_use": "Flat minimalist monochrome interfaces where 3D perspective looks out of place",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/geometric/ld-flip.snippet.html",
+        "meta": "components/geometric/ld-flip.meta.md"
+      }
+    },
+    {
+      "id": "ld-pulse",
+      "number": 24,
+      "name": "Pulse",
+      "description": "A ring rippling outward from a solid central dot.",
+      "category": "wave-pulse",
+      "metaphor": "Radio beacon ping or heartbeat expanding outward.",
+      "tags": [
+        "pulse",
+        "heartbeat",
+        "beacon",
+        "ping",
+        "live",
+        "status"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "16px - 32px",
+      "when_to_use": "Live server status, WebSocket connection heartbeat, ambient sensor ping",
+      "when_not_to_use": "Indeterminate lengthy calculations with no rhythmic frequency",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/wave-pulse/ld-pulse.snippet.html",
+        "meta": "components/wave-pulse/ld-pulse.meta.md"
+      }
+    },
+    {
+      "id": "ld-ripple",
+      "number": 25,
+      "name": "Ripple",
+      "description": "Three concentric rings spreading out continuously from the center.",
+      "category": "wave-pulse",
+      "metaphor": "Water droplet ripples or sound wave acoustic propagation.",
+      "tags": [
+        "ripple",
+        "acoustic",
+        "voice",
+        "listening",
+        "broadcast"
+      ],
+      "default_duration_ms": 1200,
+      "recommended_size": "24px - 48px",
+      "when_to_use": "Voice assistant listening state ('Listening...'), audio recording, broadcast signal sending",
+      "when_not_to_use": "Tight table cell inline status",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/wave-pulse/ld-ripple.snippet.html",
+        "meta": "components/wave-pulse/ld-ripple.meta.md"
+      }
+    },
+    {
+      "id": "ld-cascade",
+      "number": 26,
+      "name": "Cascade",
+      "description": "Three nested arcs fanning into a spiral and snapping back in line with elastic cubic-bezier.",
+      "category": "wave-pulse",
+      "metaphor": "Multi-tiered centrifugal governor snapping back into alignment.",
+      "tags": [
+        "cascade",
+        "spiral",
+        "nested",
+        "fan-out",
+        "heavy-job"
+      ],
+      "default_duration_ms": 1500,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "High-throughput asynchronous job orchestration, fan-out query execution",
+      "when_not_to_use": "Lightweight 14px button indicators",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/wave-pulse/ld-cascade.snippet.html",
+        "meta": "components/wave-pulse/ld-cascade.meta.md"
+      }
+    },
+    {
+      "id": "ld-wave",
+      "number": 27,
+      "name": "Wave",
+      "description": "Five vertical bars rising and falling harmonically in a sine wave.",
+      "category": "wave-pulse",
+      "metaphor": "Graphic equalizer or sound VU meter.",
+      "tags": [
+        "wave",
+        "equalizer",
+        "audio",
+        "voice-playback",
+        "speech",
+        "vu-meter"
+      ],
+      "default_duration_ms": 900,
+      "recommended_size": "16px - 32px",
+      "when_to_use": "Voice speech synthesis (TTS) playback, audio stream buffering, music playback activity",
+      "when_not_to_use": "Non-acoustic data requests (saving profile, updating email)",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/wave-pulse/ld-wave.snippet.html",
+        "meta": "components/wave-pulse/ld-wave.meta.md"
+      }
+    },
+    {
+      "id": "ld-atom",
+      "number": 28,
+      "name": "Atom",
+      "description": "Three 3D orbital rings tumbling continuously inside an outer sphere.",
+      "category": "orbital",
+      "metaphor": "Rutherford atom model with quantum orbital rings in 3D perspective.",
+      "tags": [
+        "atom",
+        "orbital",
+        "quantum",
+        "physics",
+        "ai-deep-thinking",
+        "neural"
+      ],
+      "default_duration_ms": 1000,
+      "recommended_size": "24px - 48px",
+      "when_to_use": "Deep neural reasoning, scientific simulations, complex quantum/AI computation",
+      "when_not_to_use": "Simple login button submission",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/orbital/ld-atom.snippet.html",
+        "meta": "components/orbital/ld-atom.meta.md"
+      }
+    },
+    {
+      "id": "ld-orbit",
+      "number": 29,
+      "name": "Orbit",
+      "description": "A fading half-arc track revolving smoothly around a central satellite dot.",
+      "category": "orbital",
+      "metaphor": "Satellite orbiting a planet along an elliptical gravitational track.",
+      "tags": [
+        "orbit",
+        "satellite",
+        "cluster",
+        "distributed",
+        "sync",
+        "cloud"
+      ],
+      "default_duration_ms": 750,
+      "recommended_size": "20px - 36px",
+      "when_to_use": "Distributed server cluster synchronization, multi-region database replication",
+      "when_not_to_use": "Compact inline typography contexts",
+      "dependencies": [
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/orbital/ld-orbit.snippet.html",
+        "meta": "components/orbital/ld-orbit.meta.md"
+      }
+    }
+  ]
+}

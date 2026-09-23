@@ -1,0 +1,1186 @@
+/* ==========================================================================
+   Holo UI Vault — loadingdev-components (Micro-Motion Loaders & Spinners)
+   Shared Base Stylesheet & Keyframes
+   Source: https://loading.dev/ (MIT License)
+   ========================================================================== */
+
+:root {
+  --ld-size: 20px;
+  --ld-duration: initial;
+  --ld-play-state: running;
+  --ld-step: 0;
+}
+
+.ld-arc {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+
+.ld-arc-spin {
+  transform-origin: center;
+  animation: ld-arc-rotate var(--ld-duration, 800ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-arc-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-arc-spin-stacked {
+  animation-name: ld-arc-rotate, ld-arc-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-arc-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-arc-spin {
+    animation: none;
+  }
+}
+
+
+.ld-atom {
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-atom-shell {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border: calc(var(--ld-size, 20px) * 0.055) solid currentColor;
+  border-radius: 9999px;
+}
+
+.ld-atom-orbit {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotate(var(--ld-atom-tilt)) rotateX(90deg);
+}
+
+.ld-atom-ring {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border: calc(var(--ld-size, 20px) * 0.045) solid currentColor;
+  border-radius: 9999px;
+  transform: rotateX(90deg);
+}
+
+
+.ld-atom-spin {
+  transform-origin: center;
+  animation: ld-atom-rotate var(--ld-duration, 1000ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-atom-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-atom-spin-stacked {
+  animation-name: ld-atom-rotate, ld-atom-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-atom-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-atom-spin {
+    animation: none;
+  }
+}
+
+
+.ld-atom-spin {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  animation-delay: calc(var(--ld-duration, 1000ms) * (var(--ld-step) - 3) / 3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-atom-spin {
+    transform: rotate(60deg);
+  }
+}
+
+.ld-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: calc(var(--ld-size, 20px) * 0.1);
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-blocks-cell {
+  background: currentColor;
+  border-radius: calc(var(--ld-size, 20px) * 0.0625);
+  animation: ld-blocks-sweep var(--ld-duration, 1300ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-blocks-cell-columns {
+  animation-delay: calc(var(--ld-duration, 1300ms) * (var(--ld-step) - 3) / 3);
+}
+
+.ld-blocks-cell-diagonal {
+  animation-delay: calc(var(--ld-duration, 1300ms) * (var(--ld-step) - 5) / 5);
+}
+
+.ld-blocks-cell-rows {
+  animation-delay: calc(var(--ld-duration, 1300ms) * (var(--ld-step) - 3) / 3);
+}
+
+@keyframes ld-blocks-sweep {
+  0%,
+  70%,
+  100% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-blocks-cell {
+    transform: scale(0.8);
+    animation: none;
+  }
+}
+
+.ld-bouncing-dots {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--ld-size, 20px) * 0.2);
+  height: var(--ld-size, 20px);
+}
+
+.ld-bouncing-dots-dot {
+  width: calc(var(--ld-size, 20px) * 0.25);
+  height: calc(var(--ld-size, 20px) * 0.25);
+  background: currentColor;
+  border-radius: 9999px;
+  animation: ld-bouncing-dots-bounce var(--ld-duration, 500ms) ease-in-out alternate infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 500ms) * (var(--ld-step) - 3) / 3);
+}
+
+@keyframes ld-bouncing-dots-bounce {
+  from {
+    transform: translateY(28%);
+  }
+  to {
+    transform: translateY(-72%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-bouncing-dots-dot {
+    animation: none;
+  }
+}
+
+.ld-cascade {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-cascade-arc {
+  transform-origin: center;
+  animation: ld-cascade-turn var(--ld-duration, 1500ms) cubic-bezier(0.68, -0.75, 0.265, 1.75) infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1500ms) * (var(--ld-step) - 24) / 24);
+}
+
+@keyframes ld-cascade-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-cascade-arc {
+    animation: none;
+  }
+}
+
+.ld-circular-dots {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-circular-dots-dot {
+  animation: ld-circular-dots-fade var(--ld-duration, 800ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 800ms) * (var(--ld-step) - 8) / 8);
+}
+
+@keyframes ld-circular-dots-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-circular-dots-dot {
+    opacity: 0.6;
+    animation: none;
+  }
+}
+
+.ld-classic {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-classic-inner {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-classic-bar {
+  position: absolute;
+  top: -3.9%;
+  left: -10%;
+  width: 24%;
+  height: 8%;
+  background: currentColor;
+  border-radius: 6px;
+  transform: rotate(calc(var(--ld-step) * 30deg)) translate(146%);
+  animation: ld-classic-spin var(--ld-duration, 1200ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1200ms) * (var(--ld-step) - 12) / 12);
+}
+
+@keyframes ld-classic-spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-classic-bar {
+    opacity: 0.5;
+    animation: none;
+  }
+}
+
+.ld-classic-v2 {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-classic-v2-tick {
+  animation: ld-classic-v2-fade var(--ld-duration, 800ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 800ms) * (var(--ld-step) - 8) / 8);
+}
+
+@keyframes ld-classic-v2-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-classic-v2-tick {
+    opacity: 0.5;
+    animation: none;
+  }
+}
+
+.ld-clock {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+
+.ld-clock-spin {
+  transform-origin: center;
+  animation: ld-clock-rotate var(--ld-duration, 1200ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-clock-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-clock-spin-stacked {
+  animation-name: ld-clock-rotate, ld-clock-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-clock-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-clock-spin {
+    animation: none;
+  }
+}
+
+
+.ld-comet {
+  --ld-comet-stroke: calc(var(--ld-size, 20px) * 0.12);
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-comet-spin {
+  position: absolute;
+  inset: 0;
+}
+
+.ld-comet-tail {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, transparent, currentColor);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--ld-comet-stroke)), #000 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - var(--ld-comet-stroke)), #000 0);
+}
+
+.ld-comet-head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--ld-comet-stroke);
+  height: var(--ld-comet-stroke);
+  background: currentColor;
+  border-radius: 9999px;
+  transform: translateX(-50%);
+}
+
+
+.ld-comet-spin {
+  transform-origin: center;
+  animation: ld-comet-rotate var(--ld-duration, 700ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-comet-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-comet-spin-stacked {
+  animation-name: ld-comet-rotate, ld-comet-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-comet-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-comet-spin {
+    animation: none;
+  }
+}
+
+
+.ld-dual {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+
+.ld-dual-spin {
+  transform-origin: center;
+  animation: ld-dual-rotate var(--ld-duration, 1000ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-dual-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-dual-spin-stacked {
+  animation-name: ld-dual-rotate, ld-dual-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-dual-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-dual-spin {
+    animation: none;
+  }
+}
+
+
+.ld-dual-inner {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-dual-inner {
+    transform: rotate(180deg);
+  }
+}
+
+.ld-eclipse {
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-eclipse-dot {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  background: currentColor;
+  border-radius: 50%;
+  animation: ld-eclipse-slide var(--ld-duration, 1200ms) ease-in-out infinite, ld-eclipse-depth var(--ld-duration, 1200ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1200ms) * (var(--ld-step) - 2) / 2);
+}
+
+@keyframes ld-eclipse-slide {
+  0%,
+  100% {
+    translate: 75% 0;
+  }
+  50% {
+    translate: -75% 0;
+  }
+}
+
+@keyframes ld-eclipse-depth {
+  0%,
+  50%,
+  100% {
+    opacity: 0.75;
+    scale: 1;
+  }
+  25% {
+    opacity: 1;
+    scale: 1.3;
+  }
+  75% {
+    opacity: 0.5;
+    scale: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-eclipse-dot {
+    translate: calc(var(--ld-step) * 150% - 75%) 0;
+    animation: none;
+  }
+}
+
+.ld-flip {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+  perspective: calc(var(--ld-size, 20px) * 3);
+}
+
+.ld-flip-face {
+  width: 64%;
+  height: 64%;
+  margin: 18%;
+  background: currentColor;
+  border-radius: calc(var(--ld-size, 20px) * 0.06);
+  animation: ld-flip-turn var(--ld-duration, 1200ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+@keyframes ld-flip-turn {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    transform: rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-flip-face {
+    animation: none;
+  }
+}
+
+.ld-gather {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-gather-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24%;
+  width: 100%;
+  height: 100%;
+  animation: ld-gather-turn var(--ld-duration, 1600ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-gather-block {
+  background: currentColor;
+  border-radius: calc(var(--ld-size, 20px) * 0.14);
+  animation: ld-gather-pull var(--ld-duration, 1600ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+@keyframes ld-gather-pull {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  30%,
+  60% {
+    transform: translate(
+      calc(var(--ld-gather-x) * 21.1%),
+      calc(var(--ld-gather-y) * 21.1%)
+    );
+  }
+}
+
+@keyframes ld-gather-turn {
+  0%,
+  30% {
+    transform: rotate(0);
+  }
+  60%,
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-gather-group,
+  .ld-gather-block {
+    animation: none;
+  }
+}
+
+.ld-leap {
+  --ld-leap-dot: round(calc(var(--ld-size, 20px) * 0.22), 1px);
+  --ld-leap-gap: round(down, calc((var(--ld-size, 20px) - var(--ld-leap-dot)) / 2), 1px);
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-leap-wrapper {
+  position: absolute;
+  top: round(calc((var(--ld-size, 20px) - var(--ld-leap-dot)) / 2), 1px);
+  left: calc(var(--ld-size, 20px) - var(--ld-leap-dot) - var(--ld-leap-gap) * 2);
+  width: calc(var(--ld-leap-gap) * 2 + var(--ld-leap-dot));
+  height: var(--ld-leap-dot);
+  animation: ld-leap-hop var(--ld-duration, 1800ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1800ms) * (var(--ld-step) - 3) / 3);
+}
+
+.ld-leap-dot {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--ld-leap-dot);
+  background: currentColor;
+  border-radius: 50%;
+}
+
+@keyframes ld-leap-hop {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  33.33% {
+    transform: translateX(0) rotate(180deg);
+  }
+  66.66% {
+    transform: translateX(calc(var(--ld-leap-gap) * -1)) rotate(180deg);
+  }
+  100% {
+    transform: translateX(calc(var(--ld-leap-gap) * -2)) rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-leap-wrapper {
+    transform: translateX(calc(var(--ld-step) * var(--ld-leap-gap)));
+    animation: none;
+  }
+}
+
+.ld-linear-dots {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--ld-size, 20px) * 0.1875);
+  height: var(--ld-size, 20px);
+}
+
+.ld-linear-dots-dot {
+  width: calc(var(--ld-size, 20px) * 0.1875);
+  height: calc(var(--ld-size, 20px) * 0.1875);
+  background: currentColor;
+  border-radius: 9999px;
+  animation: ld-linear-dots-fade var(--ld-duration, 900ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 900ms) * (var(--ld-step) - 3) / 3);
+}
+
+@keyframes ld-linear-dots-fade {
+  0% {
+    opacity: 1;
+  }
+  66.67% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-linear-dots-dot {
+    opacity: 0.75;
+    animation: none;
+  }
+}
+
+.ld-loading {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-loading-segment {
+  animation: ld-loading-fade var(--ld-duration, 1000ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1000ms) * (var(--ld-step) - 8) / 8);
+}
+
+@keyframes ld-loading-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-loading-segment {
+    opacity: 0.6;
+    animation: none;
+  }
+}
+
+.ld-morph {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-morph-shape {
+  width: 64%;
+  height: 64%;
+  margin: 18%;
+  background: currentColor;
+  border-radius: calc(var(--ld-size, 20px) * 0.08);
+  animation: ld-morph-round var(--ld-duration, 1200ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+@keyframes ld-morph-round {
+  0% {
+    border-radius: calc(var(--ld-size, 20px) * 0.08);
+    transform: rotate(0);
+  }
+  50% {
+    border-radius: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    border-radius: calc(var(--ld-size, 20px) * 0.08);
+    transform: rotate(90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-morph-shape {
+    animation: none;
+  }
+}
+
+.ld-orbit {
+  --ld-orbit-stroke: calc(var(--ld-size, 20px) * 0.0625);
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-orbit-track {
+  position: absolute;
+  inset: 8%;
+  border-radius: 9999px;
+  background: conic-gradient(from 180deg, transparent 0deg, currentColor 180deg, transparent 180deg);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--ld-orbit-stroke)), #000 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - var(--ld-orbit-stroke)), #000 0);
+}
+
+.ld-orbit-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: 25%;
+  background: currentColor;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+
+.ld-orbit-spin {
+  transform-origin: center;
+  animation: ld-orbit-rotate var(--ld-duration, 750ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-orbit-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-orbit-spin-stacked {
+  animation-name: ld-orbit-rotate, ld-orbit-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-orbit-spin {
+    animation: none;
+  }
+}
+
+
+.ld-pulse {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-pulse-ring {
+  transform-origin: center;
+  animation: ld-pulse-ripple var(--ld-duration, 1200ms) ease-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+@keyframes ld-pulse-ripple {
+  from {
+    opacity: 0.4;
+    transform: scale(0.25);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-pulse-ring {
+    opacity: 0.2;
+    animation: none;
+  }
+}
+
+.ld-ring {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+
+.ld-ring-spin {
+  transform-origin: center;
+  animation: ld-ring-rotate var(--ld-duration, 800ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-ring-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-ring-spin-stacked {
+  animation-name: ld-ring-rotate, ld-ring-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-ring-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-ring-spin {
+    animation: none;
+  }
+}
+
+
+.ld-ripple {
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-ripple-ring {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border: calc(var(--ld-size, 20px) * 0.08) solid currentColor;
+  border-radius: 9999px;
+  animation: ld-ripple-spread var(--ld-duration, 1200ms) ease-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1200ms) * (var(--ld-step) - 3) / 3);
+}
+
+.ld-ripple-ring-in {
+  animation-direction: reverse;
+}
+
+@keyframes ld-ripple-spread {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-ripple-ring {
+    opacity: 0.4;
+    transform: scale(calc((var(--ld-step) + 1) / 3));
+    animation: none;
+  }
+}
+
+.ld-slide {
+  position: relative;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-slide-dot {
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  width: 34%;
+  height: 34%;
+  background: currentColor;
+  border-radius: 50%;
+  animation: ld-slide-walk var(--ld-duration, 2400ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 2400ms) * (var(--ld-step) - 3) / 3);
+}
+
+@keyframes ld-slide-walk {
+  0% {
+    transform: translate(158.8%, 0);
+  }
+  8.33%,
+  25% {
+    transform: translate(158.8%, 158.8%);
+  }
+  33.33%,
+  50% {
+    transform: translate(0, 158.8%);
+  }
+  58.33%,
+  75% {
+    transform: translate(0, 0);
+  }
+  83.33%,
+  100% {
+    transform: translate(158.8%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-slide-dot {
+    transform: var(--ld-slide-rest);
+    animation: none;
+  }
+}
+
+.ld-snake {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+
+.ld-snake-spin {
+  transform-origin: center;
+  animation: ld-snake-rotate var(--ld-duration, 1400ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-snake-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-snake-spin-stacked {
+  animation-name: ld-snake-rotate, ld-snake-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-snake-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-snake-spin {
+    animation: none;
+  }
+}
+
+
+.ld-snake-dash {
+  animation: ld-snake-stretch var(--ld-duration, 1400ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+@keyframes ld-snake-stretch {
+  0% {
+    stroke-dasharray: 1 100;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 45 100;
+    stroke-dashoffset: -17;
+  }
+  100% {
+    stroke-dasharray: 45 100;
+    stroke-dashoffset: -62;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-snake-dash {
+    stroke-dasharray: 18 100;
+    animation: none;
+  }
+}
+
+.ld-swirl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: calc(var(--ld-size, 20px) * 0.15625);
+  box-sizing: border-box;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+  padding: calc(var(--ld-size, 20px) * 0.0625);
+}
+
+.ld-swirl-cell {
+  background: currentColor;
+  border-radius: calc(var(--ld-size, 20px) * 0.0625);
+  animation: ld-swirl-fade var(--ld-duration, 1200ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 1200ms) * (var(--ld-step) - 8) / 8);
+}
+
+@keyframes ld-swirl-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-swirl-cell {
+    opacity: 0.6;
+    animation: none;
+  }
+}
+
+.ld-trace {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+
+.ld-trace-spin {
+  transform-origin: center;
+  animation: ld-trace-rotate var(--ld-duration, 1200ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-trace-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-trace-spin-stacked {
+  animation-name: ld-trace-rotate, ld-trace-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-trace-rotate {
+  to {
+    stroke-dashoffset: -63.132741228718345;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-trace-spin {
+    animation: none;
+  }
+}
+
+
+.ld-wave {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-wave-bar {
+  width: calc(var(--ld-size, 20px) * 0.12);
+  height: 100%;
+  background: currentColor;
+  border-radius: 9999px;
+  animation: ld-wave-rise var(--ld-duration, 900ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+  animation-delay: calc(var(--ld-duration, 900ms) * (var(--ld-step) - 5) / 5);
+}
+
+.ld-wave-bar-bottom {
+  align-self: flex-end;
+}
+
+@keyframes ld-wave-rise {
+  0%,
+  100% {
+    height: 30%;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-wave-bar {
+    height: calc((0.4 + var(--ld-step) * 0.15) * 100%);
+    animation: none;
+  }
+}
+
+.ld-compass {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-compass-ticks {
+  transform-origin: center;
+  animation: ld-compass-turn var(--ld-duration, 500ms) ease-in-out infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+@keyframes ld-compass-turn {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-compass-ticks {
+    animation: none;
+  }
+}
+
+.ld-radar {
+  width: var(--ld-size, 20px);
+  height: var(--ld-size, 20px);
+}
+
+.ld-radar-spin {
+  transform-origin: center;
+  animation: ld-radar-rotate var(--ld-duration, 1500ms) linear infinite;
+  animation-play-state: var(--ld-play-state, running);
+}
+
+.ld-radar-spin-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.ld-radar-spin-stacked {
+  animation-name: ld-radar-rotate, ld-radar-rotate;
+  animation-timing-function: linear, ease-in-out;
+  animation-composition: add;
+}
+
+@keyframes ld-radar-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-radar-spin {
+    animation: none;
+  }
+}

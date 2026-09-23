@@ -68,88 +68,476 @@
       "tokens_css": "rewampui-components/shared/tokens.css",
       "shared_style": "rewampui-components/shared/base.css",
       "guide": "rewampui-components/COMPONENTS_GUIDE.md"
+    },
+    "micro_motion_indicators": {
+      "name": "Micro-Motion Loaders & Spinners (Source: loading.dev)",
+      "aesthetic": "Minimalist, zero-runtime, pure CSS/SVG, hairline single strokes, 3x3 pixel matrices, and 3D quantum wireframes.",
+      "when_to_use": [
+        "Inline button submission indicators ('Processing', 'Saving')",
+        "Conversational typing bubbles ('Agent is typing...')",
+        "Sensor detection, radar scanning, and web crawling exploration tools",
+        "AI reasoning warmup and token streaming buffers",
+        "Card container skeletons and avatar loading bounds",
+        "Two-way data synchronization and background worker progress"
+      ],
+      "when_not_to_use": [
+        "Heavy interactive product landing hero demonstrations requiring fluid physics (use Rewamp UI instead)",
+        "Step-by-step collapsible thought tree inspection (use Beautiful UI thinking-state instead)"
+      ],
+      "manifest": "loadingdev-components/loadingdev.manifest.json",
+      "shared_style": "loadingdev-components/shared/base.css",
+      "guide": "loadingdev-components/COMPONENTS_GUIDE.md"
     }
   },
   "by_function": {
     "ai_reasoning_and_states": {
       "description": "Visual indicators for AI processing, reasoning, and token generation.",
       "items": [
-        { "id": "loading-state",       "style": "ai_native_productivity",   "when": "General AI processing without step-by-step reasoning." },
-        { "id": "thinking-state",      "style": "ai_native_productivity",   "when": "LLM emits step-by-step reasoning, tool call logs, or chain-of-thought." },
-        { "id": "streaming-text",      "style": "ai_native_productivity",   "when": "Real-time token streaming with inline sources and action toolbars." },
-        { "id": "fluid-morph-orb",     "style": "kinetic_motion_tactile",   "when": "Dynamic morphing 3D fluid orb representing an active AI companion." },
-        { "id": "marbled-fluid-orb",   "style": "kinetic_motion_tactile",   "when": "Iridescent marbled 3D orb for generative and creative AI assistants." },
-        { "id": "particle-dot-orb",    "style": "kinetic_motion_tactile",   "when": "3D particle dot sphere visualizing neural computation." }
+        {
+          "id": "loading-state",
+          "style": "ai_native_productivity",
+          "when": "General AI processing without step-by-step reasoning."
+        },
+        {
+          "id": "thinking-state",
+          "style": "ai_native_productivity",
+          "when": "LLM emits step-by-step reasoning, tool call logs, or chain-of-thought."
+        },
+        {
+          "id": "streaming-text",
+          "style": "ai_native_productivity",
+          "when": "Real-time token streaming with inline sources and action toolbars."
+        },
+        {
+          "id": "fluid-morph-orb",
+          "style": "kinetic_motion_tactile",
+          "when": "Dynamic morphing 3D fluid orb representing an active AI companion."
+        },
+        {
+          "id": "marbled-fluid-orb",
+          "style": "kinetic_motion_tactile",
+          "when": "Iridescent marbled 3D orb for generative and creative AI assistants."
+        },
+        {
+          "id": "particle-dot-orb",
+          "style": "kinetic_motion_tactile",
+          "when": "3D particle dot sphere visualizing neural computation."
+        },
+        {
+          "id": "ld-comet",
+          "style": "micro_motion_indicators",
+          "when": "Luminous gradient sweep for AI reasoning buffers and token streaming warmup."
+        },
+        {
+          "id": "ld-atom",
+          "style": "micro_motion_indicators",
+          "when": "3D quantum orbital rings for deep neural computation and physics simulation."
+        }
       ]
     },
     "inputs_and_prompts": {
       "description": "User message composers, prompt bars, and search inputs.",
       "items": [
-        { "id": "prompt-bar",            "style": "ai_native_productivity",   "when": "Single-line or expanding AI prompt input with model selector." },
-        { "id": "chat-composer",         "style": "ai_native_productivity",   "when": "Full conversational panel with tab switching and message history." },
-        { "id": "search",                "style": "ai_native_productivity",   "when": "Quick command palette modal with keyboard shortcut indicator." },
-        { "id": "morph-search-capsule",  "style": "kinetic_motion_tactile",   "when": "Compact search icon that fluidly morphs into a full omnibox." },
-        { "id": "animated-search-demo",  "style": "kinetic_motion_tactile",   "when": "Simulated live search with typing and suggestion popovers." },
-        { "id": "typewriter-text",       "style": "kinetic_motion_tactile",   "when": "Terminal-style typewriter cycling through sample prompts." },
-        { "id": "character-scramble-text","style": "kinetic_motion_tactile",   "when": "Cyberpunk character decoding animation on hover or entrance." }
+        {
+          "id": "prompt-bar",
+          "style": "ai_native_productivity",
+          "when": "Single-line or expanding AI prompt input with model selector."
+        },
+        {
+          "id": "chat-composer",
+          "style": "ai_native_productivity",
+          "when": "Full conversational panel with tab switching and message history."
+        },
+        {
+          "id": "search",
+          "style": "ai_native_productivity",
+          "when": "Quick command palette modal with keyboard shortcut indicator."
+        },
+        {
+          "id": "morph-search-capsule",
+          "style": "kinetic_motion_tactile",
+          "when": "Compact search icon that fluidly morphs into a full omnibox."
+        },
+        {
+          "id": "animated-search-demo",
+          "style": "kinetic_motion_tactile",
+          "when": "Simulated live search with typing and suggestion popovers."
+        },
+        {
+          "id": "typewriter-text",
+          "style": "kinetic_motion_tactile",
+          "when": "Terminal-style typewriter cycling through sample prompts."
+        },
+        {
+          "id": "character-scramble-text",
+          "style": "kinetic_motion_tactile",
+          "when": "Cyberpunk character decoding animation on hover or entrance."
+        },
+        {
+          "id": "ld-bouncing-dots",
+          "style": "micro_motion_indicators",
+          "when": "Harmonic 3-dot bounce for real-time conversational chat typing activity."
+        },
+        {
+          "id": "ld-linear-dots",
+          "style": "micro_motion_indicators",
+          "when": "Subtle inline horizontal ellipsis for input action status."
+        }
       ]
     },
     "human_in_the_loop_and_tools": {
       "description": "User permission gates, action approval, and agent tool execution logs.",
       "items": [
-        { "id": "approval-card",             "style": "ai_native_productivity",   "when": "Agent requires explicit human confirmation before high-risk actions." },
-        { "id": "task-rows",                 "style": "ai_native_productivity",   "when": "Tracking multi-step agent execution progress." },
-        { "id": "tool-chips",                "style": "ai_native_productivity",   "when": "Displaying file edits and external API calls compactly." },
-        { "id": "selection-actions",         "style": "ai_native_productivity",   "when": "Contextual floating toolbar above highlighted text." },
-        { "id": "slide-to-confirm-button",   "style": "kinetic_motion_tactile",   "when": "High-friction slide confirmation for checkout or dangerous actions." },
-        { "id": "shimmer-button",            "style": "kinetic_motion_tactile",   "when": "High-converting CTA button with periodic light streak." },
-        { "id": "rainbow-button",            "style": "kinetic_motion_tactile",   "when": "Vibrant iridescent gradient border for special AI features." },
-        { "id": "googly-eyes-button",        "style": "kinetic_motion_tactile",   "when": "Playful cursor-tracking button with cheeky hover states." },
-        { "id": "gloss-button",              "style": "kinetic_motion_tactile",   "when": "Luxury marbled pill button with slow-drifting surface." },
-        { "id": "chrome-border-button",      "style": "kinetic_motion_tactile",   "when": "Futuristic button with rotating chrome reflection outline." },
-        { "id": "book-a-call-button",        "style": "kinetic_motion_tactile",   "when": "Lead generation booking button with avatar preview." },
-        { "id": "neumorphic-download-button","style": "kinetic_motion_tactile",   "when": "Circular download button with progress ring." },
-        { "id": "day-night-sky-toggle",      "style": "kinetic_motion_tactile",   "when": "Atmospheric theme toggle with animated sun, moon, and clouds." },
-        { "id": "landscape-orb-toggle",      "style": "kinetic_motion_tactile",   "when": "Theme switch with miniature landscape scene transitions." },
-        { "id": "glass-orb-toggle",          "style": "kinetic_motion_tactile",   "when": "Minimalist glassmorphic light/dark mode switch." }
+        {
+          "id": "approval-card",
+          "style": "ai_native_productivity",
+          "when": "Agent requires explicit human confirmation before high-risk actions."
+        },
+        {
+          "id": "task-rows",
+          "style": "ai_native_productivity",
+          "when": "Tracking multi-step agent execution progress."
+        },
+        {
+          "id": "tool-chips",
+          "style": "ai_native_productivity",
+          "when": "Displaying file edits and external API calls compactly."
+        },
+        {
+          "id": "selection-actions",
+          "style": "ai_native_productivity",
+          "when": "Contextual floating toolbar above highlighted text."
+        },
+        {
+          "id": "slide-to-confirm-button",
+          "style": "kinetic_motion_tactile",
+          "when": "High-friction slide confirmation for checkout or dangerous actions."
+        },
+        {
+          "id": "shimmer-button",
+          "style": "kinetic_motion_tactile",
+          "when": "High-converting CTA button with periodic light streak."
+        },
+        {
+          "id": "rainbow-button",
+          "style": "kinetic_motion_tactile",
+          "when": "Vibrant iridescent gradient border for special AI features."
+        },
+        {
+          "id": "googly-eyes-button",
+          "style": "kinetic_motion_tactile",
+          "when": "Playful cursor-tracking button with cheeky hover states."
+        },
+        {
+          "id": "gloss-button",
+          "style": "kinetic_motion_tactile",
+          "when": "Luxury marbled pill button with slow-drifting surface."
+        },
+        {
+          "id": "chrome-border-button",
+          "style": "kinetic_motion_tactile",
+          "when": "Futuristic button with rotating chrome reflection outline."
+        },
+        {
+          "id": "book-a-call-button",
+          "style": "kinetic_motion_tactile",
+          "when": "Lead generation booking button with avatar preview."
+        },
+        {
+          "id": "neumorphic-download-button",
+          "style": "kinetic_motion_tactile",
+          "when": "Circular download button with progress ring."
+        },
+        {
+          "id": "day-night-sky-toggle",
+          "style": "kinetic_motion_tactile",
+          "when": "Atmospheric theme toggle with animated sun, moon, and clouds."
+        },
+        {
+          "id": "landscape-orb-toggle",
+          "style": "kinetic_motion_tactile",
+          "when": "Theme switch with miniature landscape scene transitions."
+        },
+        {
+          "id": "glass-orb-toggle",
+          "style": "kinetic_motion_tactile",
+          "when": "Minimalist glassmorphic light/dark mode switch."
+        }
       ]
     },
     "data_and_diff": {
       "description": "Tabular records, status filtering, and version comparison.",
       "items": [
-        { "id": "diff-table",    "style": "ai_native_productivity",   "when": "Displaying before/after data changes proposed by an agent." },
-        { "id": "records-table", "style": "ai_native_productivity",   "when": "Complex CRM/database view with sticky columns and calculations." },
-        { "id": "filter-table",  "style": "ai_native_productivity",   "when": "Task and issue tracking tables with status badges." }
+        {
+          "id": "diff-table",
+          "style": "ai_native_productivity",
+          "when": "Displaying before/after data changes proposed by an agent."
+        },
+        {
+          "id": "records-table",
+          "style": "ai_native_productivity",
+          "when": "Complex CRM/database view with sticky columns and calculations."
+        },
+        {
+          "id": "filter-table",
+          "style": "ai_native_productivity",
+          "when": "Task and issue tracking tables with status badges."
+        }
       ]
     },
     "cards_and_knowledge": {
       "description": "RAG chunk previews, metric insights, and suggestions.",
       "items": [
-        { "id": "recommendation-card",          "style": "ai_native_productivity",   "when": "Agent proactive suggestion with confidence meter." },
-        { "id": "context-cards",                "style": "ai_native_productivity",   "when": "RAG retrieval chunk display with file badges." },
-        { "id": "insight-cards",                "style": "ai_native_productivity",   "when": "Time-series chart with crosshair tracker and delta." },
-        { "id": "fine-tune-card",               "style": "ai_native_productivity",   "when": "Model hyperparameter adjustment controls." },
-        { "id": "arch-card-carousel",           "style": "kinetic_motion_tactile",   "when": "Arched perspective 3D image and project showcase." },
-        { "id": "editorial-3-d-orbit-carousel", "style": "kinetic_motion_tactile",   "when": "Circular orbiting 3D card ring for case studies." },
-        { "id": "perspective-flip-deck",        "style": "kinetic_motion_tactile",   "when": "Tactile swipeable perspective card deck." },
-        { "id": "diagonal-card-stack",          "style": "kinetic_motion_tactile",   "when": "Diagonal layered card stack that spreads on hover." }
+        {
+          "id": "recommendation-card",
+          "style": "ai_native_productivity",
+          "when": "Agent proactive suggestion with confidence meter."
+        },
+        {
+          "id": "context-cards",
+          "style": "ai_native_productivity",
+          "when": "RAG retrieval chunk display with file badges."
+        },
+        {
+          "id": "insight-cards",
+          "style": "ai_native_productivity",
+          "when": "Time-series chart with crosshair tracker and delta."
+        },
+        {
+          "id": "fine-tune-card",
+          "style": "ai_native_productivity",
+          "when": "Model hyperparameter adjustment controls."
+        },
+        {
+          "id": "arch-card-carousel",
+          "style": "kinetic_motion_tactile",
+          "when": "Arched perspective 3D image and project showcase."
+        },
+        {
+          "id": "editorial-3-d-orbit-carousel",
+          "style": "kinetic_motion_tactile",
+          "when": "Circular orbiting 3D card ring for case studies."
+        },
+        {
+          "id": "perspective-flip-deck",
+          "style": "kinetic_motion_tactile",
+          "when": "Tactile swipeable perspective card deck."
+        },
+        {
+          "id": "diagonal-card-stack",
+          "style": "kinetic_motion_tactile",
+          "when": "Diagonal layered card stack that spreads on hover."
+        }
       ]
     },
     "navigation_and_presentation": {
       "description": "Structural sidebars, workflow graphs, and kinetic displays.",
       "items": [
-        { "id": "sidebar-nav",           "style": "ai_native_productivity",   "when": "Collapsible application sidebar with workspace switcher." },
-        { "id": "flowchart",             "style": "ai_native_productivity",   "when": "Branching decision trees and agent execution graphs." },
-        { "id": "code-block",            "style": "ai_native_productivity",   "when": "Dark-themed code viewer with title bar and copy action." },
-        { "id": "agent-screen",          "style": "ai_native_productivity",   "when": "Demonstrating computer-use agents driving a virtual browser." },
-        { "id": "hero-morph-navbar",     "style": "kinetic_motion_tactile",   "when": "Header that morphs between floating pill and expanded bar." },
-        { "id": "magnetic-pill-navbar",  "style": "kinetic_motion_tactile",   "when": "Segmented navbar with smooth magnetic sliding indicator." },
-        { "id": "pill-expand-navbar",    "style": "kinetic_motion_tactile",   "when": "Compact icon-only pill dock that expands labels." },
-        { "id": "kinetic-reel-text",     "style": "kinetic_motion_tactile",   "when": "Slot-machine rolling text for rotating header terms." },
-        { "id": "split-text-reveal",     "style": "kinetic_motion_tactile",   "when": "Staggered character split reveal for hero sections." },
-        { "id": "spotlight-text",        "style": "kinetic_motion_tactile",   "when": "Cursor-following radial spotlight text reveal." },
-        { "id": "flip-3-d-text",         "style": "kinetic_motion_tactile",   "when": "3D perspective rotating text label on hover." },
-        { "id": "velocity-marquee-text", "style": "kinetic_motion_tactile",   "when": "Infinite scrolling ticker that accelerates with scroll." }
+        {
+          "id": "sidebar-nav",
+          "style": "ai_native_productivity",
+          "when": "Collapsible application sidebar with workspace switcher."
+        },
+        {
+          "id": "flowchart",
+          "style": "ai_native_productivity",
+          "when": "Branching decision trees and agent execution graphs."
+        },
+        {
+          "id": "code-block",
+          "style": "ai_native_productivity",
+          "when": "Dark-themed code viewer with title bar and copy action."
+        },
+        {
+          "id": "agent-screen",
+          "style": "ai_native_productivity",
+          "when": "Demonstrating computer-use agents driving a virtual browser."
+        },
+        {
+          "id": "hero-morph-navbar",
+          "style": "kinetic_motion_tactile",
+          "when": "Header that morphs between floating pill and expanded bar."
+        },
+        {
+          "id": "magnetic-pill-navbar",
+          "style": "kinetic_motion_tactile",
+          "when": "Segmented navbar with smooth magnetic sliding indicator."
+        },
+        {
+          "id": "pill-expand-navbar",
+          "style": "kinetic_motion_tactile",
+          "when": "Compact icon-only pill dock that expands labels."
+        },
+        {
+          "id": "kinetic-reel-text",
+          "style": "kinetic_motion_tactile",
+          "when": "Slot-machine rolling text for rotating header terms."
+        },
+        {
+          "id": "split-text-reveal",
+          "style": "kinetic_motion_tactile",
+          "when": "Staggered character split reveal for hero sections."
+        },
+        {
+          "id": "spotlight-text",
+          "style": "kinetic_motion_tactile",
+          "when": "Cursor-following radial spotlight text reveal."
+        },
+        {
+          "id": "flip-3-d-text",
+          "style": "kinetic_motion_tactile",
+          "when": "3D perspective rotating text label on hover."
+        },
+        {
+          "id": "velocity-marquee-text",
+          "style": "kinetic_motion_tactile",
+          "when": "Infinite scrolling ticker that accelerates with scroll."
+        }
+      ]
+    },
+    "micro_states_and_indicators": {
+      "description": "Granular inline, button, container, and sensor micro-loading indicators.",
+      "items": [
+        {
+          "id": "ld-arc",
+          "style": "micro_motion_indicators",
+          "when": "Button submitting, inline text status, search trailing icon."
+        },
+        {
+          "id": "ld-ring",
+          "style": "micro_motion_indicators",
+          "when": "Pull-to-refresh, modal content loading, clean form submission."
+        },
+        {
+          "id": "ld-bouncing-dots",
+          "style": "micro_motion_indicators",
+          "when": "Chat typing bubble ('Agent is typing...'), comment drafting."
+        },
+        {
+          "id": "ld-linear-dots",
+          "style": "micro_motion_indicators",
+          "when": "Inline button label suffix ('Saving...'), compact status bars."
+        },
+        {
+          "id": "ld-comet",
+          "style": "micro_motion_indicators",
+          "when": "AI prompt generation buffer, token streaming warmup."
+        },
+        {
+          "id": "ld-dual",
+          "style": "micro_motion_indicators",
+          "when": "Two-way data sync, bidirectional handshakes, compile processes."
+        },
+        {
+          "id": "ld-radar",
+          "style": "micro_motion_indicators",
+          "when": "Device discovery, agent web search/crawl tools, security scan."
+        },
+        {
+          "id": "ld-atom",
+          "style": "micro_motion_indicators",
+          "when": "Deep neural reasoning, quantum/physics calculations."
+        },
+        {
+          "id": "ld-trace",
+          "style": "micro_motion_indicators",
+          "when": "Card container skeletons, code block loading boundaries."
+        },
+        {
+          "id": "ld-blocks",
+          "style": "micro_motion_indicators",
+          "when": "Matrix calculations, batch image processing, grid operations."
+        },
+        {
+          "id": "ld-gather",
+          "style": "micro_motion_indicators",
+          "when": "Module bundling, dependency resolution, code compiling."
+        },
+        {
+          "id": "ld-swirl",
+          "style": "micro_motion_indicators",
+          "when": "Data ETL pipelines, cache preheating, cyclic checksum validation."
+        },
+        {
+          "id": "ld-morph",
+          "style": "micro_motion_indicators",
+          "when": "File format conversion, view mode toggle (grid to list)."
+        },
+        {
+          "id": "ld-flip",
+          "style": "micro_motion_indicators",
+          "when": "3D model loading, flashcard generation, shader compilation."
+        },
+        {
+          "id": "ld-ripple",
+          "style": "micro_motion_indicators",
+          "when": "Voice assistant active listening ('Listening...'), audio broadcast."
+        },
+        {
+          "id": "ld-wave",
+          "style": "micro_motion_indicators",
+          "when": "Speech synthesis (TTS) playback, audio stream buffering."
+        },
+        {
+          "id": "ld-pulse",
+          "style": "micro_motion_indicators",
+          "when": "Server heartbeat, live WebSocket connection ping."
+        },
+        {
+          "id": "ld-clock",
+          "style": "micro_motion_indicators",
+          "when": "Cron tasks, backup progress, SLA countdowns, timeouts."
+        },
+        {
+          "id": "ld-compass",
+          "style": "micro_motion_indicators",
+          "when": "Map orientation alignment, sensor calibration, directional positioning."
+        },
+        {
+          "id": "ld-classic",
+          "style": "micro_motion_indicators",
+          "when": "Classic iOS/macOS system-level native waiting indicator."
+        },
+        {
+          "id": "ld-classic-v2",
+          "style": "micro_motion_indicators",
+          "when": "Modern streamlined desktop app navigation status."
+        },
+        {
+          "id": "ld-loading",
+          "style": "micro_motion_indicators",
+          "when": "Tech devtools, retro cyber interfaces, platform brand loading mark."
+        },
+        {
+          "id": "ld-orbit",
+          "style": "micro_motion_indicators",
+          "when": "Distributed node cluster synchronization, cloud replicas."
+        },
+        {
+          "id": "ld-leap",
+          "style": "micro_motion_indicators",
+          "when": "Job queue advancement, pipeline stage transitions."
+        },
+        {
+          "id": "ld-slide",
+          "style": "micro_motion_indicators",
+          "when": "Layout rearrangement, card sorting/re-indexing, partition balancing."
+        },
+        {
+          "id": "ld-snake",
+          "style": "micro_motion_indicators",
+          "when": "Network bandwidth buffering, video/audio segment preloading."
+        },
+        {
+          "id": "ld-cascade",
+          "style": "micro_motion_indicators",
+          "when": "High-throughput asynchronous job orchestration, fan-out query execution."
+        },
+        {
+          "id": "ld-circular-dots",
+          "style": "micro_motion_indicators",
+          "when": "Application initialization, dashboard widget initial load."
+        }
       ]
     }
   },
@@ -163,7 +551,10 @@
       "Maintain a single primary style hierarchy per viewport. Do not mix sharp brutalist elements with soft squircles.",
       "Pair Rewamp UI tactile buttons (slide-to-confirm-button, shimmer-button) with Beautiful UI's dense data tables for high-impact action points.",
       "Rewamp UI components use SF Pro and squircle radii, aligning natively with Apple HIG foundations.",
-      "When integrating Rewamp UI 3D AI Orbs, contain them in Apple Liquid Glass or Beautiful UI dark cards to maintain visual continuity."
+      "When integrating Rewamp UI 3D AI Orbs, contain them in Apple Liquid Glass or Beautiful UI dark cards to maintain visual continuity.",
+      "Embed loading.dev micro-indicators (e.g., ld-arc, ld-linear-dots) directly inside Beautiful UI prompt bars and table cells for zero-runtime lightweight feedback without layout shift.",
+      "When embedding loading.dev indicators into Apple HIG layouts, set color: var(--apple-accent-blue) or var(--apple-text-secondary) and size to 16px-22px to match SF Pro symbol scales.",
+      "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states."
     ]
   }
 }
