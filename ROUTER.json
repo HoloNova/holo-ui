@@ -1,11 +1,12 @@
 {
   "name": "Holo UI Vault — Agent Router v2",
-  "version": "2.0.0",
+  "version": "2.1.0",
+  "feature_tokens_spec": "FEATURE_TOKENS.md",
   "context_guards": [
     "DO NOT read beautifului-components/index.html (32KB preview, wastes tokens).",
     "DO NOT scan directories. Use paths from this file or manifests.",
     "Budget: max 1 snippet + 1 shared CSS per task.",
-    "For ambiguous requests, read the relevant *.manifest.json from the style entry below.",
+    "For ambiguous requests, filter by feature tokens in INDEX.json (spec in FEATURE_TOKENS.md).",
     "Review STYLE_AND_SELECTION_GUIDE.md only when mixing multiple styles."
   ],
   "styles": {

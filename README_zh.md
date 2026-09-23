@@ -33,6 +33,7 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 |:---|:---|:---|
 | [`INDEX.json`](./INDEX.json) | 机器主索引 | 双向检索核心：包含按风格索引（`by_style`）、按功能索引（`by_function`）与风格融合规则（`style_harmonization`）。 |
 | [`ROUTER.json`](./ROUTER.json) | 极速路由器 | 轻量级单点分发路由表，将用户意图与组件 ID 一键映射至本地文件路径。 |
+| [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | 特征 Token 规范 | 7 维度正交分类系统规范，用于 Agent 检索消歧与组件能力精确指纹标记。 |
 | [`STYLE_AND_SELECTION_GUIDE.md`](./STYLE_AND_SELECTION_GUIDE.md) | 技术指导文档 | 风格象限定位、AI 防过度组装四大天条与跨风格 Token 融合指南。 |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | 贡献者标准 | 外部贡献者收录新 UI 库、规范代码片段、注册双向索引的操作指南。 |
 

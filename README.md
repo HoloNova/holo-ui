@@ -33,6 +33,7 @@ The repository provides structured indices tailored for machine lookup and devel
 |:---|:---|:---|
 | [`INDEX.json`](./INDEX.json) | Machine Index | Master dual-dimension index (`by_style`, `by_function`, and `style_harmonization`). |
 | [`ROUTER.json`](./ROUTER.json) | Fast Router | High-speed dispatch map mapping user intents and component IDs to file paths. |
+| [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | Feature Spec | 7-dimension orthogonal classification taxonomy for Agent-driven component disambiguation. |
 | [`STYLE_AND_SELECTION_GUIDE.md`](./STYLE_AND_SELECTION_GUIDE.md) | Technical Guide | Style quadrant analysis, anti-over-assembly rules, and token harmonization patterns. |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | Standard SOP | Contribution criteria for submitting new component libraries and design tokens. |
 
