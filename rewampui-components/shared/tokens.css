@@ -1,0 +1,131 @@
+/**
+ * Rewamp UI Design Tokens v1.0.0
+ * Source: RewampUI (rewampui.com) & src/Agent.md
+ * Style: Kinetic Motion & Tactile Physics
+ * 
+ * Rules:
+ * - SF Pro is the primary typeface.
+ * - Lilac palette is used for brand accents, glows, and active indicators.
+ * - Orange ramp is used for high-energy call-to-actions and confirmation feedback.
+ * - Neutral ramp provides crisp surface contrast in dark and light modes.
+ */
+
+:root {
+  /* ─────────────────────────────────────────────────────────── */
+  /* 1. TYPOGRAPHY (SF Pro Stack)                                */
+  /* ─────────────────────────────────────────────────────────── */
+  --font-rewamp-sans: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-rewamp-mono: "Geist Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ─────────────────────────────────────────────────────────── */
+  /* 2. BRAND COLOR PALETTE: LILAC                               */
+  /* ─────────────────────────────────────────────────────────── */
+  --rewamp-lilac-600: #C1B4D8; /* Strongest brand accent */
+  --rewamp-lilac-500: #D4CBE5; /* Primary brand color */
+  --rewamp-lilac-400: #E4DDF0; /* Secondary accent, dark-mode brand */
+  --rewamp-lilac-300: #EEEAF7; /* Soft tint / ambient glow */
+  --rewamp-lilac-200: #F6F4FB; /* Very light tint */
+  --rewamp-lilac-100: #FBFAFE; /* Near-white tint */
+
+  /* ─────────────────────────────────────────────────────────── */
+  /* 3. ACCENT COLOR PALETTE: ORANGE                             */
+  /* ─────────────────────────────────────────────────────────── */
+  --rewamp-orange-900: #7A2D12;
+  --rewamp-orange-800: #A63E1B;
+  --rewamp-orange-700: #D2471A;
+  --rewamp-orange-600: #EC5E27; /* Core brand orange */
+  --rewamp-orange-500: #F17648;
+  --rewamp-orange-400: #F58F6A;
+  --rewamp-orange-300: #F9B494;
+  --rewamp-orange-200: #FCD5C2;
+  --rewamp-orange-100: #FEEBE1;
+
+  /* ─────────────────────────────────────────────────────────── */
+  /* 4. NEUTRAL PALETTE                                          */
+  /* ─────────────────────────────────────────────────────────── */
+  --rewamp-neutral-900: #171717; /* Primary text (light) */
+  --rewamp-neutral-800: #262626; /* Text & icons */
+  --rewamp-neutral-700: #404040; /* Secondary text */
+  --rewamp-neutral-600: #525252; /* Subtle text */
+  --rewamp-neutral-400: #A8A8A8; /* Borders & placeholders */
+  --rewamp-neutral-300: #D4D4D4; /* Dividers */
+  --rewamp-neutral-200: #E5E5E5; /* Subtle surfaces */
+  --rewamp-neutral-100: #F5F5F5; /* Backgrounds */
+  --rewamp-neutral-50:  #FAFAFA; /* Elevated backgrounds */
+
+  /* Semantic State Colors */
+  --rewamp-success: #16A34A;
+  --rewamp-warning: #FBBF24;
+  --rewamp-error:   #EF4444;
+
+  /* ─────────────────────────────────────────────────────────── */
+  /* 5. LIGHT THEME SEMANTICS (Default)                          */
+  /* ─────────────────────────────────────────────────────────── */
+  --rewamp-bg: var(--rewamp-neutral-50);
+  --rewamp-surface: #FFFFFF;
+  --rewamp-surface-subtle: #FAFAFA;
+  --rewamp-elevated: var(--rewamp-neutral-100);
+  --rewamp-border: var(--rewamp-neutral-200);
+  --rewamp-border-subtle: #EAEAEA;
+  --rewamp-text-primary: var(--rewamp-neutral-900);
+  --rewamp-text-secondary: var(--rewamp-neutral-700);
+  --rewamp-text-subtle: var(--rewamp-neutral-400);
+  --rewamp-brand: var(--rewamp-lilac-500);
+  --rewamp-brand-strong: var(--rewamp-lilac-600);
+  --rewamp-accent: var(--rewamp-orange-600);
+
+  /* ─────────────────────────────────────────────────────────── */
+  /* 6. SPRING PHYSICS & MOTION CURVES                           */
+  /* ─────────────────────────────────────────────────────────── */
+  --rewamp-spring-stiff: cubic-bezier(0.16, 1, 0.3, 1);
+  --rewamp-spring-gentle: cubic-bezier(0.25, 1, 0.5, 1);
+  --rewamp-spring-wobbly: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --rewamp-spring-bounce: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --rewamp-duration-fast: 150ms;
+  --rewamp-duration-normal: 250ms;
+  --rewamp-duration-slow: 400ms;
+
+  /* ─────────────────────────────────────────────────────────── */
+  /* 7. RADII & ELEVATIONS                                       */
+  /* ─────────────────────────────────────────────────────────── */
+  --rewamp-radius-sm: 8px;
+  --rewamp-radius-md: 12px;
+  --rewamp-radius-lg: 16px;
+  --rewamp-radius-xl: 24px;
+  --rewamp-radius-full: 9999px;
+
+  --rewamp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --rewamp-shadow-md: 0 6px 18px -12px rgba(0, 0, 0, 0.12);
+  --rewamp-shadow-lg: 0 14px 30px -12px rgba(0, 0, 0, 0.25);
+  --rewamp-shadow-glow: 0 0 40px rgba(212, 203, 229, 0.35);
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/* DARK THEME SEMANTICS                                          */
+/* ───────────────────────────────────────────────────────────── */
+:root.dark,
+[data-theme="dark"] {
+  --rewamp-bg: #0C0C0C;
+  --rewamp-surface: #141414;
+  --rewamp-surface-subtle: #181818;
+  --rewamp-elevated: #1F1F1F;
+  --rewamp-border: #2C2C2C;
+  --rewamp-border-subtle: #222222;
+  --rewamp-text-primary: #EDEDED;
+  --rewamp-text-secondary: #A0A0A0;
+  --rewamp-text-subtle: #666666;
+  --rewamp-brand: var(--rewamp-lilac-400);
+  --rewamp-brand-strong: var(--rewamp-lilac-300);
+  --rewamp-accent: var(--rewamp-orange-500);
+
+  --rewamp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --rewamp-shadow-md: 0 6px 18px -12px rgba(0, 0, 0, 0.5);
+  --rewamp-shadow-lg: 0 14px 30px -12px rgba(0, 0, 0, 0.7);
+  --rewamp-shadow-glow: 0 0 40px rgba(228, 221, 240, 0.15);
+}

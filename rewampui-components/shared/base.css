@@ -1,0 +1,99 @@
+/**
+ * Rewamp UI Base Styles & Motion Animations
+ * Source: RewampUI (rewampui.com)
+ */
+
+@import "./tokens.css";
+
+/* Base font and rendering */
+.rewamp-container,
+.rewamp-root {
+  font-family: var(--font-rewamp-sans);
+  color: var(--rewamp-text-primary);
+  background-color: var(--rewamp-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/* KEYFRAME ANIMATIONS                                           */
+/* ───────────────────────────────────────────────────────────── */
+
+/* Shimmer Light Streak */
+@keyframes rewamp-shimmer {
+  0% { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+/* Pulse / Breathing Glow */
+@keyframes rewamp-glow-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Slow Fluid Mix Orbit */
+@keyframes rewamp-orb-drift-1 {
+  0% { transform: translate(0%, 0%) scale(1); }
+  33% { transform: translate(30%, 15%) scale(1.15); }
+  66% { transform: translate(-20%, 35%) scale(0.9); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+@keyframes rewamp-orb-drift-2 {
+  0% { transform: translate(0%, 0%) scale(1); }
+  33% { transform: translate(-35%, -20%) scale(0.85); }
+  66% { transform: translate(25%, -15%) scale(1.1); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+/* Velocity Marquee Infinite Scroll */
+@keyframes rewamp-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Ripple Expansion */
+@keyframes rewamp-ripple {
+  0% { transform: scale(0); opacity: 0.6; }
+  100% { transform: scale(3.5); opacity: 0; }
+}
+
+/* Subtle Floating Hover */
+@keyframes rewamp-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/* UTILITY CLASSES                                               */
+/* ───────────────────────────────────────────────────────────── */
+.rewamp-animate-shimmer {
+  animation: rewamp-shimmer 2.2s infinite ease-in-out;
+}
+
+.rewamp-animate-glow {
+  animation: rewamp-glow-pulse 4s infinite ease-in-out;
+}
+
+.rewamp-animate-float {
+  animation: rewamp-float 3s infinite ease-in-out;
+}
+
+.rewamp-font-sf {
+  font-family: var(--font-rewamp-sans);
+}
+
+.rewamp-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+:root.dark .rewamp-glass,
+[data-theme="dark"] .rewamp-glass {
+  background: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
