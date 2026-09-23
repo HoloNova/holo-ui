@@ -45,6 +45,7 @@ The repository provides structured indices tailored for machine lookup and devel
 | Library | Source | Style DNA | Components | Tech Stack | Status |
 |:---|:---|:---|:---:|:---|:---:|
 | [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native Productivity (Dark-first, 0.5px hairlines, thinking states, prompt bars) | 21 | Tailwind CSS v4 + OKLCH Tokens | Complete |
+| [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | Kinetic Motion & Tactile Physics (Spring physics, 3D card orbits, fluid AI orbs, slide-to-confirm) | 30 | React 19 + Framer Motion + Three.js | Complete |
 
 ### B. Authoritative Design Systems & Tokens
 
@@ -84,6 +85,22 @@ holo-ui/
 |       |-- task-management/         # task-rows
 |       `-- visualization/           # flowchart
 |
+|-- rewampui-components/             # Component library: Kinetic Motion & Tactile Physics
+|   |-- catalog.json                 # Machine manifest (30 curated motion primitives)
+|   |-- COMPONENTS_GUIDE.md          # Integration guide, SF Pro rules, and spring params
+|   |-- shared/
+|   |   |-- tokens.css               # Lilac, Orange, and Neutral color tokens
+|   |   |-- base.css                 # Base motion keyframes, blur filters, and reset
+|   |   `-- siteTheme.js             # Theme synchronization and persistence helper
+|   `-- components/
+|       |-- buttons/                 # slide-to-confirm, shimmer, rainbow, gloss, etc.
+|       |-- toggles/                 # day-night-sky, landscape-orb, glass-orb
+|       |-- search-bars/             # morph-search-capsule, animated-search-demo
+|       |-- text/                    # kinetic-reel, split-reveal, scramble, etc.
+|       |-- cards/                   # arch-carousel, 3d-orbit, flip-deck, etc.
+|       |-- navbars/                 # hero-morph, magnetic-pill, pill-expand
+|       `-- ai-ui/                   # fluid-morph-orb, marbled-fluid, particle-dot
+|
 `-- guidelines/apple-design/         # Design specification: Apple Human Interface
     |-- tokens/
     |   `-- tokens.css               # Apple liquid glass, squircles, and spring tokens
@@ -103,22 +120,27 @@ When an AI coding agent is tasked with building or enhancing a user interface, i
                   [User UI Request]
                           |
                           v
-         [Step 1: Check INDEX.json / ROUTER.json]
-         Map request to style and component ID.
+         [Step 1: Read ROUTER.json (~1,100 tokens)]
+         Map request to component ID or style.
+         +-- Known component ID --> get snippet path --> Step 3
+         +-- Known style/intent --> note manifest path --> Step 2
+         +-- Ambiguous --> match keywords --> identify style --> Step 2
                           |
                           v
-      [Step 2: Consult STYLE_AND_SELECTION_GUIDE.md]
-      Verify selection against anti-over-assembly rules.
+      [Step 2: Read relevant *.manifest.json (~625-875 tokens)]
+      Select component ID by matching tags and "when" field.
+      (Only load 1 manifest, never all 3)
                           |
                           v
         [Step 3: Retrieve Minimal Target Files]
-        - Fetch single *.snippet.html file.
+        - Fetch single *.snippet.html/.jsx file.
         - Fetch shared/base.css or tokens.css.
         - DO NOT fetch index.html or scan directories.
                           |
                           v
                [Step 4: Integrate Code]
         Assemble HTML markup and CSS tokens into project.
+        Optional: read *.meta.md for customization tips.
 ```
 
 ---

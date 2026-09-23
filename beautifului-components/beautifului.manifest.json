@@ -1,0 +1,30 @@
+{
+  "style": "ai_native_productivity",
+  "aesthetic": "Dark-first, cold neutral, OKLCH palette, 0.5px hairlines, tabular figures",
+  "shared_css": "shared/base.css",
+  "tech": "Tailwind CSS v4 + HTML (no JS framework)",
+  "fonts": ["Inter", "JetBrains Mono"],
+  "items": [
+    { "id": "loading-state",       "tags": ["loading", "shimmer", "ai"],        "when": "General AI processing indicator" },
+    { "id": "thinking-state",      "tags": ["thinking", "accordion", "ai"],     "when": "Step-by-step reasoning chain display" },
+    { "id": "streaming-text",      "tags": ["streaming", "sources", "cursor"],  "when": "Real-time token streaming with citations" },
+    { "id": "approval-card",       "tags": ["approval", "hitl", "form"],        "when": "Human confirmation before risky agent actions" },
+    { "id": "tool-chips",          "tags": ["chips", "tool-calls", "agent"],    "when": "Compact file edits and API call display" },
+    { "id": "selection-actions",   "tags": ["bulk", "toolbar", "floating"],     "when": "Contextual toolbar above highlighted text" },
+    { "id": "task-rows",           "tags": ["tasks", "status", "progress"],     "when": "Multi-step agent task status tracking" },
+    { "id": "chat-composer",       "tags": ["chat", "message", "composer"],     "when": "Full conversational panel with history" },
+    { "id": "prompt-bar",          "tags": ["prompt", "input", "ai-input"],     "when": "Single-line AI prompt with model selector" },
+    { "id": "search",              "tags": ["search", "cmdk", "palette"],       "when": "Quick command palette modal" },
+    { "id": "recommendation-card", "tags": ["suggestion", "cta", "insight"],    "when": "Agent proactive suggestion with confidence" },
+    { "id": "context-cards",       "tags": ["context", "preview", "rag"],       "when": "RAG retrieval chunk with file badges" },
+    { "id": "insight-cards",       "tags": ["metric", "chart", "sparkline"],    "when": "Time-series chart with crosshair tracker" },
+    { "id": "fine-tune-card",      "tags": ["model", "config", "training"],     "when": "Model hyperparameter adjustment controls" },
+    { "id": "diff-table",          "tags": ["diff", "comparison", "code"],      "when": "Before/after data changes by agent" },
+    { "id": "records-table",       "tags": ["table", "data", "crm"],            "when": "Complex CRM view with sticky columns" },
+    { "id": "filter-table",        "tags": ["table", "filter", "status"],       "when": "Task/issue tracker with status badges" },
+    { "id": "sidebar-nav",         "tags": ["sidebar", "nav", "menu"],          "when": "Collapsible sidebar with workspace switcher" },
+    { "id": "flowchart",           "tags": ["diagram", "graph", "workflow"],    "when": "Branching decision trees and agent graphs" },
+    { "id": "code-block",          "tags": ["code", "syntax", "monospace"],     "when": "Dark code viewer with line numbers and copy" },
+    { "id": "agent-screen",        "tags": ["layout", "desktop", "agent"],      "when": "Computer-use agent virtual browser demo" }
+  ]
+}

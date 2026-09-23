@@ -118,7 +118,7 @@ Here is an example entry when registering a new component in `INDEX.json`:
 4. Run a sanity check to verify relative paths:
    ```bash
    # Ensure all referenced files exist
-   python -c "import json, os; idx = json.load(open('INDEX.json', encoding='utf-8')); [print('Missing:', f) for cat in idx['by_function'].values() for item in cat.get('items', []) if not os.path.exists(item['file'])]"
+   python -c "import json, os; r = json.load(open('ROUTER.json', encoding='utf-8')); [print('Missing:', f) for k, f in r['components'].items() if not os.path.exists(f)]"
    ```
 5. Commit with a clean conventional commit message:
    ```bash

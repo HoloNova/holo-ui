@@ -1,0 +1,20 @@
+{
+  "style": "apple_human_interface",
+  "aesthetic": "Humanist, liquid glass blur, squircle curvature, spring physics, 44pt touch",
+  "tokens_css": "tokens/tokens.css",
+  "prompt_preset": "PROMPT_PRESET.md",
+  "foundations": {
+    "typography": "foundations/typography.md",
+    "materials": "foundations/materials-and-vibrancy.md",
+    "layout_touch": "foundations/layout-and-touch.md",
+    "motion_spring": "foundations/motion-and-spring.md"
+  },
+  "patterns": {
+    "modals_sheets": "patterns/modals-and-sheets.md"
+  },
+  "resources": {
+    "official_downloads": "resources/official-downloads.md",
+    "wwdc_videos": "resources/wwdc-design-videos.md",
+    "hig_component_index": "resources/hig-component-index.md"
+  }
+}

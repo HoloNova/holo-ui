@@ -186,31 +186,11 @@ Add class `dark` to `<html>` or any container element:
 
 ---
 
-## Component Quick Reference
+### Component Quick Reference
 
-| # | ID | Name | Direct Snippet File Path | Key Tags |
-|---|----|----|--------------------------|---------|
-| 01 | `loading-state` | Loading State | `components/ai-states/loading-state.snippet.html` | loading, shimmer, animation |
-| 02 | `thinking-state` | Thinking | `components/ai-states/thinking-state.snippet.html` | thinking, expandable, traces |
-| 03 | `streaming-text` | Streaming Text | `components/ai-states/streaming-text.snippet.html` | streaming, sources, follow-ups |
-| 04 | `approval-card` | Approval Card | `components/interaction/approval-card.snippet.html` | human-in-the-loop, form, hitl |
-| 05 | `tool-chips` | Tool Chips | `components/interaction/tool-chips.snippet.html` | chips, tool-calls, agent |
-| 06 | `task-rows` | Task Rows | `components/task-management/task-rows.snippet.html` | tasks, status, running |
-| 07 | `chat-composer` | Chat | `components/input/chat-composer.snippet.html` | chat, message, composer |
-| 08 | `prompt-bar` | Prompt Bar | `components/input/prompt-bar.snippet.html` | prompt, ai-input |
-| 09 | `recommendation-card` | Recommendation Card | `components/cards/recommendation-card.snippet.html` | suggestion, next-action |
-| 10 | `context-cards` | Context Cards | `components/cards/context-cards.snippet.html` | context, preview |
-| 11 | `diff-table` | Diff Table | `components/data/diff-table.snippet.html` | diff, comparison, code |
-| 12 | `records-table` | Records Table | `components/data/records-table.snippet.html` | table, data, records |
-| 13 | `filter-table` | Filter Table | `components/data/filter-table.snippet.html` | table, filter, search |
-| 14 | `sidebar-nav` | Sidebar Nav | `components/navigation/sidebar-nav.snippet.html` | sidebar, navigation, menu |
-| 15 | `search` | Search | `components/input/search.snippet.html` | search, dropdown, results |
-| 16 | `flowchart` | Flowchart | `components/visualization/flowchart.snippet.html` | diagram, graph, nodes |
-| 17 | `insight-cards` | Insight Cards | `components/cards/insight-cards.snippet.html` | metric, dashboard, chart |
-| 18 | `code-block` | Code Block | `components/code/code-block.snippet.html` | syntax, highlight, display |
-| 19 | `fine-tune-card` | Fine-tune Card | `components/cards/fine-tune-card.snippet.html` | model, configuration, ai |
-| 20 | `selection-actions` | Selection Actions | `components/interaction/selection-actions.snippet.html` | bulk, contextual, toolbar |
-| 21 | `agent-screen` | Agent Screen | `components/layout/agent-screen.snippet.html` | full-page, desktop, agent |
+For the full component inventory with IDs, tags, and recommended use cases, see [`beautifului.manifest.json`](./beautifului.manifest.json).
+
+To look up a component's snippet file path by ID, see [`ROUTER.json`](../ROUTER.json) at the root.
 
 ---
 
