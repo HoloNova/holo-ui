@@ -45,6 +45,7 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 | 库标识 | 来源站点 | 核心视觉风格 / 场景 | 组件数量 | 技术栈 | 状态 |
 |:---|:---|:---|:---:|:---|:---:|
 | [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native 生产力风格（暗色优先、0.5px 发丝线、思考展开链、Prompt Bar） | 21 | Tailwind CSS v4 + OKLCH Tokens | 完整就绪 |
+| [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | 动态物理动效风格（弹簧物理、3D 轨道卡片、动态流体 Orb、滑动确认） | 30 | React 19 + Framer Motion + Three.js | 完整就绪 |
 
 ### B. 权威设计系统与 Tokens
 
@@ -85,6 +86,22 @@ holo-ui/
 |       |-- navigation/              # sidebar-nav
 |       |-- task-management/         # task-rows
 |       `-- visualization/           # flowchart
+|
+|-- rewampui-components/             # 组件库：动态物理动效与触觉交互风格
+|   |-- catalog.json                 # 组件清单元数据（30 个核心原语）
+|   |-- COMPONENTS_GUIDE.md          # 库专属接入指引、SF Pro 规范与弹簧参数
+|   |-- shared/
+|   |   |-- tokens.css               # Lilac 紫丁香与 Orange 能量色、中性底色
+|   |   |-- base.css                 # 基础动效关键帧、玻璃模糊与工具类
+|   |   `-- siteTheme.js             # 主题切换事件与持久化同步辅助器
+|   `-- components/
+|       |-- buttons/                 # slide-to-confirm, shimmer, rainbow, gloss, etc.
+|       |-- toggles/                 # day-night-sky, landscape-orb, glass-orb
+|       |-- search-bars/             # morph-search-capsule, animated-search-demo
+|       |-- text/                    # kinetic-reel, split-reveal, scramble, etc.
+|       |-- cards/                   # arch-carousel, 3d-orbit, flip-deck, etc.
+|       |-- navbars/                 # hero-morph, magnetic-pill, pill-expand
+|       `-- ai-ui/                   # fluid-morph-orb, marbled-fluid, particle-dot
 |
 `-- guidelines/apple-design/         # 设计规范：Apple Human Interface
     |-- tokens/

@@ -1,0 +1,862 @@
+{
+  "version": "1.0.0",
+  "source": "https://rewampui.com/",
+  "synced_at": "2026-09-23",
+  "description": "Rewamp UI — Highly interactive, physically-accurate, Framer Motion-driven components",
+  "tech_stack": {
+    "framework": "React 19 + Framer Motion",
+    "css_framework": "Tailwind CSS v4",
+    "fonts": [
+      "SF Pro",
+      "Geist Mono"
+    ],
+    "dependencies": {
+      "framer-motion": "^12.0.0",
+      "lucide-react": "^0.475.0",
+      "three": "^0.174.0"
+    },
+    "required_files": [
+      "shared/tokens.css",
+      "shared/base.css",
+      "shared/siteTheme.js"
+    ]
+  },
+  "agent_entry_point": "COMPONENTS_GUIDE.md",
+  "components": [
+    {
+      "id": "slide-to-confirm-button",
+      "name": "Slide To Confirm Button",
+      "component_name": "SlideToConfirmButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "confirm",
+        "slider",
+        "order",
+        "ecommerce",
+        "checkout",
+        "truck"
+      ],
+      "use_cases": [
+        "Order confirmation and checkout flows",
+        "High-friction critical actions",
+        "Slide-to-approve interactions"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/buttons/slide-to-confirm-button.snippet.jsx",
+        "meta": "components/buttons/slide-to-confirm-button.meta.md"
+      }
+    },
+    {
+      "id": "shimmer-button",
+      "name": "Shimmer Button",
+      "component_name": "ShimmerButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "shimmer",
+        "light-streak",
+        "pill",
+        "modern",
+        "cta"
+      ],
+      "use_cases": [
+        "Primary Call-to-Action buttons",
+        "Hero section conversion buttons",
+        "Premium action highlights"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/buttons/shimmer-button.snippet.jsx",
+        "meta": "components/buttons/shimmer-button.meta.md"
+      }
+    },
+    {
+      "id": "rainbow-button",
+      "name": "Rainbow Button",
+      "component_name": "RainbowButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "rainbow",
+        "gradient",
+        "iridescent",
+        "border",
+        "pill"
+      ],
+      "use_cases": [
+        "Eye-catching hero CTAs",
+        "Special feature launch announcements",
+        "AI / Magic trigger buttons"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/buttons/rainbow-button.snippet.jsx",
+        "meta": "components/buttons/rainbow-button.meta.md"
+      }
+    },
+    {
+      "id": "googly-eyes-button",
+      "name": "Googly Eyes Button",
+      "component_name": "GooglyEyesButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "eyes",
+        "cursor-tracking",
+        "playful",
+        "interactive",
+        "physics"
+      ],
+      "use_cases": [
+        "Playful landing pages",
+        "Easter egg interactions",
+        "Humorous engagement triggers"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/buttons/googly-eyes-button.snippet.jsx",
+        "meta": "components/buttons/googly-eyes-button.meta.md"
+      }
+    },
+    {
+      "id": "gloss-button",
+      "name": "Gloss Button",
+      "component_name": "GlossButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "gloss",
+        "marbled",
+        "oil-slick",
+        "iridescent",
+        "pill"
+      ],
+      "use_cases": [
+        "Luxury and design-forward landing pages",
+        "Artistic brand hero buttons",
+        "Soft pastel aesthetic apps"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/buttons/gloss-button.snippet.jsx",
+        "meta": "components/buttons/gloss-button.meta.md"
+      }
+    },
+    {
+      "id": "chrome-border-button",
+      "name": "Chrome Border Button",
+      "component_name": "ChromeBorderButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "chrome",
+        "metallic",
+        "reflective",
+        "conic-gradient",
+        "pill"
+      ],
+      "use_cases": [
+        "Modern metallic SaaS buttons",
+        "Hardware/tech product showcases",
+        "Futuristic UI styling"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/buttons/chrome-border-button.snippet.jsx",
+        "meta": "components/buttons/chrome-border-button.meta.md"
+      }
+    },
+    {
+      "id": "book-a-call-button",
+      "name": "Book A Call Button",
+      "component_name": "BookACallButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "booking",
+        "calendar",
+        "call",
+        "consultation",
+        "avatar"
+      ],
+      "use_cases": [
+        "Founder / agency consultation booking",
+        "Lead generation CTA",
+        "Personal service inquiries"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/buttons/book-a-call-button.snippet.jsx",
+        "meta": "components/buttons/book-a-call-button.meta.md"
+      }
+    },
+    {
+      "id": "neumorphic-download-button",
+      "name": "Neumorphic Download Button",
+      "component_name": "NeumorphicDownloadButton",
+      "category": "buttons",
+      "tags": [
+        "button",
+        "download",
+        "progress",
+        "circular",
+        "neumorphic",
+        "status"
+      ],
+      "use_cases": [
+        "File download triggers with progress feedback",
+        "Export and report generation buttons",
+        "Install state triggers"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/buttons/neumorphic-download-button.snippet.jsx",
+        "meta": "components/buttons/neumorphic-download-button.meta.md"
+      }
+    },
+    {
+      "id": "day-night-sky-toggle",
+      "name": "Day Night Sky Toggle",
+      "component_name": "DayNightSkyToggle",
+      "category": "toggles",
+      "tags": [
+        "toggle",
+        "theme",
+        "dark-mode",
+        "sun",
+        "moon",
+        "stars",
+        "clouds"
+      ],
+      "use_cases": [
+        "Interactive dark/light mode toggle",
+        "Atmospheric scene switches",
+        "Whimsical setting controls"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/toggles/day-night-sky-toggle.snippet.jsx",
+        "meta": "components/toggles/day-night-sky-toggle.meta.md"
+      }
+    },
+    {
+      "id": "landscape-orb-toggle",
+      "name": "Landscape Orb Toggle",
+      "component_name": "LandscapeOrbToggle",
+      "category": "toggles",
+      "tags": [
+        "toggle",
+        "orb",
+        "landscape",
+        "sun",
+        "mountains",
+        "theme"
+      ],
+      "use_cases": [
+        "Visual theme switcher with landscape artwork",
+        "Premium settings toggle"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/toggles/landscape-orb-toggle.snippet.jsx",
+        "meta": "components/toggles/landscape-orb-toggle.meta.md"
+      }
+    },
+    {
+      "id": "glass-orb-toggle",
+      "name": "Glass Orb Toggle",
+      "component_name": "GlassOrbToggle",
+      "category": "toggles",
+      "tags": [
+        "toggle",
+        "glass",
+        "specular",
+        "orb",
+        "minimalist",
+        "theme"
+      ],
+      "use_cases": [
+        "Sleek glassmorphism theme toggle",
+        "Spatial UI toggle switches"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/toggles/glass-orb-toggle.snippet.tsx",
+        "meta": "components/toggles/glass-orb-toggle.meta.md"
+      }
+    },
+    {
+      "id": "morph-search-capsule",
+      "name": "Morph Search Capsule",
+      "component_name": "MorphSearchCapsule",
+      "category": "search-bars",
+      "tags": [
+        "search",
+        "capsule",
+        "morph",
+        "fluid",
+        "svg",
+        "input"
+      ],
+      "use_cases": [
+        "Minimalist navbar search button that morphs into input",
+        "Omnibox / global query input"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/search-bars/morph-search-capsule.snippet.jsx",
+        "meta": "components/search-bars/morph-search-capsule.meta.md"
+      }
+    },
+    {
+      "id": "animated-search-demo",
+      "name": "Animated Search Demo",
+      "component_name": "AnimatedSearchDemo",
+      "category": "search-bars",
+      "tags": [
+        "search",
+        "animated",
+        "suggestions",
+        "typeahead",
+        "input",
+        "interactive"
+      ],
+      "use_cases": [
+        "Simulated search demo with auto-typing query",
+        "Interactive product walkthroughs"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/search-bars/animated-search-demo.snippet.jsx",
+        "meta": "components/search-bars/animated-search-demo.meta.md"
+      }
+    },
+    {
+      "id": "kinetic-reel-text",
+      "name": "Kinetic Reel Text",
+      "component_name": "KineticReelText",
+      "category": "text",
+      "tags": [
+        "text",
+        "kinetic",
+        "reel",
+        "rolling",
+        "slot-machine",
+        "typography"
+      ],
+      "use_cases": [
+        "Dynamic rotating headline words",
+        "Feature cycling text",
+        "Key value metric changes"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/kinetic-reel-text.snippet.jsx",
+        "meta": "components/text/kinetic-reel-text.meta.md"
+      }
+    },
+    {
+      "id": "split-text-reveal",
+      "name": "Split Text Reveal",
+      "component_name": "SplitTextReveal",
+      "category": "text",
+      "tags": [
+        "text",
+        "split",
+        "reveal",
+        "mask",
+        "heading",
+        "typography"
+      ],
+      "use_cases": [
+        "Editorial landing page hero headings",
+        "Section entrance reveals",
+        "Dramatic title reveals"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/split-text-reveal.snippet.jsx",
+        "meta": "components/text/split-text-reveal.meta.md"
+      }
+    },
+    {
+      "id": "character-scramble-text",
+      "name": "Character Scramble Text",
+      "component_name": "CharacterScrambleText",
+      "category": "text",
+      "tags": [
+        "text",
+        "scramble",
+        "decoder",
+        "matrix",
+        "cyberpunk",
+        "reveal"
+      ],
+      "use_cases": [
+        "Tech / AI headline reveals",
+        "Security / crypto theme headings",
+        "Interactive hover-to-decode effects"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/character-scramble-text.snippet.jsx",
+        "meta": "components/text/character-scramble-text.meta.md"
+      }
+    },
+    {
+      "id": "spotlight-text",
+      "name": "Spotlight Text",
+      "component_name": "SpotlightText",
+      "category": "text",
+      "tags": [
+        "text",
+        "spotlight",
+        "radial",
+        "mask",
+        "hover",
+        "bloom"
+      ],
+      "use_cases": [
+        "Interactive cursor-following headline illumination",
+        "Dark-themed feature headers"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/spotlight-text.snippet.jsx",
+        "meta": "components/text/spotlight-text.meta.md"
+      }
+    },
+    {
+      "id": "flip-3-d-text",
+      "name": "Flip 3D Text",
+      "component_name": "Flip3DText",
+      "category": "text",
+      "tags": [
+        "text",
+        "3d",
+        "flip",
+        "rotation",
+        "perspective",
+        "hover"
+      ],
+      "use_cases": [
+        "3D rotating navigation links",
+        "Interactive button labels",
+        "Playful headline hover states"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/flip-3-d-text.snippet.jsx",
+        "meta": "components/text/flip-3-d-text.meta.md"
+      }
+    },
+    {
+      "id": "typewriter-text",
+      "name": "Typewriter Text",
+      "component_name": "TypewriterText",
+      "category": "text",
+      "tags": [
+        "text",
+        "typewriter",
+        "typing",
+        "cursor",
+        "terminal",
+        "code"
+      ],
+      "use_cases": [
+        "Hero section value proposition cycling",
+        "Terminal-style introductions",
+        "AI streaming prompt previews"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/typewriter-text.snippet.jsx",
+        "meta": "components/text/typewriter-text.meta.md"
+      }
+    },
+    {
+      "id": "velocity-marquee-text",
+      "name": "Velocity Marquee Text",
+      "component_name": "VelocityMarqueeText",
+      "category": "text",
+      "tags": [
+        "text",
+        "marquee",
+        "velocity",
+        "scroll-driven",
+        "infinite",
+        "ticker"
+      ],
+      "use_cases": [
+        "Infinite brand ticker that accelerates on scroll",
+        "Feature highlights ticker bar"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/text/velocity-marquee-text.snippet.jsx",
+        "meta": "components/text/velocity-marquee-text.meta.md"
+      }
+    },
+    {
+      "id": "arch-card-carousel",
+      "name": "Arch Card Carousel",
+      "component_name": "ArchCardCarousel",
+      "category": "cards",
+      "tags": [
+        "card",
+        "carousel",
+        "arch",
+        "curved",
+        "gallery",
+        "3d"
+      ],
+      "use_cases": [
+        "Showcasing portfolio items in an arched perspective",
+        "Product image showcases",
+        "Creative agency galleries"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css"
+      ],
+      "files": {
+        "snippet": "components/cards/arch-card-carousel.snippet.tsx",
+        "meta": "components/cards/arch-card-carousel.meta.md"
+      }
+    },
+    {
+      "id": "editorial-3-d-orbit-carousel",
+      "name": "Editorial 3D Orbit Carousel",
+      "component_name": "Editorial3DOrbitCarousel",
+      "category": "cards",
+      "tags": [
+        "card",
+        "orbit",
+        "carousel",
+        "editorial",
+        "3d",
+        "depth"
+      ],
+      "use_cases": [
+        "3D circular orbiting case study cards",
+        "Interactive customer testimonials"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/cards/editorial-3-d-orbit-carousel.snippet.jsx",
+        "meta": "components/cards/editorial-3-d-orbit-carousel.meta.md"
+      }
+    },
+    {
+      "id": "perspective-flip-deck",
+      "name": "Perspective Flip Deck",
+      "component_name": "PerspectiveFlipDeck",
+      "category": "cards",
+      "tags": [
+        "card",
+        "deck",
+        "flip",
+        "perspective",
+        "stack",
+        "drag"
+      ],
+      "use_cases": [
+        "Swipeable product feature cards",
+        "Flashcards or onboarding decks"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/cards/perspective-flip-deck.snippet.jsx",
+        "meta": "components/cards/perspective-flip-deck.meta.md"
+      }
+    },
+    {
+      "id": "diagonal-card-stack",
+      "name": "Diagonal Card Stack",
+      "component_name": "DiagonalCardStack",
+      "category": "cards",
+      "tags": [
+        "card",
+        "stack",
+        "diagonal",
+        "layered",
+        "hover-spread",
+        "depth"
+      ],
+      "use_cases": [
+        "Layered document or resource preview cards",
+        "Interactive portfolio previews"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/cards/diagonal-card-stack.snippet.jsx",
+        "meta": "components/cards/diagonal-card-stack.meta.md"
+      }
+    },
+    {
+      "id": "fluid-morph-orb",
+      "name": "Fluid Morph Orb",
+      "component_name": "FluidMorphOrb",
+      "category": "ai-ui",
+      "tags": [
+        "ai",
+        "orb",
+        "fluid",
+        "morph",
+        "threejs",
+        "shader",
+        "3d"
+      ],
+      "use_cases": [
+        "Voice assistant speaking state visualization",
+        "AI status companion avatar",
+        "Ambient AI header orb"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "three"
+      ],
+      "files": {
+        "snippet": "components/ai-ui/fluid-morph-orb.snippet.tsx",
+        "meta": "components/ai-ui/fluid-morph-orb.meta.md"
+      }
+    },
+    {
+      "id": "marbled-fluid-orb",
+      "name": "Marbled Fluid Orb",
+      "component_name": "MarbledFluidOrb",
+      "category": "ai-ui",
+      "tags": [
+        "ai",
+        "orb",
+        "marbled",
+        "oil-slick",
+        "threejs",
+        "shader"
+      ],
+      "use_cases": [
+        "Sophisticated AI processing indicator",
+        "Generative design companion avatar"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "three"
+      ],
+      "files": {
+        "snippet": "components/ai-ui/marbled-fluid-orb.snippet.tsx",
+        "meta": "components/ai-ui/marbled-fluid-orb.meta.md"
+      }
+    },
+    {
+      "id": "particle-dot-orb",
+      "name": "Particle Dot Orb",
+      "component_name": "ParticleDotOrb",
+      "category": "ai-ui",
+      "tags": [
+        "ai",
+        "orb",
+        "particle",
+        "dots",
+        "threejs",
+        "sphere"
+      ],
+      "use_cases": [
+        "AI reasoning network representation",
+        "Data computation visualizer"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "three"
+      ],
+      "files": {
+        "snippet": "components/ai-ui/particle-dot-orb.snippet.tsx",
+        "meta": "components/ai-ui/particle-dot-orb.meta.md"
+      }
+    },
+    {
+      "id": "hero-morph-navbar",
+      "name": "Hero Morph Navbar",
+      "component_name": "HeroMorphNavbar",
+      "category": "navbars",
+      "tags": [
+        "navbar",
+        "morph",
+        "spring",
+        "pill",
+        "sticky",
+        "navigation"
+      ],
+      "use_cases": [
+        "Responsive header that morphs between floating pill and expanded bar",
+        "SaaS landing page navigation"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/navbars/hero-morph-navbar.snippet.jsx",
+        "meta": "components/navbars/hero-morph-navbar.meta.md"
+      }
+    },
+    {
+      "id": "magnetic-pill-navbar",
+      "name": "Magnetic Pill Navbar",
+      "component_name": "MagneticPillNavbar",
+      "category": "navbars",
+      "tags": [
+        "navbar",
+        "magnetic",
+        "pill",
+        "slider",
+        "tab",
+        "navigation"
+      ],
+      "use_cases": [
+        "Segmented tab bar with sliding active indicator",
+        "Floating action toolbar"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion"
+      ],
+      "files": {
+        "snippet": "components/navbars/magnetic-pill-navbar.snippet.jsx",
+        "meta": "components/navbars/magnetic-pill-navbar.meta.md"
+      }
+    },
+    {
+      "id": "pill-expand-navbar",
+      "name": "Pill Expand Navbar",
+      "component_name": "PillExpandNavbar",
+      "category": "navbars",
+      "tags": [
+        "navbar",
+        "pill",
+        "expand",
+        "dock",
+        "icons",
+        "navigation"
+      ],
+      "use_cases": [
+        "Compact icon-only pill navbar that expands on interaction",
+        "Mobile bottom navigation bar"
+      ],
+      "dependencies": [
+        "shared/tokens.css",
+        "shared/base.css",
+        "framer-motion",
+        "lucide-react"
+      ],
+      "files": {
+        "snippet": "components/navbars/pill-expand-navbar.snippet.jsx",
+        "meta": "components/navbars/pill-expand-navbar.meta.md"
+      }
+    }
+  ]
+}

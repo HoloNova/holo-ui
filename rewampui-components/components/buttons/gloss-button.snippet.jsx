@@ -1,0 +1,23 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
+
+export default function GlossButton() {
+    return (
+        <button className="relative px-10 py-4 min-w-[220px] flex items-center justify-center rounded-full select-none overflow-hidden" style={{ boxShadow: '0 10px 24px -12px rgba(0,0,0,0.25)' }}>
+                    <motion.div
+                        className="absolute inset-0"
+                        style={{
+                            background: 'linear-gradient(115deg, #d9c6c2 0%, #b7a8c4 22%, #e8d2b8 40%, #c9a8ae 58%, #a99bbd 76%, #dcc4c0 100%)',
+                            backgroundSize: '220% 220%',
+                        }}
+                        animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
+                        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                    />
+                    <div className="pointer-events-none absolute inset-x-3 top-1 h-1/2 rounded-full bg-white/25 blur-[3px]" />
+                    <span className="relative z-10 text-[16px] font-semibold text-[#2a2320]">Gloss Button</span>
+                </button>
+    );
+}
+
+export { GlossButton };

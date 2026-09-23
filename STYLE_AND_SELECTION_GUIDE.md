@@ -18,6 +18,8 @@ Different design languages originate from distinct engineering and cultural cont
 |                                      |   Apple Human Interface (HIG)            |
 |                                      |   Humanist / Spatial / Liquid Glass      |
 |                                      |                                          |
+|                                      |   Kinetic Motion & Tactile (Rewamp UI)   |
+|                                      |   Physics Springs / 3D Orbits / Lilac    |
 |   Consumer / Lifestyle ──────────────┼────────────── Geek / High-Density SaaS   |
 |                                      |                                          |
 |                                      |   AI-Native Productivity (Beautiful UI)  |
@@ -53,6 +55,22 @@ Different design languages originate from distinct engineering and cultural cont
   - Media playback controls, personal journaling, task checklists.
 - **Incompatible Scenarios**:
   - Ultra-dense financial trading terminals, raw hacker CLI logs (excessive padding and rounded corners reduce line efficiency).
+
+### Style C: Kinetic Motion & Tactile Physics (`rewampui-components`)
+- **Visual DNA**: Physical spring dynamics, continuous fluid morphing, 3D orbits, kinetic typography, Lilac & Orange palette.
+- **Key Signatures**:
+  - Framer Motion spring physics with mass, stiffness, and damping.
+  - Apple SF Pro typographic hierarchy (SF Pro Semibold + SF Pro Regular).
+  - Tactile micro-interactions: slide-to-confirm, googly-eyes tracking, shimmer streaks, rainbow gradient borders.
+  - 3D WebGL / Three.js assistant companions (fluid morph orbs, marbled fluid orbs).
+- **Applicable Scenarios**:
+  - High-converting product landing pages, hero showcases, and marketing touchpoints.
+  - Irreversible critical action gates (e.g. order confirmation with `slide-to-confirm-button`).
+  - Interactive AI companions and animated avatar states.
+  - High-impact kinetic hero typography and rotating slot-machine headlines.
+- **Incompatible Scenarios**:
+  - Data-dense financial spreadsheets or static admin backends where constant motion introduces distraction.
+  - Strict zero-JavaScript low-bandwidth environments.
 
 ---
 
@@ -161,3 +179,11 @@ Refer to this matrix to select the leanest viable component for any given user p
 | "Before/after code or text comparison" | `beautifului-components/components/data/diff-table.snippet.html` | `data/records-table.snippet.html` |
 | "Multi-column data record view with filters" | `beautifului-components/components/data/records-table.snippet.html` | `cards/context-cards.snippet.html` |
 | "iOS-style tactile settings or action sheet" | `guidelines/apple-design/tokens/tokens.css` + `patterns/` | `beautifului-components/` (raw) |
+| "High-friction order/action slide confirmation" | `rewampui-components/components/buttons/slide-to-confirm-button.snippet.jsx` | `cards/arch-card-carousel.snippet.tsx` |
+| "High-converting hero CTA with shimmer streak" | `rewampui-components/components/buttons/shimmer-button.snippet.jsx` | Heavy 3D backgrounds |
+| "Search button that fluidly expands into input" | `rewampui-components/components/search-bars/morph-search-capsule.snippet.jsx` | `input/chat-composer.snippet.html` |
+| "Rotating headline terms / kinetic typography" | `rewampui-components/components/text/kinetic-reel-text.snippet.jsx` | Complex video embed |
+| "3D arched image/case study carousel" | `rewampui-components/components/cards/arch-card-carousel.snippet.tsx` | Static grid gallery |
+| "Interactive 3D fluid AI companion avatar" | `rewampui-components/components/ai-ui/fluid-morph-orb.snippet.tsx` | Heavy multi-panel workspace |
+| "Day/night atmospheric theme toggle" | `rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx` | Full page reload / complex modal |
+
