@@ -2,6 +2,10 @@
 
 # Holo UI Vault
 
+[![PyPI version](https://img.shields.io/pypi/v/holo-ui-mcp?color=blue)](https://pypi.org/project/holo-ui-mcp/)
+[![Python](https://img.shields.io/pypi/pyversions/holo-ui-mcp)](https://pypi.org/project/holo-ui-mcp/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 > An Agent-First, curated code repository providing production-ready UI primitives, design tokens, and interaction patterns. Built to empower autonomous coding agents and developers to retrieve, compose, and assemble user interfaces with zero code hallucinations and minimal token overhead.
 
 > [!IMPORTANT]
@@ -31,6 +35,7 @@ The repository provides structured indices tailored for machine lookup and devel
 
 | File | Type | Purpose |
 |:---|:---|:---|
+| [`holo-ui-mcp`](./tools/README.md) | MCP Server | Official Model Context Protocol server. Connect via `uvx holo-ui-mcp` for one-shot UI retrieval. |
 | [`INDEX.json`](./INDEX.json) | Machine Index | Master dual-dimension index (`by_style`, `by_function`, and `style_harmonization`). |
 | [`ROUTER.json`](./ROUTER.json) | Fast Router | High-speed dispatch map mapping user intents and component IDs to file paths. |
 | [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | Feature Spec | 7-dimension orthogonal classification taxonomy for Agent-driven component disambiguation. |
@@ -39,7 +44,50 @@ The repository provides structured indices tailored for machine lookup and devel
 
 ---
 
-## 3. Curated Vault Index
+## 3. Agent MCP Server Integration (Model Context Protocol)
+
+Holo UI provides an official Model Context Protocol server ([`holo-ui-mcp`](https://pypi.org/project/holo-ui-mcp/)). Coding agents in Cursor, Claude Desktop, Antigravity, and Windsurf can retrieve verified component primitives and CSS tokens without cloning the repository.
+
+### A. Global Setup (Recommended via `uvx`)
+
+Add to your client's MCP configuration (`claude_desktop_config.json` or Cursor MCP settings):
+
+```json
+{
+  "mcpServers": {
+    "holo-ui": {
+      "command": "uvx",
+      "args": ["holo-ui-mcp"]
+    }
+  }
+}
+```
+
+### B. Local Repository Debugging Setup
+
+If working from a local clone, launch directly via the bundled script:
+
+```json
+{
+  "mcpServers": {
+    "holo-ui": {
+      "command": "python",
+      "args": ["<path-to-holo-ui>/tools/mcp_server.py"]
+    }
+  }
+}
+```
+
+### C. Tool Capabilities
+
+- **Tool Name**: `get_holo_ui_component`
+- **One-Shot Retrieval**: Single tool call returns canonical markup (HTML/React) bundled with essential CSS tokens and keyframes.
+- **7-Dimension Feature Tokens**: Built-in schema enums (`style`, `category`, `interaction`, `motion`, `scale`) for deterministic matching.
+- **Adaptive Candidate Delivery**: Emits Top 1 snippet on exact hits (conserving context tokens); returns Top 3 candidates on ambiguous requests.
+
+---
+
+## 4. Curated Vault Index
 
 ### A. Concrete Component Libraries
 
@@ -57,7 +105,7 @@ The repository provides structured indices tailored for machine lookup and devel
 
 ---
 
-## 4. Repository Topology
+## 5. Repository Topology
 
 The repository follows a strict modular topology:
 
@@ -129,7 +177,7 @@ holo-ui/
 
 ---
 
-## 5. Agent Retrieval SOP
+## 6. Agent Retrieval SOP
 
 When an AI coding agent is tasked with building or enhancing a user interface, it must follow this execution flow:
 
@@ -162,7 +210,7 @@ When an AI coding agent is tasked with building or enhancing a user interface, i
 
 ---
 
-## 6. Style Harmonization
+## 7. Style Harmonization
 
 Holo UI Vault supports composing interaction structures from one library with the visual language of another. For example, Beautiful UI's interactive components (such as `thinking-state` or `approval-card`) can be harmonized with Apple Human Interface tokens:
 
@@ -184,7 +232,7 @@ Detailed harmonization rules and anti-over-assembly principles are documented in
 
 ---
 
-## 7. Open Source & Licensing
+## 8. Open Source & Licensing
 
 - **Component Libraries**: Component implementations in `beautifului-components/` are licensed under the [MIT License](https://www.beautifului.dev/license).
 - **Design Guidelines & Specifications**: Curated design parameters and foundation summaries in `guidelines/apple-design/` are compiled for educational and reference purposes under Fair Use. Apple, iOS, macOS, visionOS, and SF Symbols are registered trademarks of Apple Inc.

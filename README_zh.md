@@ -2,6 +2,10 @@
 
 # Holo UI Vault
 
+[![PyPI version](https://img.shields.io/pypi/v/holo-ui-mcp?color=blue)](https://pypi.org/project/holo-ui-mcp/)
+[![Python](https://img.shields.io/pypi/pyversions/holo-ui-mcp)](https://pypi.org/project/holo-ui-mcp/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 > 一个专为 **AI Agent（AI 编码助手）** 与开发者打造的 Agent-First 高质量 UI 代码与设计系统资产金库。解决现有 AI 技能仅有抽象文字指引却不提供真实前端代码的痛点，帮助 Agent 与人类以极低 Token 消耗检索、组装并产出零幻觉的高水准界面。
 
 > [!IMPORTANT]
@@ -31,6 +35,7 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 
 | 文件 | 类型 | 核心用途 |
 |:---|:---|:---|
+| [`holo-ui-mcp`](./tools/README.md) | MCP 服务端 | 专为 Cursor / Claude 打造的标准协议服务，支持 `uvx holo-ui-mcp` 单步直出组件与样式。 |
 | [`INDEX.json`](./INDEX.json) | 机器主索引 | 双向检索核心：包含按风格索引（`by_style`）、按功能索引（`by_function`）与风格融合规则（`style_harmonization`）。 |
 | [`ROUTER.json`](./ROUTER.json) | 极速路由器 | 轻量级单点分发路由表，将用户意图与组件 ID 一键映射至本地文件路径。 |
 | [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | 特征 Token 规范 | 7 维度正交分类系统规范，用于 Agent 检索消歧与组件能力精确指纹标记。 |
@@ -39,7 +44,50 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 
 ---
 
-## 3. 已收录资产总索引
+## 3. AI Agent MCP 协议接入 (Model Context Protocol)
+
+Holo UI 提供官方发布的 MCP Server（[`holo-ui-mcp`](https://pypi.org/project/holo-ui-mcp/)），无需克隆本仓库，即可在 Cursor、Claude Desktop、Antigravity、Windsurf 等任意 AI 编程工具中直接调取本库的黄金组件原语与 CSS 样式。
+
+### A. 全球免安装接入（推荐：通过 `uvx`）
+
+直接在客户端 MCP 配置文件（如 `claude_desktop_config.json` 或 Cursor MCP 设置）中加入：
+
+```json
+{
+  "mcpServers": {
+    "holo-ui": {
+      "command": "uvx",
+      "args": ["holo-ui-mcp"]
+    }
+  }
+}
+```
+
+### B. 本地仓库调试接入
+
+如果你已克隆本仓库，可以直接通过内置脚本启动：
+
+```json
+{
+  "mcpServers": {
+    "holo-ui": {
+      "command": "python",
+      "args": ["<你的绝对路径>/holo-ui/tools/mcp_server.py"]
+    }
+  }
+}
+```
+
+### C. 核心工具能力
+
+- **工具名称**：`get_holo_ui_component`
+- **单步直出机制**：单次调用直接交付纯净组件源码（HTML/React）与对应的 CSS 变量底座，彻底消除多轮往返。
+- **7 维 Feature Tokens 引导**：Schema 内置 `style`、`category`、`interaction`、`motion`、`scale` 枚举，大模型根据用户意图进行确定性归类。
+- **自适应候选输出**：精准命中仅输出 Top 1 最优解（节省上下文）；意图发散时并列输出 Top 3 候选供大模型结合上下文权衡。
+
+---
+
+## 4. 已收录资产总索引
 
 ### A. 代码型组件库
 
@@ -57,7 +105,7 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 
 ---
 
-## 4. 目录拓扑结构
+## 5. 目录拓扑结构
 
 仓库遵循严格的模块化组织结构：
 
@@ -131,7 +179,7 @@ holo-ui/
 
 ---
 
-## 5. AI Agent 自动化集成流程
+## 6. AI Agent 自动化集成流程
 
 当 AI 编码助手需要从本仓库中获取组件并集成到目标项目时，请遵循以下流程：
 
@@ -159,7 +207,7 @@ holo-ui/
 
 ---
 
-## 6. 跨体系风格融合范式
+## 7. 跨体系风格融合范式
 
 Holo UI Vault 支持将不同体系的优势进行解耦与组合。例如：取用 Beautiful UI 的**交互骨架**（如思考链折叠、审批卡片），外层覆以 Apple HIG 的**视觉材质与物理特性**：
 
@@ -188,7 +236,7 @@ Holo UI Vault 支持将不同体系的优势进行解耦与组合。例如：取
 
 ---
 
-## 7. 开源协议与知识产权
+## 8. 开源协议与知识产权
 
 - **组件代码库**：`beautifului-components/` 中的组件代码遵循原作者的 [MIT License](https://www.beautifului.dev/license)。
 - **设计规范与参数**：`guidelines/apple-design/` 中的参数归纳与总结属于教育性参考（Fair Use）。Apple、iOS、macOS、visionOS、SF Symbols 均为 Apple Inc. 的注册商标与知识产权。
