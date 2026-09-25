@@ -96,6 +96,7 @@ Holo UI 提供官方发布的 MCP Server（[`holo-ui-mcp`](https://pypi.org/proj
 | [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native 生产力风格（暗色优先、0.5px 发丝线、思考展开链、Prompt Bar） | 21 | Tailwind CSS v4 + OKLCH Tokens | 完整就绪 |
 | [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | 动态物理动效风格（弹簧物理、3D 轨道卡片、动态流体 Orb、滑动确认） | 30 | React 19 + Framer Motion + Three.js | 完整就绪 |
 | [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | 微动效与微状态指示器（纯 CSS/SVG、零运行时、a11y 低动效适配、单线圆弧、点阵、雷达） | 29 | Pure HTML/SVG + CSS Custom Properties | 完整就绪 |
+| [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | 极简日夜主题切换（纯 CSS/SVG、零运行时、1em 矢量形变、双向暗黑适配） | 14 | Pure HTML/SVG + CSS Custom Properties | 完整就绪 |
 
 ### B. 权威设计系统与 Tokens
 
@@ -167,6 +168,20 @@ holo-ui/
 |       |-- geometric/               # ld-blocks, ld-gather, ld-swirl, ld-morph, etc.
 |       |-- wave-pulse/              # ld-pulse, ld-ripple, ld-cascade, ld-wave
 |       `-- orbital/                 # ld-atom, ld-orbit
+|
+|-- themetoggle-components/          # 组件库：极简日夜主题切换风格
+|   |-- catalog.json                 # 组件清单元数据（14 款核心原语）
+|   |-- themetoggle.manifest.json    # Agent 极速路由 Manifest
+|   |-- COMPONENTS_GUIDE.md          # 库专属接入指引与 CSS 变量规范
+|   |-- index.html                   # 离线画廊预览（人类开发者专用，Agent 勿读）
+|   |-- shared/
+|   |   `-- base.css                 # 14 款纯 CSS 变形过渡动画与 .theme-toggle 底座
+|   `-- components/
+|       |-- classic/                 # classic.snippet.html + classic.meta.md
+|       |-- around/                  # around.snippet.html + around.meta.md
+|       |-- eclipse/                 # eclipse.snippet.html + eclipse.meta.md
+|       |-- light-switch/            # light-switch.snippet.html + light-switch.meta.md
+|       `-- ... (共 14 款微动效切换原语)
 |
 `-- guidelines/apple-design/         # 设计规范：Apple Human Interface
     |-- tokens/

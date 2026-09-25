@@ -1,0 +1,302 @@
+{
+  "style": "minimal_theme_toggles",
+  "aesthetic": "Pure CSS/SVG, 1em vector morphing, zero-runtime, accessible, clip-path and path transitions, reduced-motion guards",
+  "shared_css": "shared/base.css",
+  "tech": "Pure HTML/SVG + CSS Custom Properties (zero JavaScript runtime lock-in)",
+  "tokens": {
+    "scale": "compact",
+    "placement": "flow",
+    "interaction": "control",
+    "lifecycle": "persistent",
+    "motion": "transition",
+    "category": "setting",
+    "runtime": "html-css"
+  },
+  "items": [
+    {
+      "id": "theme-toggle-classic",
+      "slug": "classic",
+      "name": "Classic Theme Toggle",
+      "zh_name": "经典日夜切换",
+      "file": "themetoggle-components/components/classic/classic.snippet.html",
+      "duration": "400ms",
+      "viewBox": "0 0 24 24",
+      "when": "Universal application header bars, navigation menus, and clean documentation site toolbars.",
+      "when_not": "Heavy full-page hero sections requiring 3D atmospheric effects (use day-night-sky-toggle instead).",
+      "tags": [
+        "经典日夜切换",
+        "极简主题切换",
+        "太阳月亮切换",
+        "暗黑模式切换",
+        "昼夜模式",
+        "classic-toggle",
+        "sun-moon-toggle",
+        "theme-toggle",
+        "dark-mode-toggle",
+        "light-dark-switch"
+      ]
+    },
+    {
+      "id": "theme-toggle-around",
+      "slug": "around",
+      "name": "Around Theme Toggle",
+      "zh_name": "环绕日夜切换",
+      "file": "themetoggle-components/components/around/around.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 32 32",
+      "when": "Tech SaaS headers, AI dashboards, and modern developer documentation toolbars.",
+      "when_not": "Extremely compact 12px table cell status indicators.",
+      "tags": [
+        "环绕日夜切换",
+        "轨道粒子",
+        "极简主题切换",
+        "暗黑模式切换",
+        "昼夜切换",
+        "around-toggle",
+        "orbit-toggle",
+        "satellite-toggle",
+        "theme-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-dark-inner",
+      "slug": "dark-inner",
+      "name": "Dark Inner Theme Toggle",
+      "zh_name": "内旋日夜切换",
+      "file": "themetoggle-components/components/dark-inner/dark-inner.snippet.html",
+      "duration": "400ms",
+      "viewBox": "0 0 24 24",
+      "when": "Compact toolbars, floating navigation bars, and settings list items.",
+      "when_not": "Playful landing pages requiring high-friction confirmation.",
+      "tags": [
+        "内旋日夜切换",
+        "内向折叠",
+        "极简主题切换",
+        "暗黑模式切换",
+        "dark-inner-toggle",
+        "inward-toggle",
+        "compact-theme-switch"
+      ]
+    },
+    {
+      "id": "theme-toggle-dark-side",
+      "slug": "dark-side",
+      "name": "Dark Side Theme Toggle",
+      "zh_name": "侧旋日夜切换",
+      "file": "themetoggle-components/components/dark-side/dark-side.snippet.html",
+      "duration": "400ms",
+      "viewBox": "0 0 24 24",
+      "when": "Vertical sidebars, dense developer terminals, and compact utility headers.",
+      "when_not": "Expanded full-screen modal overlays.",
+      "tags": [
+        "侧旋日夜切换",
+        "侧边翻转",
+        "极简主题切换",
+        "暗黑模式切换",
+        "dark-side-toggle",
+        "lateral-toggle",
+        "side-shift-switch"
+      ]
+    },
+    {
+      "id": "theme-toggle-eclipse",
+      "slug": "eclipse",
+      "name": "Eclipse Theme Toggle",
+      "zh_name": "日蚀切换",
+      "file": "themetoggle-components/components/eclipse/eclipse.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Astronomy, dark-first tech products, creative portfolios, and futuristic web portals.",
+      "when_not": "Standard corporate business forms.",
+      "tags": [
+        "日蚀切换",
+        "月食主题",
+        "极简主题切换",
+        "暗黑模式切换",
+        "eclipse-toggle",
+        "lunar-eclipse",
+        "solar-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-expand",
+      "slug": "expand",
+      "name": "Expand Theme Toggle",
+      "zh_name": "膨胀日夜切换",
+      "file": "themetoggle-components/components/expand/expand.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Prominent top navigation action buttons, interactive hero headers, and landing touchpoints.",
+      "when_not": "Ultra-dense data tables.",
+      "tags": [
+        "膨胀日夜切换",
+        "径向展开",
+        "极简主题切换",
+        "暗黑模式切换",
+        "expand-toggle",
+        "radial-toggle",
+        "pulse-theme-switch"
+      ]
+    },
+    {
+      "id": "theme-toggle-spin",
+      "slug": "spin",
+      "name": "Spin Theme Toggle",
+      "zh_name": "旋转日夜切换",
+      "file": "themetoggle-components/components/spin/spin.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Creative studios, dynamic landing showcases, and animated web portfolios.",
+      "when_not": "Static data-dense financial applications.",
+      "tags": [
+        "旋转日夜切换",
+        "射线收缩",
+        "极简主题切换",
+        "暗黑模式切换",
+        "spin-toggle",
+        "whirl-toggle",
+        "kinetic-sun-switch"
+      ]
+    },
+    {
+      "id": "theme-toggle-half-sun",
+      "slug": "half-sun",
+      "name": "Half Sun Theme Toggle",
+      "zh_name": "半日切换",
+      "file": "themetoggle-components/components/half-sun/half-sun.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Brutalist, Swiss typography, architecture, and design agency websites.",
+      "when_not": "Skeuomorphic consumer mobile apps.",
+      "tags": [
+        "半日切换",
+        "半月翻转",
+        "几何风格",
+        "极简主题切换",
+        "half-sun-toggle",
+        "geometric-switch",
+        "minimal-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-horizon",
+      "slug": "horizon",
+      "name": "Horizon Theme Toggle",
+      "zh_name": "地平线日夜切换",
+      "file": "themetoggle-components/components/horizon/horizon.snippet.html",
+      "duration": "400ms",
+      "viewBox": "0 0 24 24",
+      "when": "Editorial blogs, lifestyle apps, travel platforms, and reading applications.",
+      "when_not": "High-density technical code diff viewers.",
+      "tags": [
+        "地平线日夜切换",
+        "日出日落",
+        "极简主题切换",
+        "暗黑模式切换",
+        "horizon-toggle",
+        "sunset-switch",
+        "sunrise-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-inner-moon",
+      "slug": "inner-moon",
+      "name": "Inner Moon Theme Toggle",
+      "zh_name": "内核月亮切换",
+      "file": "themetoggle-components/components/inner-moon/inner-moon.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Productivity workspaces, Linear/Raycast style dark themes, and developer CLI tools.",
+      "when_not": "Complex checkout or critical action gates.",
+      "tags": [
+        "内核月亮切换",
+        "月相变化",
+        "极简主题切换",
+        "暗黑模式切换",
+        "inner-moon-toggle",
+        "moon-phase-switch",
+        "lunar-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-lightbulb",
+      "slug": "lightbulb",
+      "name": "Lightbulb Theme Toggle",
+      "zh_name": "灯泡开关",
+      "file": "themetoggle-components/components/lightbulb/lightbulb.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 32 32",
+      "when": "Education portals, note-taking applications, ideation boards, and reading environments.",
+      "when_not": "Strict corporate banking grids.",
+      "tags": [
+        "灯泡开关",
+        "白炽灯主题切换",
+        "极简主题切换",
+        "暗黑模式切换",
+        "lightbulb-toggle",
+        "lamp-switch",
+        "bulb-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-light-switch",
+      "slug": "light-switch",
+      "name": "Light Switch Theme Toggle",
+      "zh_name": "墙壁开关",
+      "file": "themetoggle-components/components/light-switch/light-switch.snippet.html",
+      "duration": "350ms",
+      "viewBox": "0 0 24 24",
+      "when": "Smart home IoT dashboards, hardware companion apps, and playful interactive settings.",
+      "when_not": "Ultra-thin inline text hyperlinks.",
+      "tags": [
+        "墙壁开关",
+        "拟物拨动开关",
+        "极简主题切换",
+        "暗黑模式切换",
+        "light-switch-toggle",
+        "wall-switch",
+        "rocker-toggle"
+      ]
+    },
+    {
+      "id": "theme-toggle-simple",
+      "slug": "simple",
+      "name": "Simple Theme Toggle",
+      "zh_name": "极简纯粹切换",
+      "file": "themetoggle-components/components/simple/simple.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Everyday minimalist websites, personal portfolios, blogs, and documentation pages.",
+      "when_not": "Complex multi-branch settings menus.",
+      "tags": [
+        "极简纯粹切换",
+        "微型日夜",
+        "极简主题切换",
+        "暗黑模式切换",
+        "simple-toggle",
+        "clean-theme-switch",
+        "minimal-day-night"
+      ]
+    },
+    {
+      "id": "theme-toggle-within",
+      "slug": "within",
+      "name": "Within Theme Toggle",
+      "zh_name": "内嵌日夜切换",
+      "file": "themetoggle-components/components/within/within.snippet.html",
+      "duration": "500ms",
+      "viewBox": "0 0 24 24",
+      "when": "Card toolbars, floating utility badges, and sub-navigation action panels.",
+      "when_not": "Full-page loading screens.",
+      "tags": [
+        "内嵌日夜切换",
+        "嵌套形变",
+        "极简主题切换",
+        "暗黑模式切换",
+        "within-toggle",
+        "nested-toggle",
+        "crater-switch"
+      ]
+    }
+  ]
+}

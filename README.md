@@ -96,6 +96,7 @@ If working from a local clone, launch directly via the bundled script:
 | [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native Productivity (Dark-first, 0.5px hairlines, thinking states, prompt bars) | 21 | Tailwind CSS v4 + OKLCH Tokens | Complete |
 | [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | Kinetic Motion & Tactile Physics (Spring physics, 3D card orbits, fluid AI orbs, slide-to-confirm) | 30 | React 19 + Framer Motion + Three.js | Complete |
 | [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | Micro-Motion Loaders & Spinners (Pure CSS/SVG, zero-runtime, a11y reduced-motion, radial, dots, radar) | 29 | Pure HTML/SVG + CSS Custom Properties | Complete |
+| [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | Minimalist Theme Toggles (Pure CSS/SVG, zero-runtime, 1em vector morphing, accessible) | 14 | Pure HTML/SVG + CSS Custom Properties | Complete |
 
 ### B. Authoritative Design Systems & Tokens
 
@@ -165,6 +166,20 @@ holo-ui/
 |       |-- geometric/               # ld-blocks, ld-gather, ld-swirl, ld-morph, etc.
 |       |-- wave-pulse/              # ld-pulse, ld-ripple, ld-cascade, ld-wave
 |       `-- orbital/                 # ld-atom, ld-orbit
+|
+|-- themetoggle-components/          # Component library: Minimalist Theme Toggles
+|   |-- catalog.json                 # Machine manifest (14 core vector morphing primitives)
+|   |-- themetoggle.manifest.json    # Agent fast router manifest
+|   |-- COMPONENTS_GUIDE.md          # Integration guide and CSS variable specification
+|   |-- index.html                   # Offline preview gallery (Human developer use only)
+|   |-- shared/
+|   |   `-- base.css                 # 14 pure CSS transitions and .theme-toggle base utility
+|   `-- components/
+|       |-- classic/                 # classic.snippet.html + classic.meta.md
+|       |-- around/                  # around.snippet.html + around.meta.md
+|       |-- eclipse/                 # eclipse.snippet.html + eclipse.meta.md
+|       |-- light-switch/            # light-switch.snippet.html + light-switch.meta.md
+|       `-- ... (14 vector morphing primitives)
 |
 `-- guidelines/apple-design/         # Design specification: Apple Human Interface
     |-- tokens/

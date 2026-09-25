@@ -30,13 +30,19 @@
       "desc": "Minimalist, zero-runtime, pure CSS/SVG micro-indicators, button spinners, typing dots, radar scans",
       "manifest": "loadingdev-components/loadingdev.manifest.json",
       "shared_css": "loadingdev-components/shared/base.css"
+    },
+    "minimal_theme_toggles": {
+      "desc": "Minimalist, zero-runtime, pure CSS/SVG day-night and theme toggle buttons, 1em scalable vector morphing",
+      "manifest": "themetoggle-components/themetoggle.manifest.json",
+      "shared_css": "themetoggle-components/shared/base.css"
     }
   },
   "keywords": {
     "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows": "ai_native_productivity",
     "apple|ios|hig|liquid glass|squircle|44pt|mac style|visionos": "apple_human_interface",
     "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile",
-    "spinner|loader|loading indicator|micro motion|arc|atom|bouncing dots|radar|ripple|comet|snake|blocks|gather|pulse|wave|circular dots|classic spinner|eclipse|leap": "micro_motion_indicators"
+    "spinner|loader|loading indicator|micro motion|arc|atom|bouncing dots|radar|ripple|comet|snake|blocks|gather|pulse|wave|circular dots|classic spinner|eclipse|leap": "micro_motion_indicators",
+    "theme toggle|day night toggle|dark mode toggle|sun moon|eclipse toggle|light switch|lightbulb toggle|minimal toggle|日夜切换|主题切换|暗黑模式切换|极简切换": "minimal_theme_toggles"
   },
   "components": {
     "loading-state": "beautifului-components/components/ai-states/loading-state.snippet.html",
@@ -118,7 +124,35 @@
     "ld-cascade": "loadingdev-components/components/wave-pulse/ld-cascade.snippet.html",
     "ld-wave": "loadingdev-components/components/wave-pulse/ld-wave.snippet.html",
     "ld-atom": "loadingdev-components/components/orbital/ld-atom.snippet.html",
-    "ld-orbit": "loadingdev-components/components/orbital/ld-orbit.snippet.html"
+    "ld-orbit": "loadingdev-components/components/orbital/ld-orbit.snippet.html",
+    "theme-toggle-classic": "themetoggle-components/components/classic/classic.snippet.html",
+    "toggle-classic": "themetoggle-components/components/classic/classic.snippet.html",
+    "theme-toggle-around": "themetoggle-components/components/around/around.snippet.html",
+    "toggle-around": "themetoggle-components/components/around/around.snippet.html",
+    "theme-toggle-dark-inner": "themetoggle-components/components/dark-inner/dark-inner.snippet.html",
+    "toggle-dark-inner": "themetoggle-components/components/dark-inner/dark-inner.snippet.html",
+    "theme-toggle-dark-side": "themetoggle-components/components/dark-side/dark-side.snippet.html",
+    "toggle-dark-side": "themetoggle-components/components/dark-side/dark-side.snippet.html",
+    "theme-toggle-eclipse": "themetoggle-components/components/eclipse/eclipse.snippet.html",
+    "toggle-eclipse": "themetoggle-components/components/eclipse/eclipse.snippet.html",
+    "theme-toggle-expand": "themetoggle-components/components/expand/expand.snippet.html",
+    "toggle-expand": "themetoggle-components/components/expand/expand.snippet.html",
+    "theme-toggle-spin": "themetoggle-components/components/spin/spin.snippet.html",
+    "toggle-spin": "themetoggle-components/components/spin/spin.snippet.html",
+    "theme-toggle-half-sun": "themetoggle-components/components/half-sun/half-sun.snippet.html",
+    "toggle-half-sun": "themetoggle-components/components/half-sun/half-sun.snippet.html",
+    "theme-toggle-horizon": "themetoggle-components/components/horizon/horizon.snippet.html",
+    "toggle-horizon": "themetoggle-components/components/horizon/horizon.snippet.html",
+    "theme-toggle-inner-moon": "themetoggle-components/components/inner-moon/inner-moon.snippet.html",
+    "toggle-inner-moon": "themetoggle-components/components/inner-moon/inner-moon.snippet.html",
+    "theme-toggle-lightbulb": "themetoggle-components/components/lightbulb/lightbulb.snippet.html",
+    "toggle-lightbulb": "themetoggle-components/components/lightbulb/lightbulb.snippet.html",
+    "theme-toggle-light-switch": "themetoggle-components/components/light-switch/light-switch.snippet.html",
+    "toggle-light-switch": "themetoggle-components/components/light-switch/light-switch.snippet.html",
+    "theme-toggle-simple": "themetoggle-components/components/simple/simple.snippet.html",
+    "toggle-simple": "themetoggle-components/components/simple/simple.snippet.html",
+    "theme-toggle-within": "themetoggle-components/components/within/within.snippet.html",
+    "toggle-within": "themetoggle-components/components/within/within.snippet.html"
   },
   "selection_guide": "STYLE_AND_SELECTION_GUIDE.md",
   "master_index": "INDEX.json"

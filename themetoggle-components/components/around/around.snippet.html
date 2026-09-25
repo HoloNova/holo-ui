@@ -1,0 +1,32 @@
+<!-- Holo UI Vault: around (Around Theme Toggle) -->
+<!-- Style: minimal_theme_toggles | Requires: themetoggle-components/shared/base.css -->
+<!-- Keywords: 环绕日夜切换, 轨道粒子, 极简主题切换, 暗黑模式切换, 昼夜切换 -->
+<div class="holo-ui-preview" style="display: flex; align-items: center; justify-content: center; padding: 24px;">
+  <button
+    type="button"
+    class="theme-toggle"
+    title="Toggle theme"
+    aria-label="Toggle theme"
+    aria-pressed="false"
+    onclick="this.classList.toggle('dark'); this.setAttribute('aria-pressed', this.classList.contains('dark'))"
+  >
+    <svg width="1em" height="1em" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" style="--toggles-around--duration: 500ms">
+      <defs>
+        <clipPath id="toggles.dev-around-main-0" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.6)_ease] dark:toggles-dev--[transform:rotate(-90deg)] motion-safe:dark:toggles-dev--[transition:transform_var(--toggles-around--duration)_ease]">
+          <path d="M0 0h42v30a1 1 0 00-16 13H0Z" class="motion-safe:toggles-dev--transition-[d,translate] motion-safe:toggles-dev--[transition-duration:calc(var(--toggles-around--duration)_*_0.6)] motion-safe:toggles-dev--[transition-timing-function:ease] dark:toggles-dev--[d:path('M-12_-14h42v30a1_1_0_00-16_13H0Z')] dark:not-supports-[d:path('M0_0')]:toggles-dev---translate-x-[12px] dark:not-supports-[d:path('M0_0')]:toggles-dev---translate-y-[14px] motion-safe:dark:toggles-dev--[transition-duration:var(--toggles-around--duration)]" />
+        </clipPath>
+      </defs>
+      <g clip-path="url(#toggles.dev-around-main-0)">
+        <circle cx="16" cy="16" r="8.4" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.6)_ease] dark:toggles-dev--[transform:scale(1.4)] motion-safe:dark:toggles-dev--[transition:transform_var(--toggles-around--duration)_ease]" />
+        <g>
+          <circle cx="16" cy="3.3" r="2.3" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.2)_ease_calc(var(--toggles-around--duration)_*_0.253)] dark:toggles-dev--[transform:scale(0)] motion-safe:dark:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.4)_ease]" />
+          <circle cx="27" cy="9.7" r="2.3" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.2)_ease_calc(var(--toggles-around--duration)_*_0.348)] dark:toggles-dev--[transform:scale(0)] motion-safe:dark:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.4)_ease]" />
+          <circle cx="27" cy="22.3" r="2.3" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.2)_ease_calc(var(--toggles-around--duration)_*_0.443)] dark:toggles-dev--[transform:scale(0)] motion-safe:dark:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.4)_ease]" />
+          <circle cx="16" cy="28.7" r="2.3" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.2)_ease_calc(var(--toggles-around--duration)_*_0.538)] dark:toggles-dev--[transform:scale(0)] motion-safe:dark:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.4)_ease]" />
+          <circle cx="5" cy="22.3" r="2.3" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.2)_ease_calc(var(--toggles-around--duration)_*_0.633)] dark:toggles-dev--[transform:scale(0)] motion-safe:dark:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.4)_ease]" />
+          <circle cx="5" cy="9.7" r="2.3" class="toggles-dev--[transform-origin:center] motion-safe:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.2)_ease_calc(var(--toggles-around--duration)_*_0.728)] dark:toggles-dev--[transform:scale(0)] motion-safe:dark:toggles-dev--[transition:transform_calc(var(--toggles-around--duration)_*_0.4)_ease]" />
+        </g>
+      </g>
+    </svg>
+  </button>
+</div>

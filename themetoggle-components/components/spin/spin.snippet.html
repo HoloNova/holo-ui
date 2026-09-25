@@ -1,0 +1,32 @@
+<!-- Holo UI Vault: spin (Spin Theme Toggle) -->
+<!-- Style: minimal_theme_toggles | Requires: themetoggle-components/shared/base.css -->
+<!-- Keywords: 旋转日夜切换, 射线收缩, 极简主题切换, 暗黑模式切换, spin-toggle -->
+<div class="holo-ui-preview" style="display: flex; align-items: center; justify-content: center; padding: 24px;">
+  <button
+    type="button"
+    class="theme-toggle"
+    title="Toggle theme"
+    aria-label="Toggle theme"
+    aria-pressed="false"
+    onclick="this.classList.toggle('dark'); this.setAttribute('aria-pressed', this.classList.contains('dark'))"
+  >
+    <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" style="--toggles-spin--duration: 400ms">
+      <defs>
+        <clipPath id="toggles.dev-spin-main-0">
+          <path d="M0 0h25a1 1 0 0010 10v14H0Z" class="motion-safe:toggles-dev--transition-[d,translate] motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:dark:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] dark:toggles-dev--[d:path('M0_2h13a1_1_0_0010_10v14H0Z')] dark:not-supports-[d:path('M0_0')]:toggles-dev---translate-x-3.25 dark:not-supports-[d:path('M0_0')]:toggles-dev--translate-y-0.5" />
+        </clipPath>
+      </defs>
+      <g stroke="currentColor" stroke-linecap="round">
+        <circle cx="12" cy="12" r="5" fill="currentColor" clip-path="url(#toggles.dev-spin-main-0)" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) dark:toggles-dev--scale-170" />
+        <path d="M12 1.4v2.4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="m20.3 3.7-2.5 2.5" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="M22.6 12h-2.4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="M12 22.6v-2.4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="M1.4 12h2.4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="m20.3 20.3-2.5-2.5" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="m3.7 20.3 2.5-2.5" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+        <path d="m3.7 3.7 2.5 2.5" fill="none" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="0" paint-order="stroke markers fill" class="toggles-dev--origin-center motion-safe:toggles-dev--transition-transform motion-safe:toggles-dev--duration-(--toggles-spin--duration) motion-safe:toggles-dev--delay-[calc(var(--toggles-spin--duration)*0.15)] motion-safe:dark:toggles-dev--delay-0 dark:toggles-dev--rotate-45 dark:toggles-dev--scale-0" />
+      </g>
+    </svg>
+  </button>
+</div>

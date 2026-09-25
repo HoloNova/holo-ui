@@ -1,0 +1,24 @@
+<!-- Holo UI Vault: light-switch (Light Switch Theme Toggle) -->
+<!-- Style: minimal_theme_toggles | Requires: themetoggle-components/shared/base.css -->
+<!-- Keywords: 墙壁开关, 拟物拨动开关, 极简主题切换, 暗黑模式切换, light-switch-toggle -->
+<div class="holo-ui-preview" style="display: flex; align-items: center; justify-content: center; padding: 24px;">
+  <button
+    type="button"
+    class="theme-toggle"
+    title="Toggle theme"
+    aria-label="Toggle theme"
+    aria-pressed="false"
+    onclick="this.classList.toggle('dark'); this.setAttribute('aria-pressed', this.classList.contains('dark'))"
+  >
+    <svg width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true" style="--toggles-light-switch--duration: 350ms">
+      <defs>
+        <clipPath id="toggles.dev-light-switch-paddle-0">
+          <path d="M7 3h10v9H7Z" class="motion-safe:toggles-dev--transition-[d,translate] motion-safe:toggles-dev--duration-(--toggles-light-switch--duration) motion-safe:toggles-dev--[transition-timing-function:cubic-bezier(0,0,0.15,1.25)] dark:toggles-dev--[d:path('M7_12h10v9H7Z')] dark:not-supports-[d:path('M0_0')]:toggles-dev--translate-y-[9px]" />
+        </clipPath>
+      </defs>
+      <rect x="5" y="1" width="14" height="22" rx="2" stroke="currentColor" fill="none" stroke-width="1.5" />
+      <rect x="7" y="3" width="10" height="18" rx="1" stroke="currentColor" fill="none" stroke-width="1" />
+      <rect x="8" y="4" width="8" height="16" rx="0.5" fill="currentColor" clip-path="url(#toggles.dev-light-switch-paddle-0)" />
+    </svg>
+  </button>
+</div>

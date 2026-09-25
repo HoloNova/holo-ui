@@ -86,6 +86,22 @@ Different design languages originate from distinct engineering and cultural cont
   - Full multi-step thinking traces with collapsible reasoning trees (use `thinking-state` from Beautiful UI).
   - High-impact hero assistant companion avatars (use 3D Fluid Orbs from Rewamp UI).
 
+### Style E: Minimalist Theme Toggles (`themetoggle-components`)
+- **Visual DNA**: Pure CSS/SVG, zero-runtime, 1em scalable vector morphing, clip-path and path transitions, reduced-motion guards.
+- **Key Signatures**:
+  - Standard semantic `<button><svg>` with pure CSS keyframe/transition animations.
+  - Automatic color adaptation via `currentColor` without hardcoded palettes.
+  - Built-in `@media (prefers-reduced-motion: no-preference)` guards on all 14 toggles.
+  - Bi-directional `.dark` class matching (applies when `.dark` is on button or root `<html>`).
+- **Applicable Scenarios**:
+  - Minimalist navigation bar and top header dark mode switches (`theme-toggle-classic`, `theme-toggle-simple`).
+  - Orbital tech dashboards and AI coding workspaces (`theme-toggle-around`, `theme-toggle-eclipse`).
+  - IoT and smart home setting controls (`theme-toggle-light-switch`).
+  - Minimal blogs, documentation sites, and CLI companion web interfaces.
+- **Incompatible Scenarios**:
+  - High-friction destructive actions (use `slide-to-confirm-button`).
+  - Full-page atmospheric storytelling heroes requiring 3D canvas (use `day-night-sky-toggle`).
+
 ---
 
 ## 2. Anti-Over-Assembly Rules
@@ -100,6 +116,9 @@ Agents must enforce the following four engineering constraints:
 - If the user asks for **"a quick prompt or search input"**:
   - Use: `beautifului-components/components/input/prompt-bar.snippet.html`
   - Never assemble: `chat-composer.snippet.html` (heavy compound workspace with tabs and thread panels).
+- If the user asks for **"a dark mode toggle or day/night switch in a header/navbar"**:
+  - Use: `themetoggle-components/components/classic/classic.snippet.html` or `simple.snippet.html`
+  - Never assemble: `rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx` (heavy 120px Framer Motion capsule with floating clouds and 3D sky particles) unless full-page atmospheric storytelling is requested.
 - If the user asks for **"a button spinner or inline action loading"**:
   - Use: `loadingdev-components/components/radial/ld-arc.snippet.html` or `ld-linear-dots.snippet.html`
   - Never assemble: `beautifului-components/components/ai-states/loading-state.snippet.html` (compound 3x3 pixel grid with timer intended for card-level AI reasoning) or heavy 3D fluid orbs.
@@ -228,7 +247,11 @@ Refer to this matrix to select the leanest viable component for any given user p
 | "Rotating headline terms / kinetic typography" | `rewampui-components/components/text/kinetic-reel-text.snippet.jsx` | Complex video embed |
 | "3D arched image/case study carousel" | `rewampui-components/components/cards/arch-card-carousel.snippet.tsx` | Static grid gallery |
 | "Interactive 3D fluid AI companion avatar" | `rewampui-components/components/ai-ui/fluid-morph-orb.snippet.tsx` | Heavy multi-panel workspace |
-| "Day/night atmospheric theme toggle" | `rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx` | Full page reload / complex modal |
+| "Day/night atmospheric hero theme toggle" | `rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx` | Full page reload / complex modal |
+| "Minimalist top navbar dark mode toggle" | `themetoggle-components/components/classic/classic.snippet.html` or `simple.snippet.html` | `rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx` |
+| "Astronomical / futuristic eclipse theme toggle" | `themetoggle-components/components/eclipse/eclipse.snippet.html` | Heavy 3D background canvas |
+| "Tactile physical rocker wall toggle switch" | `themetoggle-components/components/light-switch/light-switch.snippet.html` | Complex IoT modal popup |
+| "Orbital tech dashboard theme switch" | `themetoggle-components/components/around/around.snippet.html` | Overloaded video hero embed |
 | "Inline button spinner or quick form submit" | `loadingdev-components/components/radial/ld-arc.snippet.html` | `beautifului-components/components/ai-states/loading-state.snippet.html` |
 | "Chat bubble typing indicator ('Typing...')" | `loadingdev-components/components/dots/ld-bouncing-dots.snippet.html` | `beautifului-components/components/ai-states/thinking-state.snippet.html` |
 | "Device discovery / agent tool web scanning" | `loadingdev-components/components/radial/ld-radar.snippet.html` | Heavy 3D backgrounds |

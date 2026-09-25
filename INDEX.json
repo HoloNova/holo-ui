@@ -88,6 +88,23 @@
       "manifest": "loadingdev-components/loadingdev.manifest.json",
       "shared_style": "loadingdev-components/shared/base.css",
       "guide": "loadingdev-components/COMPONENTS_GUIDE.md"
+    },
+    "minimal_theme_toggles": {
+      "name": "Minimalist Theme Toggles (Source: toggles.dev)",
+      "aesthetic": "Pure CSS/SVG, 1em vector morphing, zero-runtime, accessible, clip-path and path transitions, reduced-motion guards.",
+      "when_to_use": [
+        "Compact top navigation bar and header dark-mode switches",
+        "Minimalist toolbars and settings cards requiring 1em vector scaling",
+        "Zero-dependency vanilla HTML/CSS interfaces",
+        "Subtle animated sun-to-moon, eclipse, and toggle transitions"
+      ],
+      "when_not_to_use": [
+        "Large atmospheric hero switches requiring full-screen sky particles (use day-night-sky-toggle instead)",
+        "High-friction destructive action gates (use slide-to-confirm-button instead)"
+      ],
+      "manifest": "themetoggle-components/themetoggle.manifest.json",
+      "shared_style": "themetoggle-components/shared/base.css",
+      "guide": "themetoggle-components/COMPONENTS_GUIDE.md"
     }
   },
   "by_function": {
@@ -802,6 +819,361 @@
             "liquid-glass-switch",
             "frosted-toggle",
             "minimal-theme-switch"
+          ]
+        },
+        {
+          "id": "theme-toggle-classic",
+          "style": "minimal_theme_toggles",
+          "name": "Classic Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Universal application header bars, navigation menus, and clean documentation site toolbars.",
+          "when_not": "Heavy full-page hero sections requiring 3D atmospheric effects (use day-night-sky-toggle instead).",
+          "aliases": [
+            "经典日夜切换",
+            "极简主题切换",
+            "太阳月亮切换",
+            "暗黑模式切换",
+            "昼夜模式",
+            "classic-toggle",
+            "sun-moon-toggle",
+            "theme-toggle",
+            "dark-mode-toggle",
+            "light-dark-switch"
+          ]
+        },
+        {
+          "id": "theme-toggle-around",
+          "style": "minimal_theme_toggles",
+          "name": "Around Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Tech SaaS headers, AI dashboards, and modern developer documentation toolbars.",
+          "when_not": "Extremely compact 12px table cell status indicators.",
+          "aliases": [
+            "环绕日夜切换",
+            "轨道粒子",
+            "极简主题切换",
+            "暗黑模式切换",
+            "昼夜切换",
+            "around-toggle",
+            "orbit-toggle",
+            "satellite-toggle",
+            "theme-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-dark-inner",
+          "style": "minimal_theme_toggles",
+          "name": "Dark Inner Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Compact toolbars, floating navigation bars, and settings list items.",
+          "when_not": "Playful landing pages requiring high-friction confirmation.",
+          "aliases": [
+            "内旋日夜切换",
+            "内向折叠",
+            "极简主题切换",
+            "暗黑模式切换",
+            "dark-inner-toggle",
+            "inward-toggle",
+            "compact-theme-switch"
+          ]
+        },
+        {
+          "id": "theme-toggle-dark-side",
+          "style": "minimal_theme_toggles",
+          "name": "Dark Side Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Vertical sidebars, dense developer terminals, and compact utility headers.",
+          "when_not": "Expanded full-screen modal overlays.",
+          "aliases": [
+            "侧旋日夜切换",
+            "侧边翻转",
+            "极简主题切换",
+            "暗黑模式切换",
+            "dark-side-toggle",
+            "lateral-toggle",
+            "side-shift-switch"
+          ]
+        },
+        {
+          "id": "theme-toggle-eclipse",
+          "style": "minimal_theme_toggles",
+          "name": "Eclipse Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Astronomy, dark-first tech products, creative portfolios, and futuristic web portals.",
+          "when_not": "Standard corporate business forms.",
+          "aliases": [
+            "日蚀切换",
+            "月食主题",
+            "极简主题切换",
+            "暗黑模式切换",
+            "eclipse-toggle",
+            "lunar-eclipse",
+            "solar-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-expand",
+          "style": "minimal_theme_toggles",
+          "name": "Expand Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Prominent top navigation action buttons, interactive hero headers, and landing touchpoints.",
+          "when_not": "Ultra-dense data tables.",
+          "aliases": [
+            "膨胀日夜切换",
+            "径向展开",
+            "极简主题切换",
+            "暗黑模式切换",
+            "expand-toggle",
+            "radial-toggle",
+            "pulse-theme-switch"
+          ]
+        },
+        {
+          "id": "theme-toggle-spin",
+          "style": "minimal_theme_toggles",
+          "name": "Spin Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Creative studios, dynamic landing showcases, and animated web portfolios.",
+          "when_not": "Static data-dense financial applications.",
+          "aliases": [
+            "旋转日夜切换",
+            "射线收缩",
+            "极简主题切换",
+            "暗黑模式切换",
+            "spin-toggle",
+            "whirl-toggle",
+            "kinetic-sun-switch"
+          ]
+        },
+        {
+          "id": "theme-toggle-half-sun",
+          "style": "minimal_theme_toggles",
+          "name": "Half Sun Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Brutalist, Swiss typography, architecture, and design agency websites.",
+          "when_not": "Skeuomorphic consumer mobile apps.",
+          "aliases": [
+            "半日切换",
+            "半月翻转",
+            "几何风格",
+            "极简主题切换",
+            "half-sun-toggle",
+            "geometric-switch",
+            "minimal-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-horizon",
+          "style": "minimal_theme_toggles",
+          "name": "Horizon Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Editorial blogs, lifestyle apps, travel platforms, and reading applications.",
+          "when_not": "High-density technical code diff viewers.",
+          "aliases": [
+            "地平线日夜切换",
+            "日出日落",
+            "极简主题切换",
+            "暗黑模式切换",
+            "horizon-toggle",
+            "sunset-switch",
+            "sunrise-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-inner-moon",
+          "style": "minimal_theme_toggles",
+          "name": "Inner Moon Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Productivity workspaces, Linear/Raycast style dark themes, and developer CLI tools.",
+          "when_not": "Complex checkout or critical action gates.",
+          "aliases": [
+            "内核月亮切换",
+            "月相变化",
+            "极简主题切换",
+            "暗黑模式切换",
+            "inner-moon-toggle",
+            "moon-phase-switch",
+            "lunar-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-lightbulb",
+          "style": "minimal_theme_toggles",
+          "name": "Lightbulb Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Education portals, note-taking applications, ideation boards, and reading environments.",
+          "when_not": "Strict corporate banking grids.",
+          "aliases": [
+            "灯泡开关",
+            "白炽灯主题切换",
+            "极简主题切换",
+            "暗黑模式切换",
+            "lightbulb-toggle",
+            "lamp-switch",
+            "bulb-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-light-switch",
+          "style": "minimal_theme_toggles",
+          "name": "Light Switch Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Smart home IoT dashboards, hardware companion apps, and playful interactive settings.",
+          "when_not": "Ultra-thin inline text hyperlinks.",
+          "aliases": [
+            "墙壁开关",
+            "拟物拨动开关",
+            "极简主题切换",
+            "暗黑模式切换",
+            "light-switch-toggle",
+            "wall-switch",
+            "rocker-toggle"
+          ]
+        },
+        {
+          "id": "theme-toggle-simple",
+          "style": "minimal_theme_toggles",
+          "name": "Simple Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Everyday minimalist websites, personal portfolios, blogs, and documentation pages.",
+          "when_not": "Complex multi-branch settings menus.",
+          "aliases": [
+            "极简纯粹切换",
+            "微型日夜",
+            "极简主题切换",
+            "暗黑模式切换",
+            "simple-toggle",
+            "clean-theme-switch",
+            "minimal-day-night"
+          ]
+        },
+        {
+          "id": "theme-toggle-within",
+          "style": "minimal_theme_toggles",
+          "name": "Within Theme Toggle",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "setting",
+            "runtime": "html-css"
+          },
+          "when": "Card toolbars, floating utility badges, and sub-navigation action panels.",
+          "when_not": "Full-page loading screens.",
+          "aliases": [
+            "内嵌日夜切换",
+            "嵌套形变",
+            "极简主题切换",
+            "暗黑模式切换",
+            "within-toggle",
+            "nested-toggle",
+            "crater-switch"
           ]
         }
       ]
@@ -1955,7 +2327,8 @@
       "When integrating Rewamp UI 3D AI Orbs, contain them in Apple Liquid Glass or Beautiful UI dark cards to maintain visual continuity.",
       "Embed loading.dev micro-indicators (e.g., ld-arc, ld-linear-dots) directly inside Beautiful UI prompt bars and table cells for zero-runtime lightweight feedback without layout shift.",
       "When embedding loading.dev indicators into Apple HIG layouts, set color: var(--apple-accent-blue) or var(--apple-text-secondary) and size to 16px-22px to match SF Pro symbol scales.",
-      "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states."
+      "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states.",
+      "Embed minimal theme toggles (themetoggle-components) into Beautiful UI or Apple HIG headers with zero CSS conflicts; currentColor automatically adapts to parent typography."
     ]
   },
   "feature_tokens_spec": "FEATURE_TOKENS.md",
