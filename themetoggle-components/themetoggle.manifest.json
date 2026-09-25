@@ -2,6 +2,7 @@
   "style": "minimal_theme_toggles",
   "aesthetic": "Pure CSS/SVG, 1em vector morphing, zero-runtime, accessible, clip-path and path transitions, reduced-motion guards",
   "shared_css": "shared/base.css",
+  "design_md": "DESIGN.md",
   "tech": "Pure HTML/SVG + CSS Custom Properties (zero JavaScript runtime lock-in)",
   "tokens": {
     "scale": "compact",

@@ -2,6 +2,7 @@
   "style": "apple_human_interface",
   "aesthetic": "Humanist, liquid glass blur, squircle curvature, spring physics, 44pt touch",
   "tokens_css": "tokens/tokens.css",
+  "design_md": "DESIGN.md",
   "prompt_preset": "PROMPT_PRESET.md",
   "foundations": {
     "typography": "foundations/typography.md",

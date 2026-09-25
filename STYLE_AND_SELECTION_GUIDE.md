@@ -29,7 +29,7 @@ Different design languages originate from distinct engineering and cultural cont
 +---------------------------------------------------------------------------------+
 ```
 
-### Style A: AI-Native Productivity (`beautifului-components`)
+### Style A: AI-Native Productivity (`beautifului-components`) — [`DESIGN.md`](./beautifului-components/DESIGN.md)
 - **Visual DNA**: Linear aesthetic, Raycast precision, cold neutral tones, OKLCH palette, dark-first default.
 - **Key Signatures**:
   - 0.5px hairline dividers, dashed micro-borders (`border-dashed`).
@@ -43,7 +43,7 @@ Different design languages originate from distinct engineering and cultural cont
 - **Incompatible Scenarios**:
   - Generic e-commerce storefronts, children education portals, casual gaming, warm lifestyle apps.
 
-### Style B: Apple Human Interface (`guidelines/apple-design`)
+### Style B: Apple Human Interface (`guidelines/apple-design`) — [`DESIGN.md`](./guidelines/apple-design/DESIGN.md)
 - **Visual DNA**: Humanist elegance, liquid glass materials, squircle curvature, ambient lighting adaptation.
 - **Key Signatures**:
   - Continuous curve squircles (`border-radius: 16px ~ 28px`).
@@ -56,7 +56,7 @@ Different design languages originate from distinct engineering and cultural cont
 - **Incompatible Scenarios**:
   - Ultra-dense financial trading terminals, raw hacker CLI logs (excessive padding and rounded corners reduce line efficiency).
 
-### Style C: Kinetic Motion & Tactile Physics (`rewampui-components`)
+### Style C: Kinetic Motion & Tactile Physics (`rewampui-components`) — [`DESIGN.md`](./rewampui-components/DESIGN.md)
 - **Visual DNA**: Physical spring dynamics, continuous fluid morphing, 3D orbits, kinetic typography, Lilac & Orange palette.
 - **Key Signatures**:
   - Framer Motion spring physics with mass, stiffness, and damping.
@@ -72,7 +72,7 @@ Different design languages originate from distinct engineering and cultural cont
   - Data-dense financial spreadsheets or static admin backends where constant motion introduces distraction.
   - Strict zero-JavaScript low-bandwidth environments.
 
-### Style D: Micro-Motion Loaders & Spinners (`loadingdev-components`)
+### Style D: Micro-Motion Loaders & Spinners (`loadingdev-components`) — [`DESIGN.md`](./loadingdev-components/DESIGN.md)
 - **Visual DNA**: Pure CSS/SVG, zero-runtime, hairline single strokes, 3x3 pixel matrices, and 3D quantum wireframes.
 - **Key Signatures**:
   - Standard CSS custom properties: `--ld-size`, `--ld-duration`, `--ld-play-state`, `--ld-step`.
@@ -86,7 +86,7 @@ Different design languages originate from distinct engineering and cultural cont
   - Full multi-step thinking traces with collapsible reasoning trees (use `thinking-state` from Beautiful UI).
   - High-impact hero assistant companion avatars (use 3D Fluid Orbs from Rewamp UI).
 
-### Style E: Minimalist Theme Toggles (`themetoggle-components`)
+### Style E: Minimalist Theme Toggles (`themetoggle-components`) — [`DESIGN.md`](./themetoggle-components/DESIGN.md)
 - **Visual DNA**: Pure CSS/SVG, zero-runtime, 1em scalable vector morphing, clip-path and path transitions, reduced-motion guards.
 - **Key Signatures**:
   - Standard semantic `<button><svg>` with pure CSS keyframe/transition animations.

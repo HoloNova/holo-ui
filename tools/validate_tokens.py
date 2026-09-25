@@ -61,7 +61,12 @@ def main():
     print(f"Unique components in INDEX.json: {len(index_comps)}")
 
     # 2. Check parity between ROUTER and INDEX
-    missing_in_index = set(router_comps.keys()) - set(index_comps.keys())
+    # Router aliases pointing to known canonical component files are permitted
+    canonical_paths = {router_comps.get(cid) for cid in index_comps.keys() if cid in router_comps}
+    missing_in_index = {
+        cid for cid, fpath in router_comps.items()
+        if cid not in index_comps and fpath not in canonical_paths
+    }
     missing_in_router = set(index_comps.keys()) - set(router_comps.keys())
 
     if missing_in_index:

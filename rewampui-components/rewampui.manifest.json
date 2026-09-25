@@ -2,6 +2,7 @@
   "style": "kinetic_motion_tactile",
   "aesthetic": "Spring damping, fluid morphing, 3D orbits, kinetic typography, Lilac/Orange",
   "shared_css": ["shared/tokens.css", "shared/base.css"],
+  "design_md": "DESIGN.md",
   "tech": "React 19 + Framer Motion + Three.js (AI orbs)",
   "fonts": ["SF Pro", "Geist Mono"],
   "items": [

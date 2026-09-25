@@ -29,6 +29,7 @@
         "Generic ecommerce stores, landing pages, children apps, casual mobile games"
       ],
       "manifest": "beautifului-components/beautifului.manifest.json",
+      "design_md": "beautifului-components/DESIGN.md",
       "shared_style": "beautifului-components/shared/base.css"
     },
     "apple_human_interface": {
@@ -46,6 +47,7 @@
       ],
       "manifest": "guidelines/apple-design/apple-design.manifest.json",
       "tokens_css": "guidelines/apple-design/tokens/tokens.css",
+      "design_md": "guidelines/apple-design/DESIGN.md",
       "prompt_preset": "guidelines/apple-design/PROMPT_PRESET.md"
     },
     "kinetic_motion_tactile": {
@@ -67,6 +69,7 @@
       ],
       "manifest": "rewampui-components/rewampui.manifest.json",
       "tokens_css": "rewampui-components/shared/tokens.css",
+      "design_md": "rewampui-components/DESIGN.md",
       "shared_style": "rewampui-components/shared/base.css",
       "guide": "rewampui-components/COMPONENTS_GUIDE.md"
     },
@@ -86,6 +89,7 @@
         "Step-by-step collapsible thought tree inspection (use Beautiful UI thinking-state instead)"
       ],
       "manifest": "loadingdev-components/loadingdev.manifest.json",
+      "design_md": "loadingdev-components/DESIGN.md",
       "shared_style": "loadingdev-components/shared/base.css",
       "guide": "loadingdev-components/COMPONENTS_GUIDE.md"
     },
@@ -103,6 +107,7 @@
         "High-friction destructive action gates (use slide-to-confirm-button instead)"
       ],
       "manifest": "themetoggle-components/themetoggle.manifest.json",
+      "design_md": "themetoggle-components/DESIGN.md",
       "shared_style": "themetoggle-components/shared/base.css",
       "guide": "themetoggle-components/COMPONENTS_GUIDE.md"
     }

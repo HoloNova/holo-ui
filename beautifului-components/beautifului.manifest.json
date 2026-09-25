@@ -2,6 +2,7 @@
   "style": "ai_native_productivity",
   "aesthetic": "Dark-first, cold neutral, OKLCH palette, 0.5px hairlines, tabular figures",
   "shared_css": "shared/base.css",
+  "design_md": "DESIGN.md",
   "tech": "Tailwind CSS v4 + HTML (no JS framework)",
   "fonts": ["Inter", "JetBrains Mono"],
   "items": [

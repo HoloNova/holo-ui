@@ -2,6 +2,7 @@
   "style": "micro_motion_indicators",
   "aesthetic": "Minimalist, zero-runtime, pure CSS/SVG, hairline strokes, pixel matrices, spring/harmonic motion",
   "shared_css": "shared/base.css",
+  "design_md": "DESIGN.md",
   "tech": "Pure HTML/SVG + CSS Custom Properties (zero JavaScript runtime)",
   "items": [
     {

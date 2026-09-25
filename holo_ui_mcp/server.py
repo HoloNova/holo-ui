@@ -178,6 +178,7 @@ class HoloUIEngine:
         normalized_q = (query or "").lower().strip()
         if style == "apple_human_interface" or any(w in normalized_q for w in ["apple", "hig", "liquid glass", "squircle", "44pt"]):
             apple_tokens = self._read_file_cached("guidelines/apple-design/tokens/tokens.css")
+            apple_design_md = self._read_file_cached("guidelines/apple-design/DESIGN.md")
             apple_prompt = self._read_file_cached("guidelines/apple-design/PROMPT_PRESET.md")
             return {
                 "count": 1,
@@ -190,6 +191,8 @@ class HoloUIEngine:
                         "when_not": "High-density data tickers or raw terminal CLI UIs.",
                         "code": apple_tokens,
                         "code_type": "css",
+                        "design_md": apple_design_md,
+                        "design_md_path": "guidelines/apple-design/DESIGN.md",
                         "guideline": apple_prompt,
                     }
                 ],
@@ -310,6 +313,7 @@ class HoloUIEngine:
                     "when": comp.get("when", ""),
                     "when_not": comp.get("when_not", ""),
                     "code_type": code_type,
+                    "design_md": self.styles.get(c_style, {}).get("design_md", ""),
                     "snippet": snippet_code,
                     "essential_css": css_bundle,
                 }

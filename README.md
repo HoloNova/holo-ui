@@ -23,6 +23,7 @@ Traditional AI "Skills" and prompt collections provide only abstract textual gui
 
 Holo UI Vault solves this problem by functioning as a **code-biased repository**:
 - **Verified Code Primitives**: Ready-to-use `.snippet.html` markup backed by standalone CSS tokens and keyframes.
+- **Agent-Native `DESIGN.md` Contracts**: High-density, zero-fluff design specifications formatted for AI agents. **DESIGN.md defines the visual rules; Holo UI provides the verified code engine.** Zero token bloat, pure machine constraints.
 - **Authoritative Design Guidelines**: Exact CSS variables, spring physics, and foundation tokens for official design languages (such as Apple Human Interface Guidelines).
 - **Dual-Dimension Architecture**: Agents can look up components either from a style perspective (e.g., AI-Native Productivity) or a functional perspective (e.g., prompt inputs, reasoning chains, approval cards).
 - **Zero Framework Lock-in**: Semantic HTML markup styled with CSS custom properties and utility classes. Easily portable into React, Vue, Svelte, or plain HTML.
@@ -33,9 +34,10 @@ Holo UI Vault solves this problem by functioning as a **code-biased repository**
 
 The repository provides structured indices tailored for machine lookup and developer reference:
 
-| File | Type | Purpose |
+| File / Asset | Type | Purpose |
 |:---|:---|:---|
 | [`holo-ui-mcp`](./tools/README.md) | MCP Server | Official Model Context Protocol server. Connect via `uvx holo-ui-mcp` for one-shot UI retrieval. |
+| [**`DESIGN.md` Matrix**](#4-library-inventory) | Agent Contracts | Machine-first design specifications ([Apple HIG](./guidelines/apple-design/DESIGN.md), [AI Productivity](./beautifului-components/DESIGN.md), [Kinetic Physics](./rewampui-components/DESIGN.md)). |
 | [`INDEX.json`](./INDEX.json) | Machine Index | Master dual-dimension index (`by_style`, `by_function`, and `style_harmonization`). |
 | [`ROUTER.json`](./ROUTER.json) | Fast Router | High-speed dispatch map mapping user intents and component IDs to file paths. |
 | [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | Feature Spec | 7-dimension orthogonal classification taxonomy for Agent-driven component disambiguation. |
@@ -91,18 +93,18 @@ If working from a local clone, launch directly via the bundled script:
 
 ### A. Concrete Component Libraries
 
-| Library | Source | Style DNA | Components | Tech Stack | Status |
-|:---|:---|:---|:---:|:---|:---:|
-| [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native Productivity (Dark-first, 0.5px hairlines, thinking states, prompt bars) | 21 | Tailwind CSS v4 + OKLCH Tokens | Complete |
-| [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | Kinetic Motion & Tactile Physics (Spring physics, 3D card orbits, fluid AI orbs, slide-to-confirm) | 30 | React 19 + Framer Motion + Three.js | Complete |
-| [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | Micro-Motion Loaders & Spinners (Pure CSS/SVG, zero-runtime, a11y reduced-motion, radial, dots, radar) | 29 | Pure HTML/SVG + CSS Custom Properties | Complete |
-| [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | Minimalist Theme Toggles (Pure CSS/SVG, zero-runtime, 1em vector morphing, accessible) | 14 | Pure HTML/SVG + CSS Custom Properties | Complete |
+| Library | Source | Style DNA & Aliases | Components | Spec | Tech Stack | Status |
+|:---|:---|:---|:---:|:---:|:---|:---:|
+| [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native Productivity (`linear-dark`, `openai-style`) | 21 | [`DESIGN.md`](./beautifului-components/DESIGN.md) | Tailwind v4 + OKLCH Tokens | Complete |
+| [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | Kinetic Motion & Tactile Physics (`stripe-fluid`, `framer-motion`) | 30 | [`DESIGN.md`](./rewampui-components/DESIGN.md) | React 19 + Framer Motion | Complete |
+| [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | Micro-Motion Loaders & Spinners (Pure CSS/SVG, zero-runtime, a11y) | 29 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | Complete |
+| [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | Minimalist Theme Toggles (Pure CSS/SVG, zero-runtime, 1em vector) | 14 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | Complete |
 
 ### B. Authoritative Design Systems & Tokens
 
 | Design System | Authority | Core Aesthetic | Assets | Status |
 |:---|:---|:---|:---|:---:|
-| [`guidelines/apple-design`](./guidelines/apple-design/) | [Apple HIG](https://developer.apple.com/design/) | Human Interface (Liquid Glass, squircles, spring physics, 44pt touch targets) | `tokens.css`, typography, materials, motion, pattern guides | Complete |
+| [`guidelines/apple-design`](./guidelines/apple-design/) | [Apple HIG](https://developer.apple.com/design/) | Human Interface (Liquid Glass, squircles, spring physics, 44pt touch targets) | [**`DESIGN.md`**](./guidelines/apple-design/DESIGN.md), `tokens.css`, typography, materials, motion guides | Complete |
 
 ---
 

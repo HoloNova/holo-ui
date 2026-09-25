@@ -23,6 +23,7 @@
 
 Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 - **实打实的代码原语（Verified Code Primitives）**：提供开箱即用、剥离了展示包装的纯净 `.snippet.html`，配合独立的 CSS 自定义属性与动画关键帧。
+- **纯 Agent-Native `DESIGN.md` 设计契约（Zero-Fluff Design Contracts）**：针对主流顶级风格，提炼剔除了人类废话、纯参数化的标准 `DESIGN.md`。**DESIGN.md 负责给 AI 定规则，Holo UI 负责给 AI 喂源码**，零 Token 浪费，彻底消除大模型代码幻觉。
 - **权威设计规范与参数（Authoritative Design Guidelines）**：针对 Apple Human Interface 等成熟设计语言，直接提炼官方标准的 `tokens.css`、排印字阶、弹簧物理参数与无幻觉生成卡。
 - **双向维度索引（Dual-Dimension Architecture）**：Agent 既可以按风格倾向（如 AI-Native 生产力风格）查找全套组件，也可以按业务功能（如推理思考链、Prompt 输入条、确认审批卡）跨库直达。
 - **零框架运行时绑架（Zero Framework Lock-in）**：基于语义化 HTML 标记与标准 CSS 变量构建，无需复杂的前置构建步骤，可无缝移植入 React、Vue、Svelte 或纯原生项目。
@@ -33,9 +34,10 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 
 仓库提供结构化的元数据与指引，方便机器检索与人工查阅：
 
-| 文件 | 类型 | 核心用途 |
+| 文件 / 资产 | 类型 | 核心用途 |
 |:---|:---|:---|
 | [`holo-ui-mcp`](./tools/README.md) | MCP 服务端 | 专为 Cursor / Claude 打造的标准协议服务，支持 `uvx holo-ui-mcp` 单步直出组件与样式。 |
+| [**`DESIGN.md` 矩阵**](#4-已收录资产总索引) | Agent 设计契约 | 纯机器优先的标准化设计规范（包含 [Apple HIG](./guidelines/apple-design/DESIGN.md)、[AI 生产力](./beautifului-components/DESIGN.md)、[物理动效](./rewampui-components/DESIGN.md)）。 |
 | [`INDEX.json`](./INDEX.json) | 机器主索引 | 双向检索核心：包含按风格索引（`by_style`）、按功能索引（`by_function`）与风格融合规则（`style_harmonization`）。 |
 | [`ROUTER.json`](./ROUTER.json) | 极速路由器 | 轻量级单点分发路由表，将用户意图与组件 ID 一键映射至本地文件路径。 |
 | [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | 特征 Token 规范 | 7 维度正交分类系统规范，用于 Agent 检索消歧与组件能力精确指纹标记。 |
@@ -91,18 +93,18 @@ Holo UI 提供官方发布的 MCP Server（[`holo-ui-mcp`](https://pypi.org/proj
 
 ### A. 代码型组件库
 
-| 库标识 | 来源站点 | 核心视觉风格 / 场景 | 组件数量 | 技术栈 | 状态 |
-|:---|:---|:---|:---:|:---|:---:|
-| [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI-Native 生产力风格（暗色优先、0.5px 发丝线、思考展开链、Prompt Bar） | 21 | Tailwind CSS v4 + OKLCH Tokens | 完整就绪 |
-| [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | 动态物理动效风格（弹簧物理、3D 轨道卡片、动态流体 Orb、滑动确认） | 30 | React 19 + Framer Motion + Three.js | 完整就绪 |
-| [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | 微动效与微状态指示器（纯 CSS/SVG、零运行时、a11y 低动效适配、单线圆弧、点阵、雷达） | 29 | Pure HTML/SVG + CSS Custom Properties | 完整就绪 |
-| [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | 极简日夜主题切换（纯 CSS/SVG、零运行时、1em 矢量形变、双向暗黑适配） | 14 | Pure HTML/SVG + CSS Custom Properties | 完整就绪 |
+| 库标识 | 来源站点 | 核心视觉风格 / 别名 | 组件数 | 专属规范 | 技术栈 | 状态 |
+|:---|:---|:---|:---:|:---:|:---|:---:|
+| [`beautifului-components`](./beautifului-components/) | [beautifului.dev](https://www.beautifului.dev/) | AI 生产力风格 (`linear-dark` / `openai-style`) | 21 | [`DESIGN.md`](./beautifului-components/DESIGN.md) | Tailwind v4 + OKLCH Tokens | 完整就绪 |
+| [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | 动态物理动效 (`stripe-fluid` / `framer-motion`) | 30 | [`DESIGN.md`](./rewampui-components/DESIGN.md) | React 19 + Framer Motion | 完整就绪 |
+| [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | 微动效与微状态指示器（纯 CSS/SVG、零运行时、a11y） | 29 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | 完整就绪 |
+| [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | 极简日夜主题切换（纯 CSS/SVG、零运行时、1em 矢量） | 14 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | 完整就绪 |
 
 ### B. 权威设计系统与 Tokens
 
 | 规范标识 | 权威来源 | 核心设计哲学 / 资产 | 核心资产组成 | 状态 |
 |:---|:---|:---|:---|:---:|
-| [`guidelines/apple-design`](./guidelines/apple-design/) | [Apple HIG](https://developer.apple.com/design/) | Apple 人机交互哲学（Liquid Glass 流动玻璃、平滑超椭圆、弹簧物理、44pt 触控） | `tokens.css`、排印/材质/动效/布局指南、Prompt 预设卡 | 完整就绪 |
+| [`guidelines/apple-design`](./guidelines/apple-design/) | [Apple HIG](https://developer.apple.com/design/) | Apple 人机交互哲学（Liquid Glass 流动玻璃、平滑超椭圆、弹簧物理、44pt 触控） | [**`DESIGN.md`**](./guidelines/apple-design/DESIGN.md)、`tokens.css`、排印/材质/动效指南 | 完整就绪 |
 
 ---
 

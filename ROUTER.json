@@ -13,27 +13,32 @@
     "ai_native_productivity": {
       "desc": "Dark-first, cold neutral, 0.5px hairlines, AI SaaS dashboards, agent workspaces",
       "manifest": "beautifului-components/beautifului.manifest.json",
+      "design_md": "beautifului-components/DESIGN.md",
       "shared_css": "beautifului-components/shared/base.css"
     },
     "apple_human_interface": {
       "desc": "Liquid glass, squircles, spring physics, 44pt touch, consumer mobile apps",
       "manifest": "guidelines/apple-design/apple-design.manifest.json",
+      "design_md": "guidelines/apple-design/DESIGN.md",
       "tokens_css": "guidelines/apple-design/tokens/tokens.css"
     },
     "kinetic_motion_tactile": {
       "desc": "Spring damping, 3D orbits, kinetic text, Lilac/Orange, landing pages, hero sections",
       "manifest": "rewampui-components/rewampui.manifest.json",
+      "design_md": "rewampui-components/DESIGN.md",
       "shared_css": "rewampui-components/shared/base.css",
       "tokens_css": "rewampui-components/shared/tokens.css"
     },
     "micro_motion_indicators": {
       "desc": "Minimalist, zero-runtime, pure CSS/SVG micro-indicators, button spinners, typing dots, radar scans",
       "manifest": "loadingdev-components/loadingdev.manifest.json",
+      "design_md": "loadingdev-components/DESIGN.md",
       "shared_css": "loadingdev-components/shared/base.css"
     },
     "minimal_theme_toggles": {
       "desc": "Minimalist, zero-runtime, pure CSS/SVG day-night and theme toggle buttons, 1em scalable vector morphing",
       "manifest": "themetoggle-components/themetoggle.manifest.json",
+      "design_md": "themetoggle-components/DESIGN.md",
       "shared_css": "themetoggle-components/shared/base.css"
     }
   },
