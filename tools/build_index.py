@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -67,6 +68,42 @@ def render_views(document):
     return {'INDEX.json': index, 'ROUTER.json': router}
 
 
+IMPORT_LINE = re.compile(r'''^import\s+(?:.+?\s+from\s+)?(['"])([^'"]+)\1\s*;?$''')
+
+
+def direct_imports(source):
+    """Recognize simple static ES imports; reject syntax we cannot certify."""
+    packages = set()
+    for line in source.splitlines():
+        stripped = line.strip()
+        if re.search(r'\b(?:import|require)\s*\(', stripped) or re.match(r'^export\b.*\bfrom\b', stripped):
+            raise ValueError('Unsupported dynamic import, require, or re-export')
+        if not re.match(r'^import\b', stripped):
+            if re.search(r'\bimport\b', stripped):
+                raise ValueError('Unrecognized import syntax: ' + stripped)
+            continue
+        match = IMPORT_LINE.fullmatch(stripped)
+        if match is None:
+            raise ValueError('Unsupported ES import syntax: ' + stripped)
+        specifier = match.group(2)
+        if specifier.startswith('.'):
+            continue
+        if specifier.startswith(('/', '#', 'node:')) or '://' in specifier:
+            raise ValueError('Unsupported module specifier: ' + specifier)
+        segments = specifier.split('/')
+        package = '/'.join(segments[:2]) if specifier.startswith('@') else segments[0]
+        if not package or (specifier.startswith('@') and len(segments) < 2):
+            raise ValueError('Invalid module specifier: ' + specifier)
+        packages.add(package)
+    return tuple(sorted(packages))
+
+
+def render_dependency_view(document, root):
+    return {'schema_version': 1, 'components': {
+        cid: list(direct_imports((root / comp['snippet']).read_text(encoding='utf-8')))
+        for cid, comp in sorted(document['components'].items())}}
+
+
 def encode(document):
     return json.dumps(document, ensure_ascii=False, indent=2) + '\n'
 
@@ -89,7 +126,7 @@ def main(argv=None):
         else:
             document = load(path)
         catalog = Catalog(ROOT, document)
-        views = render_views(document)
+        views = {**render_views(document), 'DEPENDENCIES.json': render_dependency_view(document, ROOT)}
         if args.check:
             stale = [name for name, data in views.items() if load(ROOT / name) != data]
             if stale:

@@ -59,6 +59,7 @@ class HoloUIEngine:
             'code_type': 'react' if comp['snippet'].endswith(('.jsx', '.tsx')) else 'html',
             'css_paths': list(self.catalog.css_paths(comp['style'])),
             'resources': [dict(r) for r in comp.get('resources', [])],
+            'npm_dependencies': list(self.catalog.npm_dependencies[cid]),
         }
 
     def _design_system(self, query, filters):
@@ -138,6 +139,10 @@ def format_tool_response(result):
         ])
         if comp.get('tokens'):
             parts.append('- Features: ' + ', '.join(f'{k}={v}' for k, v in comp['tokens'].items()))
+        if comp['kind'] == 'component':
+            packages = comp['npm_dependencies']
+            parts.append('- Direct npm imports: ' + ', '.join(f'`{pkg}`' for pkg in packages)
+                         if packages else '- No direct npm imports detected (static scan)')
         parts.append('- CSS assets: ' + ', '.join(comp['css_paths']))
         if comp.get('resources'):
             parts.append('- Helper resources: ' + ', '.join(r['path'] for r in comp['resources']))

@@ -70,3 +70,9 @@ AFT/LSP 缓存曾显示新模块导入未解析，CLI pyright 完整检查为 0 
 | `python -m build --no-isolation` | **PASSED** | sdist 与 wheel 构建成功 |
 | 临时隔离 venv 下 Wheel 安装验证 | **PASSED** | 在仓库外隔离虚拟环境中安装并成功检索 `day-night-sky-toggle` 及其 helper 源码正文 |
 | 评测基准运行与持久化 | **PASSED** | 同一次运行生成 `docs/retrieval-benchmark-results.json` 与 `docs/retrieval-benchmark-report.md` |
+
+## 后续增量：直接 npm import 视图（基于 `ab80ce9`）
+
+- `tools/build_index.py --write/--check` 从 snippet 构建并核对 `DEPENDENCIES.json`；未知 import 语法显式失败。MCP summary/full 返回已加载的直接 npm 包名，不按请求读取 snippet，也不把宿主 Tailwind 配置误作 npm 导入。
+- 非 UI Python 回归：52 tests OK；干净 coverage erase/run/combine/report 总计 90%（838 statements）。ruff、pyright、三视图 `--check` 均通过。
+- wheel/sdist 构建成功。实际 wheel 含 `holo_ui_mcp/DEPENDENCIES.json`；在仓库外隔离 venv 安装 wheel，summary 返回 `fluid-morph-orb` 的 `react`、`three` 包名。未执行浏览器/UI 验收（按用户要求）。

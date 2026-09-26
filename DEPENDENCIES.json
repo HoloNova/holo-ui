@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "components": {
+    "agent-screen": [],
+    "animated-search-demo": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "approval-card": [],
+    "arch-card-carousel": [
+      "react"
+    ],
+    "book-a-call-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "character-scramble-text": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "chat-composer": [],
+    "chrome-border-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "code-block": [],
+    "context-cards": [],
+    "day-night-sky-toggle": [
+      "framer-motion",
+      "react"
+    ],
+    "diagonal-card-stack": [
+      "framer-motion",
+      "react"
+    ],
+    "diff-table": [],
+    "editorial-3-d-orbit-carousel": [
+      "framer-motion",
+      "react"
+    ],
+    "filter-table": [],
+    "fine-tune-card": [],
+    "flip-3-d-text": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "flowchart": [],
+    "fluid-morph-orb": [
+      "react",
+      "three"
+    ],
+    "glass-orb-toggle": [
+      "framer-motion",
+      "react"
+    ],
+    "gloss-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "googly-eyes-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "hero-morph-navbar": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "insight-cards": [],
+    "kinetic-reel-text": [
+      "framer-motion",
+      "react"
+    ],
+    "landscape-orb-toggle": [
+      "framer-motion",
+      "react"
+    ],
+    "ld-arc": [],
+    "ld-atom": [],
+    "ld-blocks": [],
+    "ld-bouncing-dots": [],
+    "ld-cascade": [],
+    "ld-circular-dots": [],
+    "ld-classic": [],
+    "ld-classic-v2": [],
+    "ld-clock": [],
+    "ld-comet": [],
+    "ld-compass": [],
+    "ld-dual": [],
+    "ld-eclipse": [],
+    "ld-flip": [],
+    "ld-gather": [],
+    "ld-leap": [],
+    "ld-linear-dots": [],
+    "ld-loading": [],
+    "ld-morph": [],
+    "ld-orbit": [],
+    "ld-pulse": [],
+    "ld-radar": [],
+    "ld-ring": [],
+    "ld-ripple": [],
+    "ld-slide": [],
+    "ld-snake": [],
+    "ld-swirl": [],
+    "ld-trace": [],
+    "ld-wave": [],
+    "loading-state": [],
+    "magnetic-pill-navbar": [
+      "framer-motion",
+      "react"
+    ],
+    "marbled-fluid-orb": [
+      "react",
+      "three"
+    ],
+    "morph-search-capsule": [
+      "framer-motion",
+      "react"
+    ],
+    "neumorphic-download-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "particle-dot-orb": [
+      "react",
+      "three"
+    ],
+    "perspective-flip-deck": [
+      "framer-motion",
+      "react"
+    ],
+    "pill-expand-navbar": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "prompt-bar": [],
+    "rainbow-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "recommendation-card": [],
+    "records-table": [],
+    "search": [],
+    "selection-actions": [],
+    "shimmer-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "sidebar-nav": [],
+    "slide-to-confirm-button": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "split-text-reveal": [
+      "framer-motion",
+      "react"
+    ],
+    "spotlight-text": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "streaming-text": [],
+    "task-rows": [],
+    "theme-toggle-around": [],
+    "theme-toggle-classic": [],
+    "theme-toggle-dark-inner": [],
+    "theme-toggle-dark-side": [],
+    "theme-toggle-eclipse": [],
+    "theme-toggle-expand": [],
+    "theme-toggle-half-sun": [],
+    "theme-toggle-horizon": [],
+    "theme-toggle-inner-moon": [],
+    "theme-toggle-light-switch": [],
+    "theme-toggle-lightbulb": [],
+    "theme-toggle-simple": [],
+    "theme-toggle-spin": [],
+    "theme-toggle-within": [],
+    "thinking-state": [],
+    "tool-chips": [],
+    "typewriter-text": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ],
+    "velocity-marquee-text": [
+      "framer-motion",
+      "lucide-react",
+      "react"
+    ]
+  }
+}

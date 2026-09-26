@@ -195,6 +195,9 @@ class StdioTests(unittest.TestCase):
             {'jsonrpc': '2.0', 'id': 2, 'method': 'tools/call', 'params': {
                 'name': 'get_holo_ui_component', 'arguments': {
                     'query': '', 'component_id': 'shimmer-button', 'runtime': 'html-css'}}},
+            {'jsonrpc': '2.0', 'id': 3, 'method': 'tools/call', 'params': {
+                'name': 'get_holo_ui_component', 'arguments': {
+                    'query': '', 'component_id': 'fluid-morph-orb', 'mode': 'summary'}}},
         ]
         run = subprocess.run([sys.executable, '-m', 'holo_ui_mcp.server'], cwd=ROOT,
                              input='\n'.join(json.dumps(r) for r in requests) + '\n',
@@ -206,6 +209,7 @@ class StdioTests(unittest.TestCase):
             self.assertIn(key, schema)
         self.assertIn('minimal_theme_toggles', schema['style']['enum'])
         self.assertIn('No matching', responses[1]['result']['content'][0]['text'])
+        self.assertIn('Direct npm imports: `react`, `three`', responses[2]['result']['content'][0]['text'])
 
     def test_protocol_errors_and_resource_reads(self):
         requests = [

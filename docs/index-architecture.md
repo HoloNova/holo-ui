@@ -9,7 +9,7 @@ Holo UI 的核心是可定位、可约束、可交付的 UI 资产索引，不�
 ## 架构决策
 
 - `REGISTRY.json` 是检索元数据唯一事实源。每个组件只存一次；功能分组只引用 ID。
-- `INDEX.json` 与 `ROUTER.json` 是生成的兼容视图，供文件读取型 Agent 使用。库内 catalog/manifest 暂作展示资料，不参与 MCP 检索；其人工内容核对独立交接。
+- `INDEX.json` 与 `ROUTER.json` 是生成的兼容视图，供文件读取型 Agent 使用。`DEPENDENCIES.json` 是从 snippet 的直接静态 import 构建的依赖视图；只表示已识别的 npm 包，不推断宿主 CSS 或完整运行依赖。库内 catalog/manifest 暂作展示资料，不参与 MCP 检索；其人工内容核对独立交接。
 - `tools/build_index.py --migrate` 一次性读取旧 INDEX/ROUTER，按相同源码路径推导路由别名。冲突或未知路径必须失败，不推测新 ID。
 - `--write` 从 REGISTRY 重建兼容视图；`--check` 检查视图漂移及注册表有效性。
 - Python SQLite FTS5 在内存建索引；复用其 BM25，不自己实现搜索算法，不添加第三方运行依赖。需要 Python 的 sqlite3 带 FTS5；不支持时明确失败。
@@ -19,7 +19,7 @@ Holo UI 的核心是可定位、可约束、可交付的 UI 资产索引，不�
 ## 系统设计
 
 ```text
-REGISTRY ──构建脚本──> INDEX / ROUTER（兼容视图）
+REGISTRY + snippets ──构建脚本──> INDEX / ROUTER / DEPENDENCIES（派生视图）
     └── Catalog ──> Retrieval（约束 + exact/alias + FTS5）
                          └── Engine（summary 或资源展开）──> MCP 格式化
 ```
@@ -40,7 +40,7 @@ REGISTRY ──构建脚本──> INDEX / ROUTER（兼容视图）
 - component_id 是 ID/别名查询；未知 ID 返回空，不转自然语言检索。
 - 自然语言先尝试完整 ID/别名，然后 FTS5。关键词使用字面、英语词边界、中文子串匹配；较长短语优先，只用于候选偏好，不能突破约束。
 - 不分析自然语言中的否定/依赖限制；调用 Agent 应转换为结构化参数，服务端不再调用另一个 LLM。
-- 默认 mode=full、limit=1，保持单步交付；mode=summary 返回候选元数据，不读取代码/CSS/DESIGN；limit 范围 1..3。
+- 默认 mode=full、limit=1，保持单步交付；mode=summary 返回候选元数据和构建期提取的直接 npm import，不按请求读取代码/CSS/DESIGN；limit 范围 1..3。
 - 排序有稳定 ID tie-break，返回匹配原因；分数不是概率。
 - 空请求、无匹配、约束冲突明确返回 count=0，无默认 thinking-state。
 - 无组件的风格（如 Apple）作为 design_system 资产返回，不能满足组件七维条件。

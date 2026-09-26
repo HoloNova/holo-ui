@@ -45,6 +45,7 @@ packages = ["holo_ui_mcp"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "REGISTRY.json" = "holo_ui_mcp/REGISTRY.json"
+"DEPENDENCIES.json" = "holo_ui_mcp/DEPENDENCIES.json"
 "INDEX.json" = "holo_ui_mcp/INDEX.json"
 "ROUTER.json" = "holo_ui_mcp/ROUTER.json"
 "FEATURE_TOKENS.md" = "holo_ui_mcp/FEATURE_TOKENS.md"
@@ -58,6 +59,7 @@ packages = ["holo_ui_mcp"]
 [tool.hatch.build.targets.sdist]
 include = [
     "REGISTRY.json",
+    "DEPENDENCIES.json",
     "INDEX.json",
     "ROUTER.json",
     "FEATURE_TOKENS.md",

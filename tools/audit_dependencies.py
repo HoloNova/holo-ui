@@ -9,6 +9,11 @@ import re
 from pathlib import Path
 from zipfile import ZipFile
 
+if __package__:
+    from .build_index import direct_imports
+else:
+    from build_index import direct_imports
+
 ROOT = Path(__file__).resolve().parents[1]
 STATIC_IMPORT = re.compile(
     r'''\bimport\s+(?:(?:[\w*\s{},]*)\s+from\s+)?['"]([^'"]+)['"]|\brequire\(['"]([^'"]+)['"]\)'''
@@ -57,11 +62,11 @@ def audit(wheel_path=None):
         source = snippet.read_text(encoding="utf-8")
         style_tokens[comp["style"]].update(token for token in class_tokens(source)
                                            if UTILITY_SHAPE.match(token))
+        for package in direct_imports(source):
+            packages.setdefault(package, set()).add(cid)
         for match in STATIC_IMPORT.finditer(source):
             specifier = match.group(1) or match.group(2)
             if not specifier.startswith("."):
-                package = "/".join(specifier.split("/")[:2]) if specifier.startswith("@") else specifier.split("/")[0]
-                packages.setdefault(package, set()).add(cid)
                 continue
             resolved = _resolve_import(snippet, specifier)
             try:

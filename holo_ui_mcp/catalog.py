@@ -1,6 +1,7 @@
 """Validated metadata and asset access; REGISTRY.json is the only input."""
 
 import json
+import re
 from pathlib import Path, PureWindowsPath
 
 
@@ -19,7 +20,7 @@ def read_document(path):
 
 
 class Catalog:
-    def __init__(self, root_dir, document=None):
+    def __init__(self, root_dir, document=None, dependency_document=None):
         self.root = Path(root_dir).resolve()
         self.document = document if document is not None else read_document(self.root / 'REGISTRY.json')
         if self.document.get('schema_version') != 1:
@@ -29,6 +30,26 @@ class Catalog:
         self.dimensions = self.document['index_metadata']['feature_tokens_schema']['dimensions']
         self.keywords = self.document['keywords']
         self._validate()
+        if dependency_document is not None:
+            dependencies = dependency_document
+        elif document is None:
+            dependencies = read_document(self.root / 'DEPENDENCIES.json')
+        else:
+            # Synthetic catalogs in tests do not have a generated dependency view.
+            dependencies = {'schema_version': 1, 'components': {cid: [] for cid in self.components}}
+        if not isinstance(dependencies, dict):
+            raise TypeError('Invalid DEPENDENCIES.json; rebuild the index')
+        values = dependencies.get('components')
+        if (set(dependencies) != {'schema_version', 'components'} or dependencies['schema_version'] != 1
+                or not isinstance(values, dict) or set(values) != set(self.components)):
+            raise ValueError('Invalid or stale DEPENDENCIES.json; rebuild the index')
+        for cid, packages in values.items():
+            if (not isinstance(packages, list)
+                    or any(not isinstance(pkg, str) or not re.fullmatch(r'(?:@[\w.-]+/)?[\w.-]+', pkg)
+                           for pkg in packages)
+                    or packages != sorted(set(packages))):
+                raise ValueError('Invalid direct npm imports in DEPENDENCIES.json: ' + cid)
+        self.npm_dependencies = {cid: tuple(packages) for cid, packages in values.items()}
         pairs = [(alias.casefold(), cid) for cid, comp in self.components.items()
                  for alias in [cid] + comp.get('route_aliases', [])]
         if len({a for a, _ in pairs}) != len(pairs):

@@ -10,14 +10,10 @@
 
 ## 尚未验证
 
-本轮遵照用户要求，**不进行 UI/浏览器测试或验收**。ThemeToggle 的实际明暗视觉效果、全部 utility 是否由随包 CSS 覆盖、三卡片视觉与触控表现均留给用户。扫描不覆盖动态 `import()`、CSS `@import`/`url()`、HTML 资源属性或运行时拼接类名；“扫描到的本地 import 无缺失”不能写成“全部资产无缺失”。
+遵照用户要求，**Agent 不进行 UI/浏览器验收**。用户已报告前端验收通过；ThemeToggle 的逐项明暗效果、全部 utility 覆盖及三卡片真实触控表现不在此静态审计的独立验证范围内。扫描不覆盖动态 `import()`、CSS `@import`/`url()`、HTML 资源属性或运行时拼接类名；“扫描到的本地 import 无缺失”不能写成“全部资产无缺失”。
 
-## 依赖展示的下一步决策（暂不实现）
+## 直接 npm import 交付（已实施）与样式边界
 
-采用小规模混合方案，而不是请求时正则解析 snippet：
+构建脚本从 snippet 提取**受支持的静态 ES import**，生成按 canonical ID 索引的 `DEPENDENCIES.json`；`--check` 重建比对，不支持的 import/require/re-export 语法直接失败，不把未知语法误作零依赖。该视图与其他派生视图一起打入 wheel/sdist。源码是包导入的事实源；`REGISTRY.json` 仍是检索元数据和资源声明的唯一事实源。
 
-1. 在构建期从组件源码提取**可识别的直接 npm import**，生成按 canonical ID 索引的派生依赖视图，并在 `--check` 中重新生成比对；遇到解析不了的语法须标记待核实，不得静默称作零依赖。源码是包导入的事实源；`REGISTRY.json` 仍是检索元数据和资源声明的唯一事实源。
-2. 宿主 CSS 前提按经过验证的来源库约定记录，少数例外单列；这不是靠类名前缀可靠生成的内容。未完成用户 UI 验收前，不将 ThemeToggle 的宿主要求定为最终结论。
-3. 如实施，需给派生视图定义 schema、生成/检查命令、wheel/sdist 包含规则、启动加载及失配测试；`mode=summary` 必须只使用内存元数据，**不得每次查询读 snippet/CSS/helper**。full 中仍保留完整资源交付。
-
-目前没有新增依赖注册表字段或 MCP 输出。先让交付前提有证据，再决定是否值得为 94 个组件增加派生文件与展示契约。
+启动时校验派生视图；MCP 的 summary/full 均可显示直接 npm import，而 `mode=summary` 只访问已加载的内存元数据，不按请求读取 snippet/CSS/helper。此字段不是 npm 安装命令，也不承诺完整运行依赖。宿主 CSS 前提不能从工具类形态可靠生成；此部分仍按经过验证的来源库约定及例外逐步核实，不能混进 npm import 清单。

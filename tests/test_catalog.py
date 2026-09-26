@@ -7,7 +7,13 @@ from unittest.mock import patch
 from holo_ui_mcp.catalog import Catalog
 from holo_ui_mcp.engine import HoloUIEngine
 from holo_ui_mcp.retrieval import phrase_matches, terms
-from tools.build_index import encode, main, migrate, render_views
+from tools.build_index import (
+    encode,
+    main,
+    migrate,
+    render_dependency_view,
+    render_views,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCUMENT = json.loads((ROOT / 'REGISTRY.json').read_text(encoding='utf-8'))
@@ -233,11 +239,16 @@ class MigrationTests(unittest.TestCase):
         with TemporaryDirectory() as directory:
             root = Path(directory)
             (root / 'REGISTRY.json').write_text(encode(DOCUMENT), encoding='utf-8')
-            with patch('tools.build_index.ROOT', root), patch('holo_ui_mcp.catalog.Catalog', return_value=Catalog(ROOT)):
+            with patch('tools.build_index.ROOT', root), patch('holo_ui_mcp.catalog.Catalog', return_value=Catalog(ROOT)), \
+                    patch('tools.build_index.render_dependency_view', side_effect=lambda doc, _: render_dependency_view(doc, ROOT)):
                 self.assertEqual(main(['--write']), 0)
                 self.assertEqual(main(['--check']), 0)
                 self.assertEqual(main(['--migrate']), 1)
                 (root / 'ROUTER.json').write_text('{}', encoding='utf-8')
+                self.assertEqual(main(['--check']), 1)
+                self.assertEqual(main(['--write']), 0)
+                self.assertEqual(main(['--check']), 0)
+                (root / 'DEPENDENCIES.json').write_text('{}', encoding='utf-8')
                 self.assertEqual(main(['--check']), 1)
                 self.assertEqual(main(['--write']), 0)
                 self.assertEqual(main(['--check']), 0)

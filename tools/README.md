@@ -9,11 +9,11 @@
 专为 Cursor、Claude Desktop、Antigravity、Windsurf 等现代 AI 客户端打造的本地 Agent 协议服务。基于纯 Python 3 标准库构建（**0 外部依赖，无环境污染**）。
 
 ### 核心特性
-- **单一事实源**：读取 `REGISTRY.json`；兼容的 INDEX/ROUTER 由脚本生成。
+- **单一事实源**：检索元数据读取 `REGISTRY.json`；兼容的 INDEX/ROUTER 与从 snippet 提取直接 npm import 的 `DEPENDENCIES.json` 由脚本生成。
 - **约束检索**：style 与完整七维参数为 AND 硬约束，枚举自动生成；ID/路由别名优先，SQLite FTS5/BM25 负责词法排序。Python 的 sqlite3 必须支持 FTS5。
 - **按需展开**：默认 `mode=full, limit=1` 返回源码与完整共享 CSS；`mode=summary, limit=3` 只返回候选元数据。公共 limit 为 1..3。
 - **明确边界**：无匹配返回空，不默认回退；自然语言否定需调用 Agent 转换为过滤参数。DESIGN 仅通过 `include_design=true` 按需附加。
-- **资源完整性**：不再用正则裁剪 CSS；相同资源在响应中只输出一次。完整共享 CSS 可能较大，不代表已验证所有运行时依赖。
+- **资源完整性**：不再用正则裁剪 CSS；相同资源在响应中只输出一次。summary/full 显示的直接 npm import 不等于所有运行依赖或 Tailwind 宿主配置；完整共享 CSS 可能较大。
 
 ### 本地直接测试
 在命令行中可以直接运行内置的测试模式，无需启动 JSON-RPC：
@@ -57,10 +57,10 @@ python tools/validate_tokens.py
 
 ## 3. 注册表维护与回归验证
 
-新检索架构目前是仓库内改动，未发布到 PyPI。
+新检索架构已入库，尚未发布到 PyPI。
 
 ```bash
-# 日常只编辑 REGISTRY.json，然后重建兼容视图
+# 修改元数据或 snippet 后重建 INDEX / ROUTER / DEPENDENCIES 派生视图
 python tools/build_index.py --write
 python tools/build_index.py --check
 python -m unittest discover -s tests -v
