@@ -1,11 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Play, Pause, ChevronRight, ChevronLeft } from 'lucide-react';
-import skyCurtain from '../../assets/cards/sky-curtain.webp';
-import airplaneSunset from '../../assets/cards/airplane-sunset.webp';
-import rainbowHill from '../../assets/cards/rainbow-hill.webp';
-import trainWindow from '../../assets/cards/train-window.webp';
-import kangarooPlanet from '../../assets/cards/kangaroo-planet.webp';
+import { motion } from 'framer-motion';
 
 /**
  * Editorial3DOrbitCarousel
@@ -15,7 +9,7 @@ import kangarooPlanet from '../../assets/cards/kangaroo-planet.webp';
  * - Clock-arm ticking rhythm: snappy mechanical step every ~1.5s with pause between ticks
  * - Breathing space: wide 195px × 120px stride so cards have generous air and don't crowd
  * - Refined tilt angle: gentle clock-arm rotation (from +9deg to 0deg upright to -11deg)
- * - Pure image cards with no black overlays and no text
+ * - Pure image cards or neutral CSS placeholders
  * - Watermark "SHOWCASE 11" and editorial header/footer
  */
 export function Editorial3DOrbitCarousel({
@@ -67,16 +61,16 @@ export function Editorial3DOrbitCarousel({
   const effectiveInterval = Math.round(tickInterval / (speed || 1.0));
   const effectiveAuto = autoTick && autoRotate;
 
-  // Pure surreal art images
+  // Neutral placeholder items when caller provides no images
   const defaultItems = [
-    { id: '1', image: skyCurtain },
-    { id: '2', image: airplaneSunset },
-    { id: '3', image: rainbowHill },
-    { id: '4', image: trainWindow },
-    { id: '5', image: kangarooPlanet },
+    { id: '1', title: 'Exhibit 01' },
+    { id: '2', title: 'Exhibit 02' },
+    { id: '3', title: 'Exhibit 03' },
+    { id: '4', title: 'Exhibit 04' },
+    { id: '5', title: 'Exhibit 05' },
   ];
 
-  const cards = items || defaultItems;
+  const cards = Array.isArray(items) ? items : defaultItems;
   const numCards = cards.length;
 
   // Mark entrance animation complete after mount
@@ -89,7 +83,7 @@ export function Editorial3DOrbitCarousel({
 
   // Clock-arm ticking timer: ticks sequentially on load and repeats
   useEffect(() => {
-    if (!effectiveAuto || isPaused || isDragging) return;
+    if (!effectiveAuto || isPaused || isDragging || numCards === 0) return;
 
     // Start first tick shortly after load so animation immediately begins
     const initialKickstart = setTimeout(() => {
@@ -108,7 +102,7 @@ export function Editorial3DOrbitCarousel({
       clearTimeout(startInterval);
       if (intervalId) clearInterval(intervalId);
     };
-  }, [effectiveAuto, isPaused, isDragging, effectiveInterval]);
+  }, [effectiveAuto, isPaused, isDragging, effectiveInterval, numCards]);
 
   // Pointer drag to scrub or tick cards
   const handlePointerDown = (e) => {
@@ -140,6 +134,15 @@ export function Editorial3DOrbitCarousel({
       } catch (err) {}
     }
   };
+
+  if (numCards === 0) {
+    return (
+      <div
+        ref={containerRef}
+        className={`relative w-full max-w-full h-[340px] sm:h-[400px] md:h-[440px] overflow-visible select-none bg-transparent flex items-center justify-center ${className}`}
+      />
+    );
+  }
 
   return (
     <div
@@ -186,7 +189,7 @@ export function Editorial3DOrbitCarousel({
 
           return (
             <motion.div
-              key={card.id}
+              key={card.id || idx}
               initial={{
                 x: posX,
                 y: posY + 100,
@@ -231,7 +234,7 @@ export function Editorial3DOrbitCarousel({
                 setCurrentStep((prev) => prev + offset);
               }}
             >
-              {/* Pure Card Surface */}
+              {/* Card Surface */}
               <div
                 className="w-full h-full rounded-[18px] sm:rounded-[22px] overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
                 style={{
@@ -242,14 +245,28 @@ export function Editorial3DOrbitCarousel({
                   border: '1px solid rgba(255, 255, 255, 0.45)',
                 }}
               >
-                <img
-                  src={card.image}
-                  alt="Artwork"
-                  className="w-full h-full object-cover select-none pointer-events-none"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                />
+                {card.image ? (
+                  <img
+                    src={card.image}
+                    alt={card.alt || card.title || `Slide ${idx + 1}`}
+                    className="w-full h-full object-cover select-none pointer-events-none"
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                  />
+                ) : (
+                  <div
+                    className="w-full h-full flex flex-col items-center justify-center p-4 text-center select-none bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-950 text-neutral-200"
+                    aria-label={card.title || `Item ${card.id || idx + 1}`}
+                  >
+                    <span className="text-xs font-mono tracking-widest uppercase text-neutral-400 mb-1">
+                      {card.id || `0${idx + 1}`}
+                    </span>
+                    <span className="text-sm font-medium tracking-tight text-neutral-200">
+                      {card.title || `Item ${idx + 1}`}
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           );

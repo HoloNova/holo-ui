@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import skyCurtain from '../../assets/cards/sky-curtain.webp';
-import airplaneSunset from '../../assets/cards/airplane-sunset.webp';
-import rainbowHill from '../../assets/cards/rainbow-hill.webp';
-import trainWindow from '../../assets/cards/train-window.webp';
-import kangarooPlanet from '../../assets/cards/kangaroo-planet.webp';
 
 /**
  * DiagonalCardStack
@@ -53,38 +48,38 @@ export function DiagonalCardStack({
   const effStepX = Math.round(stepX * geomScale);
   const effStepY = Math.round(stepY * geomScale);
 
-  // Default cards matching the exact video design with surreal art imagery
+  // Default cards when caller provides no images
   const defaultCards = [
-    { id: '1', title: 'Stack 01', brand: 'rico.', image: skyCurtain },
-    { id: '2', title: 'Stack 02', brand: 'rico.', image: airplaneSunset },
-    { id: '3', title: 'Stack 03', brand: 'rico.', image: rainbowHill },
-    { id: '4', title: 'Stack 04', brand: 'rico.', image: trainWindow },
-    { id: '5', title: 'Stack 05', brand: 'rico.', image: kangarooPlanet },
-    { id: '6', title: 'Stack 06', brand: 'rico.', image: skyCurtain },
-    { id: '7', title: 'Stack 07', brand: 'rico.', image: airplaneSunset },
-    { id: '8', title: 'Stack 08', brand: 'rico.', image: rainbowHill },
-    { id: '9', title: 'Stack 09', brand: 'rico.', image: trainWindow },
-    { id: '10', title: 'Stack 10', brand: 'rico.', image: kangarooPlanet },
+    { id: '1', title: 'Stack 01', brand: 'rico.' },
+    { id: '2', title: 'Stack 02', brand: 'rico.' },
+    { id: '3', title: 'Stack 03', brand: 'rico.' },
+    { id: '4', title: 'Stack 04', brand: 'rico.' },
+    { id: '5', title: 'Stack 05', brand: 'rico.' },
+    { id: '6', title: 'Stack 06', brand: 'rico.' },
+    { id: '7', title: 'Stack 07', brand: 'rico.' },
+    { id: '8', title: 'Stack 08', brand: 'rico.' },
+    { id: '9', title: 'Stack 09', brand: 'rico.' },
+    { id: '10', title: 'Stack 10', brand: 'rico.' },
   ];
 
-  const cardList = cards || defaultCards;
+  const cardList = Array.isArray(cards) ? cards : defaultCards;
   const numCards = cardList.length;
-  const totalLength = numCards * Math.hypot(effStepX, effStepY);
   const unitStep = Math.hypot(effStepX, effStepY);
+  const totalLength = numCards * unitStep;
 
-  const norm = Math.hypot(effStepX, effStepY);
+  const norm = unitStep || 1;
   const dirX = effStepX / norm;
   const dirY = effStepY / norm;
 
   // Continuous animation loop moving up-left
   useEffect(() => {
-    if (isStacked || !autoPlay || isHovered || dragActive) {
+    if (isStacked || !autoPlay || isHovered || dragActive || numCards === 0) {
       lastTimeRef.current = null;
       return;
     }
 
     const animate = (time) => {
-      if (lastTimeRef.current != null) {
+      if (lastTimeRef.current != null && totalLength > 0) {
         const dt = (time - lastTimeRef.current) / 1000;
         const moveSpeed = 68 * speed;
         setOffset((prev) => {
@@ -101,22 +96,22 @@ export function DiagonalCardStack({
     return () => {
       if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
     };
-  }, [isStacked, autoPlay, isHovered, dragActive, speed, totalLength]);
+  }, [isStacked, autoPlay, isHovered, dragActive, speed, totalLength, numCards]);
 
   // Pointer drag along the diagonal axis
   const handlePointerDown = (e) => {
-    if (isStacked) return;
+    if (isStacked || numCards === 0) return;
     setDragActive(true);
     dragStartRef.current = {
       x: e.clientX,
       y: e.clientY,
       startOffset: offset,
     };
-    e.currentTarget.setPointerCapture(e.pointerId);
+    e.currentTarget.setPointerCapture?.(e.pointerId);
   };
 
   const handlePointerMove = (e) => {
-    if (!dragActive || isStacked) return;
+    if (!dragActive || isStacked || totalLength === 0) return;
     const dx = e.clientX - dragStartRef.current.x;
     const dy = e.clientY - dragStartRef.current.y;
     const projectedDelta = dx * dirX + dy * dirY;
@@ -129,10 +124,19 @@ export function DiagonalCardStack({
     if (dragActive) {
       setDragActive(false);
       try {
-        e.currentTarget.releasePointerCapture(e.pointerId);
+        e.currentTarget.releasePointerCapture?.(e.pointerId);
       } catch (err) {}
     }
   };
+
+  if (numCards === 0) {
+    return (
+      <div
+        ref={containerRef}
+        className={`relative w-full max-w-full h-[400px] sm:h-[480px] md:h-[520px] overflow-hidden select-none rounded-2xl flex items-center justify-center ${className}`}
+      />
+    );
+  }
 
   return (
     <div
@@ -216,7 +220,7 @@ export function DiagonalCardStack({
               className="pointer-events-auto"
               onClick={() => onCardClick && onCardClick(card, idx)}
             >
-              {/* Card Surface - Pure Image */}
+              {/* Card Surface */}
               <div
                 className="w-full h-full rounded-[20px] sm:rounded-[24px] overflow-hidden cursor-pointer transition-transform duration-200 hover:scale-[1.03]"
                 style={{
@@ -226,14 +230,30 @@ export function DiagonalCardStack({
                     : '0 26px 46px -12px rgba(0, 0, 0, 0.55), 0 8px 18px -4px rgba(0, 0, 0, 0.35)',
                 }}
               >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover select-none pointer-events-none"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                />
+                {card.image ? (
+                  <img
+                    src={card.image}
+                    alt={card.alt || card.title || `Card ${card.id || idx + 1}`}
+                    className="w-full h-full object-cover select-none pointer-events-none"
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                  />
+                ) : (
+                  <div
+                    className="w-full h-full flex flex-col items-center justify-center p-4 text-center select-none bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-950 text-neutral-200"
+                    aria-label={card.title || `Card ${card.id || idx + 1}`}
+                  >
+                    {card.brand && (
+                      <span className="text-xs font-mono tracking-widest text-neutral-400 uppercase mb-2">
+                        {card.brand}
+                      </span>
+                    )}
+                    <span className="text-sm font-medium tracking-tight text-neutral-200">
+                      {card.title || `Card ${idx + 1}`}
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           );

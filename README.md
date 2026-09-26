@@ -38,8 +38,9 @@ The repository provides structured indices tailored for machine lookup and devel
 |:---|:---|:---|
 | [`holo-ui-mcp`](./tools/README.md) | MCP Server | Official Model Context Protocol server. Connect via `uvx holo-ui-mcp` for one-shot UI retrieval. |
 | [**`DESIGN.md` Matrix**](#4-library-inventory) | Agent Contracts | Machine-first design specifications ([Apple HIG](./guidelines/apple-design/DESIGN.md), [AI Productivity](./beautifului-components/DESIGN.md), [Kinetic Physics](./rewampui-components/DESIGN.md)). |
-| [`INDEX.json`](./INDEX.json) | Machine Index | Master dual-dimension index (`by_style`, `by_function`, and `style_harmonization`). |
-| [`ROUTER.json`](./ROUTER.json) | Fast Router | High-speed dispatch map mapping user intents and component IDs to file paths. |
+| [`REGISTRY.json`](./REGISTRY.json) | Canonical Registry | Single source for retrieval metadata; see [index architecture](./docs/index-architecture.md). |
+| [`INDEX.json`](./INDEX.json) | Generated Index | Compatibility view (`by_style`, `by_function`, and `style_harmonization`); do not edit directly. |
+| [`ROUTER.json`](./ROUTER.json) | Generated Router | Compatibility mapping of keywords and component IDs to asset paths. |
 | [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | Feature Spec | 7-dimension orthogonal classification taxonomy for Agent-driven component disambiguation. |
 | [`STYLE_AND_SELECTION_GUIDE.md`](./STYLE_AND_SELECTION_GUIDE.md) | Technical Guide | Style quadrant analysis, anti-over-assembly rules, and token harmonization patterns. |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | Standard SOP | Contribution criteria for submitting new component libraries and design tokens. |

@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import skyCurtain from '../../assets/cards/sky-curtain.webp';
-import airplaneSunset from '../../assets/cards/airplane-sunset.webp';
-import rainbowHill from '../../assets/cards/rainbow-hill.webp';
-import trainWindow from '../../assets/cards/train-window.webp';
-import kangarooPlanet from '../../assets/cards/kangaroo-planet.webp';
 
 /**
  * PerspectiveFlipDeck
@@ -13,7 +8,7 @@ import kangarooPlanet from '../../assets/cards/kangaroo-planet.webp';
  * When cycling, the front card physically swings open to the right
  * around its right vertical hinge (from -22deg to 85deg) revealing
  * the next card which smoothly slides forward with spring physics.
- * Pure image cards with no black overlays and no text.
+ * Pure image cards or neutral CSS placeholders.
  */
 export function PerspectiveFlipDeck({
   items = null,
@@ -23,16 +18,16 @@ export function PerspectiveFlipDeck({
   cardHeight = 160,
   className = '',
 }) {
-  // Pure surreal art images provided by the user
+  // Neutral placeholder items when caller provides no images
   const defaultCards = [
-    { id: '1', image: skyCurtain },
-    { id: '2', image: airplaneSunset },
-    { id: '3', image: rainbowHill },
-    { id: '4', image: trainWindow },
-    { id: '5', image: kangarooPlanet },
+    { id: '1', title: 'Deck 01' },
+    { id: '2', title: 'Deck 02' },
+    { id: '3', title: 'Deck 03' },
+    { id: '4', title: 'Deck 04' },
+    { id: '5', title: 'Deck 05' },
   ];
 
-  const cardList = items || defaultCards;
+  const cardList = Array.isArray(items) ? items : defaultCards;
   const numCards = cardList.length;
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -56,7 +51,7 @@ export function PerspectiveFlipDeck({
   }, []);
 
   // Continuous scale (not discrete breakpoints) so the fanned deck always
-  // fits the real container width, whatever caused it to shrink. The base
+  // fit the real container width, whatever caused it to shrink. The base
   // deck size is kept compact (see cardWidth/cardHeight defaults above) so
   // it comfortably fits even the narrowed stage when a side panel is open.
   const REFERENCE_WIDTH = 380;
@@ -69,23 +64,32 @@ export function PerspectiveFlipDeck({
 
   // Trigger the 3D swinging flip
   const triggerFlip = () => {
-    if (isFlipping) return;
+    if (isFlipping || numCards <= 1) return;
     setIsFlipping(true);
 
     setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % numCards);
+      setActiveIndex((prev) => (numCards > 0 ? (prev + 1) % numCards : 0));
       setIsFlipping(false);
     }, 650);
   };
 
   // Auto-play timer
   useEffect(() => {
-    if (!autoPlay || isPaused) return;
+    if (!autoPlay || isPaused || numCards <= 1) return;
     const timer = setInterval(() => {
       triggerFlip();
     }, interval);
     return () => clearInterval(timer);
-  }, [autoPlay, isPaused, isFlipping, interval]);
+  }, [autoPlay, isPaused, isFlipping, interval, numCards]);
+
+  if (numCards === 0) {
+    return (
+      <div
+        ref={containerRef}
+        className={`relative w-full max-w-full h-[280px] sm:h-[340px] md:h-[380px] overflow-hidden select-none flex items-center justify-center rounded-2xl ${className}`}
+      />
+    );
+  }
 
   return (
     <div
@@ -140,7 +144,7 @@ export function PerspectiveFlipDeck({
 
           return (
             <motion.div
-              key={card.id}
+              key={card.id || idx}
               initial={false}
               animate={{
                 x: targetX,
@@ -164,7 +168,7 @@ export function PerspectiveFlipDeck({
                 transformStyle: 'preserve-3d',
               }}
             >
-              {/* Pure Card Surface */}
+              {/* Card Surface */}
               <div
                 className="w-full h-full rounded-[18px] sm:rounded-[24px] overflow-hidden transition-all duration-300"
                 style={{
@@ -175,14 +179,28 @@ export function PerspectiveFlipDeck({
                       : '0 18px 36px -10px rgba(0, 0, 0, 0.38)',
                 }}
               >
-                <img
-                  src={card.image}
-                  alt="Card Art"
-                  className="w-full h-full object-cover select-none pointer-events-none"
-                  loading="lazy"
-                  decoding="async"
-                  draggable={false}
-                />
+                {card.image ? (
+                  <img
+                    src={card.image}
+                    alt={card.alt || card.title || `Card ${card.id || idx + 1}`}
+                    className="w-full h-full object-cover select-none pointer-events-none"
+                    loading="lazy"
+                    decoding="async"
+                    draggable={false}
+                  />
+                ) : (
+                  <div
+                    className="w-full h-full flex flex-col items-center justify-center p-4 text-center select-none bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-950 text-neutral-200"
+                    aria-label={card.title || `Card ${card.id || idx + 1}`}
+                  >
+                    <span className="text-xs font-mono tracking-widest uppercase text-neutral-400 mb-1">
+                      {card.id || `0${idx + 1}`}
+                    </span>
+                    <span className="text-sm font-medium tracking-tight text-neutral-200">
+                      {card.title || `Card ${idx + 1}`}
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
           );

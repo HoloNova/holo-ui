@@ -1,0 +1,14 @@
+{
+  "name": "holo-ui-frontend-tests",
+  "private": true,
+  "scripts": {
+    "test": "NODE_ENV=development bun test",
+    "dev": "bun ./server.js"
+  },
+  "dependencies": {
+    "framer-motion": "^13.4.4",
+    "happy-dom": "^20.14.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

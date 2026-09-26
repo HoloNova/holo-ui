@@ -12,6 +12,88 @@
       "Review STYLE_AND_SELECTION_GUIDE.md prior to combining different styles."
     ]
   },
+  "style_harmonization": {
+    "principle": "Beautiful UI provides interaction skeletons; Apple HIG provides visual tokens and physics. They can be seamlessly blended without conflict.",
+    "rules": [
+      "When embedding Beautiful UI components into an Apple-themed project, map container radii to var(--apple-radius-lg) or var(--apple-radius-xl).",
+      "Replace dark solid surfaces with Apple Liquid Glass material: background: var(--apple-material-regular); backdrop-filter: var(--apple-blur-regular);",
+      "Ensure all clickable elements satisfy the Apple 44pt minimum touch boundary.",
+      "Adopt Apple Spring curve: transition-timing-function: var(--apple-ease-spring);",
+      "Maintain a single primary style hierarchy per viewport. Do not mix sharp brutalist elements with soft squircles.",
+      "Pair Rewamp UI tactile buttons (slide-to-confirm-button, shimmer-button) with Beautiful UI's dense data tables for high-impact action points.",
+      "Rewamp UI components use SF Pro and squircle radii, aligning natively with Apple HIG foundations.",
+      "When integrating Rewamp UI 3D AI Orbs, contain them in Apple Liquid Glass or Beautiful UI dark cards to maintain visual continuity.",
+      "Embed loading.dev micro-indicators (e.g., ld-arc, ld-linear-dots) directly inside Beautiful UI prompt bars and table cells for zero-runtime lightweight feedback without layout shift.",
+      "When embedding loading.dev indicators into Apple HIG layouts, set color: var(--apple-accent-blue) or var(--apple-text-secondary) and size to 16px-22px to match SF Pro symbol scales.",
+      "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states.",
+      "Embed minimal theme toggles (themetoggle-components) into Beautiful UI or Apple HIG headers with zero CSS conflicts; currentColor automatically adapts to parent typography."
+    ]
+  },
+  "feature_tokens_spec": "FEATURE_TOKENS.md",
+  "feature_tokens_schema": {
+    "dimensions": {
+      "scale": [
+        "micro",
+        "compact",
+        "standard",
+        "region",
+        "viewport"
+      ],
+      "placement": [
+        "embedded",
+        "flow",
+        "overlay",
+        "dock",
+        "shell"
+      ],
+      "interaction": [
+        "output",
+        "input",
+        "control",
+        "navigation",
+        "confirmation"
+      ],
+      "lifecycle": [
+        "persistent",
+        "state-driven",
+        "on-demand",
+        "transient"
+      ],
+      "motion": [
+        "none",
+        "transition",
+        "css-loop",
+        "spring",
+        "webgl"
+      ],
+      "category": [
+        "status",
+        "ai-response",
+        "composer",
+        "gate",
+        "data",
+        "content",
+        "nav",
+        "action",
+        "setting",
+        "text-effect",
+        "showcase",
+        "avatar",
+        "code",
+        "workflow",
+        "diagram",
+        "scaffold"
+      ],
+      "runtime": [
+        "html-css",
+        "vanilla-js",
+        "react",
+        "react-motion",
+        "react-3d"
+      ]
+    },
+    "cardinality": "Exactly one value per dimension for every component. All 47 values are globally unique."
+  },
   "by_style": {
     "ai_native_productivity": {
       "name": "AI-Native Productivity (Source: Beautiful UI)",
@@ -780,6 +862,12 @@
             "sky-toggle",
             "dark-mode-toggle",
             "sun-moon-switch"
+          ],
+          "resources": [
+            {
+              "path": "rewampui-components/shared/siteTheme.js",
+              "kind": "javascript"
+            }
           ]
         },
         {
@@ -802,6 +890,12 @@
             "parallax-theme-switch",
             "landscape-switch",
             "nature-toggle"
+          ],
+          "resources": [
+            {
+              "path": "rewampui-components/shared/siteTheme.js",
+              "kind": "javascript"
+            }
           ]
         },
         {
@@ -2318,87 +2412,5 @@
         }
       ]
     }
-  },
-  "style_harmonization": {
-    "principle": "Beautiful UI provides interaction skeletons; Apple HIG provides visual tokens and physics. They can be seamlessly blended without conflict.",
-    "rules": [
-      "When embedding Beautiful UI components into an Apple-themed project, map container radii to var(--apple-radius-lg) or var(--apple-radius-xl).",
-      "Replace dark solid surfaces with Apple Liquid Glass material: background: var(--apple-material-regular); backdrop-filter: var(--apple-blur-regular);",
-      "Ensure all clickable elements satisfy the Apple 44pt minimum touch boundary.",
-      "Adopt Apple Spring curve: transition-timing-function: var(--apple-ease-spring);",
-      "Maintain a single primary style hierarchy per viewport. Do not mix sharp brutalist elements with soft squircles.",
-      "Pair Rewamp UI tactile buttons (slide-to-confirm-button, shimmer-button) with Beautiful UI's dense data tables for high-impact action points.",
-      "Rewamp UI components use SF Pro and squircle radii, aligning natively with Apple HIG foundations.",
-      "When integrating Rewamp UI 3D AI Orbs, contain them in Apple Liquid Glass or Beautiful UI dark cards to maintain visual continuity.",
-      "Embed loading.dev micro-indicators (e.g., ld-arc, ld-linear-dots) directly inside Beautiful UI prompt bars and table cells for zero-runtime lightweight feedback without layout shift.",
-      "When embedding loading.dev indicators into Apple HIG layouts, set color: var(--apple-accent-blue) or var(--apple-text-secondary) and size to 16px-22px to match SF Pro symbol scales.",
-      "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states.",
-      "Embed minimal theme toggles (themetoggle-components) into Beautiful UI or Apple HIG headers with zero CSS conflicts; currentColor automatically adapts to parent typography."
-    ]
-  },
-  "feature_tokens_spec": "FEATURE_TOKENS.md",
-  "feature_tokens_schema": {
-    "dimensions": {
-      "scale": [
-        "micro",
-        "compact",
-        "standard",
-        "region",
-        "viewport"
-      ],
-      "placement": [
-        "embedded",
-        "flow",
-        "overlay",
-        "dock",
-        "shell"
-      ],
-      "interaction": [
-        "output",
-        "input",
-        "control",
-        "navigation",
-        "confirmation"
-      ],
-      "lifecycle": [
-        "persistent",
-        "state-driven",
-        "on-demand",
-        "transient"
-      ],
-      "motion": [
-        "none",
-        "transition",
-        "css-loop",
-        "spring",
-        "webgl"
-      ],
-      "category": [
-        "status",
-        "ai-response",
-        "composer",
-        "gate",
-        "data",
-        "content",
-        "nav",
-        "action",
-        "setting",
-        "text-effect",
-        "showcase",
-        "avatar",
-        "code",
-        "workflow",
-        "diagram",
-        "scaffold"
-      ],
-      "runtime": [
-        "html-css",
-        "vanilla-js",
-        "react",
-        "react-motion",
-        "react-3d"
-      ]
-    },
-    "cardinality": "Exactly one value per dimension for every component. All 47 values are globally unique."
   }
 }

@@ -9,15 +9,16 @@
 专为 Cursor、Claude Desktop、Antigravity、Windsurf 等现代 AI 客户端打造的本地 Agent 协议服务。基于纯 Python 3 标准库构建（**0 外部依赖，无环境污染**）。
 
 ### 核心特性
-- **单步直出（One-Shot Fulfillment）**：彻底消除“先搜索、再获取”的多次网络往返（Round-Trip），单次调用直接交付经过验证的 HTML/React 纯净原语与关联 CSS 变量。
-- **Feature Tokens 赋能**：将 7 维度特征 Token（风格、功能分类、交互深度、动效、尺寸）作为 Schema 枚举内置，大模型在调用瞬间即可做高精度意图归类。
-- **动态候选策略**：精准命中时仅输出 Top 1 最优解（极致节省 Token）；意图发散时并列输出评分最高的 Top 3 候选供大模型结合业务场景权衡。
-- **框架转译指引**：在工具说明中注入框架无损转换指导，提示 AI 自动将 HTML/CSS 转译为 Vue 3 SFC、React JSX、Svelte 或 Tailwind 等目标栈。
+- **单一事实源**：读取 `REGISTRY.json`；兼容的 INDEX/ROUTER 由脚本生成。
+- **约束检索**：style 与完整七维参数为 AND 硬约束，枚举自动生成；ID/路由别名优先，SQLite FTS5/BM25 负责词法排序。Python 的 sqlite3 必须支持 FTS5。
+- **按需展开**：默认 `mode=full, limit=1` 返回源码与完整共享 CSS；`mode=summary, limit=3` 只返回候选元数据。公共 limit 为 1..3。
+- **明确边界**：无匹配返回空，不默认回退；自然语言否定需调用 Agent 转换为过滤参数。DESIGN 仅通过 `include_design=true` 按需附加。
+- **资源完整性**：不再用正则裁剪 CSS；相同资源在响应中只输出一次。完整共享 CSS 可能较大，不代表已验证所有运行时依赖。
 
 ### 本地直接测试
 在命令行中可以直接运行内置的测试模式，无需启动 JSON-RPC：
 ```bash
-# 测试语义检索（模糊搜索，返回 Top 3）
+# 词法检索（默认返回 Top 1）
 python tools/mcp_server.py --test "table diff"
 
 # 测试精准命中（返回 Top 1）
@@ -49,7 +50,28 @@ python tools/mcp_server.py --test "thinking-state"
 
 ## 2. `validate_tokens.py` — 索引与 Token 规范校验器
 
-用于 CI/CD 和日常贡献检验，确保全库 80 个组件与 7 维度 Feature Token 规范保持 100% 严格对齐：
+校验 canonical ID、路径、七维枚举、别名唯一性和生成视图一致性（不代替视觉或检索质量评测）：
 ```bash
 python tools/validate_tokens.py
 ```
+
+## 3. 注册表维护与回归验证
+
+新检索架构目前是仓库内改动，未发布到 PyPI。
+
+```bash
+# 日常只编辑 REGISTRY.json，然后重建兼容视图
+python tools/build_index.py --write
+python tools/build_index.py --check
+python -m unittest discover -s tests -v
+
+# 可选开发检查；不增加发布包的运行依赖
+uv run --no-project --with coverage coverage run -m unittest discover -s tests
+uv run --no-project --with coverage coverage combine
+uv run --no-project --with coverage coverage report
+uv run --no-project --with pyright pyright
+uv run --no-project --with ruff ruff check holo_ui_mcp tools/build_index.py tools/validate_tokens.py tests
+```
+
+`--migrate` 只用于没有 REGISTRY.json 的旧仓库；已完成迁移的仓库会拒绝覆盖。
+架构与边界见 [索引架构](../docs/index-architecture.md)，独立内容/查询评测任务见 [Agent 交接](../docs/index-content-handoff.md)。

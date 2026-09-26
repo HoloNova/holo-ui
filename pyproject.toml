@@ -44,6 +44,7 @@ holo-ui-mcp = "holo_ui_mcp.server:main"
 packages = ["holo_ui_mcp"]
 
 [tool.hatch.build.targets.wheel.force-include]
+"REGISTRY.json" = "holo_ui_mcp/REGISTRY.json"
 "INDEX.json" = "holo_ui_mcp/INDEX.json"
 "ROUTER.json" = "holo_ui_mcp/ROUTER.json"
 "FEATURE_TOKENS.md" = "holo_ui_mcp/FEATURE_TOKENS.md"
@@ -51,10 +52,12 @@ packages = ["holo_ui_mcp"]
 "beautifului-components" = "holo_ui_mcp/beautifului-components"
 "rewampui-components" = "holo_ui_mcp/rewampui-components"
 "loadingdev-components" = "holo_ui_mcp/loadingdev-components"
+"themetoggle-components" = "holo_ui_mcp/themetoggle-components"
 "guidelines" = "holo_ui_mcp/guidelines"
 
 [tool.hatch.build.targets.sdist]
 include = [
+    "REGISTRY.json",
     "INDEX.json",
     "ROUTER.json",
     "FEATURE_TOKENS.md",
@@ -62,6 +65,7 @@ include = [
     "beautifului-components",
     "rewampui-components",
     "loadingdev-components",
+    "themetoggle-components",
     "guidelines",
     "holo_ui_mcp",
     "tools",
@@ -69,3 +73,18 @@ include = [
     "README_zh.md",
     "pyproject.toml"
 ]
+
+[tool.coverage.run]
+source = ["holo_ui_mcp", "tools"]
+branch = true
+patch = ["subprocess"]
+data_file = "build/coverage/.coverage"
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+
+[tool.pyright]
+include = ["holo_ui_mcp", "tools/build_index.py", "tools/validate_tokens.py", "tests"]
+pythonVersion = "3.9"
+typeCheckingMode = "basic"

@@ -38,8 +38,9 @@ Holo UI Vault 采用**偏向代码库，但不仅是代码**的定位：
 |:---|:---|:---|
 | [`holo-ui-mcp`](./tools/README.md) | MCP 服务端 | 专为 Cursor / Claude 打造的标准协议服务，支持 `uvx holo-ui-mcp` 单步直出组件与样式。 |
 | [**`DESIGN.md` 矩阵**](#4-已收录资产总索引) | Agent 设计契约 | 纯机器优先的标准化设计规范（包含 [Apple HIG](./guidelines/apple-design/DESIGN.md)、[AI 生产力](./beautifului-components/DESIGN.md)、[物理动效](./rewampui-components/DESIGN.md)）。 |
-| [`INDEX.json`](./INDEX.json) | 机器主索引 | 双向检索核心：包含按风格索引（`by_style`）、按功能索引（`by_function`）与风格融合规则（`style_harmonization`）。 |
-| [`ROUTER.json`](./ROUTER.json) | 极速路由器 | 轻量级单点分发路由表，将用户意图与组件 ID 一键映射至本地文件路径。 |
+| [`REGISTRY.json`](./REGISTRY.json) | 权威注册表 | 检索元数据唯一事实源，详见[索引架构](./docs/index-architecture.md)。 |
+| [`INDEX.json`](./INDEX.json) | 生成的兼容索引 | 包含 `by_style`、`by_function` 与风格融合规则；不要手动编辑。 |
+| [`ROUTER.json`](./ROUTER.json) | 生成的兼容路由 | 关键词与组件 ID 的资源路径映射，由注册表生成。 |
 | [`FEATURE_TOKENS.md`](./FEATURE_TOKENS.md) | 特征 Token 规范 | 7 维度正交分类系统规范，用于 Agent 检索消歧与组件能力精确指纹标记。 |
 | [`STYLE_AND_SELECTION_GUIDE.md`](./STYLE_AND_SELECTION_GUIDE.md) | 技术指导文档 | 风格象限定位、AI 防过度组装四大天条与跨风格 Token 融合指南。 |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md) | 贡献者标准 | 外部贡献者收录新 UI 库、规范代码片段、注册双向索引的操作指南。 |

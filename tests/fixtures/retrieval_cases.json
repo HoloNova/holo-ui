@@ -1,0 +1,1404 @@
+[
+  {
+    "query": "按钮里显示保存中的小转圈，不要 React",
+    "filters": {
+      "runtime": "html-css",
+      "scale": "micro",
+      "category": "status"
+    },
+    "expected_ids": [
+      "ld-arc",
+      "ld-ring"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "Pure CSS/SVG micro loaders suitable for inline button spin states without React."
+  },
+  {
+    "query": "可折叠的AI思考推理过程卡片",
+    "filters": {
+      "scale": "standard",
+      "category": "status",
+      "lifecycle": "state-driven"
+    },
+    "expected_ids": [
+      "thinking-state"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "thinking-state provides expandable accordion traces for step-by-step AI reasoning."
+  },
+  {
+    "query": "AI聊天底部的输入框，带发送按钮",
+    "filters": {
+      "placement": "flow",
+      "category": "composer"
+    },
+    "expected_ids": [
+      "chat-composer",
+      "prompt-bar"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "chat-composer and prompt-bar are flow composers (placement='flow' in registry) designed for AI chat prompts."
+  },
+  {
+    "query": "滑动确认的重要审批卡片",
+    "filters": {
+      "interaction": "confirmation",
+      "category": "gate"
+    },
+    "expected_ids": [
+      "slide-to-confirm-button",
+      "approval-card"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "slide-to-confirm-button provides spring swipe threshold; approval-card provides gated action buttons."
+  },
+  {
+    "query": "流式打字机文本效果，带呼吸光标",
+    "filters": {
+      "category": "ai-response",
+      "runtime": "html-css"
+    },
+    "expected_ids": [
+      "streaming-text"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "streaming-text is category='ai-response' in registry with typewriter stream and glowing cursor."
+  },
+  {
+    "query": "三维立体球体AI助手头像",
+    "filters": {
+      "runtime": "react-3d",
+      "category": "avatar"
+    },
+    "expected_ids": [
+      "fluid-morph-orb",
+      "marbled-fluid-orb",
+      "particle-dot-orb"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "The three Three.js WebGL orbs in rewampui provide 3D dynamic assistant visuals."
+  },
+  {
+    "query": "极简日夜主题切换按钮，纯CSS轻量",
+    "filters": {
+      "style": "minimal_theme_toggles",
+      "category": "setting",
+      "runtime": "html-css"
+    },
+    "expected_ids": [
+      "theme-toggle-classic",
+      "theme-toggle-simple",
+      "theme-toggle-around"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "Clean vector morphing theme switches from themetoggle library with zero external runtime."
+  },
+  {
+    "query": "代码块展示，带有高亮和复制功能",
+    "filters": {
+      "category": "code",
+      "runtime": "html-css"
+    },
+    "expected_ids": [
+      "code-block"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "BeautifulUI code-block primitive displays syntax-styled code with copy actions."
+  },
+  {
+    "query": "代码版本对比表格，显示添加和删除行",
+    "filters": {
+      "category": "data",
+      "scale": "standard",
+      "runtime": "html-css"
+    },
+    "expected_ids": [
+      "diff-table"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "diff-table renders side-by-side or unified green/red diff comparisons for code changes."
+  },
+  {
+    "query": "悬浮胶囊形状的导航栏，支持弹簧物理动效",
+    "filters": {
+      "category": "nav",
+      "motion": "spring",
+      "runtime": "react-motion"
+    },
+    "expected_ids": [
+      "magnetic-pill-navbar",
+      "hero-morph-navbar",
+      "pill-expand-navbar"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-constrained",
+    "rationale": "RewampUI floating pill navbars with Framer Motion spring transition."
+  },
+  {
+    "query": "collapsible thinking accordion showing chain of thought",
+    "filters": {
+      "category": "status",
+      "lifecycle": "state-driven"
+    },
+    "expected_ids": [
+      "thinking-state"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "Accordion thinking traces for AI model reasoning."
+  },
+  {
+    "query": "fluid morphing avatar orb driven by webgl shaders",
+    "filters": {
+      "motion": "webgl",
+      "runtime": "react-3d"
+    },
+    "expected_ids": [
+      "fluid-morph-orb",
+      "marbled-fluid-orb",
+      "particle-dot-orb"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "Three.js simplex noise orbs for interactive AI presence."
+  },
+  {
+    "query": "slide to confirm button for irreversible destructive action",
+    "filters": {
+      "interaction": "confirmation",
+      "runtime": "react-motion"
+    },
+    "expected_ids": [
+      "slide-to-confirm-button"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "Slide threshold drag interaction preventing accidental triggers."
+  },
+  {
+    "query": "compact inline circular spinner for form submit",
+    "filters": {
+      "scale": "micro",
+      "runtime": "html-css",
+      "category": "status"
+    },
+    "expected_ids": [
+      "ld-arc",
+      "ld-ring",
+      "ld-classic"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "Micro radial indicators engineered for inline button and form contexts."
+  },
+  {
+    "query": "floating command palette with quick search shortcuts",
+    "filters": {
+      "category": "composer",
+      "placement": "overlay"
+    },
+    "expected_ids": [
+      "search"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "BeautifulUI search dialog overlay spotlight palette with keyboard shortcuts."
+  },
+  {
+    "query": "smooth sun to moon transition icon button",
+    "filters": {
+      "style": "minimal_theme_toggles",
+      "interaction": "control"
+    },
+    "expected_ids": [
+      "theme-toggle-classic",
+      "theme-toggle-simple",
+      "theme-toggle-dark-inner"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "1em vector transition switches from sun rays to moon crescent."
+  },
+  {
+    "query": "spring physics counter ticker for animated numbers",
+    "filters": {
+      "category": "text-effect",
+      "motion": "spring"
+    },
+    "expected_ids": [
+      "kinetic-reel-text"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "Rolling reel digits with spring deceleration on numeric changes."
+  },
+  {
+    "query": "sidebar navigation with active indicator highlight",
+    "filters": {
+      "scale": "region",
+      "category": "nav"
+    },
+    "expected_ids": [
+      "sidebar-nav"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "BeautifulUI collapsible desktop sidebar navigation menu."
+  },
+  {
+    "query": "data records table showing rows and status badges",
+    "filters": {
+      "category": "data",
+      "runtime": "html-css"
+    },
+    "expected_ids": [
+      "records-table",
+      "diff-table"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "BeautifulUI tabular data component with metadata rows."
+  },
+  {
+    "query": "rainbow glowing border button for primary call to action",
+    "filters": {
+      "category": "action",
+      "motion": "spring"
+    },
+    "expected_ids": [
+      "rainbow-button"
+    ],
+    "expect_no_match": false,
+    "slice": "en-constrained",
+    "rationale": "rainbow-button is motion='spring' in registry with animated rainbow border."
+  },
+  {
+    "query": "页面加载中的脉冲波浪动画",
+    "filters": {},
+    "expected_ids": [
+      "ld-wave",
+      "ld-ripple",
+      "ld-pulse"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "Wave and pulse loading animations in loadingdev."
+  },
+  {
+    "query": "日蚀效果的主题切换",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-eclipse"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "Eclipse theme switch where lunar shadow sweeps across the disc."
+  },
+  {
+    "query": "AI生成代码的打字机流式输出",
+    "filters": {},
+    "expected_ids": [
+      "streaming-text",
+      "typewriter-text"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "Real-time text token stream with typing cursor effect."
+  },
+  {
+    "query": "聚光灯高亮文字动效",
+    "filters": {},
+    "expected_ids": [
+      "spotlight-text"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "RewampUI spotlight-text with dynamic lighting highlight."
+  },
+  {
+    "query": "类似Linear的暗黑风全屏工作台脚手架",
+    "filters": {},
+    "expected_ids": [
+      "agent-screen"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "Full viewport shell scaffold with header, sidebar, and workspace canvas."
+  },
+  {
+    "query": "文字乱码解码还原的动效",
+    "filters": {},
+    "expected_ids": [
+      "character-scramble-text"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "Cyberpunk matrix-style character scrambling resolving into plain text."
+  },
+  {
+    "query": "灯泡样式的开关，开灯变亮关灯变暗",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-lightbulb"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "Lightbulb theme toggle morphing filament illumination."
+  },
+  {
+    "query": "粒子点阵球体头像",
+    "filters": {},
+    "expected_ids": [
+      "particle-dot-orb"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "WebGL particle dot matrix sphere assistant avatar."
+  },
+  {
+    "query": "微光闪烁按钮",
+    "filters": {},
+    "expected_ids": [
+      "shimmer-button"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "RewampUI shimmer button with sweeping diagonal light streak."
+  },
+  {
+    "query": "3D倾斜卡片画廊展示",
+    "filters": {},
+    "expected_ids": [
+      "editorial-3-d-orbit-carousel",
+      "perspective-flip-deck",
+      "arch-card-carousel"
+    ],
+    "expect_no_match": false,
+    "slice": "zh-natural",
+    "rationale": "3D perspective carousels and card decks in rewampui."
+  },
+  {
+    "query": "expand theme switch button",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-expand"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Expand theme toggle radiating outward on toggle."
+  },
+  {
+    "query": "pulsing radar sonar loading indicator",
+    "filters": {},
+    "expected_ids": [
+      "ld-radar",
+      "ld-ripple"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Radar pinging concentric circle scanner animation."
+  },
+  {
+    "query": "clock hand spinning loader indicator",
+    "filters": {},
+    "expected_ids": [
+      "ld-clock"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Animated turning clock timer indicator."
+  },
+  {
+    "query": "multi-row task list workflow management panel",
+    "filters": {},
+    "expected_ids": [
+      "task-rows"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Task rows list for AI agent workflow execution."
+  },
+  {
+    "query": "glossy pill button with glass tactile feel",
+    "filters": {},
+    "expected_ids": [
+      "gloss-button"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Glossy pill button in rewampui."
+  },
+  {
+    "query": "scaffold screen for autonomous agent workspace",
+    "filters": {},
+    "expected_ids": [
+      "agent-screen"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Full viewport agent IDE / dashboard layout."
+  },
+  {
+    "query": "googly eyes playful interactive button",
+    "filters": {},
+    "expected_ids": [
+      "googly-eyes-button"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Playful button with cartoon eyes tracking mouse movement."
+  },
+  {
+    "query": "spinning rays theme toggle button",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-spin"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Rapid rotating sun rays collapsing into crescent moon."
+  },
+  {
+    "query": "flowing flowchart diagram with connection nodes",
+    "filters": {},
+    "expected_ids": [
+      "flowchart"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Directed DAG graph node flowchart component."
+  },
+  {
+    "query": "wall switch rocker clicking up and down",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-light-switch"
+    ],
+    "expect_no_match": false,
+    "slice": "en-natural",
+    "rationale": "Physical wall switch rocker toggle from toggles.dev."
+  },
+  {
+    "query": "昼夜模式无缝切换控件",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-classic",
+      "theme-toggle-simple",
+      "day-night-sky-toggle"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Day/night mode toggle synonyms (昼夜模式, 昼夜切换)."
+  },
+  {
+    "query": "步骤思考链展示折叠面板",
+    "filters": {},
+    "expected_ids": [
+      "thinking-state"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Synonym rewrite of thinking state (思考链, 步骤折叠面板)."
+  },
+  {
+    "query": "滑动解锁式的高危操作拦截器",
+    "filters": {},
+    "expected_ids": [
+      "slide-to-confirm-button"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Synonym rewrite of slide to confirm button (滑动解锁, 高危拦截)."
+  },
+  {
+    "query": "数字翻牌器滚动计数器",
+    "filters": {},
+    "expected_ids": [
+      "kinetic-reel-text"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Synonym rewrite of kinetic reel (数字翻牌器, 滚动计数器)."
+  },
+  {
+    "query": "原子核外电子轨道旋转加载器",
+    "filters": {},
+    "expected_ids": [
+      "ld-atom",
+      "ld-orbit"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Atomic nucleus orbit loader (原子轨道, 电子旋转)."
+  },
+  {
+    "query": "spotlight quick file finder command bar",
+    "filters": {},
+    "expected_ids": [
+      "search"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Spotlight / command bar synonym for search palette."
+  },
+  {
+    "query": "typewriter effect with flashing pipe indicator",
+    "filters": {},
+    "expected_ids": [
+      "streaming-text",
+      "typewriter-text"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Typewriter effect with blinking cursor synonym."
+  },
+  {
+    "query": "rainbow border button with moving iridescent rim",
+    "filters": {},
+    "expected_ids": [
+      "rainbow-button"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Iridescent moving rim synonym for rainbow button."
+  },
+  {
+    "query": "3D perspective stacking card carousel",
+    "filters": {},
+    "expected_ids": [
+      "diagonal-card-stack",
+      "perspective-flip-deck",
+      "arch-card-carousel"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Stacking card carousel synonym in rewampui."
+  },
+  {
+    "query": "bouncing three dots waiting indicator",
+    "filters": {},
+    "expected_ids": [
+      "ld-bouncing-dots",
+      "ld-linear-dots"
+    ],
+    "expect_no_match": false,
+    "slice": "synonym-rewrite",
+    "rationale": "Three dots bounce typing indicator synonym."
+  },
+  {
+    "query": "ld-arc",
+    "filters": {},
+    "expected_ids": [
+      "ld-arc"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Exact canonical ID query for ld-arc."
+  },
+  {
+    "query": "thinking-state",
+    "filters": {},
+    "expected_ids": [
+      "thinking-state"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Exact canonical ID query for thinking-state."
+  },
+  {
+    "query": "slide-to-confirm-button",
+    "filters": {},
+    "expected_ids": [
+      "slide-to-confirm-button"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Exact canonical ID query for slide-to-confirm-button."
+  },
+  {
+    "query": "theme-toggle-horizon",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-horizon"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Exact canonical ID query for theme-toggle-horizon."
+  },
+  {
+    "query": "diff-table",
+    "filters": {},
+    "expected_ids": [
+      "diff-table"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Exact canonical ID query for diff-table."
+  },
+  {
+    "query": "fluid-morph-orb",
+    "filters": {},
+    "expected_ids": [
+      "fluid-morph-orb"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Exact canonical ID query for fluid-morph-orb."
+  },
+  {
+    "query": "",
+    "component_id": "shimmer-button",
+    "filters": {},
+    "expected_ids": [
+      "shimmer-button"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Direct component_id parameter invocation."
+  },
+  {
+    "query": "",
+    "component_id": "ld-ripple",
+    "filters": {},
+    "expected_ids": [
+      "ld-ripple"
+    ],
+    "expect_no_match": false,
+    "slice": "exact-id",
+    "rationale": "Direct component_id parameter invocation for ld-ripple."
+  },
+  {
+    "query": "toggle-classic",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-classic"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-classic resolves to canonical theme-toggle-classic."
+  },
+  {
+    "query": "toggle-around",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-around"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-around resolves to canonical theme-toggle-around."
+  },
+  {
+    "query": "toggle-eclipse",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-eclipse"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-eclipse resolves to canonical theme-toggle-eclipse."
+  },
+  {
+    "query": "toggle-spin",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-spin"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-spin resolves to canonical theme-toggle-spin."
+  },
+  {
+    "query": "",
+    "component_id": "toggle-dark-inner",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-dark-inner"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-dark-inner passed as component_id."
+  },
+  {
+    "query": "",
+    "component_id": "toggle-light-switch",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-light-switch"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-light-switch passed as component_id."
+  },
+  {
+    "query": "",
+    "component_id": "toggle-within",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-within"
+    ],
+    "expect_no_match": false,
+    "slice": "route-alias",
+    "rationale": "Route alias toggle-within passed as component_id."
+  },
+  {
+    "query": "spinner",
+    "filters": {},
+    "expected_ids": [
+      "ld-arc",
+      "ld-ring",
+      "ld-classic",
+      "ld-loading"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Broad query matching radial/classic spinners in loadingdev."
+  },
+  {
+    "query": "toggle",
+    "filters": {},
+    "expected_ids": [
+      "theme-toggle-classic",
+      "theme-toggle-simple",
+      "day-night-sky-toggle"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic toggle query matching theme toggles."
+  },
+  {
+    "query": "card",
+    "filters": {},
+    "expected_ids": [
+      "recommendation-card",
+      "approval-card",
+      "context-cards",
+      "insight-cards"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic card query matching various card primitives."
+  },
+  {
+    "query": "navbar",
+    "filters": {},
+    "expected_ids": [
+      "hero-morph-navbar",
+      "magnetic-pill-navbar",
+      "pill-expand-navbar"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic navbar query matching navigation bars."
+  },
+  {
+    "query": "button",
+    "filters": {},
+    "expected_ids": [
+      "shimmer-button",
+      "gloss-button",
+      "rainbow-button",
+      "slide-to-confirm-button"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic button query matching interactive buttons."
+  },
+  {
+    "query": "avatar",
+    "filters": {},
+    "expected_ids": [
+      "fluid-morph-orb",
+      "marbled-fluid-orb",
+      "particle-dot-orb"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic avatar query matching WebGL AI avatars."
+  },
+  {
+    "query": "table",
+    "filters": {},
+    "expected_ids": [
+      "diff-table",
+      "records-table",
+      "filter-table"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic table query matching data tables."
+  },
+  {
+    "query": "loader",
+    "filters": {},
+    "expected_ids": [
+      "loading-state",
+      "ld-arc",
+      "ld-ring",
+      "ld-loading"
+    ],
+    "expect_no_match": false,
+    "slice": "ambiguous",
+    "rationale": "Generic loader query matching status loaders."
+  },
+  {
+    "query": "shimmer-button",
+    "filters": {
+      "motion": "none"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "shimmer-button has motion='transition'; motion='none' is a strict conflict."
+  },
+  {
+    "query": "ld-arc",
+    "filters": {
+      "runtime": "react-motion"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "ld-arc has runtime='html-css'; react-motion hard constraint cannot be satisfied."
+  },
+  {
+    "query": "thinking-state",
+    "filters": {
+      "scale": "micro"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "thinking-state is scale='standard'; micro filter produces zero hits."
+  },
+  {
+    "query": "3D avatar sphere",
+    "filters": {
+      "runtime": "html-css",
+      "category": "avatar"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "All avatar components require runtime='react-3d'; html-css conflicts."
+  },
+  {
+    "query": "diff-table",
+    "filters": {
+      "interaction": "confirmation"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "diff-table has interaction='output'; confirmation filter conflicts."
+  },
+  {
+    "query": "day-night-sky-toggle",
+    "filters": {
+      "style": "minimal_theme_toggles"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "day-night-sky-toggle belongs to kinetic_motion_tactile, not minimal_theme_toggles."
+  },
+  {
+    "query": "slide-to-confirm-button",
+    "filters": {
+      "placement": "dock"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "slide-to-confirm-button is placement='flow'; dock filter conflicts."
+  },
+  {
+    "query": "",
+    "component_id": "theme-toggle-classic",
+    "filters": {
+      "runtime": "react-motion"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "hard-conflict",
+    "rationale": "theme-toggle-classic has runtime='html-css'; exact ID with conflicting filter must return empty."
+  },
+  {
+    "query": "网页加载旋转动画，不要React，只用纯CSS",
+    "filters": {
+      "runtime": "html-css",
+      "category": "status"
+    },
+    "expected_ids": [
+      "ld-arc",
+      "ld-ring",
+      "ld-classic",
+      "ld-loading"
+    ],
+    "expect_no_match": false,
+    "slice": "nl-negative",
+    "rationale": "Agent extracted runtime='html-css' from natural language negation '不要React'."
+  },
+  {
+    "query": "静态代码展示卡片，不要弹簧动效",
+    "filters": {
+      "motion": "none",
+      "category": "code"
+    },
+    "expected_ids": [
+      "code-block"
+    ],
+    "expect_no_match": false,
+    "slice": "nl-negative",
+    "rationale": "Agent extracted motion='none' from '不要弹簧动效'."
+  },
+  {
+    "query": "非弹窗式AI思考过程，不要Modal",
+    "filters": {
+      "placement": "flow",
+      "category": "status"
+    },
+    "expected_ids": [
+      "thinking-state"
+    ],
+    "expect_no_match": false,
+    "slice": "nl-negative",
+    "rationale": "Agent extracted placement='flow' from '不要Modal'."
+  },
+  {
+    "query": "轻量级主题切换，无需Three.js和复杂物理引擎",
+    "filters": {
+      "runtime": "html-css",
+      "category": "setting"
+    },
+    "expected_ids": [
+      "theme-toggle-classic",
+      "theme-toggle-simple"
+    ],
+    "expect_no_match": false,
+    "slice": "nl-negative",
+    "rationale": "Agent extracted runtime='html-css' from negation of Three.js."
+  },
+  {
+    "query": "loading spinner without react or external libraries",
+    "filters": {
+      "runtime": "html-css",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-arc",
+      "ld-ring",
+      "ld-linear-dots"
+    ],
+    "expect_no_match": false,
+    "slice": "nl-negative",
+    "rationale": "Agent parsed 'without react' to runtime='html-css'."
+  },
+  {
+    "query": "command palette search bar not docked to bottom",
+    "filters": {
+      "placement": "overlay",
+      "category": "composer"
+    },
+    "expected_ids": [
+      "search"
+    ],
+    "expect_no_match": false,
+    "slice": "nl-negative",
+    "rationale": "Agent converted 'not docked' to placement='overlay'."
+  },
+  {
+    "query": "web3 metamask wallet connect modal dialog",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "Holo UI does not have cryptocurrency Web3 wallet components."
+  },
+  {
+    "query": "webrtc video streaming peer to peer conference grid",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "No video conferencing or WebRTC media streaming components in the vault."
+  },
+  {
+    "query": "pdf interactive annotation and signature canvas",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "No PDF rendering or digital signature components."
+  },
+  {
+    "query": "audio waveform music player equalizer visualizer",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "No audio synthesizer or music player waveform components."
+  },
+  {
+    "query": "leaflet map geospatial heatmap coordinates viewer",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "No GIS map or geographic coordinate components."
+  },
+  {
+    "query": "wysiwyg rich text markdown block editor with table formatting",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "No full WYSIWYG rich text block editors."
+  },
+  {
+    "query": "",
+    "component_id": "unknown-component-xyz",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "Non-existent component_id must return 0 results."
+  },
+  {
+    "query": "",
+    "component_id": "crypto-wallet-modal",
+    "filters": {},
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "unknown-asset",
+    "rationale": "Fabricated component ID must not return arbitrary matches."
+  },
+  {
+    "query": "apple design system guidelines",
+    "filters": {
+      "style": "apple_human_interface"
+    },
+    "expected_ids": [
+      "apple-human-interface-tokens"
+    ],
+    "expect_no_match": false,
+    "slice": "apple-design",
+    "rationale": "Querying apple_human_interface style returns design system assets when no component filters."
+  },
+  {
+    "query": "Apple Human Interface Guidelines squircle tokens",
+    "filters": {
+      "style": "apple_human_interface"
+    },
+    "expected_ids": [
+      "apple-human-interface-tokens"
+    ],
+    "expect_no_match": false,
+    "slice": "apple-design",
+    "rationale": "Apple HIG design system tokens."
+  },
+  {
+    "query": "Apple liquid glass frosted material specification",
+    "filters": {
+      "style": "apple_human_interface"
+    },
+    "expected_ids": [
+      "apple-human-interface-tokens"
+    ],
+    "expect_no_match": false,
+    "slice": "apple-design",
+    "rationale": "Apple HIG material guidelines."
+  },
+  {
+    "query": "apple hig button with 44pt touch target",
+    "filters": {
+      "style": "apple_human_interface",
+      "scale": "compact"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "apple-design",
+    "rationale": "Apple style has 0 concrete components; component filters (scale=compact) cannot be satisfied."
+  },
+  {
+    "query": "Apple HIG theme toggle switch",
+    "filters": {
+      "style": "apple_human_interface",
+      "category": "setting"
+    },
+    "expected_ids": [],
+    "expect_no_match": true,
+    "slice": "apple-design",
+    "rationale": "Apple style has no theme toggle component; must return count=0."
+  },
+  {
+    "query": "单选微调配置卡片",
+    "filters": {
+      "scale": "standard",
+      "category": "setting"
+    },
+    "expected_ids": [
+      "fine-tune-card"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "fine-tune-card is category='setting' in registry providing model parameter configuration."
+  },
+  {
+    "query": "环形粒子围绕核心旋转的加载动画",
+    "filters": {
+      "category": "status",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-orbit",
+      "ld-circular-dots"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Orbiting dots / circular satellites around a center loader in loadingdev."
+  },
+  {
+    "query": "双向滑动条数据过滤组件",
+    "filters": {
+      "category": "data",
+      "interaction": "control"
+    },
+    "expected_ids": [
+      "filter-table"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "filter-table provides dataset filtering with interactive controls."
+  },
+  {
+    "query": "微小点阵脉冲呼吸指示器",
+    "filters": {
+      "scale": "micro",
+      "category": "status"
+    },
+    "expected_ids": [
+      "ld-pulse",
+      "ld-bouncing-dots"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Pulsing micro indicators in loadingdev."
+  },
+  {
+    "query": "大理石纹理流体三维球体",
+    "filters": {
+      "runtime": "react-3d"
+    },
+    "expected_ids": [
+      "marbled-fluid-orb"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Marbled texture fluid sphere in rewampui."
+  },
+  {
+    "query": "多任务卡片执行管理面板",
+    "filters": {
+      "category": "workflow",
+      "scale": "standard"
+    },
+    "expected_ids": [
+      "task-rows"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "task-rows is scale='standard' in registry for multi-task execution management."
+  },
+  {
+    "query": "点击水波纹扩散加载动画",
+    "filters": {
+      "category": "status",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-ripple"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Expanding concentric circular ripples loader."
+  },
+  {
+    "query": "带闪光扫过效果的高光按钮",
+    "filters": {
+      "category": "action",
+      "runtime": "react-motion"
+    },
+    "expected_ids": [
+      "shimmer-button"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Shimmer sweep light beam button."
+  },
+  {
+    "query": "拆分文字进场揭示动效",
+    "filters": {
+      "category": "text-effect",
+      "runtime": "react-motion"
+    },
+    "expected_ids": [
+      "split-text-reveal"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Split text reveal entrance animation in rewampui."
+  },
+  {
+    "query": "时钟指针转动等待指示图标",
+    "filters": {
+      "category": "status",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-clock"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Turning clock waiting indicator."
+  },
+  {
+    "query": "双层同心圆旋转加载器",
+    "filters": {
+      "category": "status",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-dual",
+      "ld-orbit"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Dual concentric counter-rotating ring loader."
+  },
+  {
+    "query": "内嵌式月球环形山质感日夜切换",
+    "filters": {
+      "style": "minimal_theme_toggles"
+    },
+    "expected_ids": [
+      "theme-toggle-within",
+      "theme-toggle-inner-moon"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Morphing concentric lunar crater / inner moon toggle."
+  },
+  {
+    "query": "极简半日旋转硬币切换开关",
+    "filters": {
+      "style": "minimal_theme_toggles"
+    },
+    "expected_ids": [
+      "theme-toggle-half-sun"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Half sun 180-degree rotating geometric coin toggle."
+  },
+  {
+    "query": "地平线日落日出昼夜按钮",
+    "filters": {
+      "style": "minimal_theme_toggles"
+    },
+    "expected_ids": [
+      "theme-toggle-horizon"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Horizon sunrise/sunset theme toggle."
+  },
+  {
+    "query": "三维立体视差相册折叠卡片",
+    "filters": {
+      "category": "showcase",
+      "runtime": "react-motion"
+    },
+    "expected_ids": [
+      "perspective-flip-deck",
+      "editorial-3-d-orbit-carousel",
+      "arch-card-carousel"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "3D perspective flip deck / carousel card showcases."
+  },
+  {
+    "query": "带有磁性吸附动画胶囊导航栏",
+    "filters": {
+      "category": "nav",
+      "motion": "spring"
+    },
+    "expected_ids": [
+      "magnetic-pill-navbar"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Magnetic pill navigation bar."
+  },
+  {
+    "query": "卡片折叠翻转卡组",
+    "filters": {
+      "category": "showcase"
+    },
+    "expected_ids": [
+      "perspective-flip-deck",
+      "diagonal-card-stack"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Flipping card deck showcase in rewampui."
+  },
+  {
+    "query": "高光质感玻璃药丸按钮",
+    "filters": {
+      "category": "action",
+      "style": "kinetic_motion_tactile"
+    },
+    "expected_ids": [
+      "gloss-button"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Gloss button in rewampui."
+  },
+  {
+    "query": "方块网格矩阵翻转跳动加载器",
+    "filters": {
+      "category": "status",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-blocks"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Grid blocks micro loader."
+  },
+  {
+    "query": "彗星尾迹旋转微动效状态指示",
+    "filters": {
+      "category": "status",
+      "scale": "micro"
+    },
+    "expected_ids": [
+      "ld-comet"
+    ],
+    "expect_no_match": false,
+    "slice": "holdout",
+    "rationale": "Comet trailing tail micro indicator."
+  }
+]

@@ -21,3 +21,6 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+
+# Node
+node_modules/

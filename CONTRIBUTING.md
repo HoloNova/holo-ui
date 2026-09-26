@@ -9,7 +9,7 @@ Thank you for contributing to Holo UI Vault. This repository is an Agent-First, 
 Holo UI Vault differs fundamentally from general UI libraries and prompt collections:
 
 1. **Code-Biased, Not Abstract**: Prompt guidelines and Skills that merely tell an Agent to "make it look modern" fail because the Agent must hallucinate complex CSS from scratch. We provide verified, copy-pasteable HTML/CSS code snippets and authoritative design tokens.
-2. **Agent-First Retrieval**: Every component and guideline must be indexed in `INDEX.json`. An AI Agent should be able to query `INDEX.json` and read only the exact snippet or token file required, without scanning directories or consuming unnecessary context tokens.
+2. **Agent-First Retrieval**: Register components and guidelines in `REGISTRY.json`, the canonical retrieval source. Generate `INDEX.json` and `ROUTER.json` for file-based agents; do not edit those views directly. See [index architecture](docs/index-architecture.md).
 3. **Curated & Harmonized**: We accept distinct design styles (e.g., AI-Native Productivity, Apple Human Interface, Linear Dark, Brutalist), provided they include clear rules on *when to use*, *when not to use*, and *how to harmonize* with other systems.
 4. **Clean Engineering Typography**: Strictly no emojis. Documentation must use clean markdown, structured tables, ASCII trees, and GitHub alert blocks.
 
@@ -40,7 +40,8 @@ When onboarding a new UI style or library, organize files within a dedicated top
 
 ```
 holo-ui/
-|-- INDEX.json                       # Central dual-dimension index (Style + Function)
+|-- REGISTRY.json                    # Canonical metadata; one record per component
+|-- INDEX.json                       # Generated dual-dimension compatibility view
 |-- ROUTER.json                      # Legacy routing compatibility layer
 |-- STYLE_AND_SELECTION_GUIDE.md     # Engineering decision guide & harmonization matrix
 |-- CONTRIBUTING.md                  # This contributor SOP
@@ -74,12 +75,11 @@ Before submitting a Pull Request, verify every item:
 - [ ] Touch targets adhere to minimum accessibility standards (minimum 44x44px for touch interfaces).
 
 ### 2. Index Registration
-- [ ] Registered in `INDEX.json` under `by_style`:
-  - Defined `name`, `aesthetic`, `when_to_use`, and `when_not_to_use`.
-  - Listed all component paths or guideline paths.
-- [ ] Registered in `INDEX.json` under `by_function`:
-  - Added components to the relevant functional category (`ai_reasoning_and_states`, `inputs_and_prompts`, `human_in_the_loop_and_tools`, `data_and_diff`, `cards_and_knowledge`, `navigation_and_presentation`, or a justified new functional category).
-  - Specified `recommended_when` for each item.
+- [ ] Register the style in `REGISTRY.json.styles`, including its existing resource paths.
+- [ ] Register the component once in `REGISTRY.json.components`, with seven feature tokens and a snippet path.
+- [ ] Reference its ID in the relevant `functions` group(s).
+- [ ] Keep `route_aliases` unique; descriptive `aliases` may be shared by several candidates.
+- [ ] Run `python tools/build_index.py --write`, then `python tools/validate_tokens.py`.
 
 ### 3. Context Guard Compliance
 - [ ] Visual preview galleries (like `index.html`) must include a header comment warning AI Agents not to read the file during single-task retrieval.
@@ -92,16 +92,24 @@ Before submitting a Pull Request, verify every item:
 
 ---
 
-## 5. How to Add a Component to INDEX.json
+## 5. How to Add a Component to REGISTRY.json
 
-Here is an example entry when registering a new component in `INDEX.json`:
+Add an entry keyed by its canonical ID to `components`, then reference the ID in `functions`. Example metadata (the snippet must exist):
 
 ```json
 {
   "id": "metric-badge",
   "style": "ai_native_productivity",
-  "file": "beautifului-components/components/cards/metric-badge.snippet.html",
-  "recommended_when": "Displaying real-time latency, token usage, or model performance counters."
+  "name": "Metric Badge",
+  "snippet": "beautifului-components/components/cards/metric-badge.snippet.html",
+  "tokens": {
+    "scale": "micro", "placement": "embedded", "interaction": "output",
+    "lifecycle": "persistent", "motion": "none", "category": "data", "runtime": "html-css"
+  },
+  "aliases": ["latency-badge"],
+  "route_aliases": [],
+  "when": "Displaying a single latency or token usage value.",
+  "when_not": "Multi-series charts or interactive data tables."
 }
 ```
 
@@ -114,12 +122,13 @@ Here is an example entry when registering a new component in `INDEX.json`:
    git checkout -b feature/add-linear-dark-components
    ```
 2. Add your component snippets, tokens, and metadata.
-3. Update `INDEX.json` and `STYLE_AND_SELECTION_GUIDE.md`.
-4. Run a sanity check to verify relative paths:
-   ```bash
-   # Ensure all referenced files exist
-   python -c "import json, os; r = json.load(open('ROUTER.json', encoding='utf-8')); [print('Missing:', f) for k, f in r['components'].items() if not os.path.exists(f)]"
-   ```
+3. Update `REGISTRY.json` and, when needed, `STYLE_AND_SELECTION_GUIDE.md`.
+4. Generate views and verify metadata plus retrieval regressions:
+    ```bash
+    python tools/build_index.py --write
+    python tools/validate_tokens.py
+    python -m unittest discover -s tests -v
+    ```
 5. Commit with a clean conventional commit message:
    ```bash
    git commit -m "feat(linear-dark): introduce 6 command menu and shortcut primitives"

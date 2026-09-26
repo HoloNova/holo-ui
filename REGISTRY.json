@@ -1,0 +1,2672 @@
+{
+  "schema_version": 1,
+  "index_metadata": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "name": "Holo UI Vault — Unified Dual-Dimension Index",
+    "version": "2.1.0",
+    "description": "Style taxonomy, functional classification with 7-dimension Feature Tokens, and harmonization rules. Component paths are in ROUTER.json; token specification in FEATURE_TOKENS.md.",
+    "context_guards": {
+      "rules": [
+        "DO NOT read beautifului-components/index.html (32KB human visual preview, wastes tokens).",
+        "DO NOT recursively scan directories. Use ROUTER.json for component paths.",
+        "Single-task retrieval budget: maximum 1 snippet file + 1 shared CSS file.",
+        "Use ROUTER.json for fast path resolution, and FEATURE_TOKENS.md for multi-dimensional disambiguation.",
+        "Review STYLE_AND_SELECTION_GUIDE.md prior to combining different styles."
+      ]
+    },
+    "style_harmonization": {
+      "principle": "Beautiful UI provides interaction skeletons; Apple HIG provides visual tokens and physics. They can be seamlessly blended without conflict.",
+      "rules": [
+        "When embedding Beautiful UI components into an Apple-themed project, map container radii to var(--apple-radius-lg) or var(--apple-radius-xl).",
+        "Replace dark solid surfaces with Apple Liquid Glass material: background: var(--apple-material-regular); backdrop-filter: var(--apple-blur-regular);",
+        "Ensure all clickable elements satisfy the Apple 44pt minimum touch boundary.",
+        "Adopt Apple Spring curve: transition-timing-function: var(--apple-ease-spring);",
+        "Maintain a single primary style hierarchy per viewport. Do not mix sharp brutalist elements with soft squircles.",
+        "Pair Rewamp UI tactile buttons (slide-to-confirm-button, shimmer-button) with Beautiful UI's dense data tables for high-impact action points.",
+        "Rewamp UI components use SF Pro and squircle radii, aligning natively with Apple HIG foundations.",
+        "When integrating Rewamp UI 3D AI Orbs, contain them in Apple Liquid Glass or Beautiful UI dark cards to maintain visual continuity.",
+        "Embed loading.dev micro-indicators (e.g., ld-arc, ld-linear-dots) directly inside Beautiful UI prompt bars and table cells for zero-runtime lightweight feedback without layout shift.",
+        "When embedding loading.dev indicators into Apple HIG layouts, set color: var(--apple-accent-blue) or var(--apple-text-secondary) and size to 16px-22px to match SF Pro symbol scales.",
+        "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states.",
+        "Embed minimal theme toggles (themetoggle-components) into Beautiful UI or Apple HIG headers with zero CSS conflicts; currentColor automatically adapts to parent typography."
+      ]
+    },
+    "feature_tokens_spec": "FEATURE_TOKENS.md",
+    "feature_tokens_schema": {
+      "dimensions": {
+        "scale": [
+          "micro",
+          "compact",
+          "standard",
+          "region",
+          "viewport"
+        ],
+        "placement": [
+          "embedded",
+          "flow",
+          "overlay",
+          "dock",
+          "shell"
+        ],
+        "interaction": [
+          "output",
+          "input",
+          "control",
+          "navigation",
+          "confirmation"
+        ],
+        "lifecycle": [
+          "persistent",
+          "state-driven",
+          "on-demand",
+          "transient"
+        ],
+        "motion": [
+          "none",
+          "transition",
+          "css-loop",
+          "spring",
+          "webgl"
+        ],
+        "category": [
+          "status",
+          "ai-response",
+          "composer",
+          "gate",
+          "data",
+          "content",
+          "nav",
+          "action",
+          "setting",
+          "text-effect",
+          "showcase",
+          "avatar",
+          "code",
+          "workflow",
+          "diagram",
+          "scaffold"
+        ],
+        "runtime": [
+          "html-css",
+          "vanilla-js",
+          "react",
+          "react-motion",
+          "react-3d"
+        ]
+      },
+      "cardinality": "Exactly one value per dimension for every component. All 47 values are globally unique."
+    }
+  },
+  "router_metadata": {
+    "name": "Holo UI Vault — Agent Router v2",
+    "version": "2.1.0",
+    "feature_tokens_spec": "FEATURE_TOKENS.md",
+    "context_guards": [
+      "DO NOT read beautifului-components/index.html (32KB preview, wastes tokens).",
+      "DO NOT scan directories. Use paths from this file or manifests.",
+      "Budget: max 1 snippet + 1 shared CSS per task.",
+      "For ambiguous requests, filter by feature tokens in INDEX.json (spec in FEATURE_TOKENS.md).",
+      "Review STYLE_AND_SELECTION_GUIDE.md only when mixing multiple styles."
+    ],
+    "selection_guide": "STYLE_AND_SELECTION_GUIDE.md",
+    "master_index": "INDEX.json"
+  },
+  "styles": {
+    "ai_native_productivity": {
+      "name": "AI-Native Productivity (Source: Beautiful UI)",
+      "aesthetic": "Cold neutral, dark-first, high information density, 0.5px hairlines, tabular figures, subtle shimmer transitions.",
+      "when_to_use": [
+        "LLM reasoning and thinking chain display",
+        "Token streaming with source citations",
+        "Agent tool call and file modification chips",
+        "Human-in-the-loop permission and confirmation flow",
+        "Multi-modal prompt composition",
+        "Code and data revision comparison",
+        "AI SaaS, agent dashboards, terminal/CLI-inspired web apps"
+      ],
+      "when_not_to_use": [
+        "Generic ecommerce stores, landing pages, children apps, casual mobile games"
+      ],
+      "manifest": "beautifului-components/beautifului.manifest.json",
+      "design_md": "beautifului-components/DESIGN.md",
+      "shared_style": "beautifului-components/shared/base.css"
+    },
+    "apple_human_interface": {
+      "name": "Apple Human Interface (Source: Apple HIG)",
+      "aesthetic": "Humanist, tactile spatial depth, continuous squircle curvature, liquid glass blur, spring physics, 44pt touch friendliness.",
+      "when_to_use": [
+        "Consumer-facing applications, mobile web apps and PWAs",
+        "System settings, preference panels, grouped form lists",
+        "Contextual overlays: Action Sheets, Bottom Sheets, Alerts",
+        "Tactile card layouts with soft shadows and inner specular highlights",
+        "Interfaces prioritizing readability, visual breathing room, and accessibility"
+      ],
+      "when_not_to_use": [
+        "Ultra-dense financial ticker screens, raw hacker CLI terminals"
+      ],
+      "manifest": "guidelines/apple-design/apple-design.manifest.json",
+      "tokens_css": "guidelines/apple-design/tokens/tokens.css",
+      "design_md": "guidelines/apple-design/DESIGN.md",
+      "prompt_preset": "guidelines/apple-design/PROMPT_PRESET.md"
+    },
+    "kinetic_motion_tactile": {
+      "name": "Kinetic Motion & Tactile Physics (Source: Rewamp UI)",
+      "aesthetic": "Physical spring damping, continuous fluid morphing, 3D orbital rotations, kinetic typography, Lilac & Orange accent palette.",
+      "when_to_use": [
+        "High-converting landing pages, interactive product demos, and hero sections",
+        "High-friction user confirmations requiring physical slide feedback",
+        "Tactile interactive buttons with shimmer streaks, rainbow borders, or metallic chrome outlines",
+        "Theme switches with ambient sky / day-night orbs",
+        "Animated search pills that fluidly expand into omnibox inputs",
+        "Kinetic typography reveals",
+        "3D card decks and orbital carousels",
+        "3D fluid assistant orbs for AI companions"
+      ],
+      "when_not_to_use": [
+        "Data-dense tabular spreadsheets where motion causes distraction",
+        "Low-bandwidth environments requiring zero-JavaScript plain HTML pages"
+      ],
+      "manifest": "rewampui-components/rewampui.manifest.json",
+      "tokens_css": "rewampui-components/shared/tokens.css",
+      "design_md": "rewampui-components/DESIGN.md",
+      "shared_style": "rewampui-components/shared/base.css",
+      "guide": "rewampui-components/COMPONENTS_GUIDE.md"
+    },
+    "micro_motion_indicators": {
+      "name": "Micro-Motion Loaders & Spinners (Source: loading.dev)",
+      "aesthetic": "Minimalist, zero-runtime, pure CSS/SVG, hairline single strokes, 3x3 pixel matrices, and 3D quantum wireframes.",
+      "when_to_use": [
+        "Inline button submission indicators ('Processing', 'Saving')",
+        "Conversational typing bubbles ('Agent is typing...')",
+        "Sensor detection, radar scanning, and web crawling exploration tools",
+        "AI reasoning warmup and token streaming buffers",
+        "Card container skeletons and avatar loading bounds",
+        "Two-way data synchronization and background worker progress"
+      ],
+      "when_not_to_use": [
+        "Heavy interactive product landing hero demonstrations requiring fluid physics (use Rewamp UI instead)",
+        "Step-by-step collapsible thought tree inspection (use Beautiful UI thinking-state instead)"
+      ],
+      "manifest": "loadingdev-components/loadingdev.manifest.json",
+      "design_md": "loadingdev-components/DESIGN.md",
+      "shared_style": "loadingdev-components/shared/base.css",
+      "guide": "loadingdev-components/COMPONENTS_GUIDE.md"
+    },
+    "minimal_theme_toggles": {
+      "name": "Minimalist Theme Toggles (Source: toggles.dev)",
+      "aesthetic": "Pure CSS/SVG, 1em vector morphing, zero-runtime, accessible, clip-path and path transitions, reduced-motion guards.",
+      "when_to_use": [
+        "Compact top navigation bar and header dark-mode switches",
+        "Minimalist toolbars and settings cards requiring 1em vector scaling",
+        "Zero-dependency vanilla HTML/CSS interfaces",
+        "Subtle animated sun-to-moon, eclipse, and toggle transitions"
+      ],
+      "when_not_to_use": [
+        "Large atmospheric hero switches requiring full-screen sky particles (use day-night-sky-toggle instead)",
+        "High-friction destructive action gates (use slide-to-confirm-button instead)"
+      ],
+      "manifest": "themetoggle-components/themetoggle.manifest.json",
+      "design_md": "themetoggle-components/DESIGN.md",
+      "shared_style": "themetoggle-components/shared/base.css",
+      "guide": "themetoggle-components/COMPONENTS_GUIDE.md"
+    }
+  },
+  "functions": {
+    "ai_reasoning_and_states": {
+      "description": "Visual indicators for AI processing, reasoning, and token generation.",
+      "items": [
+        "loading-state",
+        "thinking-state",
+        "streaming-text",
+        "fluid-morph-orb",
+        "marbled-fluid-orb",
+        "particle-dot-orb",
+        "ld-comet",
+        "ld-atom"
+      ]
+    },
+    "inputs_and_prompts": {
+      "description": "User message composers, prompt bars, and search inputs.",
+      "items": [
+        "prompt-bar",
+        "chat-composer",
+        "search",
+        "morph-search-capsule",
+        "animated-search-demo",
+        "typewriter-text",
+        "character-scramble-text",
+        "ld-bouncing-dots",
+        "ld-linear-dots"
+      ]
+    },
+    "human_in_the_loop_and_tools": {
+      "description": "User permission gates, action approval, and agent tool execution logs.",
+      "items": [
+        "approval-card",
+        "task-rows",
+        "tool-chips",
+        "selection-actions",
+        "slide-to-confirm-button",
+        "shimmer-button",
+        "rainbow-button",
+        "googly-eyes-button",
+        "gloss-button",
+        "chrome-border-button",
+        "book-a-call-button",
+        "neumorphic-download-button",
+        "day-night-sky-toggle",
+        "landscape-orb-toggle",
+        "glass-orb-toggle",
+        "theme-toggle-classic",
+        "theme-toggle-around",
+        "theme-toggle-dark-inner",
+        "theme-toggle-dark-side",
+        "theme-toggle-eclipse",
+        "theme-toggle-expand",
+        "theme-toggle-spin",
+        "theme-toggle-half-sun",
+        "theme-toggle-horizon",
+        "theme-toggle-inner-moon",
+        "theme-toggle-lightbulb",
+        "theme-toggle-light-switch",
+        "theme-toggle-simple",
+        "theme-toggle-within"
+      ]
+    },
+    "data_and_diff": {
+      "description": "Tabular records, status filtering, and version comparison.",
+      "items": [
+        "diff-table",
+        "records-table",
+        "filter-table"
+      ]
+    },
+    "cards_and_knowledge": {
+      "description": "RAG chunk previews, metric insights, and suggestions.",
+      "items": [
+        "recommendation-card",
+        "context-cards",
+        "insight-cards",
+        "fine-tune-card",
+        "arch-card-carousel",
+        "editorial-3-d-orbit-carousel",
+        "perspective-flip-deck",
+        "diagonal-card-stack"
+      ]
+    },
+    "navigation_and_presentation": {
+      "description": "Structural sidebars, workflow graphs, and kinetic displays.",
+      "items": [
+        "sidebar-nav",
+        "flowchart",
+        "code-block",
+        "agent-screen",
+        "hero-morph-navbar",
+        "magnetic-pill-navbar",
+        "pill-expand-navbar",
+        "kinetic-reel-text",
+        "split-text-reveal",
+        "spotlight-text",
+        "flip-3-d-text",
+        "velocity-marquee-text"
+      ]
+    },
+    "micro_states_and_indicators": {
+      "description": "Granular inline, button, container, and sensor micro-loading indicators.",
+      "items": [
+        "ld-arc",
+        "ld-ring",
+        "ld-bouncing-dots",
+        "ld-linear-dots",
+        "ld-eclipse",
+        "ld-comet",
+        "ld-dual",
+        "ld-radar",
+        "ld-atom",
+        "ld-trace",
+        "ld-blocks",
+        "ld-gather",
+        "ld-swirl",
+        "ld-morph",
+        "ld-flip",
+        "ld-ripple",
+        "ld-wave",
+        "ld-pulse",
+        "ld-clock",
+        "ld-compass",
+        "ld-classic",
+        "ld-classic-v2",
+        "ld-loading",
+        "ld-orbit",
+        "ld-leap",
+        "ld-slide",
+        "ld-snake",
+        "ld-cascade",
+        "ld-circular-dots"
+      ]
+    }
+  },
+  "keywords": {
+    "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows": "ai_native_productivity",
+    "apple|ios|hig|liquid glass|squircle|44pt|mac style|visionos": "apple_human_interface",
+    "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile",
+    "spinner|loader|loading indicator|micro motion|arc|atom|bouncing dots|radar|ripple|comet|snake|blocks|gather|pulse|wave|circular dots|classic spinner|eclipse|leap": "micro_motion_indicators",
+    "theme toggle|day night toggle|dark mode toggle|sun moon|eclipse toggle|light switch|lightbulb toggle|minimal toggle|日夜切换|主题切换|暗黑模式切换|极简切换": "minimal_theme_toggles"
+  },
+  "components": {
+    "loading-state": {
+      "id": "loading-state",
+      "style": "ai_native_productivity",
+      "name": "Loading State",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Card-level AI processing indicator with pixel grid animations and elapsed time counter.",
+      "when_not": "Inline button submission states or tight table cells (use ld-arc or ld-linear-dots instead).",
+      "aliases": [
+        "ai-loader",
+        "pixel-grid-loader",
+        "elapsed-time-loader",
+        "processing-state"
+      ],
+      "snippet": "beautifului-components/components/ai-states/loading-state.snippet.html",
+      "route_aliases": []
+    },
+    "thinking-state": {
+      "id": "thinking-state",
+      "style": "ai_native_productivity",
+      "name": "Thinking State",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "state-driven",
+        "motion": "transition",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "LLM emits step-by-step reasoning traces, expandable tool call logs, or chain-of-thought.",
+      "when_not": "General processing without step-by-step reasoning steps (use loading-state instead).",
+      "aliases": [
+        "reasoning-chain",
+        "cot-accordion",
+        "thinking-accordion",
+        "step-by-step-log"
+      ],
+      "snippet": "beautifului-components/components/ai-states/thinking-state.snippet.html",
+      "route_aliases": []
+    },
+    "streaming-text": {
+      "id": "streaming-text",
+      "style": "ai_native_productivity",
+      "name": "Streaming Text",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "transition",
+        "category": "ai-response",
+        "runtime": "html-css"
+      },
+      "when": "Real-time token streaming with inline sources, follow-up suggestions, and response action buttons.",
+      "when_not": "Static markdown documentation or pre-rendered code blocks without streaming cursor.",
+      "aliases": [
+        "token-stream",
+        "ai-chat-response",
+        "streaming-markdown",
+        "source-citations"
+      ],
+      "snippet": "beautifului-components/components/ai-states/streaming-text.snippet.html",
+      "route_aliases": []
+    },
+    "fluid-morph-orb": {
+      "id": "fluid-morph-orb",
+      "style": "kinetic_motion_tactile",
+      "name": "Fluid Morph Orb",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "webgl",
+        "category": "avatar",
+        "runtime": "react-3d"
+      },
+      "when": "Dynamic continuously morphing 3D fluid orb representing an active AI companion avatar.",
+      "when_not": "Atomic button submission indicators (use ld-arc or ld-ring instead).",
+      "aliases": [
+        "3d-ai-orb",
+        "fluid-companion",
+        "webgl-orb",
+        "assistant-sphere"
+      ],
+      "snippet": "rewampui-components/components/ai-ui/fluid-morph-orb.snippet.tsx",
+      "route_aliases": []
+    },
+    "marbled-fluid-orb": {
+      "id": "marbled-fluid-orb",
+      "style": "kinetic_motion_tactile",
+      "name": "Marbled Fluid Orb",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "webgl",
+        "category": "avatar",
+        "runtime": "react-3d"
+      },
+      "when": "Iridescent marbled oil-slick 3D orb for creative and generative AI assistants.",
+      "when_not": "Low-power mobile web views requiring minimal GPU usage.",
+      "aliases": [
+        "iridescent-orb",
+        "oil-slick-sphere",
+        "marbled-avatar",
+        "generative-ai-orb"
+      ],
+      "snippet": "rewampui-components/components/ai-ui/marbled-fluid-orb.snippet.tsx",
+      "route_aliases": []
+    },
+    "particle-dot-orb": {
+      "id": "particle-dot-orb",
+      "style": "kinetic_motion_tactile",
+      "name": "Particle Dot Orb",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "webgl",
+        "category": "avatar",
+        "runtime": "react-3d"
+      },
+      "when": "3D particle sphere visualizing neural computation and active data processing.",
+      "when_not": "Simple static icon representations.",
+      "aliases": [
+        "neural-particle-sphere",
+        "dot-matrix-orb",
+        "particle-cloud",
+        "ai-brain-sphere"
+      ],
+      "snippet": "rewampui-components/components/ai-ui/particle-dot-orb.snippet.tsx",
+      "route_aliases": []
+    },
+    "ld-comet": {
+      "id": "ld-comet",
+      "style": "micro_motion_indicators",
+      "name": "Comet Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "AI prompt generation buffer, token streaming warmup, high-tech crypto verification.",
+      "when_not": "Ultra-dense tabular data rows.",
+      "aliases": [
+        "conic-glow-loader",
+        "streaming-warmup",
+        "comet-tail-spinner"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-comet.snippet.html",
+      "route_aliases": []
+    },
+    "ld-atom": {
+      "id": "ld-atom",
+      "style": "micro_motion_indicators",
+      "name": "Atom Quantum Orbital",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Deep neural reasoning, scientific simulations, complex quantum/AI computation.",
+      "when_not": "Simple login button submission.",
+      "aliases": [
+        "quantum-atom",
+        "neural-reasoning-rings",
+        "physics-orbital-spinner"
+      ],
+      "snippet": "loadingdev-components/components/orbital/ld-atom.snippet.html",
+      "route_aliases": []
+    },
+    "prompt-bar": {
+      "id": "prompt-bar",
+      "style": "ai_native_productivity",
+      "name": "Prompt Bar",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "composer",
+        "runtime": "html-css"
+      },
+      "when": "Single-line or expanding AI prompt input bar with model selector and attachment triggers.",
+      "when_not": "Full multi-turn chat message histories (use chat-composer instead).",
+      "aliases": [
+        "ai-input-bar",
+        "omnibox-prompt",
+        "search-prompt",
+        "command-bar"
+      ],
+      "snippet": "beautifului-components/components/input/prompt-bar.snippet.html",
+      "route_aliases": []
+    },
+    "chat-composer": {
+      "id": "chat-composer",
+      "style": "ai_native_productivity",
+      "name": "Chat Composer",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "composer",
+        "runtime": "html-css"
+      },
+      "when": "Full conversational workspace with message history bubbles and multi-modal input composer.",
+      "when_not": "Single-line minimalist search or prompt inputs (use prompt-bar instead).",
+      "aliases": [
+        "ai-chat-interface",
+        "conversational-panel",
+        "chat-thread",
+        "dialogue-window"
+      ],
+      "snippet": "beautifului-components/components/input/chat-composer.snippet.html",
+      "route_aliases": []
+    },
+    "search": {
+      "id": "search",
+      "style": "ai_native_productivity",
+      "name": "Search (Command Palette)",
+      "tokens": {
+        "scale": "standard",
+        "placement": "overlay",
+        "interaction": "input",
+        "lifecycle": "on-demand",
+        "motion": "transition",
+        "category": "composer",
+        "runtime": "html-css"
+      },
+      "when": "Quick command palette modal with keyboard shortcut indicator and categorized results.",
+      "when_not": "Inline persistent search inputs embedded directly in navigation headers.",
+      "aliases": [
+        "cmdk",
+        "command-palette",
+        "spotlight-search",
+        "quick-switcher"
+      ],
+      "snippet": "beautifului-components/components/input/search.snippet.html",
+      "route_aliases": []
+    },
+    "morph-search-capsule": {
+      "id": "morph-search-capsule",
+      "style": "kinetic_motion_tactile",
+      "name": "Morph Search Capsule",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "composer",
+        "runtime": "react-motion"
+      },
+      "when": "Compact search pill that fluidly morphs into an expanded omnibox input on focus.",
+      "when_not": "Full-page modal search dialogs with category tabs (use search instead).",
+      "aliases": [
+        "expanding-search",
+        "morphing-omnibox",
+        "pill-search",
+        "fluid-search-bar"
+      ],
+      "snippet": "rewampui-components/components/search-bars/morph-search-capsule.snippet.jsx",
+      "route_aliases": []
+    },
+    "animated-search-demo": {
+      "id": "animated-search-demo",
+      "style": "kinetic_motion_tactile",
+      "name": "Animated Search Demo",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "composer",
+        "runtime": "react-motion"
+      },
+      "when": "Showcase search container with simulated live typing, auto-completion, and suggestion popover.",
+      "when_not": "Ultra-lean production search inputs where simulated animations hinder immediate typing.",
+      "aliases": [
+        "search-showcase",
+        "typeahead-demo",
+        "interactive-search-hero",
+        "search-preview"
+      ],
+      "snippet": "rewampui-components/components/search-bars/animated-search-demo.snippet.jsx",
+      "route_aliases": []
+    },
+    "typewriter-text": {
+      "id": "typewriter-text",
+      "style": "kinetic_motion_tactile",
+      "name": "Typewriter Text",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "Terminal-style typewriter effect cycling through sample prompts or value propositions.",
+      "when_not": "Critical status messages where users must read all words immediately.",
+      "aliases": [
+        "typing-text",
+        "terminal-typewriter",
+        "prompt-rotator",
+        "cycling-tagline"
+      ],
+      "snippet": "rewampui-components/components/text/typewriter-text.snippet.jsx",
+      "route_aliases": []
+    },
+    "character-scramble-text": {
+      "id": "character-scramble-text",
+      "style": "kinetic_motion_tactile",
+      "name": "Character Scramble Text",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "Cyberpunk character decoding and decipher animation triggered on hover or entrance.",
+      "when_not": "Standard readable form labels or accessible body text.",
+      "aliases": [
+        "decoding-text",
+        "matrix-text",
+        "scramble-effect",
+        "hacker-text"
+      ],
+      "snippet": "rewampui-components/components/text/character-scramble-text.snippet.jsx",
+      "route_aliases": []
+    },
+    "ld-bouncing-dots": {
+      "id": "ld-bouncing-dots",
+      "style": "micro_motion_indicators",
+      "name": "Bouncing Dots",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Chat bubble typing indicator ('Agent is typing...'), comment drafting, live messaging.",
+      "when_not": "Vertical-height-constrained table rows where bounce clips cells.",
+      "aliases": [
+        "typing-dots",
+        "chat-typing-bubble",
+        "three-dots-bounce"
+      ],
+      "snippet": "loadingdev-components/components/dots/ld-bouncing-dots.snippet.html",
+      "route_aliases": []
+    },
+    "ld-linear-dots": {
+      "id": "ld-linear-dots",
+      "style": "micro_motion_indicators",
+      "name": "Linear Dots",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Inline button text suffix (e.g., 'Saving...'), table cell updates, status bar footers.",
+      "when_not": "Large prominent hero sections.",
+      "aliases": [
+        "ellipsis-dots",
+        "inline-saving-dots",
+        "subtle-status-dots"
+      ],
+      "snippet": "loadingdev-components/components/dots/ld-linear-dots.snippet.html",
+      "route_aliases": []
+    },
+    "approval-card": {
+      "id": "approval-card",
+      "style": "ai_native_productivity",
+      "name": "Approval Card",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "confirmation",
+        "lifecycle": "state-driven",
+        "motion": "transition",
+        "category": "gate",
+        "runtime": "html-css"
+      },
+      "when": "Agent requires explicit human confirmation before executing high-risk, irreversible actions.",
+      "when_not": "Standard form submit or low-risk reversible user preferences.",
+      "aliases": [
+        "hitl-card",
+        "permission-gate",
+        "decision-card",
+        "human-in-the-loop-confirmation"
+      ],
+      "snippet": "beautifului-components/components/interaction/approval-card.snippet.html",
+      "route_aliases": []
+    },
+    "task-rows": {
+      "id": "task-rows",
+      "style": "ai_native_productivity",
+      "name": "Task Rows",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "workflow",
+        "runtime": "html-css"
+      },
+      "when": "Tracking multi-step parallel or sequential agent task execution progress.",
+      "when_not": "Simple single-state loading indicators (use ld-arc or loading-state instead).",
+      "aliases": [
+        "task-queue",
+        "agent-progress-tracker",
+        "multi-step-tasks",
+        "job-rows"
+      ],
+      "snippet": "beautifului-components/components/task-management/task-rows.snippet.html",
+      "route_aliases": []
+    },
+    "tool-chips": {
+      "id": "tool-chips",
+      "style": "ai_native_productivity",
+      "name": "Tool Chips",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "state-driven",
+        "motion": "transition",
+        "category": "workflow",
+        "runtime": "html-css"
+      },
+      "when": "Displaying compact chips of agent tool calls, file edits, and external API executions.",
+      "when_not": "Detailed code diffs or full terminal outputs (use diff-table or code-block instead).",
+      "aliases": [
+        "tool-call-chips",
+        "file-edit-badges",
+        "agent-action-chips",
+        "api-call-pills"
+      ],
+      "snippet": "beautifului-components/components/interaction/tool-chips.snippet.html",
+      "route_aliases": []
+    },
+    "selection-actions": {
+      "id": "selection-actions",
+      "style": "ai_native_productivity",
+      "name": "Selection Actions",
+      "tokens": {
+        "scale": "compact",
+        "placement": "overlay",
+        "interaction": "control",
+        "lifecycle": "on-demand",
+        "motion": "transition",
+        "category": "action",
+        "runtime": "html-css"
+      },
+      "when": "Contextual floating toolbar appearing above highlighted text or selected rows.",
+      "when_not": "Fixed top or bottom navigation toolbars (use dock navbars instead).",
+      "aliases": [
+        "floating-toolbar",
+        "context-action-menu",
+        "selection-popup",
+        "bulk-actions-pill"
+      ],
+      "snippet": "beautifului-components/components/interaction/selection-actions.snippet.html",
+      "route_aliases": []
+    },
+    "slide-to-confirm-button": {
+      "id": "slide-to-confirm-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Slide To Confirm Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "confirmation",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "gate",
+        "runtime": "react-motion"
+      },
+      "when": "High-friction physical slide confirmation for irreversible checkout or dangerous actions.",
+      "when_not": "Low-friction everyday form submits or search actions.",
+      "aliases": [
+        "slide-confirm",
+        "friction-button",
+        "swipe-to-approve",
+        "checkout-slider"
+      ],
+      "snippet": "rewampui-components/components/buttons/slide-to-confirm-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "shimmer-button": {
+      "id": "shimmer-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Shimmer Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "High-converting primary CTA button with periodic luminous streak animation.",
+      "when_not": "Secondary neutral buttons in high-density data tables.",
+      "aliases": [
+        "cta-shimmer",
+        "light-streak-button",
+        "glow-button",
+        "hero-action-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/shimmer-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "rainbow-button": {
+      "id": "rainbow-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Rainbow Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "Vibrant iridescent gradient border CTA highlighting special AI features or promotions.",
+      "when_not": "Monochrome brutalist or stark minimalist financial interfaces.",
+      "aliases": [
+        "iridescent-button",
+        "gradient-border-button",
+        "ai-feature-button",
+        "magic-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/rainbow-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "googly-eyes-button": {
+      "id": "googly-eyes-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Googly Eyes Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "Playful easter-egg button with physics-based cursor-tracking eyes.",
+      "when_not": "Strict medical, legal, or enterprise compliance tools.",
+      "aliases": [
+        "easter-egg-button",
+        "interactive-eyes",
+        "playful-cta",
+        "cursor-tracking-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/googly-eyes-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "gloss-button": {
+      "id": "gloss-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Gloss Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "Luxury marbled pill button with slow-drifting iridescent liquid surface.",
+      "when_not": "Flat high-density data grids requiring crisp text contrasts.",
+      "aliases": [
+        "marbled-button",
+        "liquid-pill-button",
+        "luxury-cta",
+        "fluid-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/gloss-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "chrome-border-button": {
+      "id": "chrome-border-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Chrome Border Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "Futuristic dark-mode button with rotating metallic chrome specular outline.",
+      "when_not": "Warm humanist lifestyle applications.",
+      "aliases": [
+        "metallic-button",
+        "specular-border",
+        "chrome-cta",
+        "cyber-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/chrome-border-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "book-a-call-button": {
+      "id": "book-a-call-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Book A Call Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "Lead generation booking button with animated avatar preview and schedule flow.",
+      "when_not": "Standard non-scheduling action triggers.",
+      "aliases": [
+        "calendar-cta",
+        "schedule-button",
+        "lead-gen-button",
+        "consultation-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/book-a-call-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "neumorphic-download-button": {
+      "id": "neumorphic-download-button",
+      "style": "kinetic_motion_tactile",
+      "name": "Neumorphic Download Button",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "action",
+        "runtime": "react-motion"
+      },
+      "when": "Tactile circular download button with embedded progress ring animation.",
+      "when_not": "Inline plain text hyperlinks.",
+      "aliases": [
+        "progress-download-button",
+        "circular-action-button",
+        "tactile-download",
+        "soft-ui-button"
+      ],
+      "snippet": "rewampui-components/components/buttons/neumorphic-download-button.snippet.jsx",
+      "route_aliases": []
+    },
+    "day-night-sky-toggle": {
+      "id": "day-night-sky-toggle",
+      "style": "kinetic_motion_tactile",
+      "name": "Day Night Sky Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "setting",
+        "runtime": "react-motion"
+      },
+      "when": "Atmospheric theme toggle with animated sun, moon, and drifting clouds.",
+      "when_not": "Compact monochrome settings lists with 16px toggle height restrictions.",
+      "aliases": [
+        "theme-switch",
+        "sky-toggle",
+        "dark-mode-toggle",
+        "sun-moon-switch"
+      ],
+      "snippet": "rewampui-components/components/toggles/day-night-sky-toggle.snippet.jsx",
+      "route_aliases": [],
+      "resources": [
+        {
+          "path": "rewampui-components/shared/siteTheme.js",
+          "kind": "javascript"
+        }
+      ]
+    },
+    "landscape-orb-toggle": {
+      "id": "landscape-orb-toggle",
+      "style": "kinetic_motion_tactile",
+      "name": "Landscape Orb Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "setting",
+        "runtime": "react-motion"
+      },
+      "when": "Theme switch featuring miniature landscape scene transitions with parallax depth.",
+      "when_not": "Minimalist system preference panes.",
+      "aliases": [
+        "scenery-toggle",
+        "parallax-theme-switch",
+        "landscape-switch",
+        "nature-toggle"
+      ],
+      "snippet": "rewampui-components/components/toggles/landscape-orb-toggle.snippet.jsx",
+      "route_aliases": [],
+      "resources": [
+        {
+          "path": "rewampui-components/shared/siteTheme.js",
+          "kind": "javascript"
+        }
+      ]
+    },
+    "glass-orb-toggle": {
+      "id": "glass-orb-toggle",
+      "style": "kinetic_motion_tactile",
+      "name": "Glass Orb Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "setting",
+        "runtime": "react-motion"
+      },
+      "when": "Minimalist glassmorphic light/dark mode switch with frosted depth.",
+      "when_not": "Pure high-contrast retro cyber themes.",
+      "aliases": [
+        "glassmorphic-toggle",
+        "liquid-glass-switch",
+        "frosted-toggle",
+        "minimal-theme-switch"
+      ],
+      "snippet": "rewampui-components/components/toggles/glass-orb-toggle.snippet.tsx",
+      "route_aliases": []
+    },
+    "theme-toggle-classic": {
+      "id": "theme-toggle-classic",
+      "style": "minimal_theme_toggles",
+      "name": "Classic Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Universal application header bars, navigation menus, and clean documentation site toolbars.",
+      "when_not": "Heavy full-page hero sections requiring 3D atmospheric effects (use day-night-sky-toggle instead).",
+      "aliases": [
+        "经典日夜切换",
+        "极简主题切换",
+        "太阳月亮切换",
+        "暗黑模式切换",
+        "昼夜模式",
+        "classic-toggle",
+        "sun-moon-toggle",
+        "theme-toggle",
+        "dark-mode-toggle",
+        "light-dark-switch"
+      ],
+      "snippet": "themetoggle-components/components/classic/classic.snippet.html",
+      "route_aliases": [
+        "toggle-classic"
+      ]
+    },
+    "theme-toggle-around": {
+      "id": "theme-toggle-around",
+      "style": "minimal_theme_toggles",
+      "name": "Around Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Tech SaaS headers, AI dashboards, and modern developer documentation toolbars.",
+      "when_not": "Extremely compact 12px table cell status indicators.",
+      "aliases": [
+        "环绕日夜切换",
+        "轨道粒子",
+        "极简主题切换",
+        "暗黑模式切换",
+        "昼夜切换",
+        "around-toggle",
+        "orbit-toggle",
+        "satellite-toggle",
+        "theme-toggle"
+      ],
+      "snippet": "themetoggle-components/components/around/around.snippet.html",
+      "route_aliases": [
+        "toggle-around"
+      ]
+    },
+    "theme-toggle-dark-inner": {
+      "id": "theme-toggle-dark-inner",
+      "style": "minimal_theme_toggles",
+      "name": "Dark Inner Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Compact toolbars, floating navigation bars, and settings list items.",
+      "when_not": "Playful landing pages requiring high-friction confirmation.",
+      "aliases": [
+        "内旋日夜切换",
+        "内向折叠",
+        "极简主题切换",
+        "暗黑模式切换",
+        "dark-inner-toggle",
+        "inward-toggle",
+        "compact-theme-switch"
+      ],
+      "snippet": "themetoggle-components/components/dark-inner/dark-inner.snippet.html",
+      "route_aliases": [
+        "toggle-dark-inner"
+      ]
+    },
+    "theme-toggle-dark-side": {
+      "id": "theme-toggle-dark-side",
+      "style": "minimal_theme_toggles",
+      "name": "Dark Side Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Vertical sidebars, dense developer terminals, and compact utility headers.",
+      "when_not": "Expanded full-screen modal overlays.",
+      "aliases": [
+        "侧旋日夜切换",
+        "侧边翻转",
+        "极简主题切换",
+        "暗黑模式切换",
+        "dark-side-toggle",
+        "lateral-toggle",
+        "side-shift-switch"
+      ],
+      "snippet": "themetoggle-components/components/dark-side/dark-side.snippet.html",
+      "route_aliases": [
+        "toggle-dark-side"
+      ]
+    },
+    "theme-toggle-eclipse": {
+      "id": "theme-toggle-eclipse",
+      "style": "minimal_theme_toggles",
+      "name": "Eclipse Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Astronomy, dark-first tech products, creative portfolios, and futuristic web portals.",
+      "when_not": "Standard corporate business forms.",
+      "aliases": [
+        "日蚀切换",
+        "月食主题",
+        "极简主题切换",
+        "暗黑模式切换",
+        "eclipse-toggle",
+        "lunar-eclipse",
+        "solar-toggle"
+      ],
+      "snippet": "themetoggle-components/components/eclipse/eclipse.snippet.html",
+      "route_aliases": [
+        "toggle-eclipse"
+      ]
+    },
+    "theme-toggle-expand": {
+      "id": "theme-toggle-expand",
+      "style": "minimal_theme_toggles",
+      "name": "Expand Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Prominent top navigation action buttons, interactive hero headers, and landing touchpoints.",
+      "when_not": "Ultra-dense data tables.",
+      "aliases": [
+        "膨胀日夜切换",
+        "径向展开",
+        "极简主题切换",
+        "暗黑模式切换",
+        "expand-toggle",
+        "radial-toggle",
+        "pulse-theme-switch"
+      ],
+      "snippet": "themetoggle-components/components/expand/expand.snippet.html",
+      "route_aliases": [
+        "toggle-expand"
+      ]
+    },
+    "theme-toggle-spin": {
+      "id": "theme-toggle-spin",
+      "style": "minimal_theme_toggles",
+      "name": "Spin Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Creative studios, dynamic landing showcases, and animated web portfolios.",
+      "when_not": "Static data-dense financial applications.",
+      "aliases": [
+        "旋转日夜切换",
+        "射线收缩",
+        "极简主题切换",
+        "暗黑模式切换",
+        "spin-toggle",
+        "whirl-toggle",
+        "kinetic-sun-switch"
+      ],
+      "snippet": "themetoggle-components/components/spin/spin.snippet.html",
+      "route_aliases": [
+        "toggle-spin"
+      ]
+    },
+    "theme-toggle-half-sun": {
+      "id": "theme-toggle-half-sun",
+      "style": "minimal_theme_toggles",
+      "name": "Half Sun Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Brutalist, Swiss typography, architecture, and design agency websites.",
+      "when_not": "Skeuomorphic consumer mobile apps.",
+      "aliases": [
+        "半日切换",
+        "半月翻转",
+        "几何风格",
+        "极简主题切换",
+        "half-sun-toggle",
+        "geometric-switch",
+        "minimal-toggle"
+      ],
+      "snippet": "themetoggle-components/components/half-sun/half-sun.snippet.html",
+      "route_aliases": [
+        "toggle-half-sun"
+      ]
+    },
+    "theme-toggle-horizon": {
+      "id": "theme-toggle-horizon",
+      "style": "minimal_theme_toggles",
+      "name": "Horizon Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Editorial blogs, lifestyle apps, travel platforms, and reading applications.",
+      "when_not": "High-density technical code diff viewers.",
+      "aliases": [
+        "地平线日夜切换",
+        "日出日落",
+        "极简主题切换",
+        "暗黑模式切换",
+        "horizon-toggle",
+        "sunset-switch",
+        "sunrise-toggle"
+      ],
+      "snippet": "themetoggle-components/components/horizon/horizon.snippet.html",
+      "route_aliases": [
+        "toggle-horizon"
+      ]
+    },
+    "theme-toggle-inner-moon": {
+      "id": "theme-toggle-inner-moon",
+      "style": "minimal_theme_toggles",
+      "name": "Inner Moon Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Productivity workspaces, Linear/Raycast style dark themes, and developer CLI tools.",
+      "when_not": "Complex checkout or critical action gates.",
+      "aliases": [
+        "内核月亮切换",
+        "月相变化",
+        "极简主题切换",
+        "暗黑模式切换",
+        "inner-moon-toggle",
+        "moon-phase-switch",
+        "lunar-toggle"
+      ],
+      "snippet": "themetoggle-components/components/inner-moon/inner-moon.snippet.html",
+      "route_aliases": [
+        "toggle-inner-moon"
+      ]
+    },
+    "theme-toggle-lightbulb": {
+      "id": "theme-toggle-lightbulb",
+      "style": "minimal_theme_toggles",
+      "name": "Lightbulb Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Education portals, note-taking applications, ideation boards, and reading environments.",
+      "when_not": "Strict corporate banking grids.",
+      "aliases": [
+        "灯泡开关",
+        "白炽灯主题切换",
+        "极简主题切换",
+        "暗黑模式切换",
+        "lightbulb-toggle",
+        "lamp-switch",
+        "bulb-toggle"
+      ],
+      "snippet": "themetoggle-components/components/lightbulb/lightbulb.snippet.html",
+      "route_aliases": [
+        "toggle-lightbulb"
+      ]
+    },
+    "theme-toggle-light-switch": {
+      "id": "theme-toggle-light-switch",
+      "style": "minimal_theme_toggles",
+      "name": "Light Switch Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Smart home IoT dashboards, hardware companion apps, and playful interactive settings.",
+      "when_not": "Ultra-thin inline text hyperlinks.",
+      "aliases": [
+        "墙壁开关",
+        "拟物拨动开关",
+        "极简主题切换",
+        "暗黑模式切换",
+        "light-switch-toggle",
+        "wall-switch",
+        "rocker-toggle"
+      ],
+      "snippet": "themetoggle-components/components/light-switch/light-switch.snippet.html",
+      "route_aliases": [
+        "toggle-light-switch"
+      ]
+    },
+    "theme-toggle-simple": {
+      "id": "theme-toggle-simple",
+      "style": "minimal_theme_toggles",
+      "name": "Simple Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Everyday minimalist websites, personal portfolios, blogs, and documentation pages.",
+      "when_not": "Complex multi-branch settings menus.",
+      "aliases": [
+        "极简纯粹切换",
+        "微型日夜",
+        "极简主题切换",
+        "暗黑模式切换",
+        "simple-toggle",
+        "clean-theme-switch",
+        "minimal-day-night"
+      ],
+      "snippet": "themetoggle-components/components/simple/simple.snippet.html",
+      "route_aliases": [
+        "toggle-simple"
+      ]
+    },
+    "theme-toggle-within": {
+      "id": "theme-toggle-within",
+      "style": "minimal_theme_toggles",
+      "name": "Within Theme Toggle",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "Card toolbars, floating utility badges, and sub-navigation action panels.",
+      "when_not": "Full-page loading screens.",
+      "aliases": [
+        "内嵌日夜切换",
+        "嵌套形变",
+        "极简主题切换",
+        "暗黑模式切换",
+        "within-toggle",
+        "nested-toggle",
+        "crater-switch"
+      ],
+      "snippet": "themetoggle-components/components/within/within.snippet.html",
+      "route_aliases": [
+        "toggle-within"
+      ]
+    },
+    "diff-table": {
+      "id": "diff-table",
+      "style": "ai_native_productivity",
+      "name": "Diff Table",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "html-css"
+      },
+      "when": "Side-by-side or unified code and text difference view with added/removed line highlighting.",
+      "when_not": "Standard read-only code viewer without changes (use code-block instead).",
+      "aliases": [
+        "code-diff",
+        "version-compare",
+        "git-diff-viewer",
+        "before-after-table"
+      ],
+      "snippet": "beautifului-components/components/data/diff-table.snippet.html",
+      "route_aliases": []
+    },
+    "records-table": {
+      "id": "records-table",
+      "style": "ai_native_productivity",
+      "name": "Records Table",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "data",
+        "runtime": "html-css"
+      },
+      "when": "Complex CRM and database table view with sticky headers, column sorting, and row selection.",
+      "when_not": "Simple 3-row static lists (use basic HTML tables or task-rows instead).",
+      "aliases": [
+        "crm-table",
+        "data-grid",
+        "sortable-table",
+        "database-records"
+      ],
+      "snippet": "beautifului-components/components/data/records-table.snippet.html",
+      "route_aliases": []
+    },
+    "filter-table": {
+      "id": "filter-table",
+      "style": "ai_native_productivity",
+      "name": "Filter Table",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "html-css"
+      },
+      "when": "Issue and task tracking table with multi-criteria filter bars and status badges.",
+      "when_not": "Full spreadsheet math calculations with formulas.",
+      "aliases": [
+        "issue-tracker-table",
+        "faceted-filter-table",
+        "status-records",
+        "task-filter"
+      ],
+      "snippet": "beautifului-components/components/data/filter-table.snippet.html",
+      "route_aliases": []
+    },
+    "recommendation-card": {
+      "id": "recommendation-card",
+      "style": "ai_native_productivity",
+      "name": "Recommendation Card",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "state-driven",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "html-css"
+      },
+      "when": "Agent proactive suggestion card with icon, rationale description, and action CTA.",
+      "when_not": "Blocking approval gates requiring explicit confirmation (use approval-card instead).",
+      "aliases": [
+        "proactive-suggestion",
+        "next-action-card",
+        "insight-cta",
+        "ai-tip"
+      ],
+      "snippet": "beautifului-components/components/cards/recommendation-card.snippet.html",
+      "route_aliases": []
+    },
+    "context-cards": {
+      "id": "context-cards",
+      "style": "ai_native_productivity",
+      "name": "Context Cards",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "content",
+        "runtime": "html-css"
+      },
+      "when": "Displaying attached context chunks, RAG file badges, and source preview summaries.",
+      "when_not": "Full document editors or live diff viewers (use diff-table or code-block instead).",
+      "aliases": [
+        "rag-chunks",
+        "attachment-previews",
+        "file-context-badges",
+        "reference-card"
+      ],
+      "snippet": "beautifului-components/components/cards/context-cards.snippet.html",
+      "route_aliases": []
+    },
+    "insight-cards": {
+      "id": "insight-cards",
+      "style": "ai_native_productivity",
+      "name": "Insight Cards",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "html-css"
+      },
+      "when": "Time-series metric cards with sparkline charts, crosshair tracking, and delta statistics.",
+      "when_not": "Complex multi-column tabular databases (use records-table instead).",
+      "aliases": [
+        "kpi-card",
+        "sparkline-metric",
+        "metric-trend",
+        "analytics-summary"
+      ],
+      "snippet": "beautifului-components/components/cards/insight-cards.snippet.html",
+      "route_aliases": []
+    },
+    "fine-tune-card": {
+      "id": "fine-tune-card",
+      "style": "ai_native_productivity",
+      "name": "Fine-tune Card",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "setting",
+        "runtime": "html-css"
+      },
+      "when": "AI model hyperparameter configuration panel with dataset selectors and tuning sliders.",
+      "when_not": "General application settings or profile preference forms.",
+      "aliases": [
+        "model-tuning",
+        "hyperparameters-panel",
+        "ai-config-card",
+        "training-parameters"
+      ],
+      "snippet": "beautifului-components/components/cards/fine-tune-card.snippet.html",
+      "route_aliases": []
+    },
+    "arch-card-carousel": {
+      "id": "arch-card-carousel",
+      "style": "kinetic_motion_tactile",
+      "name": "Arch Card Carousel",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "showcase",
+        "runtime": "react-motion"
+      },
+      "when": "Arched perspective 3D image and project showcase gallery with curved layout.",
+      "when_not": "Simple single-image previews or compact thumbnail lists.",
+      "aliases": [
+        "3d-carousel",
+        "arched-gallery",
+        "perspective-carousel",
+        "curved-card-deck"
+      ],
+      "snippet": "rewampui-components/components/cards/arch-card-carousel.snippet.tsx",
+      "route_aliases": []
+    },
+    "editorial-3-d-orbit-carousel": {
+      "id": "editorial-3-d-orbit-carousel",
+      "style": "kinetic_motion_tactile",
+      "name": "Editorial 3D Orbit Carousel",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "showcase",
+        "runtime": "react-motion"
+      },
+      "when": "Circular orbiting 3D card ring for presenting premium case studies or portfolios.",
+      "when_not": "Compact mobile viewport sidebars.",
+      "aliases": [
+        "orbital-carousel",
+        "cylinder-card-ring",
+        "3d-card-ring",
+        "rotating-showcase"
+      ],
+      "snippet": "rewampui-components/components/cards/editorial-3-d-orbit-carousel.snippet.jsx",
+      "route_aliases": []
+    },
+    "perspective-flip-deck": {
+      "id": "perspective-flip-deck",
+      "style": "kinetic_motion_tactile",
+      "name": "Perspective Flip Deck",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "showcase",
+        "runtime": "react-motion"
+      },
+      "when": "Tactile swipeable perspective card deck with depth stacking and gesture rotation.",
+      "when_not": "Static non-interactive blog article cards.",
+      "aliases": [
+        "swipeable-deck",
+        "tinder-card-stack",
+        "flip-deck",
+        "gesture-cards"
+      ],
+      "snippet": "rewampui-components/components/cards/perspective-flip-deck.snippet.jsx",
+      "route_aliases": []
+    },
+    "diagonal-card-stack": {
+      "id": "diagonal-card-stack",
+      "style": "kinetic_motion_tactile",
+      "name": "Diagonal Card Stack",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "showcase",
+        "runtime": "react-motion"
+      },
+      "when": "Diagonal layered card stack that spreads out fan-style on cursor hover.",
+      "when_not": "Dense tabular records where elements cannot overlap.",
+      "aliases": [
+        "fan-card-stack",
+        "hover-spread-cards",
+        "diagonal-deck",
+        "stacked-previews"
+      ],
+      "snippet": "rewampui-components/components/cards/diagonal-card-stack.snippet.jsx",
+      "route_aliases": []
+    },
+    "sidebar-nav": {
+      "id": "sidebar-nav",
+      "style": "ai_native_productivity",
+      "name": "Sidebar Nav",
+      "tokens": {
+        "scale": "region",
+        "placement": "dock",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "nav",
+        "runtime": "html-css"
+      },
+      "when": "Collapsible vertical application sidebar navigation with workspace switcher.",
+      "when_not": "Horizontal top navigation bars (use hero-morph-navbar or magnetic-pill-navbar instead).",
+      "aliases": [
+        "collapsible-sidebar",
+        "app-navigation-dock",
+        "vertical-nav",
+        "workspace-menu"
+      ],
+      "snippet": "beautifului-components/components/navigation/sidebar-nav.snippet.html",
+      "route_aliases": []
+    },
+    "flowchart": {
+      "id": "flowchart",
+      "style": "ai_native_productivity",
+      "name": "Flowchart",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "diagram",
+        "runtime": "html-css"
+      },
+      "when": "Branching decision trees, state machines, and multi-agent execution graphs.",
+      "when_not": "Linear 3-step text tutorials or single-line progress steps.",
+      "aliases": [
+        "decision-tree",
+        "workflow-diagram",
+        "agent-graph",
+        "dag-visualizer"
+      ],
+      "snippet": "beautifului-components/components/visualization/flowchart.snippet.html",
+      "route_aliases": []
+    },
+    "code-block": {
+      "id": "code-block",
+      "style": "ai_native_productivity",
+      "name": "Code Block",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "code",
+        "runtime": "html-css"
+      },
+      "when": "Dark-themed syntax-highlighted code viewer with language badge, line numbers, and copy action.",
+      "when_not": "Editable interactive code editors with auto-complete.",
+      "aliases": [
+        "syntax-highlighter",
+        "code-snippet",
+        "terminal-output-viewer",
+        "code-viewer"
+      ],
+      "snippet": "beautifului-components/components/code/code-block.snippet.html",
+      "route_aliases": []
+    },
+    "agent-screen": {
+      "id": "agent-screen",
+      "style": "ai_native_productivity",
+      "name": "Agent Screen",
+      "tokens": {
+        "scale": "viewport",
+        "placement": "shell",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "scaffold",
+        "runtime": "html-css"
+      },
+      "when": "Full application shell for computer-use agents driving a virtual browser and tool desktop.",
+      "when_not": "Embedded widget inside an existing page layout (use standard or compact components instead).",
+      "aliases": [
+        "agent-desktop",
+        "computer-use-layout",
+        "virtual-browser-shell",
+        "workspace-frame"
+      ],
+      "snippet": "beautifului-components/components/layout/agent-screen.snippet.html",
+      "route_aliases": []
+    },
+    "hero-morph-navbar": {
+      "id": "hero-morph-navbar",
+      "style": "kinetic_motion_tactile",
+      "name": "Hero Morph Navbar",
+      "tokens": {
+        "scale": "region",
+        "placement": "dock",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "nav",
+        "runtime": "react-motion"
+      },
+      "when": "Header navigation bar that fluidly morphs between a floating pill and an expanded bar on scroll.",
+      "when_not": "Deeply nested multi-level tree menus.",
+      "aliases": [
+        "morphing-header",
+        "scroll-navbar",
+        "fluid-header",
+        "sticky-morph-nav"
+      ],
+      "snippet": "rewampui-components/components/navbars/hero-morph-navbar.snippet.jsx",
+      "route_aliases": []
+    },
+    "magnetic-pill-navbar": {
+      "id": "magnetic-pill-navbar",
+      "style": "kinetic_motion_tactile",
+      "name": "Magnetic Pill Navbar",
+      "tokens": {
+        "scale": "region",
+        "placement": "dock",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "nav",
+        "runtime": "react-motion"
+      },
+      "when": "Segmented navigation dock with smooth magnetic sliding active pill indicator.",
+      "when_not": "Complex multi-column mega-menus with hundreds of links.",
+      "aliases": [
+        "sliding-tab-navbar",
+        "magnetic-dock",
+        "pill-dock",
+        "segmented-nav"
+      ],
+      "snippet": "rewampui-components/components/navbars/magnetic-pill-navbar.snippet.jsx",
+      "route_aliases": []
+    },
+    "pill-expand-navbar": {
+      "id": "pill-expand-navbar",
+      "style": "kinetic_motion_tactile",
+      "name": "Pill Expand Navbar",
+      "tokens": {
+        "scale": "region",
+        "placement": "dock",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "nav",
+        "runtime": "react-motion"
+      },
+      "when": "Compact icon-only pill dock that expands text labels smoothly on hover.",
+      "when_not": "Mobile viewports where hover states are unavailable.",
+      "aliases": [
+        "expandable-dock",
+        "icon-pill-nav",
+        "hover-expand-navbar",
+        "compact-menu-dock"
+      ],
+      "snippet": "rewampui-components/components/navbars/pill-expand-navbar.snippet.jsx",
+      "route_aliases": []
+    },
+    "kinetic-reel-text": {
+      "id": "kinetic-reel-text",
+      "style": "kinetic_motion_tactile",
+      "name": "Kinetic Reel Text",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "Slot-machine rolling text reveal for dynamically rotating headline phrases.",
+      "when_not": "Static legal paragraphs or multi-line prose body copy.",
+      "aliases": [
+        "slot-machine-text",
+        "rolling-headline",
+        "rotating-word-text",
+        "reel-typography"
+      ],
+      "snippet": "rewampui-components/components/text/kinetic-reel-text.snippet.jsx",
+      "route_aliases": []
+    },
+    "split-text-reveal": {
+      "id": "split-text-reveal",
+      "style": "kinetic_motion_tactile",
+      "name": "Split Text Reveal",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "Staggered character split reveal animation for high-impact hero headings on page entrance.",
+      "when_not": "Dynamic content re-rendered repeatedly on every user keystroke.",
+      "aliases": [
+        "staggered-heading",
+        "character-reveal",
+        "hero-title-animation",
+        "split-typography"
+      ],
+      "snippet": "rewampui-components/components/text/split-text-reveal.snippet.jsx",
+      "route_aliases": []
+    },
+    "spotlight-text": {
+      "id": "spotlight-text",
+      "style": "kinetic_motion_tactile",
+      "name": "Spotlight Text",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "Cursor-following radial spotlight mask revealing illuminated text.",
+      "when_not": "Mobile touch-only devices without pointer hover tracking.",
+      "aliases": [
+        "torch-text",
+        "radial-spotlight",
+        "hover-reveal-text",
+        "flashlight-typography"
+      ],
+      "snippet": "rewampui-components/components/text/spotlight-text.snippet.jsx",
+      "route_aliases": []
+    },
+    "flip-3-d-text": {
+      "id": "flip-3-d-text",
+      "style": "kinetic_motion_tactile",
+      "name": "Flip 3D Text",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "3D perspective rotating text badge flipping over on hover.",
+      "when_not": "Flat minimalist monochrome interfaces where 3D perspective creates visual noise.",
+      "aliases": [
+        "3d-text-flip",
+        "rotating-label",
+        "perspective-typography",
+        "cube-flip-text"
+      ],
+      "snippet": "rewampui-components/components/text/flip-3-d-text.snippet.jsx",
+      "route_aliases": []
+    },
+    "velocity-marquee-text": {
+      "id": "velocity-marquee-text",
+      "style": "kinetic_motion_tactile",
+      "name": "Velocity Marquee Text",
+      "tokens": {
+        "scale": "region",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "spring",
+        "category": "text-effect",
+        "runtime": "react-motion"
+      },
+      "when": "Infinite scrolling banner ticker that accelerates dynamically with scroll velocity.",
+      "when_not": "Pages with strict reduced-motion requirements or high-density data dashboards.",
+      "aliases": [
+        "ticker-banner",
+        "scroll-marquee",
+        "velocity-ticker",
+        "infinite-scroll-text"
+      ],
+      "snippet": "rewampui-components/components/text/velocity-marquee-text.snippet.jsx",
+      "route_aliases": []
+    },
+    "ld-arc": {
+      "id": "ld-arc",
+      "style": "micro_motion_indicators",
+      "name": "Arc Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Compact button submitting, inline text status, search input trailing icon.",
+      "when_not": "Large fullscreen splash screens where hairline stroke feels too thin.",
+      "aliases": [
+        "arc-spinner",
+        "button-spinner",
+        "inline-loader"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-arc.snippet.html",
+      "route_aliases": []
+    },
+    "ld-ring": {
+      "id": "ld-ring",
+      "style": "micro_motion_indicators",
+      "name": "Ring Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Pull-to-refresh headers, modal dialog content loading, clean form submission.",
+      "when_not": "Extremely tight 12px inline badges.",
+      "aliases": [
+        "ring-spinner",
+        "circle-loader",
+        "halo-spinner"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-ring.snippet.html",
+      "route_aliases": []
+    },
+    "ld-eclipse": {
+      "id": "ld-eclipse",
+      "style": "micro_motion_indicators",
+      "name": "Eclipse Binary Star Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Model comparison (A/B testing), token/asset balance transfers, dual-agent collaboration.",
+      "when_not": "Simple solitary item loading.",
+      "aliases": [
+        "binary-star-loader",
+        "ab-test-spinner",
+        "dual-orbit-dots"
+      ],
+      "snippet": "loadingdev-components/components/dots/ld-eclipse.snippet.html",
+      "route_aliases": []
+    },
+    "ld-dual": {
+      "id": "ld-dual",
+      "style": "micro_motion_indicators",
+      "name": "Dual Counter-Arc Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Two-way data sync (cloud <-> local), bidirectional handshakes, compilation processes.",
+      "when_not": "Simple unidirectional instantaneous requests.",
+      "aliases": [
+        "counter-rotating-arcs",
+        "sync-indicator",
+        "bidirectional-spinner"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-dual.snippet.html",
+      "route_aliases": []
+    },
+    "ld-radar": {
+      "id": "ld-radar",
+      "style": "micro_motion_indicators",
+      "name": "Radar Sonar Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Device/bluetooth discovery, agent web exploration tool, security auditing.",
+      "when_not": "Minimalist button spinners.",
+      "aliases": [
+        "sonar-sweep",
+        "device-scanner",
+        "discovery-indicator"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-radar.snippet.html",
+      "route_aliases": []
+    },
+    "ld-trace": {
+      "id": "ld-trace",
+      "style": "micro_motion_indicators",
+      "name": "Trace Squircle Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Card container loading, skeleton avatar placeholders, bounding box scanning.",
+      "when_not": "Circular badge contexts where rectangular geometry clashes.",
+      "aliases": [
+        "squircle-trace",
+        "card-skeleton-loader",
+        "box-scan-spinner"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-trace.snippet.html",
+      "route_aliases": []
+    },
+    "ld-blocks": {
+      "id": "ld-blocks",
+      "style": "micro_motion_indicators",
+      "name": "Blocks Grid Wave",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Spreadsheet math calculation, batch image processing, matrix data transformation.",
+      "when_not": "Narrow text inline label spaces.",
+      "aliases": [
+        "matrix-calculation",
+        "cellular-grid-loader",
+        "spreadsheet-spinner"
+      ],
+      "snippet": "loadingdev-components/components/geometric/ld-blocks.snippet.html",
+      "route_aliases": []
+    },
+    "ld-gather": {
+      "id": "ld-gather",
+      "style": "micro_motion_indicators",
+      "name": "Gather Docking Blocks",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Module bundling (Webpack/Vite), package resolution, dependency build stage.",
+      "when_not": "Single continuous streaming data feeds.",
+      "aliases": [
+        "bundle-compiling",
+        "module-assembly",
+        "docking-blocks"
+      ],
+      "snippet": "loadingdev-components/components/geometric/ld-gather.snippet.html",
+      "route_aliases": []
+    },
+    "ld-swirl": {
+      "id": "ld-swirl",
+      "style": "micro_motion_indicators",
+      "name": "Swirl Loop Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Data ETL pipelines, cache preheating, cyclic checksum validation.",
+      "when_not": "Sub-16px miniature icons.",
+      "aliases": [
+        "etl-pipeline-spinner",
+        "loop-cycle-loader",
+        "cache-warming"
+      ],
+      "snippet": "loadingdev-components/components/geometric/ld-swirl.snippet.html",
+      "route_aliases": []
+    },
+    "ld-morph": {
+      "id": "ld-morph",
+      "style": "micro_motion_indicators",
+      "name": "Morph Shape-Shift Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "File format conversion, view mode toggle (grid to list), vectorization rendering.",
+      "when_not": "Strict non-polymorphic basic waiting states.",
+      "aliases": [
+        "shape-shift-loader",
+        "format-converter-spinner",
+        "topology-morph"
+      ],
+      "snippet": "loadingdev-components/components/geometric/ld-morph.snippet.html",
+      "route_aliases": []
+    },
+    "ld-flip": {
+      "id": "ld-flip",
+      "style": "micro_motion_indicators",
+      "name": "Flip 3D Cube Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "3D model loading, flashcard generation, shader compilation.",
+      "when_not": "Flat minimalist monochrome interfaces where 3D perspective looks out of place.",
+      "aliases": [
+        "3d-cube-flip",
+        "card-tumble-spinner",
+        "shader-compilation"
+      ],
+      "snippet": "loadingdev-components/components/geometric/ld-flip.snippet.html",
+      "route_aliases": []
+    },
+    "ld-ripple": {
+      "id": "ld-ripple",
+      "style": "micro_motion_indicators",
+      "name": "Ripple Acoustic Waves",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Voice assistant listening state ('Listening...'), audio recording, broadcast signal sending.",
+      "when_not": "Tight table cell inline status.",
+      "aliases": [
+        "voice-listening-ripple",
+        "acoustic-rings",
+        "audio-broadcast-wave"
+      ],
+      "snippet": "loadingdev-components/components/wave-pulse/ld-ripple.snippet.html",
+      "route_aliases": []
+    },
+    "ld-wave": {
+      "id": "ld-wave",
+      "style": "micro_motion_indicators",
+      "name": "Wave Audio Equalizer",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Voice speech synthesis (TTS) playback, audio stream buffering, music playback activity.",
+      "when_not": "Non-acoustic data requests (saving profile, updating email).",
+      "aliases": [
+        "tts-playback-wave",
+        "audio-equalizer",
+        "vu-meter-bars"
+      ],
+      "snippet": "loadingdev-components/components/wave-pulse/ld-wave.snippet.html",
+      "route_aliases": []
+    },
+    "ld-pulse": {
+      "id": "ld-pulse",
+      "style": "micro_motion_indicators",
+      "name": "Pulse Beacon",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Live server status, WebSocket connection heartbeat, ambient sensor ping.",
+      "when_not": "Indeterminate lengthy calculations with no rhythmic frequency.",
+      "aliases": [
+        "heartbeat-beacon",
+        "websocket-ping",
+        "live-status-pulse"
+      ],
+      "snippet": "loadingdev-components/components/wave-pulse/ld-pulse.snippet.html",
+      "route_aliases": []
+    },
+    "ld-clock": {
+      "id": "ld-clock",
+      "style": "micro_motion_indicators",
+      "name": "Clock Time Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Scheduled cron jobs, backup progress, SLA countdowns, time-series aggregation.",
+      "when_not": "Sub-second instant network responses.",
+      "aliases": [
+        "time-progress",
+        "cron-loader",
+        "countdown-spinner"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-clock.snippet.html",
+      "route_aliases": []
+    },
+    "ld-compass": {
+      "id": "ld-compass",
+      "style": "micro_motion_indicators",
+      "name": "Compass Heading Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Map orientation alignment, sensor calibration, directional positioning.",
+      "when_not": "Unoriented generic form saving.",
+      "aliases": [
+        "heading-align",
+        "sensor-calibration",
+        "navigation-spinner"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-compass.snippet.html",
+      "route_aliases": []
+    },
+    "ld-classic": {
+      "id": "ld-classic",
+      "style": "micro_motion_indicators",
+      "name": "Classic Radial Wheel",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Standard system-level waiting state, iOS hybrid mobile web views, modal confirmation.",
+      "when_not": "Futuristic dark-mode AI terminal aesthetics.",
+      "aliases": [
+        "ios-spinner",
+        "macos-activity-indicator",
+        "system-wheel"
+      ],
+      "snippet": "loadingdev-components/components/classic/ld-classic.snippet.html",
+      "route_aliases": []
+    },
+    "ld-classic-v2": {
+      "id": "ld-classic-v2",
+      "style": "micro_motion_indicators",
+      "name": "Classic v2 Tick Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Modern desktop web apps, top header navigation bars, developer dashboard status.",
+      "when_not": "Ornate whimsical consumer apps.",
+      "aliases": [
+        "tick-indicator",
+        "desktop-nav-spinner",
+        "modern-classic-loader"
+      ],
+      "snippet": "loadingdev-components/components/classic/ld-classic-v2.snippet.html",
+      "route_aliases": []
+    },
+    "ld-loading": {
+      "id": "ld-loading",
+      "style": "micro_motion_indicators",
+      "name": "Loading Brand Pixel Wheel",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Tech devtools, retro cyber interfaces, platform brand loading mark.",
+      "when_not": "Strict clinical corporate enterprise forms.",
+      "aliases": [
+        "8bit-pixel-wheel",
+        "retro-loader",
+        "brand-mark-spinner"
+      ],
+      "snippet": "loadingdev-components/components/classic/ld-loading.snippet.html",
+      "route_aliases": []
+    },
+    "ld-orbit": {
+      "id": "ld-orbit",
+      "style": "micro_motion_indicators",
+      "name": "Orbit Satellite Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Distributed server cluster synchronization, multi-region database replication.",
+      "when_not": "Compact inline typography contexts.",
+      "aliases": [
+        "satellite-orbit",
+        "cluster-sync-indicator",
+        "cloud-replication"
+      ],
+      "snippet": "loadingdev-components/components/orbital/ld-orbit.snippet.html",
+      "route_aliases": []
+    },
+    "ld-leap": {
+      "id": "ld-leap",
+      "style": "micro_motion_indicators",
+      "name": "Leap Progression Dots",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Job queue advancement, ingestion pipeline step transitions, background task workers.",
+      "when_not": "Instantaneous micro-feedback under 200ms.",
+      "aliases": [
+        "queue-advancement",
+        "leapfrog-dots",
+        "pipeline-progress-dots"
+      ],
+      "snippet": "loadingdev-components/components/dots/ld-leap.snippet.html",
+      "route_aliases": []
+    },
+    "ld-slide": {
+      "id": "ld-slide",
+      "style": "micro_motion_indicators",
+      "name": "Slide Reorder Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Layout rearrangement, card sorting/re-indexing, database partition re-balancing.",
+      "when_not": "Standard linear text labels.",
+      "aliases": [
+        "puzzle-slide",
+        "tile-shift-loader",
+        "sorting-indicator"
+      ],
+      "snippet": "loadingdev-components/components/dots/ld-slide.snippet.html",
+      "route_aliases": []
+    },
+    "ld-snake": {
+      "id": "ld-snake",
+      "style": "micro_motion_indicators",
+      "name": "Snake Buffer Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Network bandwidth buffering, video/audio segment preloading, elastic wait times.",
+      "when_not": "Strict fixed-interval micro-delays.",
+      "aliases": [
+        "elastic-arc",
+        "buffer-spinner",
+        "video-preloader"
+      ],
+      "snippet": "loadingdev-components/components/radial/ld-snake.snippet.html",
+      "route_aliases": []
+    },
+    "ld-cascade": {
+      "id": "ld-cascade",
+      "style": "micro_motion_indicators",
+      "name": "Cascade Spiral Spinner",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "High-throughput asynchronous job orchestration, fan-out query execution.",
+      "when_not": "Lightweight 14px button indicators.",
+      "aliases": [
+        "spiral-cascade",
+        "fan-out-orchestration",
+        "centrifugal-arcs"
+      ],
+      "snippet": "loadingdev-components/components/wave-pulse/ld-cascade.snippet.html",
+      "route_aliases": []
+    },
+    "ld-circular-dots": {
+      "id": "ld-circular-dots",
+      "style": "micro_motion_indicators",
+      "name": "Circular Dots",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "status",
+        "runtime": "html-css"
+      },
+      "when": "Application initialization, dashboard widget initial load, firmware flashing.",
+      "when_not": "Inline text flow.",
+      "aliases": [
+        "led-dial",
+        "rotary-dots",
+        "boot-spinner"
+      ],
+      "snippet": "loadingdev-components/components/dots/ld-circular-dots.snippet.html",
+      "route_aliases": []
+    }
+  }
+}
