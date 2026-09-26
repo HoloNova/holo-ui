@@ -56,7 +56,7 @@ authoritative_spec: "Apple Human Interface Guidelines (HIG)"
 | `label-tertiary` | `rgba(60, 60, 67, 0.30)` | `rgba(235, 235, 245, 0.30)` | `var(--apple-label-tertiary)` |
 | `separator-hairline` | `rgba(60, 60, 67, 0.29)` | `rgba(84, 84, 88, 0.65)` | `var(--apple-separator)` |
 | `accent-primary` | `#007AFF` | `#0A84FF` | `var(--apple-accent)` |
-| `accent-tint` | `rgba(0, 122, 255, 0.12)` | `rgba(10, 132, 255, 0.15)` | `var(--apple-accent-tint)` |
+| `accent-tint` | `rgba(0, 122, 255, 0.12)` | `rgba(10, 132, 255, 0.18)` | `var(--apple-accent-tint)` |
 | `system-red` | `#FF3B30` | `#FF453A` | `var(--apple-red)` |
 | `system-green` | `#34C759` | `#30D158` | `var(--apple-green)` |
 

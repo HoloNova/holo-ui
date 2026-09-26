@@ -34,16 +34,16 @@ primary_stack: "Tailwind CSS v4 + Pure HTML + OKLCH"
 | :--- | :--- | :--- | :--- |
 | `page-bg` | `oklch(20.9% .004 264.477)` | `oklch(98.5% .001 286.376)` | `var(--page)` |
 | `canvas-bg` | `oklch(23.1% .004 264.487)` | `oklch(96.1% .002 247.84)` | `var(--canvas)` |
-| `surface-card` | `oklch(26.0% .006 271.191)` | `oklch(100% 0 0)` | `var(--surface)` |
+| `surface-card` | `oklch(26% .006 271.191)` | `oklch(100% 0 0)` | `var(--surface)` |
 | `inset-bg` | `oklch(24.3% .004 264.492)` | `oklch(97.9% .002 247.839)` | `var(--inset)` |
-| `field-input` | `oklch(20.9% .004 264.477)` | `oklch(96.1% .001 286.375)` | `var(--field)` |
-| `text-primary` | `oklch(94.6% .003 264.542)` | `oklch(24.7% .006 258.361)` | `var(--ink)` |
-| `text-secondary` | `oklch(78.5% .006 264.524)` | `oklch(50.6% .01 264.477)` | `var(--ink-2)` |
-| `text-muted` | `oklch(57.5% .009 264.492)` | `oklch(69.5% .009 264.505)` | `var(--ink-3)` |
-| `border-hairline` | `oklch(33.0% .007 264.464)` | `oklch(94.6% .003 264.542)` | `var(--line)` |
-| `border-strong` | `oklch(42.0% .008 264.448)` | `oklch(91.2% .005 258.326)` | `var(--line-strong)` |
-| `accent-blue` | `oklch(67.5% .185 252.128)` | `oklch(62.6% .205 254.947)` | `var(--accent)` |
-| `accent-tint` | `oklch(28.5% .045 254.891)` | `oklch(96% .019 252.878)` | `var(--accent-tint)` |
+| `field-input` | `oklch(29.3% .006 271.223)` | `oklch(96.1% .001 286.375)` | `var(--field)` |
+| `text-primary` | `oklch(96.4% .002 247.839)` | `oklch(24.7% .006 258.361)` | `var(--ink)` |
+| `text-secondary` | `oklch(73.1% .008 260.731)` | `oklch(50.6% .01 264.477)` | `var(--ink-2)` |
+| `text-muted` | `oklch(54.1% .01 264.484)` | `oklch(69.5% .009 264.505)` | `var(--ink-3)` |
+| `border-hairline` | `oklch(30.8% .006 258.354)` | `oklch(94.6% .003 264.542)` | `var(--line)` |
+| `border-strong` | `oklch(35.6% .007 264.474)` | `oklch(91.2% .005 258.326)` | `var(--line-strong)` |
+| `accent-blue` | `oklch(68% .173 253.301)` | `oklch(62.6% .205 254.947)` | `var(--accent)` |
+| `accent-tint` | `oklch(68% .173 253.301 / .16)` | `oklch(96% .019 252.878)` | `var(--accent-tint)` |
 
 #### 2.2 Radii, Elevation & Hairline Presets
 

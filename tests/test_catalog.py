@@ -1,4 +1,5 @@
 import json
+import re
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -212,6 +213,58 @@ class CatalogTests(unittest.TestCase):
         for query in ('" OR * NEAR(a b)', '"; DROP TABLE documents;--', 'the please'):
             engine.search_and_retrieve(query, mode='summary')
         self.assertEqual(engine.search_and_retrieve('', component_id='ld-arc')['count'], 1)
+
+    def test_design_md_color_tokens_match_css(self):
+        # 1. BeautifulUI: Table 2.1 color tokens must match shared/base.css in both scopes
+        b_doc = (ROOT / 'beautifului-components/DESIGN.md').read_text(encoding='utf-8')
+        b_css = (ROOT / 'beautifului-components/shared/base.css').read_text(encoding='utf-8')
+        dark_idx = b_css.find('.dark,')
+        css_light, css_dark = b_css[:dark_idx], b_css[dark_idx:]
+
+        b_rows = [line for line in b_doc.splitlines() if line.startswith('| `') and 'var(--' in line]
+        self.assertTrue(b_rows, "BeautifulUI DESIGN.md must contain color tokens table")
+        for row in b_rows:
+            parts = [p.strip().strip('`') for p in row.split('|')[1:-1]]
+            if len(parts) == 4:
+                role, dark_val, light_val, var_token = parts
+                var_name = var_token.replace('var(', '').replace(')', '').strip()
+                m_l = re.search(rf'(?:^|\s){re.escape(var_name)}:\s*([^;]+);', css_light, re.MULTILINE)
+                m_d = re.search(rf'(?:^|\s){re.escape(var_name)}:\s*([^;]+);', css_dark, re.MULTILINE)
+                self.assertIsNotNone(m_l, f"Light mode variable {var_name} not found in base.css")
+                self.assertIsNotNone(m_d, f"Dark mode variable {var_name} not found in base.css")
+                self.assertEqual(light_val, m_l.group(1).strip(), f"Light mode mismatch for {var_name}")
+                self.assertEqual(dark_val, m_d.group(1).strip(), f"Dark mode mismatch for {var_name}")
+
+        # 2. Apple Design: Table 2.2 semantic color tokens must match tokens/tokens.css
+        a_doc = (ROOT / 'guidelines/apple-design/DESIGN.md').read_text(encoding='utf-8')
+        a_css = (ROOT / 'guidelines/apple-design/tokens/tokens.css').read_text(encoding='utf-8')
+        a_rows = [line for line in a_doc.splitlines() if line.startswith('| `') and 'var(--apple-' in line and ('#' in line or 'rgba(' in line)]
+        self.assertTrue(a_rows, "Apple DESIGN.md must contain semantic color tokens")
+        for row in a_rows:
+            parts = [p.strip().strip('`') for p in row.split('|')[1:-1]]
+            if len(parts) == 4:
+                role, light_val, dark_val, var_token = parts
+                var_name = var_token.replace('var(', '').replace(')', '').strip()
+                m_all = re.findall(rf'(?:^|\s){re.escape(var_name)}:\s*([^;]+);', a_css, re.MULTILINE)
+                self.assertTrue(m_all, f"Variable {var_name} not found in apple tokens.css")
+                self.assertEqual(light_val, m_all[0].strip(), f"Light value mismatch for {var_name}")
+                if len(m_all) > 1:
+                    self.assertEqual(dark_val, m_all[1].strip(), f"Dark value mismatch for {var_name}")
+
+        # 3. RewampUI: Table 2.1 color tokens must match shared/tokens.css
+        r_doc = (ROOT / 'rewampui-components/DESIGN.md').read_text(encoding='utf-8')
+        r_css = (ROOT / 'rewampui-components/shared/tokens.css').read_text(encoding='utf-8')
+        r_rows = [line for line in r_doc.splitlines() if line.startswith('| `') and 'var(--rewamp-' in line]
+        self.assertTrue(r_rows, "RewampUI DESIGN.md must contain color matrix")
+        for row in r_rows:
+            parts = [p.strip().strip('`') for p in row.split('|')[1:-1]]
+            role, hex_code, applied, var_token = parts
+            var_name = var_token.replace('var(', '').replace(')', '').strip()
+            m = re.search(rf'(?:^|\s){re.escape(var_name)}:\s*([^;]+);', r_css, re.MULTILINE)
+            self.assertIsNotNone(m, f"Variable {var_name} not found in rewampui tokens.css")
+            css_val = m.group(1).split('/*')[0].strip()
+            self.assertEqual(hex_code.lower(), css_val.lower(), f"Mismatch for {var_name}")
+
 
 
 class MigrationTests(unittest.TestCase):
