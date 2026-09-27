@@ -125,6 +125,9 @@ Agents must enforce the following four engineering constraints:
 - If the user asks for **"card-level AI processing with elapsed time"**:
   - Use: `beautifului-components/components/ai-states/loading-state.snippet.html`
   - Never assemble: `thinking-state.snippet.html` (multi-step accordion) unless step-by-step reasoning logs are explicitly streamed.
+- If the user asks for **"a verification code, 2FA passcode, or OTP input"**:
+  - Use: `beautifului-components/components/input/input-otp.snippet.html`
+  - Never assemble: multiple discrete `<input>` boxes with manual JavaScript focus juggling.
 
 ### Rule 2: Single Design Hierarchy
 > **Never construct a "Frankenstein" interface by mixing conflicting tokens.**

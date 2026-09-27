@@ -1,0 +1,171 @@
+<!--
+  Component: Input OTP
+  Source: https://input-otp.rodz.dev/
+  Category: input
+  Description: Accessible, unstyled-ready one-time passcode (OTP) input built on a single invisible native input with visual slot mirrors, fake blinking caret, password-manager badge evasion, and SMS autofill support.
+  Dependencies: shared/base.css (CSS vars + animations), Tailwind CSS v4
+  Style: AI-Native Productivity (Linear-dark aesthetic, OKLCH, tabular-nums)
+-->
+
+<div class="relative inline-flex flex-col items-center gap-3 select-none" data-input-otp-root>
+  <!-- Slot display layer and native input overlay -->
+  <div class="group relative flex items-center gap-2">
+    <!-- Group 1: First 3 digits -->
+    <div class="flex items-center gap-1.5" data-slot-group="1">
+      <div
+        class="relative flex h-12 w-11 items-center justify-center rounded-control border border-line bg-field/60 text-lg font-mono font-medium tabular-nums text-ink shadow-hairline transition-all duration-150 group-focus-within:border-line-strong data-[active=true]:border-accent data-[active=true]:ring-2 data-[active=true]:ring-accent/20"
+        data-slot="0"
+        data-active="true"
+        aria-hidden="true"
+      >
+        <span class="leading-none" data-slot-value></span>
+        <span class="h-5 w-[1.5px] bg-accent motion-safe:animate-[caret-blink_1s_step-end_infinite]" data-fake-caret></span>
+      </div>
+      <div
+        class="relative flex h-12 w-11 items-center justify-center rounded-control border border-line bg-field/60 text-lg font-mono font-medium tabular-nums text-ink shadow-hairline transition-all duration-150 group-focus-within:border-line-strong data-[active=true]:border-accent data-[active=true]:ring-2 data-[active=true]:ring-accent/20"
+        data-slot="1"
+        aria-hidden="true"
+      >
+        <span class="leading-none" data-slot-value></span>
+        <span class="hidden h-5 w-[1.5px] bg-accent motion-safe:animate-[caret-blink_1s_step-end_infinite]" data-fake-caret></span>
+      </div>
+      <div
+        class="relative flex h-12 w-11 items-center justify-center rounded-control border border-line bg-field/60 text-lg font-mono font-medium tabular-nums text-ink shadow-hairline transition-all duration-150 group-focus-within:border-line-strong data-[active=true]:border-accent data-[active=true]:ring-2 data-[active=true]:ring-accent/20"
+        data-slot="2"
+        aria-hidden="true"
+      >
+        <span class="leading-none" data-slot-value></span>
+        <span class="hidden h-5 w-[1.5px] bg-accent motion-safe:animate-[caret-blink_1s_step-end_infinite]" data-fake-caret></span>
+      </div>
+    </div>
+
+    <!-- Center separator (3 + 3 grouping) -->
+    <div class="flex items-center justify-center px-1 text-lg font-mono font-semibold text-ink-3 select-none" aria-hidden="true">
+      ·
+    </div>
+
+    <!-- Group 2: Last 3 digits -->
+    <div class="flex items-center gap-1.5" data-slot-group="2">
+      <div
+        class="relative flex h-12 w-11 items-center justify-center rounded-control border border-line bg-field/60 text-lg font-mono font-medium tabular-nums text-ink shadow-hairline transition-all duration-150 group-focus-within:border-line-strong data-[active=true]:border-accent data-[active=true]:ring-2 data-[active=true]:ring-accent/20"
+        data-slot="3"
+        aria-hidden="true"
+      >
+        <span class="leading-none" data-slot-value></span>
+        <span class="hidden h-5 w-[1.5px] bg-accent motion-safe:animate-[caret-blink_1s_step-end_infinite]" data-fake-caret></span>
+      </div>
+      <div
+        class="relative flex h-12 w-11 items-center justify-center rounded-control border border-line bg-field/60 text-lg font-mono font-medium tabular-nums text-ink shadow-hairline transition-all duration-150 group-focus-within:border-line-strong data-[active=true]:border-accent data-[active=true]:ring-2 data-[active=true]:ring-accent/20"
+        data-slot="4"
+        aria-hidden="true"
+      >
+        <span class="leading-none" data-slot-value></span>
+        <span class="hidden h-5 w-[1.5px] bg-accent motion-safe:animate-[caret-blink_1s_step-end_infinite]" data-fake-caret></span>
+      </div>
+      <div
+        class="relative flex h-12 w-11 items-center justify-center rounded-control border border-line bg-field/60 text-lg font-mono font-medium tabular-nums text-ink shadow-hairline transition-all duration-150 group-focus-within:border-line-strong data-[active=true]:border-accent data-[active=true]:ring-2 data-[active=true]:ring-accent/20"
+        data-slot="5"
+        aria-hidden="true"
+      >
+        <span class="leading-none" data-slot-value></span>
+        <span class="hidden h-5 w-[1.5px] bg-accent motion-safe:animate-[caret-blink_1s_step-end_infinite]" data-fake-caret></span>
+      </div>
+    </div>
+
+    <!--
+      Single invisible real HTML input covering the interactive field.
+      Notice:
+      1. width: calc(100% + 40px) & clip-path: inset(0 40px 0 0) walk password-manager
+         badges (1Password/Bitwarden) 40px to the right outside visible bounds.
+      2. autocomplete="one-time-code" receives OS-level SMS autofill.
+      3. inputmode="numeric" triggers pure number pad on mobile browsers.
+    -->
+    <input
+      type="text"
+      inputmode="numeric"
+      pattern="[0-9]*"
+      maxlength="6"
+      autocomplete="one-time-code"
+      spellcheck="false"
+      aria-label="Verification passcode"
+      class="absolute inset-0 z-10 cursor-text opacity-0"
+      style="width:calc(100% + 40px);clip-path:inset(0 40px 0 0);caret-color:transparent;background:transparent;border:none;outline:none;"
+      data-input-otp-control
+    />
+  </div>
+
+  <!-- Progressive Enhancement: No-JS Fallback -->
+  <noscript>
+    <style>
+      [data-input-otp-control] {
+        position: static !important;
+        width: 240px !important;
+        height: 48px !important;
+        opacity: 1 !important;
+        color: var(--ink) !important;
+        background: var(--field) !important;
+        border: 1px solid var(--line) !important;
+        border-radius: var(--radius-control) !important;
+        text-align: center !important;
+        letter-spacing: 0.35em !important;
+        clip-path: none !important;
+        font-family: var(--font-mono) !important;
+        font-size: 18px !important;
+      }
+      [data-slot-group],
+      [data-input-otp-root] > .group > div:nth-child(2) {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+</div>
+
+<script>
+  // Progressive vanilla JS hook for slot mirroring, active tracking, and fake caret
+  (function initInputOTP() {
+    const roots = document.querySelectorAll('[data-input-otp-root]');
+    roots.forEach((root) => {
+      const input = root.querySelector('[data-input-otp-control]');
+      const slots = Array.from(root.querySelectorAll('[data-slot]'));
+      if (!input || slots.length === 0) return;
+
+      function updateSlots() {
+        const value = input.value.replace(/\D/g, '').slice(0, slots.length);
+        input.value = value;
+        const isFocused = document.activeElement === input;
+        const caretIndex = Math.min(value.length, slots.length - 1);
+
+        slots.forEach((slot, idx) => {
+          const valEl = slot.querySelector('[data-slot-value]');
+          const caretEl = slot.querySelector('[data-fake-caret]');
+          const char = value[idx] || '';
+
+          if (valEl) valEl.textContent = char;
+
+          const isActive = isFocused && (idx === value.length || (idx === slots.length - 1 && value.length === slots.length));
+          slot.setAttribute('data-active', isActive ? 'true' : 'false');
+
+          if (caretEl) {
+            caretEl.classList.toggle('hidden', !isActive || !isFocused);
+          }
+        });
+
+        if (value.length === slots.length) {
+          root.dispatchEvent(new CustomEvent('otp-complete', { detail: { value }, bubbles: true }));
+        }
+      }
+
+      input.addEventListener('input', updateSlots);
+      input.addEventListener('focus', updateSlots);
+      input.addEventListener('blur', () => {
+        slots.forEach((slot) => {
+          slot.setAttribute('data-active', 'false');
+          const caretEl = slot.querySelector('[data-fake-caret]');
+          if (caretEl) caretEl.classList.add('hidden');
+        });
+      });
+
+      updateSlots();
+    });
+  })();
+</script>

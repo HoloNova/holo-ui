@@ -444,6 +444,32 @@
           ]
         },
         {
+          "id": "input-otp",
+          "style": "ai_native_productivity",
+          "name": "Input OTP",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "transition",
+            "category": "composer",
+            "runtime": "html-css"
+          },
+          "when": "Collecting one-time passcodes, two-factor authentication codes, or verification pins.",
+          "when_not": "Free-form text input or multi-line prompts (use prompt-bar or chat-composer instead).",
+          "aliases": [
+            "otp-input",
+            "one-time-password",
+            "verification-code-input",
+            "two-factor-auth-field",
+            "pin-input",
+            "验证码",
+            "验证码输入框",
+            "一次性密码"
+          ]
+        },
+        {
           "id": "morph-search-capsule",
           "style": "kinetic_motion_tactile",
           "name": "Morph Search Capsule",

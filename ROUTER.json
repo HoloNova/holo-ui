@@ -45,7 +45,7 @@
     }
   },
   "keywords": {
-    "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows": "ai_native_productivity",
+    "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows|otp|verification code|one-time password|验证码|一次性密码": "ai_native_productivity",
     "apple|ios|hig|liquid glass|squircle|44pt|mac style|visionos": "apple_human_interface",
     "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile",
     "spinner|loader|loading indicator|micro motion|arc|atom|bouncing dots|radar|ripple|comet|snake|blocks|gather|pulse|wave|circular dots|classic spinner|eclipse|leap": "micro_motion_indicators",
@@ -63,6 +63,8 @@
     "prompt-bar": "beautifului-components/components/input/prompt-bar.snippet.html",
     "chat-composer": "beautifului-components/components/input/chat-composer.snippet.html",
     "search": "beautifului-components/components/input/search.snippet.html",
+    "input-otp": "beautifului-components/components/input/input-otp.snippet.html",
+    "otp-input": "beautifului-components/components/input/input-otp.snippet.html",
     "morph-search-capsule": "rewampui-components/components/search-bars/morph-search-capsule.snippet.jsx",
     "animated-search-demo": "rewampui-components/components/search-bars/animated-search-demo.snippet.jsx",
     "typewriter-text": "rewampui-components/components/text/typewriter-text.snippet.jsx",

@@ -231,6 +231,7 @@
         "prompt-bar",
         "chat-composer",
         "search",
+        "input-otp",
         "morph-search-capsule",
         "animated-search-demo",
         "typewriter-text",
@@ -347,7 +348,7 @@
     }
   },
   "keywords": {
-    "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows": "ai_native_productivity",
+    "thinking|loading|streaming|approval|prompt bar|chat|chips|table|diff|sidebar|flowchart|code block|agent screen|task rows|otp|verification code|one-time password|验证码|一次性密码": "ai_native_productivity",
     "apple|ios|hig|liquid glass|squircle|44pt|mac style|visionos": "apple_human_interface",
     "motion|tactile|slide to confirm|shimmer|rainbow|googly|toggle|morph search|kinetic|scramble|typewriter|marquee|3d card|carousel|orbit|ai orb|fluid orb|navbar pill|framer motion|three.js": "kinetic_motion_tactile",
     "spinner|loader|loading indicator|micro motion|arc|atom|bouncing dots|radar|ripple|comet|snake|blocks|gather|pulse|wave|circular dots|classic spinner|eclipse|leap": "micro_motion_indicators",
@@ -615,6 +616,36 @@
       ],
       "snippet": "beautifului-components/components/input/search.snippet.html",
       "route_aliases": []
+    },
+    "input-otp": {
+      "id": "input-otp",
+      "style": "ai_native_productivity",
+      "name": "Input OTP",
+      "tokens": {
+        "scale": "compact",
+        "placement": "flow",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "composer",
+        "runtime": "html-css"
+      },
+      "when": "Collecting one-time passcodes, two-factor authentication codes, or verification pins.",
+      "when_not": "Free-form text input or multi-line prompts (use prompt-bar or chat-composer instead).",
+      "aliases": [
+        "otp-input",
+        "one-time-password",
+        "verification-code-input",
+        "two-factor-auth-field",
+        "pin-input",
+        "验证码",
+        "验证码输入框",
+        "一次性密码"
+      ],
+      "snippet": "beautifului-components/components/input/input-otp.snippet.html",
+      "route_aliases": [
+        "otp-input"
+      ]
     },
     "morph-search-capsule": {
       "id": "morph-search-capsule",

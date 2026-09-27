@@ -371,6 +371,22 @@
         "demo": "components/layout/agent-screen.demo.html"
       },
       "animations": ["fade-up", "pop-in"]
+    },
+    {
+      "id": "input-otp",
+      "number": 22,
+      "name": "Input OTP",
+      "description": "Accessible, unstyled-ready one-time passcode (OTP) input built on a single invisible native input with visual slot mirrors, fake blinking caret, password-manager badge evasion, and SMS autofill support.",
+      "category": "input",
+      "tags": ["otp", "verification-code", "input", "auth", "sms-code", "passcode", "security", "2fa"],
+      "variants": ["Keycaps (3+3)", "Underline", "Masked"],
+      "use_cases": ["Two-factor authentication (2FA) verification", "SMS login code entry", "PIN / passcode confirmation"],
+      "dependencies": ["shared/base.css", "tailwindcss"],
+      "files": {
+        "snippet": "components/input/input-otp.snippet.html",
+        "meta": "components/input/input-otp.meta.md"
+      },
+      "animations": ["caret-blink"]
     }
   ],
   "categories": {
@@ -392,7 +408,7 @@
     "input": {
       "label": "Input",
       "description": "Input and prompt components",
-      "components": ["chat-composer", "prompt-bar", "search"]
+      "components": ["chat-composer", "prompt-bar", "search", "input-otp"]
     },
     "cards": {
       "label": "Cards",
