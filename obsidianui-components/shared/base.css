@@ -1,0 +1,28 @@
+/* ObsidianUI Shared Base Tokens & Utility Fallbacks */
+
+:root {
+  --foreground: #09090b;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --background: #ffffff;
+}
+
+.dark {
+  --foreground: #fafafa;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --background: #09090b;
+}
+
+/* Fallback variable utilities for standalone use without full Tailwind base */
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.border-border {
+  border-color: var(--border);
+}

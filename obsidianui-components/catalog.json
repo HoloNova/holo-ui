@@ -1,0 +1,35 @@
+{
+  "name": "ObsidianUI Components",
+  "library": "obsidianui-components",
+  "version": "1.0.0",
+  "source": "https://www.obsidianui.dev",
+  "license": "MIT",
+  "count": 1,
+  "tokens": {
+    "scale": "standard",
+    "placement": "flow",
+    "interaction": "control",
+    "lifecycle": "persistent",
+    "motion": "spring",
+    "category": "showcase",
+    "runtime": "react-motion"
+  },
+  "items": [
+    {
+      "id": "split-showcase",
+      "name": "Split Showcase",
+      "snippet": "components/showcase/split-showcase.snippet.tsx",
+      "meta": "components/showcase/split-showcase.meta.md",
+      "when": "Interactive dual partner or sponsor showcase cards with outward spring hover shift and dotted divider.",
+      "when_not": "Multi-row data tables, dense dashboard grids, text-only blogs.",
+      "keywords": [
+        "split-showcase",
+        "split showcase",
+        "partner cards",
+        "sponsor cards",
+        "spring cards",
+        "obsidianui"
+      ]
+    }
+  ]
+}

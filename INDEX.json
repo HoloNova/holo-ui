@@ -26,7 +26,9 @@
       "Embed loading.dev micro-indicators (e.g., ld-arc, ld-linear-dots) directly inside Beautiful UI prompt bars and table cells for zero-runtime lightweight feedback without layout shift.",
       "When embedding loading.dev indicators into Apple HIG layouts, set color: var(--apple-accent-blue) or var(--apple-text-secondary) and size to 16px-22px to match SF Pro symbol scales.",
       "Never replace full 3D assistant fluid orbs (Rewamp UI) with micro-spinners; use micro-spinners strictly for atomic operation states.",
-      "Embed minimal theme toggles (themetoggle-components) into Beautiful UI or Apple HIG headers with zero CSS conflicts; currentColor automatically adapts to parent typography."
+      "Embed minimal theme toggles (themetoggle-components) into Beautiful UI or Apple HIG headers with zero CSS conflicts; currentColor automatically adapts to parent typography.",
+      "Pair ObsidianUI partner cards (split-showcase) with Apple HIG squircle containers and subtle spring physics for high-fidelity co-marketing showcases.",
+      "Pair Arc tactile controls (button, segmented-control, hold-to-confirm) with Beautiful UI or Apple HIG layouts for fluid spring micro-interactions."
     ]
   },
   "feature_tokens_spec": "FEATURE_TOKENS.md",
@@ -192,6 +194,39 @@
       "design_md": "themetoggle-components/DESIGN.md",
       "shared_style": "themetoggle-components/shared/base.css",
       "guide": "themetoggle-components/COMPONENTS_GUIDE.md"
+    },
+    "obsidian_tactile_showcase": {
+      "name": "Obsidian Tactile Showcase (Source: ObsidianUI)",
+      "aesthetic": "Apple-style spring physics, expanding rounded corners, outward shift on hover, partner split cards, and dotted divider.",
+      "when_to_use": [
+        "Interactive dual partner or sponsor showcase cards",
+        "Feature comparison and landing page split presentations",
+        "Interactive Apple-style spring cards with outward translation and elevation"
+      ],
+      "when_not_to_use": [
+        "Multi-row data tables, dense dashboard grids, text-only blogs"
+      ],
+      "manifest": "obsidianui-components/obsidianui.manifest.json",
+      "design_md": "obsidianui-components/DESIGN.md",
+      "shared_style": "obsidianui-components/shared/base.css"
+    },
+    "arc_motion_primitives": {
+      "name": "Arc Motion Primitives (Source: uiarc.dev)",
+      "aesthetic": "OKLCH color system, motion/react physics-based spring curves, useMorphWidth dynamic resize, and zero layout shift micro-interactions.",
+      "when_to_use": [
+        "Tactile UI controls and micro-interactions requiring spring physics and dynamic morphing",
+        "OKLCH color spaces with native accessibility and contrast guarantees",
+        "Smooth data visualization charts with adaptive multi-series palette",
+        "Fluid segmented controls, toggles, sliders, and confirmation buttons"
+      ],
+      "when_not_to_use": [
+        "Static server-only HTML without JavaScript",
+        "Heavy 3D WebGL scenes requiring Three.js (use Rewamp UI or particle orbs)"
+      ],
+      "manifest": "arc-components/arc.manifest.json",
+      "design_md": "arc-components/DESIGN.md",
+      "shared_style": "arc-components/shared/base.css",
+      "guide": "arc-components/COMPONENTS_GUIDE.md"
     }
   },
   "by_function": {
@@ -370,6 +405,153 @@
             "quantum-atom",
             "neural-reasoning-rings",
             "physics-orbital-spinner"
+          ]
+        },
+        {
+          "id": "animated-counter",
+          "style": "arc_motion_primitives",
+          "name": "Animated counter",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "text-effect",
+            "runtime": "react-motion"
+          },
+          "when": "Give changing totals a clear sense of movement.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "animated counter",
+            "arc animated-counter",
+            "arc-animated-counter"
+          ]
+        },
+        {
+          "id": "chat-thread",
+          "style": "arc_motion_primitives",
+          "name": "Chat thread",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "ai-response",
+            "runtime": "react-motion"
+          },
+          "when": "A chat thread with grouped messages, reactions, read receipts, typing, and a composer with attachments.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "chat thread",
+            "arc chat-thread",
+            "arc-chat-thread"
+          ]
+        },
+        {
+          "id": "in-view-title",
+          "style": "arc_motion_primitives",
+          "name": "In-view title",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "text-effect",
+            "runtime": "react-motion"
+          },
+          "when": "Bring a section title in as it scrolls into view.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "in view title",
+            "arc in-view-title",
+            "arc-in-view-title"
+          ]
+        },
+        {
+          "id": "slot-text",
+          "style": "arc_motion_primitives",
+          "name": "Slot text",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "text-effect",
+            "runtime": "react-motion"
+          },
+          "when": "Text and numbers that spin into their new value on staggered slot machine reels.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "slot text",
+            "arc slot-text",
+            "arc-slot-text"
+          ]
+        },
+        {
+          "id": "text-morph",
+          "style": "arc_motion_primitives",
+          "name": "Text morph",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "text-effect",
+            "runtime": "react-motion"
+          },
+          "when": "Morph a label into its next state, letter by letter.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "text morph",
+            "arc text-morph",
+            "arc-text-morph"
+          ]
+        },
+        {
+          "id": "text-reveal",
+          "style": "arc_motion_primitives",
+          "name": "Text reveal",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "text-effect",
+            "runtime": "react-motion"
+          },
+          "when": "Reveal a short piece of content with restrained motion.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "text reveal",
+            "arc text-reveal",
+            "arc-text-reveal"
+          ]
+        },
+        {
+          "id": "text-shimmer",
+          "style": "arc_motion_primitives",
+          "name": "Text shimmer",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "text-effect",
+            "runtime": "react-motion"
+          },
+          "when": "Show ongoing work with a calm light across the words.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "text shimmer",
+            "arc text-shimmer",
+            "arc-text-shimmer"
           ]
         }
       ]
@@ -597,6 +779,615 @@
             "ellipsis-dots",
             "inline-saving-dots",
             "subtle-status-dots"
+          ]
+        },
+        {
+          "id": "billing-toggle",
+          "style": "arc_motion_primitives",
+          "name": "Billing toggle",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "setting",
+            "runtime": "react-motion"
+          },
+          "when": "A monthly and yearly switch with a savings badge and prices that roll to the new amount.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "billing toggle",
+            "arc billing-toggle",
+            "arc-billing-toggle"
+          ]
+        },
+        {
+          "id": "calendar",
+          "style": "arc_motion_primitives",
+          "name": "Calendar",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Browse dates in a clear, compact month view.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "calendar",
+            "arc calendar",
+            "arc-calendar"
+          ]
+        },
+        {
+          "id": "checkbox",
+          "style": "arc_motion_primitives",
+          "name": "Checkbox",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A binary choice with a precise, legible state.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "checkbox",
+            "arc checkbox",
+            "arc-checkbox"
+          ]
+        },
+        {
+          "id": "color-picker",
+          "style": "arc_motion_primitives",
+          "name": "Color picker",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A swatch that grows into a picker with format morphing, eyedropper, saved swatches, and contrast readout.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "color picker",
+            "arc color-picker",
+            "arc-color-picker"
+          ]
+        },
+        {
+          "id": "combobox",
+          "style": "arc_motion_primitives",
+          "name": "Combobox",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Search and select from a list without leaving the field.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "combobox",
+            "arc combobox",
+            "arc-combobox"
+          ]
+        },
+        {
+          "id": "date-picker",
+          "style": "arc_motion_primitives",
+          "name": "Date picker",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Choose a date without losing context.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "date picker",
+            "arc date-picker",
+            "arc-date-picker"
+          ]
+        },
+        {
+          "id": "date-range-picker",
+          "style": "arc_motion_primitives",
+          "name": "Date range picker",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A range picker that grows from its trigger into two months with presets and a stretching range highlight.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "date range picker",
+            "arc date-range-picker",
+            "arc-date-range-picker"
+          ]
+        },
+        {
+          "id": "file-dropzone",
+          "style": "arc_motion_primitives",
+          "name": "File dropzone",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A generous target for dropping one or more files.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "file dropzone",
+            "arc file-dropzone",
+            "arc-file-dropzone"
+          ]
+        },
+        {
+          "id": "file-upload",
+          "style": "arc_motion_primitives",
+          "name": "File upload",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A complete file selection flow with constraints, progress, and error feedback.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "file upload",
+            "arc file-upload",
+            "arc-file-upload"
+          ]
+        },
+        {
+          "id": "input",
+          "style": "arc_motion_primitives",
+          "name": "Input",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A single line field with clear labels and useful states.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "input",
+            "arc input",
+            "arc-input"
+          ]
+        },
+        {
+          "id": "mention-input",
+          "style": "arc_motion_primitives",
+          "name": "Mention input",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A textarea with @people and #channel mentions that act as single tokens, with suggestions at the caret.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "mention input",
+            "arc mention-input",
+            "arc-mention-input"
+          ]
+        },
+        {
+          "id": "multi-select",
+          "style": "arc_motion_primitives",
+          "name": "Multi-select",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Select several values while keeping the field readable.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "multi select",
+            "arc multi-select",
+            "arc-multi-select"
+          ]
+        },
+        {
+          "id": "number-field",
+          "style": "arc_motion_primitives",
+          "name": "Number field",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Enter a bounded number with clear increment controls.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "number field",
+            "arc number-field",
+            "arc-number-field"
+          ]
+        },
+        {
+          "id": "password-field",
+          "style": "arc_motion_primitives",
+          "name": "Password field",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Capture sensitive text with a visible reveal control.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "password field",
+            "arc password-field",
+            "arc-password-field"
+          ]
+        },
+        {
+          "id": "phone-input",
+          "style": "arc_motion_primitives",
+          "name": "Phone input",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A phone field with a country picker, formatting as you type, and E.164 output.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "phone input",
+            "arc phone-input",
+            "arc-phone-input"
+          ]
+        },
+        {
+          "id": "radio-cards",
+          "style": "arc_motion_primitives",
+          "name": "Radio cards",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Selectable option cards with a sliding selection ring, price and description slots, and radio keyboard behavior.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "radio cards",
+            "arc radio-cards",
+            "arc-radio-cards"
+          ]
+        },
+        {
+          "id": "radio-group",
+          "style": "arc_motion_primitives",
+          "name": "Radio group",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Choose one option from a visible set.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "radio group",
+            "arc radio-group",
+            "arc-radio-group"
+          ]
+        },
+        {
+          "id": "rich-text-editor",
+          "style": "arc_motion_primitives",
+          "name": "Rich text editor",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A lightweight editor with markdown shortcuts, a floating toolbar, a slash menu, and HTML and markdown output.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "rich text editor",
+            "arc rich-text-editor",
+            "arc-rich-text-editor"
+          ]
+        },
+        {
+          "id": "search-field",
+          "style": "arc_motion_primitives",
+          "name": "Search field",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A recognizable search entry point with clear affordances.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "search field",
+            "arc search-field",
+            "arc-search-field"
+          ]
+        },
+        {
+          "id": "segmented-control",
+          "style": "arc_motion_primitives",
+          "name": "Segmented control",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Switch between a small set of related views.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "segmented control",
+            "arc segmented-control",
+            "arc-segmented-control"
+          ]
+        },
+        {
+          "id": "select",
+          "style": "arc_motion_primitives",
+          "name": "Select",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A compact choice field with a keyboard friendly menu.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "select",
+            "arc select",
+            "arc-select"
+          ]
+        },
+        {
+          "id": "shortcut-recorder",
+          "style": "arc_motion_primitives",
+          "name": "Shortcut recorder",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Record key combinations into key caps, with conflict warnings, Kbd, and a searchable cheatsheet.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "shortcut recorder",
+            "arc shortcut-recorder",
+            "arc-shortcut-recorder"
+          ]
+        },
+        {
+          "id": "signature-pad",
+          "style": "arc_motion_primitives",
+          "name": "Signature pad",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Smooth ink that thins with speed, with undo, replay, and PNG or SVG export.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "signature pad",
+            "arc signature-pad",
+            "arc-signature-pad"
+          ]
+        },
+        {
+          "id": "slider",
+          "style": "arc_motion_primitives",
+          "name": "Slider",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Pick a value or a range on a track that follows your finger.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "slider",
+            "arc slider",
+            "arc-slider"
+          ]
+        },
+        {
+          "id": "switch",
+          "style": "arc_motion_primitives",
+          "name": "Switch",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "setting",
+            "runtime": "react-motion"
+          },
+          "when": "A tactile toggle for settings that take effect immediately.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "switch",
+            "arc switch",
+            "arc-switch"
+          ]
+        },
+        {
+          "id": "tag-input",
+          "style": "arc_motion_primitives",
+          "name": "Tag input",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Turn short text values into removable tags.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "tag input",
+            "arc tag-input",
+            "arc-tag-input"
+          ]
+        },
+        {
+          "id": "textarea",
+          "style": "arc_motion_primitives",
+          "name": "Textarea",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A multiline field for notes, descriptions, and longer text.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "textarea",
+            "arc textarea",
+            "arc-textarea"
+          ]
+        },
+        {
+          "id": "time-picker",
+          "style": "arc_motion_primitives",
+          "name": "Time picker",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "Choose a time with sensible keyboard behavior.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "time picker",
+            "arc time-picker",
+            "arc-time-picker"
+          ]
+        },
+        {
+          "id": "arc-otp-input",
+          "style": "arc_motion_primitives",
+          "name": "OTP input",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "input",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "composer",
+            "runtime": "react-motion"
+          },
+          "when": "A six digit verification flow with paste support and keyboard navigation.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "arc otp input",
+            "arc arc-otp-input",
+            "arc-arc-otp-input"
           ]
         }
       ]
@@ -1300,6 +2091,468 @@
             "nested-toggle",
             "crater-switch"
           ]
+        },
+        {
+          "id": "action-button",
+          "style": "arc_motion_primitives",
+          "name": "Action button",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "A compact button for frequent toolbar actions.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "action button",
+            "arc action-button",
+            "arc-action-button"
+          ]
+        },
+        {
+          "id": "bottom-sheet",
+          "style": "arc_motion_primitives",
+          "name": "Bottom sheet",
+          "tokens": {
+            "scale": "region",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A sheet that rests at a peek or full height and follows your finger.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "bottom sheet",
+            "arc bottom-sheet",
+            "arc-bottom-sheet"
+          ]
+        },
+        {
+          "id": "button",
+          "style": "arc_motion_primitives",
+          "name": "Button",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "A clear, responsive action with quiet secondary states.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "button",
+            "arc button",
+            "arc-button"
+          ]
+        },
+        {
+          "id": "chip-group",
+          "style": "arc_motion_primitives",
+          "name": "Chip group",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "Filter by a few facets with chips that morph as you pick them.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "chip group",
+            "arc chip-group",
+            "arc-chip-group"
+          ]
+        },
+        {
+          "id": "confirm-morph",
+          "style": "arc_motion_primitives",
+          "name": "Confirm morph",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "confirmation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "gate",
+            "runtime": "react-motion"
+          },
+          "when": "A destructive button that morphs into an inline confirmation, a spinner, and a result with undo.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "confirm morph",
+            "arc confirm-morph",
+            "arc-confirm-morph"
+          ]
+        },
+        {
+          "id": "context-menu",
+          "style": "arc_motion_primitives",
+          "name": "Context menu",
+          "tokens": {
+            "scale": "compact",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "Secondary actions kept close to the selected object.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "context menu",
+            "arc context-menu",
+            "arc-context-menu"
+          ]
+        },
+        {
+          "id": "copy-button",
+          "style": "arc_motion_primitives",
+          "name": "Copy button",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "Copy a value with immediate confirmation.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "copy button",
+            "arc copy-button",
+            "arc-copy-button"
+          ]
+        },
+        {
+          "id": "dialog",
+          "style": "arc_motion_primitives",
+          "name": "Dialog",
+          "tokens": {
+            "scale": "region",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A focused surface for decisions that need attention.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "dialog",
+            "arc dialog",
+            "arc-dialog"
+          ]
+        },
+        {
+          "id": "drawer",
+          "style": "arc_motion_primitives",
+          "name": "Drawer",
+          "tokens": {
+            "scale": "region",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A temporary side surface for focused work.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "drawer",
+            "arc drawer",
+            "arc-drawer"
+          ]
+        },
+        {
+          "id": "dropdown-menu",
+          "style": "arc_motion_primitives",
+          "name": "Dropdown menu",
+          "tokens": {
+            "scale": "compact",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "A focused list of actions anchored to a trigger.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "dropdown menu",
+            "arc dropdown-menu",
+            "arc-dropdown-menu"
+          ]
+        },
+        {
+          "id": "hold-to-confirm",
+          "style": "arc_motion_primitives",
+          "name": "Hold to confirm",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "confirmation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "gate",
+            "runtime": "react-motion"
+          },
+          "when": "Confirm a destructive action by holding, not tapping.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "hold to confirm",
+            "arc hold-to-confirm",
+            "arc-hold-to-confirm"
+          ]
+        },
+        {
+          "id": "hover-card",
+          "style": "arc_motion_primitives",
+          "name": "Hover card",
+          "tokens": {
+            "scale": "compact",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Preview a person or link on hover or focus without leaving the page.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "hover card",
+            "arc hover-card",
+            "arc-hover-card"
+          ]
+        },
+        {
+          "id": "inline-edit",
+          "style": "arc_motion_primitives",
+          "name": "Inline edit",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "Rename in place: the text becomes a field without moving.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "inline edit",
+            "arc inline-edit",
+            "arc-inline-edit"
+          ]
+        },
+        {
+          "id": "popover",
+          "style": "arc_motion_primitives",
+          "name": "Popover",
+          "tokens": {
+            "scale": "compact",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A small anchored surface for contextual information.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "popover",
+            "arc popover",
+            "arc-popover"
+          ]
+        },
+        {
+          "id": "split-button",
+          "style": "arc_motion_primitives",
+          "name": "Split button",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "A primary action with a menu of nearby alternatives.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "split button",
+            "arc split-button",
+            "arc-split-button"
+          ]
+        },
+        {
+          "id": "swipe-actions",
+          "style": "arc_motion_primitives",
+          "name": "Swipe actions",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "Reveal row actions with a swipe, or from the same actions in a menu.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "swipe actions",
+            "arc swipe-actions",
+            "arc-swipe-actions"
+          ]
+        },
+        {
+          "id": "theme-switch-eclipse",
+          "style": "arc_motion_primitives",
+          "name": "Eclipse",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "setting",
+            "runtime": "react-motion"
+          },
+          "when": "The next appearance crosses the page like an eclipse.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "theme switch eclipse",
+            "arc theme-switch-eclipse",
+            "arc-theme-switch-eclipse"
+          ]
+        },
+        {
+          "id": "theme-switch-rise",
+          "style": "arc_motion_primitives",
+          "name": "Rise",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "setting",
+            "runtime": "react-motion"
+          },
+          "when": "The next appearance rises into place.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "theme switch rise",
+            "arc theme-switch-rise",
+            "arc-theme-switch-rise"
+          ]
+        },
+        {
+          "id": "theme-switch-split",
+          "style": "arc_motion_primitives",
+          "name": "Split",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "setting",
+            "runtime": "react-motion"
+          },
+          "when": "The next appearance opens from a slim center seam.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "theme switch split",
+            "arc theme-switch-split",
+            "arc-theme-switch-split"
+          ]
+        },
+        {
+          "id": "theme-switch",
+          "style": "arc_motion_primitives",
+          "name": "Theme switcher",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "setting",
+            "runtime": "react-motion"
+          },
+          "when": "Four smooth ways to move between light and dark appearance.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "theme switch",
+            "arc theme-switch",
+            "arc-theme-switch"
+          ]
+        },
+        {
+          "id": "tooltip",
+          "style": "arc_motion_primitives",
+          "name": "Tooltip",
+          "tokens": {
+            "scale": "compact",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Short supporting text for unfamiliar controls.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "tooltip",
+            "arc tooltip",
+            "arc-tooltip"
+          ]
+        },
+        {
+          "id": "user-menu",
+          "style": "arc_motion_primitives",
+          "name": "User menu",
+          "tokens": {
+            "scale": "compact",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "action",
+            "runtime": "react-motion"
+          },
+          "when": "Your account, settings, theme, and sign out behind the avatar. Opens as a bottom sheet on phones.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "user menu",
+            "arc user-menu",
+            "arc-user-menu"
+          ]
         }
       ]
     },
@@ -1370,6 +2623,426 @@
             "faceted-filter-table",
             "status-records",
             "task-filter"
+          ]
+        },
+        {
+          "id": "activity-heatmap",
+          "style": "arc_motion_primitives",
+          "name": "Activity heatmap",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "See a year of activity at a glance, one square per day.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "activity heatmap",
+            "arc activity-heatmap",
+            "arc-activity-heatmap"
+          ]
+        },
+        {
+          "id": "bar-chart",
+          "style": "arc_motion_primitives",
+          "name": "Bar chart",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Compare one measure across days and scrub any bar for its value.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "bar chart",
+            "arc bar-chart",
+            "arc-bar-chart"
+          ]
+        },
+        {
+          "id": "brush-chart",
+          "style": "arc_motion_primitives",
+          "name": "Brush chart",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "A dense time series with an overview strip: drag a window to zoom, resize it by its handles, and read events in place.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "brush chart",
+            "arc brush-chart",
+            "arc-brush-chart"
+          ]
+        },
+        {
+          "id": "donut-chart",
+          "style": "arc_motion_primitives",
+          "name": "Donut chart",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "A donut whose arcs morph between datasets, with the active value rolling into the center.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "donut chart",
+            "arc donut-chart",
+            "arc-donut-chart"
+          ]
+        },
+        {
+          "id": "filter-toolbar",
+          "style": "arc_motion_primitives",
+          "name": "Filter toolbar",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Keep collection filters close and easy to reset.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "filter toolbar",
+            "arc filter-toolbar",
+            "arc-filter-toolbar"
+          ]
+        },
+        {
+          "id": "gauge",
+          "style": "arc_motion_primitives",
+          "name": "Gauge",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Show a value against a known range.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "gauge",
+            "arc gauge",
+            "arc-gauge"
+          ]
+        },
+        {
+          "id": "image-compare",
+          "style": "arc_motion_primitives",
+          "name": "Image compare",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Drag a divider across two images to see what changed.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "image compare",
+            "arc image-compare",
+            "arc-image-compare"
+          ]
+        },
+        {
+          "id": "line-chart",
+          "style": "arc_motion_primitives",
+          "name": "Line chart",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "A multi-series line chart with a gliding crosshair, legend toggles, and paths that morph between ranges.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "line chart",
+            "arc line-chart",
+            "arc-line-chart"
+          ]
+        },
+        {
+          "id": "pagination",
+          "style": "arc_motion_primitives",
+          "name": "Pagination",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Move through a long collection with clear bounds.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "pagination",
+            "arc pagination",
+            "arc-pagination"
+          ]
+        },
+        {
+          "id": "resizable-panels",
+          "style": "arc_motion_primitives",
+          "name": "Resizable panels",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Trade space between panes by dragging the divider between them.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "resizable panels",
+            "arc resizable-panels",
+            "arc-resizable-panels"
+          ]
+        },
+        {
+          "id": "ridgeline",
+          "style": "arc_motion_primitives",
+          "name": "Ridgeline",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Overlapping distributions, one ridge per group: hover to lift a ridge and read its quartiles, switch datasets and every curve morphs.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "ridgeline",
+            "arc ridgeline",
+            "arc-ridgeline"
+          ]
+        },
+        {
+          "id": "slope-chart",
+          "style": "arc_motion_primitives",
+          "name": "Slope chart",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Before and after on two axes: lines draw in, rank moves sit beside each value, and switching datasets slides every line to its new slope.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "slope chart",
+            "arc slope-chart",
+            "arc-slope-chart"
+          ]
+        },
+        {
+          "id": "sortable-data-table",
+          "style": "arc_motion_primitives",
+          "name": "Sortable data table",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Compare structured records with sortable columns.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "sortable data table",
+            "arc sortable-data-table",
+            "arc-sortable-data-table"
+          ]
+        },
+        {
+          "id": "sparkline",
+          "style": "arc_motion_primitives",
+          "name": "Sparkline",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Show a compact trend beside a value.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "sparkline",
+            "arc sparkline",
+            "arc-sparkline"
+          ]
+        },
+        {
+          "id": "stepper",
+          "style": "arc_motion_primitives",
+          "name": "Stepper",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Show where a person is in a multi-step flow and what is done.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "stepper",
+            "arc stepper",
+            "arc-stepper"
+          ]
+        },
+        {
+          "id": "streamgraph",
+          "style": "arc_motion_primitives",
+          "name": "Streamgraph",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Layered streams on a wiggle baseline that morph between ranges, with a layer you can isolate and read week by week.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "streamgraph",
+            "arc streamgraph",
+            "arc-streamgraph"
+          ]
+        },
+        {
+          "id": "timeline",
+          "style": "arc_motion_primitives",
+          "name": "Timeline",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Follow what happened, newest first, grouped by day.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "timeline",
+            "arc timeline",
+            "arc-timeline"
+          ]
+        },
+        {
+          "id": "tree-view",
+          "style": "arc_motion_primitives",
+          "name": "Tree view",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "Navigate nested folders and structured content.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "tree view",
+            "arc tree-view",
+            "arc-tree-view"
+          ]
+        },
+        {
+          "id": "treemap",
+          "style": "arc_motion_primitives",
+          "name": "Treemap",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "A squarified treemap: click to drill and the tiles grow to fill the view, with a breadcrumb back and metrics that morph every tile.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "treemap",
+            "arc treemap",
+            "arc-treemap"
+          ]
+        },
+        {
+          "id": "waffle-chart",
+          "style": "arc_motion_primitives",
+          "name": "Waffle chart",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "data",
+            "runtime": "react-motion"
+          },
+          "when": "A ten by ten unit chart where every cell is one percent, and cells fly to their new group when the data changes.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "waffle chart",
+            "arc waffle-chart",
+            "arc-waffle-chart"
           ]
         }
       ]
@@ -1552,6 +3225,237 @@
             "diagonal-deck",
             "stacked-previews"
           ]
+        },
+        {
+          "id": "split-showcase",
+          "style": "obsidian_tactile_showcase",
+          "name": "Split Showcase",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "showcase",
+            "runtime": "react-motion"
+          },
+          "when": "Interactive dual partner or sponsor showcase cards with outward spring hover shift and dotted divider.",
+          "when_not": "Multi-row data tables, dense dashboard grids, text-only blogs.",
+          "aliases": [
+            "partner-cards",
+            "sponsor-showcase",
+            "spring-split-cards"
+          ]
+        },
+        {
+          "id": "accordion",
+          "style": "arc_motion_primitives",
+          "name": "Accordion",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Progressively reveal supporting information in place.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "accordion",
+            "arc accordion",
+            "arc-accordion"
+          ]
+        },
+        {
+          "id": "avatar-group",
+          "style": "arc_motion_primitives",
+          "name": "Avatar group",
+          "tokens": {
+            "scale": "micro",
+            "placement": "embedded",
+            "interaction": "output",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "avatar",
+            "runtime": "react-motion"
+          },
+          "when": "Show a team or set of contributors in a small space.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "avatar group",
+            "arc avatar-group",
+            "arc-avatar-group"
+          ]
+        },
+        {
+          "id": "avatar",
+          "style": "arc_motion_primitives",
+          "name": "Avatar",
+          "tokens": {
+            "scale": "micro",
+            "placement": "embedded",
+            "interaction": "output",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "avatar",
+            "runtime": "react-motion"
+          },
+          "when": "A compact identity marker for people and accounts.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "avatar",
+            "arc avatar",
+            "arc-avatar"
+          ]
+        },
+        {
+          "id": "card",
+          "style": "arc_motion_primitives",
+          "name": "Card",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A contained group of related content and actions.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "card",
+            "arc card",
+            "arc-card"
+          ]
+        },
+        {
+          "id": "carousel",
+          "style": "arc_motion_primitives",
+          "name": "Carousel",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Browse a row of slides by dragging, flicking, or arrowing through them.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "carousel",
+            "arc carousel",
+            "arc-carousel"
+          ]
+        },
+        {
+          "id": "code-block",
+          "style": "arc_motion_primitives",
+          "name": "Code block",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Present code with legible hierarchy and copy access.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "code block",
+            "arc code-block",
+            "arc-code-block"
+          ]
+        },
+        {
+          "id": "empty-state",
+          "style": "arc_motion_primitives",
+          "name": "Empty state",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A useful next step when there is nothing to show yet.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "empty state",
+            "arc empty-state",
+            "arc-empty-state"
+          ]
+        },
+        {
+          "id": "empty-states",
+          "style": "arc_motion_primitives",
+          "name": "Empty states",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Four empty states in one illustration whose shapes morph between scenes as you switch tabs.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "empty states",
+            "arc empty-states",
+            "arc-empty-states"
+          ]
+        },
+        {
+          "id": "expandable-card",
+          "style": "arc_motion_primitives",
+          "name": "Expandable card",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "Give a dense card more room when requested.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "expandable card",
+            "arc expandable-card",
+            "arc-expandable-card"
+          ]
+        },
+        {
+          "id": "metric-card",
+          "style": "arc_motion_primitives",
+          "name": "Metric card",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
+          },
+          "when": "A compact summary for a number that needs context.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "metric card",
+            "arc metric-card",
+            "arc-metric-card"
+          ]
         }
       ]
     },
@@ -1604,24 +3508,23 @@
         },
         {
           "id": "code-block",
-          "style": "ai_native_productivity",
-          "name": "Code Block",
+          "style": "arc_motion_primitives",
+          "name": "Code block",
           "tokens": {
-            "scale": "standard",
+            "scale": "region",
             "placement": "flow",
-            "interaction": "control",
+            "interaction": "output",
             "lifecycle": "persistent",
-            "motion": "none",
-            "category": "code",
-            "runtime": "html-css"
+            "motion": "spring",
+            "category": "content",
+            "runtime": "react-motion"
           },
-          "when": "Dark-themed syntax-highlighted code viewer with language badge, line numbers, and copy action.",
-          "when_not": "Editable interactive code editors with auto-complete.",
+          "when": "Present code with legible hierarchy and copy access.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
           "aliases": [
-            "syntax-highlighter",
-            "code-snippet",
-            "terminal-output-viewer",
-            "code-viewer"
+            "code block",
+            "arc code-block",
+            "arc-code-block"
           ]
         },
         {
@@ -1820,6 +3723,489 @@
             "scroll-marquee",
             "velocity-ticker",
             "infinite-scroll-text"
+          ]
+        },
+        {
+          "id": "blog-grid",
+          "style": "arc_motion_primitives",
+          "name": "Blog grid",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A blog index with a featured post, category filter, post cards, pagination and an in-place reader.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "blog grid",
+            "arc blog-grid",
+            "arc-blog-grid"
+          ]
+        },
+        {
+          "id": "breadcrumb",
+          "style": "arc_motion_primitives",
+          "name": "Breadcrumb",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "navigation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "Show where a page sits in a hierarchy.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "breadcrumb",
+            "arc breadcrumb",
+            "arc-breadcrumb"
+          ]
+        },
+        {
+          "id": "changelog-feed",
+          "style": "arc_motion_primitives",
+          "name": "Changelog feed",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "Release notes you can filter, open in place, and scroll through month by month.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "changelog feed",
+            "arc changelog-feed",
+            "arc-changelog-feed"
+          ]
+        },
+        {
+          "id": "command-palette",
+          "style": "arc_motion_primitives",
+          "name": "Command palette",
+          "tokens": {
+            "scale": "region",
+            "placement": "overlay",
+            "interaction": "control",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "A complete keyboard driven action surface with search, grouped results, and shortcuts.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "command palette",
+            "arc command-palette",
+            "arc-command-palette"
+          ]
+        },
+        {
+          "id": "comment-thread",
+          "style": "arc_motion_primitives",
+          "name": "Comment thread",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "Threaded comments with replies, reactions, mentions, inline edit, and resolve.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "comment thread",
+            "arc comment-thread",
+            "arc-comment-thread"
+          ]
+        },
+        {
+          "id": "comparison-table",
+          "style": "arc_motion_primitives",
+          "name": "Comparison table",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "An us versus them table with a sticky header, a highlighted column, and a stacked phone view.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "comparison table",
+            "arc comparison-table",
+            "arc-comparison-table"
+          ]
+        },
+        {
+          "id": "contact-section",
+          "style": "arc_motion_primitives",
+          "name": "Contact section",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A validated contact form that morphs into a confirmation, support channels, and office cards with local times.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "contact section",
+            "arc contact-section",
+            "arc-contact-section"
+          ]
+        },
+        {
+          "id": "cta-section",
+          "style": "arc_motion_primitives",
+          "name": "CTA section",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A call to action as a centered closing section, a split beside a setup card that completes itself, or a dismissible banner.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "cta section",
+            "arc cta-section",
+            "arc-cta-section"
+          ]
+        },
+        {
+          "id": "faq-section",
+          "style": "arc_motion_primitives",
+          "name": "FAQ section",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "FAQs as an accordion, a topic rail, or a searchable list that highlights matches.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "faq section",
+            "arc faq-section",
+            "arc-faq-section"
+          ]
+        },
+        {
+          "id": "hero-section",
+          "style": "arc_motion_primitives",
+          "name": "Hero section",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "Three full screen SaaS heroes: a live dashboard rising from the bottom edge over a drifting mesh, a workflow graph that routes sample events node by node, and editorial type over a mesh gradient.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "hero section",
+            "arc hero-section",
+            "arc-hero-section"
+          ]
+        },
+        {
+          "id": "login-centered",
+          "style": "arc_motion_primitives",
+          "name": "Centered login",
+          "tokens": {
+            "scale": "viewport",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A passkey-first login card on a quiet ring backdrop that morphs through email and code.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "login centered",
+            "arc login-centered",
+            "arc-login-centered"
+          ]
+        },
+        {
+          "id": "logo-marquee",
+          "style": "arc_motion_primitives",
+          "name": "Logo marquee",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A quiet, continuously moving row of brand marks with a pause control.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "logo marquee",
+            "arc logo-marquee",
+            "arc-logo-marquee"
+          ]
+        },
+        {
+          "id": "newsletter-signup",
+          "style": "arc_motion_primitives",
+          "name": "Newsletter signup",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "An email signup framed by a stack of past issues; subscribing drops the next issue, addressed to you, onto the front.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "newsletter signup",
+            "arc newsletter-signup",
+            "arc-newsletter-signup"
+          ]
+        },
+        {
+          "id": "notification-center",
+          "style": "arc_motion_primitives",
+          "name": "Notification center",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A home for updates with read state, grouped information, and animated disclosure.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "notification center",
+            "arc notification-center",
+            "arc-notification-center"
+          ]
+        },
+        {
+          "id": "page-header",
+          "style": "arc_motion_primitives",
+          "name": "Page header",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "navigation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "A project page header that folds into a compact bar as you scroll, with tabs whose counts roll.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "page header",
+            "arc page-header",
+            "arc-page-header"
+          ]
+        },
+        {
+          "id": "plan-comparison",
+          "style": "arc_motion_primitives",
+          "name": "Plan comparison",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "Compare meaningful differences between plans and billing periods.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "plan comparison",
+            "arc plan-comparison",
+            "arc-plan-comparison"
+          ]
+        },
+        {
+          "id": "scroll-area",
+          "style": "arc_motion_primitives",
+          "name": "Scroll area",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "navigation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "A native scroll container with thin overlay scrollbars and edge fades that appear only when content overflows.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "scroll area",
+            "arc scroll-area",
+            "arc-scroll-area"
+          ]
+        },
+        {
+          "id": "sign-in",
+          "style": "arc_motion_primitives",
+          "name": "Sign in",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "A sign in card that morphs from email to a six digit code to your account.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "sign in",
+            "arc sign-in",
+            "arc-sign-in"
+          ]
+        },
+        {
+          "id": "signup-form",
+          "style": "arc_motion_primitives",
+          "name": "Sign up form",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "An account creation flow with field validation, password strength, and a clear completion state.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "signup form",
+            "arc signup-form",
+            "arc-signup-form"
+          ]
+        },
+        {
+          "id": "site-footer",
+          "style": "arc_motion_primitives",
+          "name": "Site footer",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "navigation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "A website footer with link columns and newsletter, a minimal layout, and a large fading Arc mark.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "site footer",
+            "arc site-footer",
+            "arc-site-footer"
+          ]
+        },
+        {
+          "id": "site-header",
+          "style": "arc_motion_primitives",
+          "name": "Site header",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "navigation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "A sticky website header that turns solid on scroll, with a gliding active link, mega menu panels, and a mobile sheet.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "site header",
+            "arc site-header",
+            "arc-site-header"
+          ]
+        },
+        {
+          "id": "stats-band",
+          "style": "arc_motion_primitives",
+          "name": "Stats band",
+          "tokens": {
+            "scale": "region",
+            "placement": "flow",
+            "interaction": "control",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "scaffold",
+            "runtime": "react-motion"
+          },
+          "when": "Headline numbers that count up in view, each with a tiny visual that proves it and a context line on hover, plain or in a hairline grid.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "stats band",
+            "arc stats-band",
+            "arc-stats-band"
+          ]
+        },
+        {
+          "id": "tabs",
+          "style": "arc_motion_primitives",
+          "name": "Tabs",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "navigation",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "nav",
+            "runtime": "react-motion"
+          },
+          "when": "Switch between related content in the same context.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "tabs",
+            "arc tabs",
+            "arc-tabs"
           ]
         }
       ]
@@ -2434,6 +4820,174 @@
             "led-dial",
             "rotary-dots",
             "boot-spinner"
+          ]
+        },
+        {
+          "id": "alert",
+          "style": "arc_motion_primitives",
+          "name": "Alert",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "A persistent message that helps people recover or continue.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "alert",
+            "arc alert",
+            "arc-alert"
+          ]
+        },
+        {
+          "id": "announcement-bar",
+          "style": "arc_motion_primitives",
+          "name": "Announcement bar",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "A top banner that rotates messages, counts down, and collapses smoothly when dismissed.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "announcement bar",
+            "arc announcement-bar",
+            "arc-announcement-bar"
+          ]
+        },
+        {
+          "id": "badge",
+          "style": "arc_motion_primitives",
+          "name": "Badge",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "A small label for status, category, or metadata.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "badge",
+            "arc badge",
+            "arc-badge"
+          ]
+        },
+        {
+          "id": "progress",
+          "style": "arc_motion_primitives",
+          "name": "Progress",
+          "tokens": {
+            "scale": "compact",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "Show how much of a known task is complete.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "progress",
+            "arc progress",
+            "arc-progress"
+          ]
+        },
+        {
+          "id": "skeleton",
+          "style": "arc_motion_primitives",
+          "name": "Skeleton",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "Reserve space while content is still loading.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "skeleton",
+            "arc skeleton",
+            "arc-skeleton"
+          ]
+        },
+        {
+          "id": "toast-stack",
+          "style": "arc_motion_primitives",
+          "name": "Toast stack",
+          "tokens": {
+            "scale": "standard",
+            "placement": "overlay",
+            "interaction": "output",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "Stack short results at the edge until you reach for them.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "toast stack",
+            "arc toast-stack",
+            "arc-toast-stack"
+          ]
+        },
+        {
+          "id": "toast",
+          "style": "arc_motion_primitives",
+          "name": "Toast",
+          "tokens": {
+            "scale": "standard",
+            "placement": "overlay",
+            "interaction": "output",
+            "lifecycle": "transient",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "Brief confirmation for a completed background action.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "toast",
+            "arc toast",
+            "arc-toast"
+          ]
+        },
+        {
+          "id": "usage-meter",
+          "style": "arc_motion_primitives",
+          "name": "Usage meter",
+          "tokens": {
+            "scale": "standard",
+            "placement": "flow",
+            "interaction": "output",
+            "lifecycle": "persistent",
+            "motion": "spring",
+            "category": "status",
+            "runtime": "react-motion"
+          },
+          "when": "Show what fills an allowance and how close it is to the limit.",
+          "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+          "aliases": [
+            "usage meter",
+            "arc usage-meter",
+            "arc-usage-meter"
           ]
         }
       ]

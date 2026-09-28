@@ -24,3 +24,7 @@ desktop.ini
 
 # Node
 node_modules/
+
+# Scratch
+scratch/
+

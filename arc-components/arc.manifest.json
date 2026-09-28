@@ -1,0 +1,1210 @@
+{
+  "style": "arc_motion_primitives",
+  "aesthetic": "OKLCH color system, motion/react physics-based spring curves, useMorphWidth dynamic resize, and zero layout shift micro-interactions",
+  "shared_css": [
+    "shared/base.css"
+  ],
+  "design_md": "DESIGN.md",
+  "tech": "React 19 + Motion + OKLCH Design Tokens",
+  "items": [
+    {
+      "id": "accordion",
+      "tags": [
+        "disclosure",
+        "layout",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Progressively reveal supporting information in place."
+    },
+    {
+      "id": "action-button",
+      "tags": [
+        "action",
+        "toolbar",
+        "actions",
+        "arc"
+      ],
+      "when": "A compact button for frequent toolbar actions."
+    },
+    {
+      "id": "activity-heatmap",
+      "tags": [
+        "data",
+        "chart",
+        "calendar",
+        "data",
+        "arc"
+      ],
+      "when": "See a year of activity at a glance, one square per day."
+    },
+    {
+      "id": "alert",
+      "tags": [
+        "status",
+        "message",
+        "feedback",
+        "arc"
+      ],
+      "when": "A persistent message that helps people recover or continue."
+    },
+    {
+      "id": "animated-counter",
+      "tags": [
+        "data",
+        "motion",
+        "data",
+        "arc"
+      ],
+      "when": "Give changing totals a clear sense of movement."
+    },
+    {
+      "id": "announcement-bar",
+      "tags": [
+        "feedback",
+        "new",
+        "feedback",
+        "arc"
+      ],
+      "when": "A top banner that rotates messages, counts down, and collapses smoothly when dismissed."
+    },
+    {
+      "id": "avatar-group",
+      "tags": [
+        "identity",
+        "people",
+        "data",
+        "arc"
+      ],
+      "when": "Show a team or set of contributors in a small space."
+    },
+    {
+      "id": "avatar",
+      "tags": [
+        "identity",
+        "people",
+        "data",
+        "arc"
+      ],
+      "when": "A compact identity marker for people and accounts."
+    },
+    {
+      "id": "badge",
+      "tags": [
+        "label",
+        "status",
+        "data",
+        "arc"
+      ],
+      "when": "A small label for status, category, or metadata."
+    },
+    {
+      "id": "bar-chart",
+      "tags": [
+        "chart",
+        "bar",
+        "data",
+        "data",
+        "arc"
+      ],
+      "when": "Compare one measure across days and scrub any bar for its value."
+    },
+    {
+      "id": "billing-toggle",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "A monthly and yearly switch with a savings badge and prices that roll to the new amount."
+    },
+    {
+      "id": "blog-grid",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A blog index with a featured post, category filter, post cards, pagination and an in-place reader."
+    },
+    {
+      "id": "bottom-sheet",
+      "tags": [
+        "overlay",
+        "gesture",
+        "motion",
+        "disclosure",
+        "arc"
+      ],
+      "when": "A sheet that rests at a peek or full height and follows your finger."
+    },
+    {
+      "id": "breadcrumb",
+      "tags": [
+        "navigation",
+        "wayfinding",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Show where a page sits in a hierarchy."
+    },
+    {
+      "id": "brush-chart",
+      "tags": [
+        "data",
+        "chart",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "A dense time series with an overview strip: drag a window to zoom, resize it by its handles, and read events in place."
+    },
+    {
+      "id": "button",
+      "tags": [
+        "action",
+        "control",
+        "actions",
+        "arc"
+      ],
+      "when": "A clear, responsive action with quiet secondary states."
+    },
+    {
+      "id": "calendar",
+      "tags": [
+        "date",
+        "field",
+        "inputs",
+        "arc"
+      ],
+      "when": "Browse dates in a clear, compact month view."
+    },
+    {
+      "id": "card",
+      "tags": [
+        "surface",
+        "layout",
+        "data",
+        "arc"
+      ],
+      "when": "A contained group of related content and actions."
+    },
+    {
+      "id": "carousel",
+      "tags": [
+        "carousel",
+        "slider",
+        "gallery",
+        "data",
+        "arc"
+      ],
+      "when": "Browse a row of slides by dragging, flicking, or arrowing through them."
+    },
+    {
+      "id": "changelog-feed",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "Release notes you can filter, open in place, and scroll through month by month."
+    },
+    {
+      "id": "chat-thread",
+      "tags": [
+        "data",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "A chat thread with grouped messages, reactions, read receipts, typing, and a composer with attachments."
+    },
+    {
+      "id": "checkbox",
+      "tags": [
+        "field",
+        "form",
+        "inputs",
+        "arc"
+      ],
+      "when": "A binary choice with a precise, legible state."
+    },
+    {
+      "id": "chip-group",
+      "tags": [
+        "chips",
+        "filter",
+        "toggle",
+        "inputs",
+        "arc"
+      ],
+      "when": "Filter by a few facets with chips that morph as you pick them."
+    },
+    {
+      "id": "code-block",
+      "tags": [
+        "content",
+        "developer",
+        "data",
+        "arc"
+      ],
+      "when": "Present code with legible hierarchy and copy access."
+    },
+    {
+      "id": "color-picker",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "A swatch that grows into a picker with format morphing, eyedropper, saved swatches, and contrast readout."
+    },
+    {
+      "id": "combobox",
+      "tags": [
+        "field",
+        "search",
+        "inputs",
+        "arc"
+      ],
+      "when": "Search and select from a list without leaving the field."
+    },
+    {
+      "id": "command-palette",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A complete keyboard driven action surface with search, grouped results, and shortcuts."
+    },
+    {
+      "id": "comment-thread",
+      "tags": [
+        "data",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "Threaded comments with replies, reactions, mentions, inline edit, and resolve."
+    },
+    {
+      "id": "comparison-table",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "An us versus them table with a sticky header, a highlighted column, and a stacked phone view."
+    },
+    {
+      "id": "confirm-morph",
+      "tags": [
+        "actions",
+        "new",
+        "actions",
+        "arc"
+      ],
+      "when": "A destructive button that morphs into an inline confirmation, a spinner, and a result with undo."
+    },
+    {
+      "id": "contact-section",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A validated contact form that morphs into a confirmation, support channels, and office cards with local times."
+    },
+    {
+      "id": "context-menu",
+      "tags": [
+        "menu",
+        "action",
+        "actions",
+        "arc"
+      ],
+      "when": "Secondary actions kept close to the selected object."
+    },
+    {
+      "id": "copy-button",
+      "tags": [
+        "action",
+        "utility",
+        "actions",
+        "arc"
+      ],
+      "when": "Copy a value with immediate confirmation."
+    },
+    {
+      "id": "cta-section",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A call to action as a centered closing section, a split beside a setup card that completes itself, or a dismissible banner."
+    },
+    {
+      "id": "date-picker",
+      "tags": [
+        "date",
+        "field",
+        "inputs",
+        "arc"
+      ],
+      "when": "Choose a date without losing context."
+    },
+    {
+      "id": "date-range-picker",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "A range picker that grows from its trigger into two months with presets and a stretching range highlight."
+    },
+    {
+      "id": "dialog",
+      "tags": [
+        "modal",
+        "overlay",
+        "disclosure",
+        "arc"
+      ],
+      "when": "A focused surface for decisions that need attention."
+    },
+    {
+      "id": "donut-chart",
+      "tags": [
+        "data",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "A donut whose arcs morph between datasets, with the active value rolling into the center."
+    },
+    {
+      "id": "drawer",
+      "tags": [
+        "overlay",
+        "surface",
+        "disclosure",
+        "arc"
+      ],
+      "when": "A temporary side surface for focused work."
+    },
+    {
+      "id": "dropdown-menu",
+      "tags": [
+        "menu",
+        "action",
+        "actions",
+        "arc"
+      ],
+      "when": "A focused list of actions anchored to a trigger."
+    },
+    {
+      "id": "empty-state",
+      "tags": [
+        "data",
+        "guidance",
+        "data",
+        "arc"
+      ],
+      "when": "A useful next step when there is nothing to show yet."
+    },
+    {
+      "id": "empty-states",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "Four empty states in one illustration whose shapes morph between scenes as you switch tabs."
+    },
+    {
+      "id": "expandable-card",
+      "tags": [
+        "disclosure",
+        "layout",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Give a dense card more room when requested."
+    },
+    {
+      "id": "faq-section",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "FAQs as an accordion, a topic rail, or a searchable list that highlights matches."
+    },
+    {
+      "id": "file-dropzone",
+      "tags": [
+        "field",
+        "files",
+        "inputs",
+        "arc"
+      ],
+      "when": "A generous target for dropping one or more files."
+    },
+    {
+      "id": "file-upload",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A complete file selection flow with constraints, progress, and error feedback."
+    },
+    {
+      "id": "filter-toolbar",
+      "tags": [
+        "data",
+        "filter",
+        "data",
+        "arc"
+      ],
+      "when": "Keep collection filters close and easy to reset."
+    },
+    {
+      "id": "gauge",
+      "tags": [
+        "data",
+        "chart",
+        "data",
+        "arc"
+      ],
+      "when": "Show a value against a known range."
+    },
+    {
+      "id": "hero-section",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "Three full screen SaaS heroes: a live dashboard rising from the bottom edge over a drifting mesh, a workflow graph that routes sample events node by node, and editorial type over a mesh gradient."
+    },
+    {
+      "id": "hold-to-confirm",
+      "tags": [
+        "hold",
+        "long press",
+        "confirm",
+        "actions",
+        "arc"
+      ],
+      "when": "Confirm a destructive action by holding, not tapping."
+    },
+    {
+      "id": "hover-card",
+      "tags": [
+        "preview",
+        "people",
+        "popover",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Preview a person or link on hover or focus without leaving the page."
+    },
+    {
+      "id": "image-compare",
+      "tags": [
+        "before after",
+        "comparison",
+        "image",
+        "data",
+        "arc"
+      ],
+      "when": "Drag a divider across two images to see what changed."
+    },
+    {
+      "id": "in-view-title",
+      "tags": [
+        "text",
+        "motion",
+        "heading",
+        "text",
+        "arc"
+      ],
+      "when": "Bring a section title in as it scrolls into view."
+    },
+    {
+      "id": "inline-edit",
+      "tags": [
+        "inline edit",
+        "rename",
+        "click to edit",
+        "inputs",
+        "arc"
+      ],
+      "when": "Rename in place: the text becomes a field without moving."
+    },
+    {
+      "id": "input",
+      "tags": [
+        "field",
+        "form",
+        "inputs",
+        "arc"
+      ],
+      "when": "A single line field with clear labels and useful states."
+    },
+    {
+      "id": "line-chart",
+      "tags": [
+        "data",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "A multi-series line chart with a gliding crosshair, legend toggles, and paths that morph between ranges."
+    },
+    {
+      "id": "login-centered",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A passkey-first login card on a quiet ring backdrop that morphs through email and code."
+    },
+    {
+      "id": "logo-marquee",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A quiet, continuously moving row of brand marks with a pause control."
+    },
+    {
+      "id": "mention-input",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "A textarea with @people and #channel mentions that act as single tokens, with suggestions at the caret."
+    },
+    {
+      "id": "metric-card",
+      "tags": [
+        "data",
+        "summary",
+        "data",
+        "arc"
+      ],
+      "when": "A compact summary for a number that needs context."
+    },
+    {
+      "id": "multi-select",
+      "tags": [
+        "field",
+        "choice",
+        "inputs",
+        "arc"
+      ],
+      "when": "Select several values while keeping the field readable."
+    },
+    {
+      "id": "newsletter-signup",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "An email signup framed by a stack of past issues; subscribing drops the next issue, addressed to you, onto the front."
+    },
+    {
+      "id": "notification-center",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A home for updates with read state, grouped information, and animated disclosure."
+    },
+    {
+      "id": "number-field",
+      "tags": [
+        "field",
+        "numeric",
+        "inputs",
+        "arc"
+      ],
+      "when": "Enter a bounded number with clear increment controls."
+    },
+    {
+      "id": "arc-otp-input",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A six digit verification flow with paste support and keyboard navigation."
+    },
+    {
+      "id": "page-header",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A project page header that folds into a compact bar as you scroll, with tabs whose counts roll."
+    },
+    {
+      "id": "pagination",
+      "tags": [
+        "data",
+        "navigation",
+        "data",
+        "arc"
+      ],
+      "when": "Move through a long collection with clear bounds."
+    },
+    {
+      "id": "password-field",
+      "tags": [
+        "field",
+        "security",
+        "inputs",
+        "arc"
+      ],
+      "when": "Capture sensitive text with a visible reveal control."
+    },
+    {
+      "id": "phone-input",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "A phone field with a country picker, formatting as you type, and E.164 output."
+    },
+    {
+      "id": "plan-comparison",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "Compare meaningful differences between plans and billing periods."
+    },
+    {
+      "id": "popover",
+      "tags": [
+        "overlay",
+        "menu",
+        "disclosure",
+        "arc"
+      ],
+      "when": "A small anchored surface for contextual information."
+    },
+    {
+      "id": "progress",
+      "tags": [
+        "status",
+        "loading",
+        "feedback",
+        "arc"
+      ],
+      "when": "Show how much of a known task is complete."
+    },
+    {
+      "id": "radio-cards",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "Selectable option cards with a sliding selection ring, price and description slots, and radio keyboard behavior."
+    },
+    {
+      "id": "radio-group",
+      "tags": [
+        "field",
+        "choice",
+        "inputs",
+        "arc"
+      ],
+      "when": "Choose one option from a visible set."
+    },
+    {
+      "id": "resizable-panels",
+      "tags": [
+        "split view",
+        "resizable",
+        "panes",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Trade space between panes by dragging the divider between them."
+    },
+    {
+      "id": "rich-text-editor",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "A lightweight editor with markdown shortcuts, a floating toolbar, a slash menu, and HTML and markdown output."
+    },
+    {
+      "id": "ridgeline",
+      "tags": [
+        "data",
+        "chart",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "Overlapping distributions, one ridge per group: hover to lift a ridge and read its quartiles, switch datasets and every curve morphs."
+    },
+    {
+      "id": "scroll-area",
+      "tags": [
+        "disclosure",
+        "new",
+        "disclosure",
+        "arc"
+      ],
+      "when": "A native scroll container with thin overlay scrollbars and edge fades that appear only when content overflows."
+    },
+    {
+      "id": "search-field",
+      "tags": [
+        "field",
+        "search",
+        "inputs",
+        "arc"
+      ],
+      "when": "A recognizable search entry point with clear affordances."
+    },
+    {
+      "id": "segmented-control",
+      "tags": [
+        "control",
+        "choice",
+        "inputs",
+        "arc"
+      ],
+      "when": "Switch between a small set of related views."
+    },
+    {
+      "id": "select",
+      "tags": [
+        "field",
+        "form",
+        "inputs",
+        "arc"
+      ],
+      "when": "A compact choice field with a keyboard friendly menu."
+    },
+    {
+      "id": "shortcut-recorder",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "Record key combinations into key caps, with conflict warnings, Kbd, and a searchable cheatsheet."
+    },
+    {
+      "id": "sign-in",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A sign in card that morphs from email to a six digit code to your account."
+    },
+    {
+      "id": "signature-pad",
+      "tags": [
+        "inputs",
+        "new",
+        "inputs",
+        "arc"
+      ],
+      "when": "Smooth ink that thins with speed, with undo, replay, and PNG or SVG export."
+    },
+    {
+      "id": "signup-form",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "An account creation flow with field validation, password strength, and a clear completion state."
+    },
+    {
+      "id": "site-footer",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A website footer with link columns and newsletter, a minimal layout, and a large fading Arc mark."
+    },
+    {
+      "id": "site-header",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "A sticky website header that turns solid on scroll, with a gliding active link, mega menu panels, and a mobile sheet."
+    },
+    {
+      "id": "skeleton",
+      "tags": [
+        "loading",
+        "status",
+        "feedback",
+        "arc"
+      ],
+      "when": "Reserve space while content is still loading."
+    },
+    {
+      "id": "slider",
+      "tags": [
+        "slider",
+        "range",
+        "input",
+        "inputs",
+        "arc"
+      ],
+      "when": "Pick a value or a range on a track that follows your finger."
+    },
+    {
+      "id": "slope-chart",
+      "tags": [
+        "data",
+        "chart",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "Before and after on two axes: lines draw in, rank moves sit beside each value, and switching datasets slides every line to its new slope."
+    },
+    {
+      "id": "slot-text",
+      "tags": [
+        "special",
+        "text",
+        "numbers",
+        "new",
+        "special",
+        "arc"
+      ],
+      "when": "Text and numbers that spin into their new value on staggered slot machine reels."
+    },
+    {
+      "id": "sortable-data-table",
+      "tags": [
+        "data",
+        "table",
+        "data",
+        "arc"
+      ],
+      "when": "Compare structured records with sortable columns."
+    },
+    {
+      "id": "sparkline",
+      "tags": [
+        "data",
+        "chart",
+        "data",
+        "arc"
+      ],
+      "when": "Show a compact trend beside a value."
+    },
+    {
+      "id": "split-button",
+      "tags": [
+        "action",
+        "menu",
+        "actions",
+        "arc"
+      ],
+      "when": "A primary action with a menu of nearby alternatives."
+    },
+    {
+      "id": "stats-band",
+      "tags": [
+        "blocks",
+        "blocks",
+        "arc"
+      ],
+      "when": "Headline numbers that count up in view, each with a tiny visual that proves it and a context line on hover, plain or in a hairline grid."
+    },
+    {
+      "id": "stepper",
+      "tags": [
+        "motion",
+        "product",
+        "feedback",
+        "arc"
+      ],
+      "when": "Show where a person is in a multi-step flow and what is done."
+    },
+    {
+      "id": "streamgraph",
+      "tags": [
+        "data",
+        "chart",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "Layered streams on a wiggle baseline that morph between ranges, with a layer you can isolate and read week by week."
+    },
+    {
+      "id": "swipe-actions",
+      "tags": [
+        "swipe",
+        "gesture",
+        "list",
+        "actions",
+        "arc"
+      ],
+      "when": "Reveal row actions with a swipe, or from the same actions in a menu."
+    },
+    {
+      "id": "switch",
+      "tags": [
+        "toggle",
+        "settings",
+        "inputs",
+        "arc"
+      ],
+      "when": "A tactile toggle for settings that take effect immediately."
+    },
+    {
+      "id": "tabs",
+      "tags": [
+        "navigation",
+        "layout",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Switch between related content in the same context."
+    },
+    {
+      "id": "tag-input",
+      "tags": [
+        "field",
+        "tags",
+        "inputs",
+        "arc"
+      ],
+      "when": "Turn short text values into removable tags."
+    },
+    {
+      "id": "text-morph",
+      "tags": [
+        "text",
+        "motion",
+        "status",
+        "text",
+        "arc"
+      ],
+      "when": "Morph a label into its next state, letter by letter."
+    },
+    {
+      "id": "text-reveal",
+      "tags": [
+        "text",
+        "motion",
+        "content",
+        "text",
+        "arc"
+      ],
+      "when": "Reveal a short piece of content with restrained motion."
+    },
+    {
+      "id": "text-shimmer",
+      "tags": [
+        "text",
+        "motion",
+        "loading",
+        "text",
+        "arc"
+      ],
+      "when": "Show ongoing work with a calm light across the words."
+    },
+    {
+      "id": "textarea",
+      "tags": [
+        "field",
+        "form",
+        "inputs",
+        "arc"
+      ],
+      "when": "A multiline field for notes, descriptions, and longer text."
+    },
+    {
+      "id": "theme-switch-eclipse",
+      "tags": [
+        "theme",
+        "appearance",
+        "motion",
+        "actions",
+        "arc"
+      ],
+      "when": "The next appearance crosses the page like an eclipse."
+    },
+    {
+      "id": "theme-switch-rise",
+      "tags": [
+        "theme",
+        "appearance",
+        "motion",
+        "actions",
+        "arc"
+      ],
+      "when": "The next appearance rises into place."
+    },
+    {
+      "id": "theme-switch-split",
+      "tags": [
+        "theme",
+        "appearance",
+        "motion",
+        "actions",
+        "arc"
+      ],
+      "when": "The next appearance opens from a slim center seam."
+    },
+    {
+      "id": "theme-switch",
+      "tags": [
+        "theme",
+        "appearance",
+        "motion",
+        "actions",
+        "arc"
+      ],
+      "when": "Four smooth ways to move between light and dark appearance."
+    },
+    {
+      "id": "time-picker",
+      "tags": [
+        "time",
+        "field",
+        "inputs",
+        "arc"
+      ],
+      "when": "Choose a time with sensible keyboard behavior."
+    },
+    {
+      "id": "timeline",
+      "tags": [
+        "data",
+        "feed",
+        "activity",
+        "data",
+        "arc"
+      ],
+      "when": "Follow what happened, newest first, grouped by day."
+    },
+    {
+      "id": "toast-stack",
+      "tags": [
+        "toast",
+        "notification",
+        "sonner",
+        "feedback",
+        "arc"
+      ],
+      "when": "Stack short results at the edge until you reach for them."
+    },
+    {
+      "id": "toast",
+      "tags": [
+        "status",
+        "message",
+        "feedback",
+        "arc"
+      ],
+      "when": "Brief confirmation for a completed background action."
+    },
+    {
+      "id": "tooltip",
+      "tags": [
+        "hint",
+        "overlay",
+        "disclosure",
+        "arc"
+      ],
+      "when": "Short supporting text for unfamiliar controls."
+    },
+    {
+      "id": "tree-view",
+      "tags": [
+        "data",
+        "navigation",
+        "data",
+        "arc"
+      ],
+      "when": "Navigate nested folders and structured content."
+    },
+    {
+      "id": "treemap",
+      "tags": [
+        "data",
+        "chart",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "A squarified treemap: click to drill and the tiles grow to fill the view, with a breadcrumb back and metrics that morph every tile."
+    },
+    {
+      "id": "usage-meter",
+      "tags": [
+        "meter",
+        "usage",
+        "storage",
+        "feedback",
+        "arc"
+      ],
+      "when": "Show what fills an allowance and how close it is to the limit."
+    },
+    {
+      "id": "user-menu",
+      "tags": [
+        "motion",
+        "product",
+        "actions",
+        "arc"
+      ],
+      "when": "Your account, settings, theme, and sign out behind the avatar. Opens as a bottom sheet on phones."
+    },
+    {
+      "id": "waffle-chart",
+      "tags": [
+        "data",
+        "chart",
+        "new",
+        "data",
+        "arc"
+      ],
+      "when": "A ten by ten unit chart where every cell is one percent, and cells fly to their new group when the data changes."
+    }
+  ]
+}

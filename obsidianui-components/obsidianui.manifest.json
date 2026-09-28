@@ -1,0 +1,14 @@
+{
+  "style": "obsidian_tactile_showcase",
+  "aesthetic": "Apple-style spring physics, expanding rounded corners, outward shift on hover, partner split cards, and dotted divider",
+  "shared_css": ["shared/base.css"],
+  "design_md": "DESIGN.md",
+  "tech": "React + Motion + Tailwind CSS",
+  "items": [
+    {
+      "id": "split-showcase",
+      "tags": ["showcase", "split", "cards", "partner", "spring", "apple-style"],
+      "when": "Interactive dual partner or sponsor showcase cards with outward spring hover shift and dotted divider"
+    }
+  ]
+}

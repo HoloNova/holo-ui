@@ -1,0 +1,1566 @@
+{
+  "name": "Arc Motion Primitives",
+  "library": "arc-components",
+  "version": "1.0.0",
+  "source": "https://uiarc.dev",
+  "license": "MIT",
+  "count": 119,
+  "tokens": {
+    "scale": "standard",
+    "placement": "flow",
+    "interaction": "control",
+    "lifecycle": "persistent",
+    "motion": "spring",
+    "category": "action",
+    "runtime": "react-motion"
+  },
+  "items": [
+    {
+      "id": "accordion",
+      "name": "Accordion",
+      "snippet": "arc-components/components/disclosure/accordion/accordion.snippet.tsx",
+      "meta": "components/disclosure/accordion/accordion.meta.md",
+      "when": "Progressively reveal supporting information in place.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "accordion",
+        "accordion",
+        "arc accordion"
+      ]
+    },
+    {
+      "id": "action-button",
+      "name": "Action button",
+      "snippet": "arc-components/components/actions/action-button/action-button.snippet.tsx",
+      "meta": "components/actions/action-button/action-button.meta.md",
+      "when": "A compact button for frequent toolbar actions.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "action-button",
+        "action button",
+        "arc action-button"
+      ]
+    },
+    {
+      "id": "activity-heatmap",
+      "name": "Activity heatmap",
+      "snippet": "arc-components/components/data/activity-heatmap/activity-heatmap.snippet.tsx",
+      "meta": "components/data/activity-heatmap/activity-heatmap.meta.md",
+      "when": "See a year of activity at a glance, one square per day.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "activity-heatmap",
+        "activity heatmap",
+        "arc activity-heatmap"
+      ]
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "snippet": "arc-components/components/feedback/alert/alert.snippet.tsx",
+      "meta": "components/feedback/alert/alert.meta.md",
+      "when": "A persistent message that helps people recover or continue.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "alert",
+        "alert",
+        "arc alert"
+      ]
+    },
+    {
+      "id": "animated-counter",
+      "name": "Animated counter",
+      "snippet": "arc-components/components/data/animated-counter/animated-counter.snippet.tsx",
+      "meta": "components/data/animated-counter/animated-counter.meta.md",
+      "when": "Give changing totals a clear sense of movement.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "animated-counter",
+        "animated counter",
+        "arc animated-counter"
+      ]
+    },
+    {
+      "id": "announcement-bar",
+      "name": "Announcement bar",
+      "snippet": "arc-components/components/feedback/announcement-bar/announcement-bar.snippet.tsx",
+      "meta": "components/feedback/announcement-bar/announcement-bar.meta.md",
+      "when": "A top banner that rotates messages, counts down, and collapses smoothly when dismissed.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "announcement-bar",
+        "announcement bar",
+        "arc announcement-bar"
+      ]
+    },
+    {
+      "id": "avatar-group",
+      "name": "Avatar group",
+      "snippet": "arc-components/components/data/avatar-group/avatar-group.snippet.tsx",
+      "meta": "components/data/avatar-group/avatar-group.meta.md",
+      "when": "Show a team or set of contributors in a small space.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "avatar-group",
+        "avatar group",
+        "arc avatar-group"
+      ]
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar",
+      "snippet": "arc-components/components/data/avatar/avatar.snippet.tsx",
+      "meta": "components/data/avatar/avatar.meta.md",
+      "when": "A compact identity marker for people and accounts.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "avatar",
+        "avatar",
+        "arc avatar"
+      ]
+    },
+    {
+      "id": "badge",
+      "name": "Badge",
+      "snippet": "arc-components/components/data/badge/badge.snippet.tsx",
+      "meta": "components/data/badge/badge.meta.md",
+      "when": "A small label for status, category, or metadata.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "badge",
+        "badge",
+        "arc badge"
+      ]
+    },
+    {
+      "id": "bar-chart",
+      "name": "Bar chart",
+      "snippet": "arc-components/components/data/bar-chart/bar-chart.snippet.tsx",
+      "meta": "components/data/bar-chart/bar-chart.meta.md",
+      "when": "Compare one measure across days and scrub any bar for its value.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "bar-chart",
+        "bar chart",
+        "arc bar-chart"
+      ]
+    },
+    {
+      "id": "billing-toggle",
+      "name": "Billing toggle",
+      "snippet": "arc-components/components/inputs/billing-toggle/billing-toggle.snippet.tsx",
+      "meta": "components/inputs/billing-toggle/billing-toggle.meta.md",
+      "when": "A monthly and yearly switch with a savings badge and prices that roll to the new amount.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "billing-toggle",
+        "billing toggle",
+        "arc billing-toggle"
+      ]
+    },
+    {
+      "id": "blog-grid",
+      "name": "Blog grid",
+      "snippet": "arc-components/components/blocks/blog-grid/blog-grid.snippet.tsx",
+      "meta": "components/blocks/blog-grid/blog-grid.meta.md",
+      "when": "A blog index with a featured post, category filter, post cards, pagination and an in-place reader.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "blog-grid",
+        "blog grid",
+        "arc blog-grid"
+      ]
+    },
+    {
+      "id": "bottom-sheet",
+      "name": "Bottom sheet",
+      "snippet": "arc-components/components/disclosure/bottom-sheet/bottom-sheet.snippet.tsx",
+      "meta": "components/disclosure/bottom-sheet/bottom-sheet.meta.md",
+      "when": "A sheet that rests at a peek or full height and follows your finger.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "bottom-sheet",
+        "bottom sheet",
+        "arc bottom-sheet"
+      ]
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "snippet": "arc-components/components/disclosure/breadcrumb/breadcrumb.snippet.tsx",
+      "meta": "components/disclosure/breadcrumb/breadcrumb.meta.md",
+      "when": "Show where a page sits in a hierarchy.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "breadcrumb",
+        "breadcrumb",
+        "arc breadcrumb"
+      ]
+    },
+    {
+      "id": "brush-chart",
+      "name": "Brush chart",
+      "snippet": "arc-components/components/data/brush-chart/brush-chart.snippet.tsx",
+      "meta": "components/data/brush-chart/brush-chart.meta.md",
+      "when": "A dense time series with an overview strip: drag a window to zoom, resize it by its handles, and read events in place.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "brush-chart",
+        "brush chart",
+        "arc brush-chart"
+      ]
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "snippet": "arc-components/components/actions/button/button.snippet.tsx",
+      "meta": "components/actions/button/button.meta.md",
+      "when": "A clear, responsive action with quiet secondary states.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "button",
+        "button",
+        "arc button"
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "snippet": "arc-components/components/inputs/calendar/calendar.snippet.tsx",
+      "meta": "components/inputs/calendar/calendar.meta.md",
+      "when": "Browse dates in a clear, compact month view.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "calendar",
+        "calendar",
+        "arc calendar"
+      ]
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "snippet": "arc-components/components/data/card/card.snippet.tsx",
+      "meta": "components/data/card/card.meta.md",
+      "when": "A contained group of related content and actions.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "card",
+        "card",
+        "arc card"
+      ]
+    },
+    {
+      "id": "carousel",
+      "name": "Carousel",
+      "snippet": "arc-components/components/data/carousel/carousel.snippet.tsx",
+      "meta": "components/data/carousel/carousel.meta.md",
+      "when": "Browse a row of slides by dragging, flicking, or arrowing through them.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "carousel",
+        "carousel",
+        "arc carousel"
+      ]
+    },
+    {
+      "id": "changelog-feed",
+      "name": "Changelog feed",
+      "snippet": "arc-components/components/blocks/changelog-feed/changelog-feed.snippet.tsx",
+      "meta": "components/blocks/changelog-feed/changelog-feed.meta.md",
+      "when": "Release notes you can filter, open in place, and scroll through month by month.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "changelog-feed",
+        "changelog feed",
+        "arc changelog-feed"
+      ]
+    },
+    {
+      "id": "chat-thread",
+      "name": "Chat thread",
+      "snippet": "arc-components/components/data/chat-thread/chat-thread.snippet.tsx",
+      "meta": "components/data/chat-thread/chat-thread.meta.md",
+      "when": "A chat thread with grouped messages, reactions, read receipts, typing, and a composer with attachments.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "chat-thread",
+        "chat thread",
+        "arc chat-thread"
+      ]
+    },
+    {
+      "id": "checkbox",
+      "name": "Checkbox",
+      "snippet": "arc-components/components/inputs/checkbox/checkbox.snippet.tsx",
+      "meta": "components/inputs/checkbox/checkbox.meta.md",
+      "when": "A binary choice with a precise, legible state.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "checkbox",
+        "checkbox",
+        "arc checkbox"
+      ]
+    },
+    {
+      "id": "chip-group",
+      "name": "Chip group",
+      "snippet": "arc-components/components/inputs/chip-group/chip-group.snippet.tsx",
+      "meta": "components/inputs/chip-group/chip-group.meta.md",
+      "when": "Filter by a few facets with chips that morph as you pick them.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "chip-group",
+        "chip group",
+        "arc chip-group"
+      ]
+    },
+    {
+      "id": "code-block",
+      "name": "Code block",
+      "snippet": "arc-components/components/data/code-block/code-block.snippet.tsx",
+      "meta": "components/data/code-block/code-block.meta.md",
+      "when": "Present code with legible hierarchy and copy access.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "code-block",
+        "code block",
+        "arc code-block"
+      ]
+    },
+    {
+      "id": "color-picker",
+      "name": "Color picker",
+      "snippet": "arc-components/components/inputs/color-picker/color-picker.snippet.tsx",
+      "meta": "components/inputs/color-picker/color-picker.meta.md",
+      "when": "A swatch that grows into a picker with format morphing, eyedropper, saved swatches, and contrast readout.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "color-picker",
+        "color picker",
+        "arc color-picker"
+      ]
+    },
+    {
+      "id": "combobox",
+      "name": "Combobox",
+      "snippet": "arc-components/components/inputs/combobox/combobox.snippet.tsx",
+      "meta": "components/inputs/combobox/combobox.meta.md",
+      "when": "Search and select from a list without leaving the field.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "combobox",
+        "combobox",
+        "arc combobox"
+      ]
+    },
+    {
+      "id": "command-palette",
+      "name": "Command palette",
+      "snippet": "arc-components/components/blocks/command-palette/command-palette.snippet.tsx",
+      "meta": "components/blocks/command-palette/command-palette.meta.md",
+      "when": "A complete keyboard driven action surface with search, grouped results, and shortcuts.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "command-palette",
+        "command palette",
+        "arc command-palette"
+      ]
+    },
+    {
+      "id": "comment-thread",
+      "name": "Comment thread",
+      "snippet": "arc-components/components/data/comment-thread/comment-thread.snippet.tsx",
+      "meta": "components/data/comment-thread/comment-thread.meta.md",
+      "when": "Threaded comments with replies, reactions, mentions, inline edit, and resolve.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "comment-thread",
+        "comment thread",
+        "arc comment-thread"
+      ]
+    },
+    {
+      "id": "comparison-table",
+      "name": "Comparison table",
+      "snippet": "arc-components/components/blocks/comparison-table/comparison-table.snippet.tsx",
+      "meta": "components/blocks/comparison-table/comparison-table.meta.md",
+      "when": "An us versus them table with a sticky header, a highlighted column, and a stacked phone view.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "comparison-table",
+        "comparison table",
+        "arc comparison-table"
+      ]
+    },
+    {
+      "id": "confirm-morph",
+      "name": "Confirm morph",
+      "snippet": "arc-components/components/actions/confirm-morph/confirm-morph.snippet.tsx",
+      "meta": "components/actions/confirm-morph/confirm-morph.meta.md",
+      "when": "A destructive button that morphs into an inline confirmation, a spinner, and a result with undo.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "confirm-morph",
+        "confirm morph",
+        "arc confirm-morph"
+      ]
+    },
+    {
+      "id": "contact-section",
+      "name": "Contact section",
+      "snippet": "arc-components/components/blocks/contact-section/contact-section.snippet.tsx",
+      "meta": "components/blocks/contact-section/contact-section.meta.md",
+      "when": "A validated contact form that morphs into a confirmation, support channels, and office cards with local times.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "contact-section",
+        "contact section",
+        "arc contact-section"
+      ]
+    },
+    {
+      "id": "context-menu",
+      "name": "Context menu",
+      "snippet": "arc-components/components/actions/context-menu/context-menu.snippet.tsx",
+      "meta": "components/actions/context-menu/context-menu.meta.md",
+      "when": "Secondary actions kept close to the selected object.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "context-menu",
+        "context menu",
+        "arc context-menu"
+      ]
+    },
+    {
+      "id": "copy-button",
+      "name": "Copy button",
+      "snippet": "arc-components/components/actions/copy-button/copy-button.snippet.tsx",
+      "meta": "components/actions/copy-button/copy-button.meta.md",
+      "when": "Copy a value with immediate confirmation.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "copy-button",
+        "copy button",
+        "arc copy-button"
+      ]
+    },
+    {
+      "id": "cta-section",
+      "name": "CTA section",
+      "snippet": "arc-components/components/blocks/cta-section/cta-section.snippet.tsx",
+      "meta": "components/blocks/cta-section/cta-section.meta.md",
+      "when": "A call to action as a centered closing section, a split beside a setup card that completes itself, or a dismissible banner.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "cta-section",
+        "cta section",
+        "arc cta-section"
+      ]
+    },
+    {
+      "id": "date-picker",
+      "name": "Date picker",
+      "snippet": "arc-components/components/inputs/date-picker/date-picker.snippet.tsx",
+      "meta": "components/inputs/date-picker/date-picker.meta.md",
+      "when": "Choose a date without losing context.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "date-picker",
+        "date picker",
+        "arc date-picker"
+      ]
+    },
+    {
+      "id": "date-range-picker",
+      "name": "Date range picker",
+      "snippet": "arc-components/components/inputs/date-range-picker/date-range-picker.snippet.tsx",
+      "meta": "components/inputs/date-range-picker/date-range-picker.meta.md",
+      "when": "A range picker that grows from its trigger into two months with presets and a stretching range highlight.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "date-range-picker",
+        "date range picker",
+        "arc date-range-picker"
+      ]
+    },
+    {
+      "id": "dialog",
+      "name": "Dialog",
+      "snippet": "arc-components/components/disclosure/dialog/dialog.snippet.tsx",
+      "meta": "components/disclosure/dialog/dialog.meta.md",
+      "when": "A focused surface for decisions that need attention.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "dialog",
+        "dialog",
+        "arc dialog"
+      ]
+    },
+    {
+      "id": "donut-chart",
+      "name": "Donut chart",
+      "snippet": "arc-components/components/data/donut-chart/donut-chart.snippet.tsx",
+      "meta": "components/data/donut-chart/donut-chart.meta.md",
+      "when": "A donut whose arcs morph between datasets, with the active value rolling into the center.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "donut-chart",
+        "donut chart",
+        "arc donut-chart"
+      ]
+    },
+    {
+      "id": "drawer",
+      "name": "Drawer",
+      "snippet": "arc-components/components/disclosure/drawer/drawer.snippet.tsx",
+      "meta": "components/disclosure/drawer/drawer.meta.md",
+      "when": "A temporary side surface for focused work.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "drawer",
+        "drawer",
+        "arc drawer"
+      ]
+    },
+    {
+      "id": "dropdown-menu",
+      "name": "Dropdown menu",
+      "snippet": "arc-components/components/actions/dropdown-menu/dropdown-menu.snippet.tsx",
+      "meta": "components/actions/dropdown-menu/dropdown-menu.meta.md",
+      "when": "A focused list of actions anchored to a trigger.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "dropdown-menu",
+        "dropdown menu",
+        "arc dropdown-menu"
+      ]
+    },
+    {
+      "id": "empty-state",
+      "name": "Empty state",
+      "snippet": "arc-components/components/data/empty-state/empty-state.snippet.tsx",
+      "meta": "components/data/empty-state/empty-state.meta.md",
+      "when": "A useful next step when there is nothing to show yet.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "empty-state",
+        "empty state",
+        "arc empty-state"
+      ]
+    },
+    {
+      "id": "empty-states",
+      "name": "Empty states",
+      "snippet": "arc-components/components/blocks/empty-states/empty-states.snippet.tsx",
+      "meta": "components/blocks/empty-states/empty-states.meta.md",
+      "when": "Four empty states in one illustration whose shapes morph between scenes as you switch tabs.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "empty-states",
+        "empty states",
+        "arc empty-states"
+      ]
+    },
+    {
+      "id": "expandable-card",
+      "name": "Expandable card",
+      "snippet": "arc-components/components/disclosure/expandable-card/expandable-card.snippet.tsx",
+      "meta": "components/disclosure/expandable-card/expandable-card.meta.md",
+      "when": "Give a dense card more room when requested.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "expandable-card",
+        "expandable card",
+        "arc expandable-card"
+      ]
+    },
+    {
+      "id": "faq-section",
+      "name": "FAQ section",
+      "snippet": "arc-components/components/blocks/faq-section/faq-section.snippet.tsx",
+      "meta": "components/blocks/faq-section/faq-section.meta.md",
+      "when": "FAQs as an accordion, a topic rail, or a searchable list that highlights matches.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "faq-section",
+        "faq section",
+        "arc faq-section"
+      ]
+    },
+    {
+      "id": "file-dropzone",
+      "name": "File dropzone",
+      "snippet": "arc-components/components/inputs/file-dropzone/file-dropzone.snippet.tsx",
+      "meta": "components/inputs/file-dropzone/file-dropzone.meta.md",
+      "when": "A generous target for dropping one or more files.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "file-dropzone",
+        "file dropzone",
+        "arc file-dropzone"
+      ]
+    },
+    {
+      "id": "file-upload",
+      "name": "File upload",
+      "snippet": "arc-components/components/blocks/file-upload/file-upload.snippet.tsx",
+      "meta": "components/blocks/file-upload/file-upload.meta.md",
+      "when": "A complete file selection flow with constraints, progress, and error feedback.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "file-upload",
+        "file upload",
+        "arc file-upload"
+      ]
+    },
+    {
+      "id": "filter-toolbar",
+      "name": "Filter toolbar",
+      "snippet": "arc-components/components/data/filter-toolbar/filter-toolbar.snippet.tsx",
+      "meta": "components/data/filter-toolbar/filter-toolbar.meta.md",
+      "when": "Keep collection filters close and easy to reset.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "filter-toolbar",
+        "filter toolbar",
+        "arc filter-toolbar"
+      ]
+    },
+    {
+      "id": "gauge",
+      "name": "Gauge",
+      "snippet": "arc-components/components/data/gauge/gauge.snippet.tsx",
+      "meta": "components/data/gauge/gauge.meta.md",
+      "when": "Show a value against a known range.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "gauge",
+        "gauge",
+        "arc gauge"
+      ]
+    },
+    {
+      "id": "hero-section",
+      "name": "Hero section",
+      "snippet": "arc-components/components/blocks/hero-section/hero-section.snippet.tsx",
+      "meta": "components/blocks/hero-section/hero-section.meta.md",
+      "when": "Three full screen SaaS heroes: a live dashboard rising from the bottom edge over a drifting mesh, a workflow graph that routes sample events node by node, and editorial type over a mesh gradient.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "hero-section",
+        "hero section",
+        "arc hero-section"
+      ]
+    },
+    {
+      "id": "hold-to-confirm",
+      "name": "Hold to confirm",
+      "snippet": "arc-components/components/actions/hold-to-confirm/hold-to-confirm.snippet.tsx",
+      "meta": "components/actions/hold-to-confirm/hold-to-confirm.meta.md",
+      "when": "Confirm a destructive action by holding, not tapping.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "hold-to-confirm",
+        "hold to confirm",
+        "arc hold-to-confirm"
+      ]
+    },
+    {
+      "id": "hover-card",
+      "name": "Hover card",
+      "snippet": "arc-components/components/disclosure/hover-card/hover-card.snippet.tsx",
+      "meta": "components/disclosure/hover-card/hover-card.meta.md",
+      "when": "Preview a person or link on hover or focus without leaving the page.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "hover-card",
+        "hover card",
+        "arc hover-card"
+      ]
+    },
+    {
+      "id": "image-compare",
+      "name": "Image compare",
+      "snippet": "arc-components/components/data/image-compare/image-compare.snippet.tsx",
+      "meta": "components/data/image-compare/image-compare.meta.md",
+      "when": "Drag a divider across two images to see what changed.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "image-compare",
+        "image compare",
+        "arc image-compare"
+      ]
+    },
+    {
+      "id": "in-view-title",
+      "name": "In-view title",
+      "snippet": "arc-components/components/text/in-view-title/in-view-title.snippet.tsx",
+      "meta": "components/text/in-view-title/in-view-title.meta.md",
+      "when": "Bring a section title in as it scrolls into view.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "in-view-title",
+        "in view title",
+        "arc in-view-title"
+      ]
+    },
+    {
+      "id": "inline-edit",
+      "name": "Inline edit",
+      "snippet": "arc-components/components/inputs/inline-edit/inline-edit.snippet.tsx",
+      "meta": "components/inputs/inline-edit/inline-edit.meta.md",
+      "when": "Rename in place: the text becomes a field without moving.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "inline-edit",
+        "inline edit",
+        "arc inline-edit"
+      ]
+    },
+    {
+      "id": "input",
+      "name": "Input",
+      "snippet": "arc-components/components/inputs/input/input.snippet.tsx",
+      "meta": "components/inputs/input/input.meta.md",
+      "when": "A single line field with clear labels and useful states.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "input",
+        "input",
+        "arc input"
+      ]
+    },
+    {
+      "id": "line-chart",
+      "name": "Line chart",
+      "snippet": "arc-components/components/data/line-chart/line-chart.snippet.tsx",
+      "meta": "components/data/line-chart/line-chart.meta.md",
+      "when": "A multi-series line chart with a gliding crosshair, legend toggles, and paths that morph between ranges.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "line-chart",
+        "line chart",
+        "arc line-chart"
+      ]
+    },
+    {
+      "id": "login-centered",
+      "name": "Centered login",
+      "snippet": "arc-components/components/blocks/login-centered/login-centered.snippet.tsx",
+      "meta": "components/blocks/login-centered/login-centered.meta.md",
+      "when": "A passkey-first login card on a quiet ring backdrop that morphs through email and code.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "login-centered",
+        "login centered",
+        "arc login-centered"
+      ]
+    },
+    {
+      "id": "logo-marquee",
+      "name": "Logo marquee",
+      "snippet": "arc-components/components/blocks/logo-marquee/logo-marquee.snippet.tsx",
+      "meta": "components/blocks/logo-marquee/logo-marquee.meta.md",
+      "when": "A quiet, continuously moving row of brand marks with a pause control.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "logo-marquee",
+        "logo marquee",
+        "arc logo-marquee"
+      ]
+    },
+    {
+      "id": "mention-input",
+      "name": "Mention input",
+      "snippet": "arc-components/components/inputs/mention-input/mention-input.snippet.tsx",
+      "meta": "components/inputs/mention-input/mention-input.meta.md",
+      "when": "A textarea with @people and #channel mentions that act as single tokens, with suggestions at the caret.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "mention-input",
+        "mention input",
+        "arc mention-input"
+      ]
+    },
+    {
+      "id": "metric-card",
+      "name": "Metric card",
+      "snippet": "arc-components/components/data/metric-card/metric-card.snippet.tsx",
+      "meta": "components/data/metric-card/metric-card.meta.md",
+      "when": "A compact summary for a number that needs context.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "metric-card",
+        "metric card",
+        "arc metric-card"
+      ]
+    },
+    {
+      "id": "multi-select",
+      "name": "Multi-select",
+      "snippet": "arc-components/components/inputs/multi-select/multi-select.snippet.tsx",
+      "meta": "components/inputs/multi-select/multi-select.meta.md",
+      "when": "Select several values while keeping the field readable.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "multi-select",
+        "multi select",
+        "arc multi-select"
+      ]
+    },
+    {
+      "id": "newsletter-signup",
+      "name": "Newsletter signup",
+      "snippet": "arc-components/components/blocks/newsletter-signup/newsletter-signup.snippet.tsx",
+      "meta": "components/blocks/newsletter-signup/newsletter-signup.meta.md",
+      "when": "An email signup framed by a stack of past issues; subscribing drops the next issue, addressed to you, onto the front.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "newsletter-signup",
+        "newsletter signup",
+        "arc newsletter-signup"
+      ]
+    },
+    {
+      "id": "notification-center",
+      "name": "Notification center",
+      "snippet": "arc-components/components/blocks/notification-center/notification-center.snippet.tsx",
+      "meta": "components/blocks/notification-center/notification-center.meta.md",
+      "when": "A home for updates with read state, grouped information, and animated disclosure.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "notification-center",
+        "notification center",
+        "arc notification-center"
+      ]
+    },
+    {
+      "id": "number-field",
+      "name": "Number field",
+      "snippet": "arc-components/components/inputs/number-field/number-field.snippet.tsx",
+      "meta": "components/inputs/number-field/number-field.meta.md",
+      "when": "Enter a bounded number with clear increment controls.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "number-field",
+        "number field",
+        "arc number-field"
+      ]
+    },
+    {
+      "id": "arc-otp-input",
+      "name": "OTP input",
+      "snippet": "arc-components/components/blocks/arc-otp-input/arc-otp-input.snippet.tsx",
+      "meta": "components/blocks/arc-otp-input/arc-otp-input.meta.md",
+      "when": "A six digit verification flow with paste support and keyboard navigation.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "arc-otp-input",
+        "arc otp input",
+        "arc arc-otp-input"
+      ]
+    },
+    {
+      "id": "page-header",
+      "name": "Page header",
+      "snippet": "arc-components/components/blocks/page-header/page-header.snippet.tsx",
+      "meta": "components/blocks/page-header/page-header.meta.md",
+      "when": "A project page header that folds into a compact bar as you scroll, with tabs whose counts roll.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "page-header",
+        "page header",
+        "arc page-header"
+      ]
+    },
+    {
+      "id": "pagination",
+      "name": "Pagination",
+      "snippet": "arc-components/components/data/pagination/pagination.snippet.tsx",
+      "meta": "components/data/pagination/pagination.meta.md",
+      "when": "Move through a long collection with clear bounds.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "pagination",
+        "pagination",
+        "arc pagination"
+      ]
+    },
+    {
+      "id": "password-field",
+      "name": "Password field",
+      "snippet": "arc-components/components/inputs/password-field/password-field.snippet.tsx",
+      "meta": "components/inputs/password-field/password-field.meta.md",
+      "when": "Capture sensitive text with a visible reveal control.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "password-field",
+        "password field",
+        "arc password-field"
+      ]
+    },
+    {
+      "id": "phone-input",
+      "name": "Phone input",
+      "snippet": "arc-components/components/inputs/phone-input/phone-input.snippet.tsx",
+      "meta": "components/inputs/phone-input/phone-input.meta.md",
+      "when": "A phone field with a country picker, formatting as you type, and E.164 output.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "phone-input",
+        "phone input",
+        "arc phone-input"
+      ]
+    },
+    {
+      "id": "plan-comparison",
+      "name": "Plan comparison",
+      "snippet": "arc-components/components/blocks/plan-comparison/plan-comparison.snippet.tsx",
+      "meta": "components/blocks/plan-comparison/plan-comparison.meta.md",
+      "when": "Compare meaningful differences between plans and billing periods.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "plan-comparison",
+        "plan comparison",
+        "arc plan-comparison"
+      ]
+    },
+    {
+      "id": "popover",
+      "name": "Popover",
+      "snippet": "arc-components/components/disclosure/popover/popover.snippet.tsx",
+      "meta": "components/disclosure/popover/popover.meta.md",
+      "when": "A small anchored surface for contextual information.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "popover",
+        "popover",
+        "arc popover"
+      ]
+    },
+    {
+      "id": "progress",
+      "name": "Progress",
+      "snippet": "arc-components/components/feedback/progress/progress.snippet.tsx",
+      "meta": "components/feedback/progress/progress.meta.md",
+      "when": "Show how much of a known task is complete.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "progress",
+        "progress",
+        "arc progress"
+      ]
+    },
+    {
+      "id": "radio-cards",
+      "name": "Radio cards",
+      "snippet": "arc-components/components/inputs/radio-cards/radio-cards.snippet.tsx",
+      "meta": "components/inputs/radio-cards/radio-cards.meta.md",
+      "when": "Selectable option cards with a sliding selection ring, price and description slots, and radio keyboard behavior.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "radio-cards",
+        "radio cards",
+        "arc radio-cards"
+      ]
+    },
+    {
+      "id": "radio-group",
+      "name": "Radio group",
+      "snippet": "arc-components/components/inputs/radio-group/radio-group.snippet.tsx",
+      "meta": "components/inputs/radio-group/radio-group.meta.md",
+      "when": "Choose one option from a visible set.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "radio-group",
+        "radio group",
+        "arc radio-group"
+      ]
+    },
+    {
+      "id": "resizable-panels",
+      "name": "Resizable panels",
+      "snippet": "arc-components/components/disclosure/resizable-panels/resizable-panels.snippet.tsx",
+      "meta": "components/disclosure/resizable-panels/resizable-panels.meta.md",
+      "when": "Trade space between panes by dragging the divider between them.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "resizable-panels",
+        "resizable panels",
+        "arc resizable-panels"
+      ]
+    },
+    {
+      "id": "rich-text-editor",
+      "name": "Rich text editor",
+      "snippet": "arc-components/components/inputs/rich-text-editor/rich-text-editor.snippet.tsx",
+      "meta": "components/inputs/rich-text-editor/rich-text-editor.meta.md",
+      "when": "A lightweight editor with markdown shortcuts, a floating toolbar, a slash menu, and HTML and markdown output.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "rich-text-editor",
+        "rich text editor",
+        "arc rich-text-editor"
+      ]
+    },
+    {
+      "id": "ridgeline",
+      "name": "Ridgeline",
+      "snippet": "arc-components/components/data/ridgeline/ridgeline.snippet.tsx",
+      "meta": "components/data/ridgeline/ridgeline.meta.md",
+      "when": "Overlapping distributions, one ridge per group: hover to lift a ridge and read its quartiles, switch datasets and every curve morphs.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "ridgeline",
+        "ridgeline",
+        "arc ridgeline"
+      ]
+    },
+    {
+      "id": "scroll-area",
+      "name": "Scroll area",
+      "snippet": "arc-components/components/disclosure/scroll-area/scroll-area.snippet.tsx",
+      "meta": "components/disclosure/scroll-area/scroll-area.meta.md",
+      "when": "A native scroll container with thin overlay scrollbars and edge fades that appear only when content overflows.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "scroll-area",
+        "scroll area",
+        "arc scroll-area"
+      ]
+    },
+    {
+      "id": "search-field",
+      "name": "Search field",
+      "snippet": "arc-components/components/inputs/search-field/search-field.snippet.tsx",
+      "meta": "components/inputs/search-field/search-field.meta.md",
+      "when": "A recognizable search entry point with clear affordances.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "search-field",
+        "search field",
+        "arc search-field"
+      ]
+    },
+    {
+      "id": "segmented-control",
+      "name": "Segmented control",
+      "snippet": "arc-components/components/inputs/segmented-control/segmented-control.snippet.tsx",
+      "meta": "components/inputs/segmented-control/segmented-control.meta.md",
+      "when": "Switch between a small set of related views.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "segmented-control",
+        "segmented control",
+        "arc segmented-control"
+      ]
+    },
+    {
+      "id": "select",
+      "name": "Select",
+      "snippet": "arc-components/components/inputs/select/select.snippet.tsx",
+      "meta": "components/inputs/select/select.meta.md",
+      "when": "A compact choice field with a keyboard friendly menu.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "select",
+        "select",
+        "arc select"
+      ]
+    },
+    {
+      "id": "shortcut-recorder",
+      "name": "Shortcut recorder",
+      "snippet": "arc-components/components/inputs/shortcut-recorder/shortcut-recorder.snippet.tsx",
+      "meta": "components/inputs/shortcut-recorder/shortcut-recorder.meta.md",
+      "when": "Record key combinations into key caps, with conflict warnings, Kbd, and a searchable cheatsheet.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "shortcut-recorder",
+        "shortcut recorder",
+        "arc shortcut-recorder"
+      ]
+    },
+    {
+      "id": "sign-in",
+      "name": "Sign in",
+      "snippet": "arc-components/components/blocks/sign-in/sign-in.snippet.tsx",
+      "meta": "components/blocks/sign-in/sign-in.meta.md",
+      "when": "A sign in card that morphs from email to a six digit code to your account.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "sign-in",
+        "sign in",
+        "arc sign-in"
+      ]
+    },
+    {
+      "id": "signature-pad",
+      "name": "Signature pad",
+      "snippet": "arc-components/components/inputs/signature-pad/signature-pad.snippet.tsx",
+      "meta": "components/inputs/signature-pad/signature-pad.meta.md",
+      "when": "Smooth ink that thins with speed, with undo, replay, and PNG or SVG export.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "signature-pad",
+        "signature pad",
+        "arc signature-pad"
+      ]
+    },
+    {
+      "id": "signup-form",
+      "name": "Sign up form",
+      "snippet": "arc-components/components/blocks/signup-form/signup-form.snippet.tsx",
+      "meta": "components/blocks/signup-form/signup-form.meta.md",
+      "when": "An account creation flow with field validation, password strength, and a clear completion state.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "signup-form",
+        "signup form",
+        "arc signup-form"
+      ]
+    },
+    {
+      "id": "site-footer",
+      "name": "Site footer",
+      "snippet": "arc-components/components/blocks/site-footer/site-footer.snippet.tsx",
+      "meta": "components/blocks/site-footer/site-footer.meta.md",
+      "when": "A website footer with link columns and newsletter, a minimal layout, and a large fading Arc mark.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "site-footer",
+        "site footer",
+        "arc site-footer"
+      ]
+    },
+    {
+      "id": "site-header",
+      "name": "Site header",
+      "snippet": "arc-components/components/blocks/site-header/site-header.snippet.tsx",
+      "meta": "components/blocks/site-header/site-header.meta.md",
+      "when": "A sticky website header that turns solid on scroll, with a gliding active link, mega menu panels, and a mobile sheet.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "site-header",
+        "site header",
+        "arc site-header"
+      ]
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "snippet": "arc-components/components/feedback/skeleton/skeleton.snippet.tsx",
+      "meta": "components/feedback/skeleton/skeleton.meta.md",
+      "when": "Reserve space while content is still loading.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "skeleton",
+        "skeleton",
+        "arc skeleton"
+      ]
+    },
+    {
+      "id": "slider",
+      "name": "Slider",
+      "snippet": "arc-components/components/inputs/slider/slider.snippet.tsx",
+      "meta": "components/inputs/slider/slider.meta.md",
+      "when": "Pick a value or a range on a track that follows your finger.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "slider",
+        "slider",
+        "arc slider"
+      ]
+    },
+    {
+      "id": "slope-chart",
+      "name": "Slope chart",
+      "snippet": "arc-components/components/data/slope-chart/slope-chart.snippet.tsx",
+      "meta": "components/data/slope-chart/slope-chart.meta.md",
+      "when": "Before and after on two axes: lines draw in, rank moves sit beside each value, and switching datasets slides every line to its new slope.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "slope-chart",
+        "slope chart",
+        "arc slope-chart"
+      ]
+    },
+    {
+      "id": "slot-text",
+      "name": "Slot text",
+      "snippet": "arc-components/components/special/slot-text/slot-text.snippet.tsx",
+      "meta": "components/special/slot-text/slot-text.meta.md",
+      "when": "Text and numbers that spin into their new value on staggered slot machine reels.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "slot-text",
+        "slot text",
+        "arc slot-text"
+      ]
+    },
+    {
+      "id": "sortable-data-table",
+      "name": "Sortable data table",
+      "snippet": "arc-components/components/data/sortable-data-table/sortable-data-table.snippet.tsx",
+      "meta": "components/data/sortable-data-table/sortable-data-table.meta.md",
+      "when": "Compare structured records with sortable columns.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "sortable-data-table",
+        "sortable data table",
+        "arc sortable-data-table"
+      ]
+    },
+    {
+      "id": "sparkline",
+      "name": "Sparkline",
+      "snippet": "arc-components/components/data/sparkline/sparkline.snippet.tsx",
+      "meta": "components/data/sparkline/sparkline.meta.md",
+      "when": "Show a compact trend beside a value.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "sparkline",
+        "sparkline",
+        "arc sparkline"
+      ]
+    },
+    {
+      "id": "split-button",
+      "name": "Split button",
+      "snippet": "arc-components/components/actions/split-button/split-button.snippet.tsx",
+      "meta": "components/actions/split-button/split-button.meta.md",
+      "when": "A primary action with a menu of nearby alternatives.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "split-button",
+        "split button",
+        "arc split-button"
+      ]
+    },
+    {
+      "id": "stats-band",
+      "name": "Stats band",
+      "snippet": "arc-components/components/blocks/stats-band/stats-band.snippet.tsx",
+      "meta": "components/blocks/stats-band/stats-band.meta.md",
+      "when": "Headline numbers that count up in view, each with a tiny visual that proves it and a context line on hover, plain or in a hairline grid.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "stats-band",
+        "stats band",
+        "arc stats-band"
+      ]
+    },
+    {
+      "id": "stepper",
+      "name": "Stepper",
+      "snippet": "arc-components/components/feedback/stepper/stepper.snippet.tsx",
+      "meta": "components/feedback/stepper/stepper.meta.md",
+      "when": "Show where a person is in a multi-step flow and what is done.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "stepper",
+        "stepper",
+        "arc stepper"
+      ]
+    },
+    {
+      "id": "streamgraph",
+      "name": "Streamgraph",
+      "snippet": "arc-components/components/data/streamgraph/streamgraph.snippet.tsx",
+      "meta": "components/data/streamgraph/streamgraph.meta.md",
+      "when": "Layered streams on a wiggle baseline that morph between ranges, with a layer you can isolate and read week by week.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "streamgraph",
+        "streamgraph",
+        "arc streamgraph"
+      ]
+    },
+    {
+      "id": "swipe-actions",
+      "name": "Swipe actions",
+      "snippet": "arc-components/components/actions/swipe-actions/swipe-actions.snippet.tsx",
+      "meta": "components/actions/swipe-actions/swipe-actions.meta.md",
+      "when": "Reveal row actions with a swipe, or from the same actions in a menu.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "swipe-actions",
+        "swipe actions",
+        "arc swipe-actions"
+      ]
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "snippet": "arc-components/components/inputs/switch/switch.snippet.tsx",
+      "meta": "components/inputs/switch/switch.meta.md",
+      "when": "A tactile toggle for settings that take effect immediately.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "switch",
+        "switch",
+        "arc switch"
+      ]
+    },
+    {
+      "id": "tabs",
+      "name": "Tabs",
+      "snippet": "arc-components/components/disclosure/tabs/tabs.snippet.tsx",
+      "meta": "components/disclosure/tabs/tabs.meta.md",
+      "when": "Switch between related content in the same context.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "tabs",
+        "tabs",
+        "arc tabs"
+      ]
+    },
+    {
+      "id": "tag-input",
+      "name": "Tag input",
+      "snippet": "arc-components/components/inputs/tag-input/tag-input.snippet.tsx",
+      "meta": "components/inputs/tag-input/tag-input.meta.md",
+      "when": "Turn short text values into removable tags.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "tag-input",
+        "tag input",
+        "arc tag-input"
+      ]
+    },
+    {
+      "id": "text-morph",
+      "name": "Text morph",
+      "snippet": "arc-components/components/text/text-morph/text-morph.snippet.tsx",
+      "meta": "components/text/text-morph/text-morph.meta.md",
+      "when": "Morph a label into its next state, letter by letter.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "text-morph",
+        "text morph",
+        "arc text-morph"
+      ]
+    },
+    {
+      "id": "text-reveal",
+      "name": "Text reveal",
+      "snippet": "arc-components/components/text/text-reveal/text-reveal.snippet.tsx",
+      "meta": "components/text/text-reveal/text-reveal.meta.md",
+      "when": "Reveal a short piece of content with restrained motion.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "text-reveal",
+        "text reveal",
+        "arc text-reveal"
+      ]
+    },
+    {
+      "id": "text-shimmer",
+      "name": "Text shimmer",
+      "snippet": "arc-components/components/text/text-shimmer/text-shimmer.snippet.tsx",
+      "meta": "components/text/text-shimmer/text-shimmer.meta.md",
+      "when": "Show ongoing work with a calm light across the words.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "text-shimmer",
+        "text shimmer",
+        "arc text-shimmer"
+      ]
+    },
+    {
+      "id": "textarea",
+      "name": "Textarea",
+      "snippet": "arc-components/components/inputs/textarea/textarea.snippet.tsx",
+      "meta": "components/inputs/textarea/textarea.meta.md",
+      "when": "A multiline field for notes, descriptions, and longer text.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "textarea",
+        "textarea",
+        "arc textarea"
+      ]
+    },
+    {
+      "id": "theme-switch-eclipse",
+      "name": "Eclipse",
+      "snippet": "arc-components/components/actions/theme-switch-eclipse/theme-switch-eclipse.snippet.tsx",
+      "meta": "components/actions/theme-switch-eclipse/theme-switch-eclipse.meta.md",
+      "when": "The next appearance crosses the page like an eclipse.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "theme-switch-eclipse",
+        "theme switch eclipse",
+        "arc theme-switch-eclipse"
+      ]
+    },
+    {
+      "id": "theme-switch-rise",
+      "name": "Rise",
+      "snippet": "arc-components/components/actions/theme-switch-rise/theme-switch-rise.snippet.tsx",
+      "meta": "components/actions/theme-switch-rise/theme-switch-rise.meta.md",
+      "when": "The next appearance rises into place.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "theme-switch-rise",
+        "theme switch rise",
+        "arc theme-switch-rise"
+      ]
+    },
+    {
+      "id": "theme-switch-split",
+      "name": "Split",
+      "snippet": "arc-components/components/actions/theme-switch-split/theme-switch-split.snippet.tsx",
+      "meta": "components/actions/theme-switch-split/theme-switch-split.meta.md",
+      "when": "The next appearance opens from a slim center seam.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "theme-switch-split",
+        "theme switch split",
+        "arc theme-switch-split"
+      ]
+    },
+    {
+      "id": "theme-switch",
+      "name": "Theme switcher",
+      "snippet": "arc-components/components/actions/theme-switch/theme-switch.snippet.tsx",
+      "meta": "components/actions/theme-switch/theme-switch.meta.md",
+      "when": "Four smooth ways to move between light and dark appearance.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "theme-switch",
+        "theme switch",
+        "arc theme-switch"
+      ]
+    },
+    {
+      "id": "time-picker",
+      "name": "Time picker",
+      "snippet": "arc-components/components/inputs/time-picker/time-picker.snippet.tsx",
+      "meta": "components/inputs/time-picker/time-picker.meta.md",
+      "when": "Choose a time with sensible keyboard behavior.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "time-picker",
+        "time picker",
+        "arc time-picker"
+      ]
+    },
+    {
+      "id": "timeline",
+      "name": "Timeline",
+      "snippet": "arc-components/components/data/timeline/timeline.snippet.tsx",
+      "meta": "components/data/timeline/timeline.meta.md",
+      "when": "Follow what happened, newest first, grouped by day.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "timeline",
+        "timeline",
+        "arc timeline"
+      ]
+    },
+    {
+      "id": "toast-stack",
+      "name": "Toast stack",
+      "snippet": "arc-components/components/feedback/toast-stack/toast-stack.snippet.tsx",
+      "meta": "components/feedback/toast-stack/toast-stack.meta.md",
+      "when": "Stack short results at the edge until you reach for them.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "toast-stack",
+        "toast stack",
+        "arc toast-stack"
+      ]
+    },
+    {
+      "id": "toast",
+      "name": "Toast",
+      "snippet": "arc-components/components/feedback/toast/toast.snippet.tsx",
+      "meta": "components/feedback/toast/toast.meta.md",
+      "when": "Brief confirmation for a completed background action.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "toast",
+        "toast",
+        "arc toast"
+      ]
+    },
+    {
+      "id": "tooltip",
+      "name": "Tooltip",
+      "snippet": "arc-components/components/disclosure/tooltip/tooltip.snippet.tsx",
+      "meta": "components/disclosure/tooltip/tooltip.meta.md",
+      "when": "Short supporting text for unfamiliar controls.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "tooltip",
+        "tooltip",
+        "arc tooltip"
+      ]
+    },
+    {
+      "id": "tree-view",
+      "name": "Tree view",
+      "snippet": "arc-components/components/data/tree-view/tree-view.snippet.tsx",
+      "meta": "components/data/tree-view/tree-view.meta.md",
+      "when": "Navigate nested folders and structured content.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "tree-view",
+        "tree view",
+        "arc tree-view"
+      ]
+    },
+    {
+      "id": "treemap",
+      "name": "Treemap",
+      "snippet": "arc-components/components/data/treemap/treemap.snippet.tsx",
+      "meta": "components/data/treemap/treemap.meta.md",
+      "when": "A squarified treemap: click to drill and the tiles grow to fill the view, with a breadcrumb back and metrics that morph every tile.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "treemap",
+        "treemap",
+        "arc treemap"
+      ]
+    },
+    {
+      "id": "usage-meter",
+      "name": "Usage meter",
+      "snippet": "arc-components/components/feedback/usage-meter/usage-meter.snippet.tsx",
+      "meta": "components/feedback/usage-meter/usage-meter.meta.md",
+      "when": "Show what fills an allowance and how close it is to the limit.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "usage-meter",
+        "usage meter",
+        "arc usage-meter"
+      ]
+    },
+    {
+      "id": "user-menu",
+      "name": "User menu",
+      "snippet": "arc-components/components/actions/user-menu/user-menu.snippet.tsx",
+      "meta": "components/actions/user-menu/user-menu.meta.md",
+      "when": "Your account, settings, theme, and sign out behind the avatar. Opens as a bottom sheet on phones.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "user-menu",
+        "user menu",
+        "arc user-menu"
+      ]
+    },
+    {
+      "id": "waffle-chart",
+      "name": "Waffle chart",
+      "snippet": "arc-components/components/data/waffle-chart/waffle-chart.snippet.tsx",
+      "meta": "components/data/waffle-chart/waffle-chart.meta.md",
+      "when": "A ten by ten unit chart where every cell is one percent, and cells fly to their new group when the data changes.",
+      "when_not": "Static non-JavaScript HTML pages or heavy 3D particle viewports.",
+      "keywords": [
+        "waffle-chart",
+        "waffle chart",
+        "arc waffle-chart"
+      ]
+    }
+  ]
+}

@@ -1,19 +1,120 @@
 {
   "schema_version": 1,
   "components": {
+    "accordion": [
+      "@radix-ui/react-accordion",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "action-button": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "activity-heatmap": [
+      "motion",
+      "react"
+    ],
     "agent-screen": [],
+    "alert": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "animated-counter": [
+      "motion",
+      "react"
+    ],
     "animated-search-demo": [
       "framer-motion",
       "lucide-react",
       "react"
     ],
+    "announcement-bar": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "approval-card": [],
+    "arc-otp-input": [
+      "motion",
+      "react"
+    ],
     "arch-card-carousel": [
+      "react"
+    ],
+    "avatar": [
+      "motion",
+      "next",
+      "react"
+    ],
+    "avatar-group": [
+      "motion",
+      "react"
+    ],
+    "badge": [
+      "motion",
+      "react"
+    ],
+    "bar-chart": [
+      "motion",
+      "react"
+    ],
+    "billing-toggle": [
+      "motion",
+      "react"
+    ],
+    "blog-grid": [
+      "lucide-react",
+      "motion",
       "react"
     ],
     "book-a-call-button": [
       "framer-motion",
       "lucide-react",
+      "react"
+    ],
+    "bottom-sheet": [
+      "@radix-ui/react-dialog",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "breadcrumb": [
+      "lucide-react",
+      "motion",
+      "next",
+      "react"
+    ],
+    "brush-chart": [
+      "motion",
+      "react"
+    ],
+    "button": [
+      "motion",
+      "react"
+    ],
+    "calendar": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "card": [
+      "@radix-ui/react-dialog",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "carousel": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "changelog-feed": [
+      "lucide-react",
+      "motion",
+      "next",
       "react"
     ],
     "character-scramble-text": [
@@ -22,13 +123,92 @@
       "react"
     ],
     "chat-composer": [],
+    "chat-thread": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "checkbox": [
+      "@radix-ui/react-checkbox",
+      "motion",
+      "react"
+    ],
+    "chip-group": [
+      "motion",
+      "react"
+    ],
     "chrome-border-button": [
       "framer-motion",
       "lucide-react",
       "react"
     ],
-    "code-block": [],
+    "code-block": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "color-picker": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "combobox": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "command-palette": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "comment-thread": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "comparison-table": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "confirm-morph": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "contact-section": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "context-cards": [],
+    "context-menu": [
+      "lucide-react",
+      "motion",
+      "react",
+      "react-dom"
+    ],
+    "copy-button": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "cta-section": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "date-picker": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "date-range-picker": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "day-night-sky-toggle": [
       "framer-motion",
       "react"
@@ -37,12 +217,68 @@
       "framer-motion",
       "react"
     ],
+    "dialog": [
+      "@radix-ui/react-dialog",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "diff-table": [],
+    "donut-chart": [
+      "motion",
+      "react"
+    ],
+    "drawer": [
+      "@radix-ui/react-dialog",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "dropdown-menu": [
+      "@radix-ui/react-dropdown-menu",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "editorial-3-d-orbit-carousel": [
       "framer-motion",
       "react"
     ],
+    "empty-state": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "empty-states": [
+      "motion",
+      "react"
+    ],
+    "expandable-card": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "faq-section": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "file-dropzone": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "file-upload": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "filter-table": [],
+    "filter-toolbar": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "fine-tune-card": [],
     "flip-3-d-text": [
       "framer-motion",
@@ -53,6 +289,10 @@
     "fluid-morph-orb": [
       "react",
       "three"
+    ],
+    "gauge": [
+      "motion",
+      "react"
     ],
     "glass-orb-toggle": [
       "framer-motion",
@@ -71,6 +311,37 @@
     "hero-morph-navbar": [
       "framer-motion",
       "lucide-react",
+      "react"
+    ],
+    "hero-section": [
+      "react"
+    ],
+    "hold-to-confirm": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "hover-card": [
+      "@radix-ui/react-popover",
+      "motion",
+      "react"
+    ],
+    "image-compare": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "in-view-title": [
+      "motion",
+      "react"
+    ],
+    "inline-edit": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "input": [
+      "motion",
       "react"
     ],
     "input-otp": [],
@@ -112,7 +383,20 @@
     "ld-swirl": [],
     "ld-trace": [],
     "ld-wave": [],
+    "line-chart": [
+      "motion",
+      "react"
+    ],
     "loading-state": [],
+    "login-centered": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "logo-marquee": [
+      "lucide-react",
+      "react"
+    ],
     "magnetic-pill-navbar": [
       "framer-motion",
       "react"
@@ -121,8 +405,22 @@
       "react",
       "three"
     ],
+    "mention-input": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "metric-card": [
+      "motion",
+      "react"
+    ],
     "morph-search-capsule": [
       "framer-motion",
+      "react"
+    ],
+    "multi-select": [
+      "lucide-react",
+      "motion",
       "react"
     ],
     "neumorphic-download-button": [
@@ -130,12 +428,50 @@
       "lucide-react",
       "react"
     ],
+    "newsletter-signup": [
+      "lucide-react",
+      "motion",
+      "next",
+      "react"
+    ],
+    "notification-center": [
+      "@radix-ui/react-popover",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "number-field": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "page-header": [
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-tabs",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "pagination": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "particle-dot-orb": [
       "react",
       "three"
     ],
+    "password-field": [
+      "motion",
+      "react"
+    ],
     "perspective-flip-deck": [
       "framer-motion",
+      "react"
+    ],
+    "phone-input": [
+      "lucide-react",
+      "motion",
       "react"
     ],
     "pill-expand-navbar": [
@@ -143,7 +479,29 @@
       "lucide-react",
       "react"
     ],
+    "plan-comparison": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "popover": [
+      "@radix-ui/react-popover",
+      "react"
+    ],
+    "progress": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "prompt-bar": [],
+    "radio-cards": [
+      "motion",
+      "react"
+    ],
+    "radio-group": [
+      "motion",
+      "react"
+    ],
     "rainbow-button": [
       "framer-motion",
       "lucide-react",
@@ -151,18 +509,117 @@
     ],
     "recommendation-card": [],
     "records-table": [],
+    "resizable-panels": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "rich-text-editor": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "ridgeline": [
+      "motion",
+      "react"
+    ],
+    "scroll-area": [
+      "react"
+    ],
     "search": [],
+    "search-field": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "segmented-control": [
+      "motion",
+      "react"
+    ],
+    "select": [
+      "@radix-ui/react-select",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "selection-actions": [],
     "shimmer-button": [
       "framer-motion",
       "lucide-react",
       "react"
     ],
+    "shortcut-recorder": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "sidebar-nav": [],
+    "sign-in": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "signature-pad": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "signup-form": [
+      "motion",
+      "react"
+    ],
+    "site-footer": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "site-header": [
+      "lucide-react",
+      "motion",
+      "next",
+      "react"
+    ],
+    "skeleton": [
+      "motion",
+      "react"
+    ],
     "slide-to-confirm-button": [
       "framer-motion",
       "lucide-react",
       "react"
+    ],
+    "slider": [
+      "motion",
+      "react"
+    ],
+    "slope-chart": [
+      "motion",
+      "react"
+    ],
+    "slot-text": [
+      "motion",
+      "react"
+    ],
+    "sortable-data-table": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "sparkline": [
+      "motion",
+      "react"
+    ],
+    "split-button": [
+      "@radix-ui/react-dropdown-menu",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "split-showcase": [
+      "clsx",
+      "motion",
+      "react",
+      "tailwind-merge"
     ],
     "split-text-reveal": [
       "framer-motion",
@@ -173,8 +630,77 @@
       "lucide-react",
       "react"
     ],
+    "stats-band": [
+      "motion",
+      "react"
+    ],
+    "stepper": [
+      "motion",
+      "react"
+    ],
+    "streamgraph": [
+      "motion",
+      "react"
+    ],
     "streaming-text": [],
+    "swipe-actions": [
+      "@radix-ui/react-dropdown-menu",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "switch": [
+      "@radix-ui/react-switch",
+      "motion",
+      "react"
+    ],
+    "tabs": [
+      "@radix-ui/react-tabs",
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "tag-input": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "task-rows": [],
+    "text-morph": [
+      "motion",
+      "react"
+    ],
+    "text-reveal": [
+      "react"
+    ],
+    "text-shimmer": [
+      "motion",
+      "react"
+    ],
+    "textarea": [
+      "motion",
+      "react"
+    ],
+    "theme-switch": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "theme-switch-eclipse": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "theme-switch-rise": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "theme-switch-split": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "theme-toggle-around": [],
     "theme-toggle-classic": [],
     "theme-toggle-dark-inner": [],
@@ -190,15 +716,64 @@
     "theme-toggle-spin": [],
     "theme-toggle-within": [],
     "thinking-state": [],
+    "time-picker": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "timeline": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "toast": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "toast-stack": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
     "tool-chips": [],
+    "tooltip": [
+      "@radix-ui/react-tooltip",
+      "motion",
+      "react"
+    ],
+    "tree-view": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "treemap": [
+      "motion",
+      "react"
+    ],
     "typewriter-text": [
       "framer-motion",
       "lucide-react",
       "react"
     ],
+    "usage-meter": [
+      "lucide-react",
+      "motion",
+      "react"
+    ],
+    "user-menu": [
+      "lucide-react",
+      "motion",
+      "react",
+      "react-dom"
+    ],
     "velocity-marquee-text": [
       "framer-motion",
       "lucide-react",
+      "react"
+    ],
+    "waffle-chart": [
+      "motion",
       "react"
     ]
   }
