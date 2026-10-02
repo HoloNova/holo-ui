@@ -100,6 +100,9 @@ Holo UI 提供官方发布的 MCP Server（[`holo-ui-mcp`](https://pypi.org/proj
 | [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | 动态物理动效 (`stripe-fluid` / `framer-motion`) | 30 | [`DESIGN.md`](./rewampui-components/DESIGN.md) | React 19 + Framer Motion | 完整就绪 |
 | [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | 微动效与微状态指示器（纯 CSS/SVG、零运行时、a11y） | 29 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | 完整就绪 |
 | [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | 极简日夜主题切换（纯 CSS/SVG、零运行时、1em 矢量） | 14 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | 完整就绪 |
+| [`localmode-components`](./localmode-components/) | [localmode.ai](https://localmode.ai/) | 本地优先与端侧 AI 原语 (`local-first` / `webgpu-ai`) | 106 | [`DESIGN.md`](./localmode-components/DESIGN.md) | React + Tailwind v4 + shadcn Tokens | 完整就绪 |
+| [`arc-components`](./arc-components/) | [uiarc.dev](https://uiarc.dev/) | Arc 动态物理与 OKLCH 原语 (`arc-ui` / `motion-primitives`) | 119 | [`DESIGN.md`](./arc-components/DESIGN.md) | React 19 + Motion + OKLCH | 完整就绪 |
+| [`obsidianui-components`](./obsidianui-components/) | [obsidianui.com](https://obsidianui.com/) | Obsidian 触觉展示分栏卡片 (`obsidian-ui`) | 1 | [`DESIGN.md`](./obsidianui-components/DESIGN.md) | React + Framer Motion | 完整就绪 |
 
 ### B. 权威设计系统与 Tokens
 

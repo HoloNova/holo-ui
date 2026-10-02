@@ -12,11 +12,29 @@
       "motion",
       "react"
     ],
+    "actions": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "activity-heatmap": [
       "motion",
       "react"
     ],
+    "adaptive-batch-card": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "agent-screen": [],
+    "agent-step-timeline": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "alert": [
       "lucide-react",
       "motion",
@@ -44,6 +62,17 @@
     "arch-card-carousel": [
       "react"
     ],
+    "artifact": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "audio-scrub-player": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
     "avatar": [
       "motion",
       "next",
@@ -60,6 +89,11 @@
     "bar-chart": [
       "motion",
       "react"
+    ],
+    "before-after-image-viewer": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "billing-toggle": [
       "motion",
@@ -81,11 +115,27 @@
       "motion",
       "react"
     ],
+    "bounding-box-overlay": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "branch": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "breadcrumb": [
       "lucide-react",
       "motion",
       "next",
       "react"
+    ],
+    "browser-compat-card": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
     ],
     "brush-chart": [
       "motion",
@@ -95,10 +145,20 @@
       "motion",
       "react"
     ],
+    "cache-badge": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "calendar": [
       "lucide-react",
       "motion",
       "react"
+    ],
+    "capability-gate": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "card": [
       "@radix-ui/react-dialog",
@@ -111,16 +171,37 @@
       "motion",
       "react"
     ],
+    "category-facet-list": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "chain-of-thought": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "changelog-feed": [
       "lucide-react",
       "motion",
       "next",
       "react"
     ],
+    "char-limit-indicator": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "character-scramble-text": [
       "framer-motion",
       "lucide-react",
       "react"
+    ],
+    "chart-artifact": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "chat-composer": [],
     "chat-thread": [
@@ -137,15 +218,30 @@
       "motion",
       "react"
     ],
+    "chrome-ai-download-gate": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "chrome-border-button": [
       "framer-motion",
       "lucide-react",
       "react"
     ],
+    "chunk-boundary-visualizer": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
     "code-block": [
       "lucide-react",
       "motion",
       "react"
+    ],
+    "code-diff-viewer": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "color-picker": [
       "lucide-react",
@@ -172,6 +268,10 @@
       "motion",
       "react"
     ],
+    "confidence-score-badge": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "confirm-morph": [
       "lucide-react",
       "motion",
@@ -189,15 +289,36 @@
       "react",
       "react-dom"
     ],
+    "context-usage-meter": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "conversation": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "copy-button": [
       "lucide-react",
       "motion",
       "react"
     ],
+    "cosine-similarity-meter": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "cta-section": [
       "lucide-react",
       "motion",
       "react"
+    ],
+    "data-table-artifact": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "date-picker": [
       "lucide-react",
@@ -213,6 +334,15 @@
       "framer-motion",
       "react"
     ],
+    "device-badge": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "device-capability-grid": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "diagonal-card-stack": [
       "framer-motion",
       "react"
@@ -224,6 +354,12 @@
       "react"
     ],
     "diff-table": [],
+    "differential-privacy-controls": [
+      "clsx",
+      "lucide-react",
+      "radix-ui",
+      "tailwind-merge"
+    ],
     "donut-chart": [
       "motion",
       "react"
@@ -240,9 +376,20 @@
       "motion",
       "react"
     ],
+    "editable-label-set": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "editorial-3-d-orbit-carousel": [
       "framer-motion",
       "react"
+    ],
+    "embedding-drift-banner": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
     ],
     "empty-state": [
       "lucide-react",
@@ -252,6 +399,30 @@
     "empty-states": [
       "motion",
       "react"
+    ],
+    "entity-relationship-graph": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "entity-stats-bar": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "error-alert": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "evaluation-metrics-dashboard": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "event-log-viewer": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "expandable-card": [
       "lucide-react",
@@ -289,6 +460,11 @@
     "fluid-morph-orb": [
       "react",
       "three"
+    ],
+    "format-detection-badge": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "gauge": [
       "motion",
@@ -331,9 +507,44 @@
       "motion",
       "react"
     ],
+    "image-processing-overlay": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "image-result-gallery": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "in-message-error": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "in-view-title": [
       "motion",
       "react"
+    ],
+    "indexed-document-card": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "inference-queue-monitor": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "inline-citation": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "inline-edit": [
       "lucide-react",
@@ -353,6 +564,11 @@
     "landscape-orb-toggle": [
       "framer-motion",
       "react"
+    ],
+    "language-pair-selector": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
     ],
     "ld-arc": [],
     "ld-atom": [],
@@ -387,7 +603,36 @@
       "motion",
       "react"
     ],
+    "lm-code-block": [
+      "clsx",
+      "lucide-react",
+      "shiki",
+      "tailwind-merge"
+    ],
+    "lm-copy-button": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "lm-file-dropzone": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "loader": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "loading-state": [],
+    "lock-status-badge": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "login-centered": [
       "lucide-react",
       "motion",
@@ -405,14 +650,87 @@
       "react",
       "three"
     ],
+    "mask-token-input": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "media-dropzone": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "mention-input": [
       "lucide-react",
       "motion",
       "react"
     ],
+    "message": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "metric-card": [
       "motion",
       "react"
+    ],
+    "mic-selector": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "mode-error-boundary": [
+      "react"
+    ],
+    "model-cache-table": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-catalog-card": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-comparison-panel": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-downloader": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-loading-panel": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-metadata-card": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-recommendation-card": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-search-browser": [
+      "clsx",
+      "cmdk",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "model-selector": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "morph-search-capsule": [
       "framer-motion",
@@ -422,6 +740,11 @@
       "lucide-react",
       "motion",
       "react"
+    ],
+    "network-badge": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
     ],
     "neumorphic-download-button": [
       "framer-motion",
@@ -445,6 +768,12 @@
       "motion",
       "react"
     ],
+    "option-list": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "page-header": [
       "@radix-ui/react-dropdown-menu",
       "@radix-ui/react-tabs",
@@ -457,13 +786,29 @@
       "motion",
       "react"
     ],
+    "parameter-slider": [
+      "clsx",
+      "radix-ui",
+      "react",
+      "tailwind-merge"
+    ],
     "particle-dot-orb": [
       "react",
       "three"
     ],
+    "passphrase-gate": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "password-field": [
       "motion",
       "react"
+    ],
+    "password-strength-bar": [
+      "clsx",
+      "tailwind-merge"
     ],
     "perspective-flip-deck": [
       "framer-motion",
@@ -478,6 +823,17 @@
       "framer-motion",
       "lucide-react",
       "react"
+    ],
+    "pipeline-run-inspector": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "pipeline-tracker": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "plan-comparison": [
       "lucide-react",
@@ -494,6 +850,33 @@
       "react"
     ],
     "prompt-bar": [],
+    "prompt-enhance-button": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "prompt-input": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "prompt-input-attachments": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "provider-badge": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "provider-fallback-badge": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "radio-cards": [
       "motion",
       "react"
@@ -507,12 +890,27 @@
       "lucide-react",
       "react"
     ],
+    "reasoning": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "recommendation-card": [],
     "records-table": [],
+    "redacted-text-display": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "resizable-panels": [
       "lucide-react",
       "motion",
       "react"
+    ],
+    "response": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "rich-text-editor": [
       "lucide-react",
@@ -523,8 +921,18 @@
       "motion",
       "react"
     ],
+    "scored-result-bar-list": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "scroll-area": [
       "react"
+    ],
+    "scroll-to-bottom-button": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "search": [],
     "search-field": [
@@ -536,6 +944,10 @@
       "motion",
       "react"
     ],
+    "segmented-mode-picker": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "select": [
       "@radix-ui/react-select",
       "lucide-react",
@@ -543,6 +955,11 @@
       "react"
     ],
     "selection-actions": [],
+    "semantic-cache-status-bar": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "shimmer-button": [
       "framer-motion",
       "lucide-react",
@@ -583,6 +1000,11 @@
       "motion",
       "react"
     ],
+    "slash-command-palette": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
     "slide-to-confirm-button": [
       "framer-motion",
       "lucide-react",
@@ -604,6 +1026,18 @@
       "lucide-react",
       "motion",
       "react"
+    ],
+    "source-citation-list": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "sources": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "sparkline": [
       "motion",
@@ -638,11 +1072,31 @@
       "motion",
       "react"
     ],
+    "storage-meter": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "streamgraph": [
       "motion",
       "react"
     ],
+    "streaming-speech-panel": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
     "streaming-text": [],
+    "structured-output-viewer": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "suggestions": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
     "swipe-actions": [
       "@radix-ui/react-dropdown-menu",
       "lucide-react",
@@ -653,6 +1107,21 @@
       "@radix-ui/react-switch",
       "motion",
       "react"
+    ],
+    "synced-transcript-viewer": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "system-notice-banner": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "system-prompt-editor": [
+      "clsx",
+      "tailwind-merge"
     ],
     "tabs": [
       "@radix-ui/react-tabs",
@@ -665,10 +1134,22 @@
       "motion",
       "react"
     ],
+    "task": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "task-rows": [],
     "text-morph": [
       "motion",
       "react"
+    ],
+    "text-processing-panel": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
     ],
     "text-reveal": [
       "react"
@@ -716,6 +1197,10 @@
     "theme-toggle-spin": [],
     "theme-toggle-within": [],
     "thinking-state": [],
+    "threshold-calibration-panel": [
+      "clsx",
+      "tailwind-merge"
+    ],
     "time-picker": [
       "lucide-react",
       "motion",
@@ -736,11 +1221,32 @@
       "motion",
       "react"
     ],
+    "tool": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
+    "tool-approval": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "tool-chips": [],
     "tooltip": [
       "@radix-ui/react-tooltip",
       "motion",
       "react"
+    ],
+    "top-result-card": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "transcribed-note-card": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ],
     "tree-view": [
       "lucide-react",
@@ -767,14 +1273,65 @@
       "react",
       "react-dom"
     ],
+    "vault-item-card": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "vector-export-panel": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "vector-import-flow": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
+    "vector-storage-observability": [
+      "clsx",
+      "lucide-react",
+      "tailwind-merge"
+    ],
     "velocity-marquee-text": [
       "framer-motion",
       "lucide-react",
       "react"
     ],
+    "video-canvas": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "voice-button": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "voice-comparison-panel": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "voice-orb": [
+      "clsx",
+      "react",
+      "tailwind-merge"
+    ],
+    "voice-picker": [
+      "clsx",
+      "lucide-react",
+      "react",
+      "tailwind-merge"
+    ],
     "waffle-chart": [
       "motion",
       "react"
+    ],
+    "waveform-activity-bars": [
+      "clsx",
+      "react",
+      "tailwind-merge"
     ]
   }
 }

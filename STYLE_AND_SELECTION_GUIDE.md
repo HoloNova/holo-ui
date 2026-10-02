@@ -86,6 +86,23 @@ Different design languages originate from distinct engineering and cultural cont
   - Full multi-step thinking traces with collapsible reasoning trees (use `thinking-state` from Beautiful UI).
   - High-impact hero assistant companion avatars (use 3D Fluid Orbs from Rewamp UI).
 
+
+### Style F: Local-First & Edge AI Primitives (`localmode-components`) — [`DESIGN.md`](./localmode-components/DESIGN.md)
+- **Visual DNA**: shadcn / Tailwind CSS v4 design tokens, client-side WebGPU/WASM hardware awareness, token budget meters, and on-device multi-modal UI.
+- **Key Signatures**:
+  - CSS variables conforming to shadcn specifications (`var(--background)`, `var(--card)`, `var(--border)`, `var(--primary)`).
+  - WebGPU, WASM, and IndexedDB capability probing (`device-badge`, `capability-gate`).
+  - Context token usage budgeting and window meters (`context-usage-meter`).
+  - On-device speech waveform activity bars (`waveform-activity-bars`) and audio transcription cards.
+  - Computer vision detection overlays and comparative image sliders.
+- **Applicable Scenarios**:
+  - In-browser AI inference and client-side model execution (Transformers.js, WebLLM, WebGPU).
+  - Cloud AI chat applications adopting standard shadcn / Tailwind CSS v4 design tokens.
+  - Displaying client device resource metrics (memory, cache, storage quota).
+- **Incompatible Scenarios**:
+  - Non-React static plain HTML pages without styling frameworks.
+  - Monolithic server-rendered backends with no concept of client-side compute.
+
 ### Style E: Minimalist Theme Toggles (`themetoggle-components`) — [`DESIGN.md`](./themetoggle-components/DESIGN.md)
 - **Visual DNA**: Pure CSS/SVG, zero-runtime, 1em scalable vector morphing, clip-path and path transitions, reduced-motion guards.
 - **Key Signatures**:
@@ -235,6 +252,12 @@ Refer to this matrix to select the leanest viable component for any given user p
 
 | User Intent | Minimal Recommended File | Prohibited Over-Assembly |
 |:---|:---|:---|
+| "Detect browser WebGPU/WASM capability" | `localmode-components/components/local-first/device-badge/device-badge.snippet.tsx` | Full model loading panels |
+| "Token budget / context window usage" | `localmode-components/components/local-first/context-usage-meter/context-usage-meter.snippet.tsx` | Heavy workspace dashboards |
+| "Voice activity bars / mic input state" | `localmode-components/components/audio/waveform-activity-bars/waveform-activity-bars.snippet.tsx` | Full audio workstation apps |
+| "Confidence score / similarity bar" | `localmode-components/components/results/scored-result-bar-list/scored-result-bar-list.snippet.tsx` | Complex database records table |
+| "Bounding box overlay for vision AI" | `localmode-components/components/media-vision/bounding-box-overlay/bounding-box-overlay.snippet.tsx` | Heavy 3D canvas viewports |
+
 | "Single-line AI prompt or quick search" | `beautifului-components/components/input/prompt-bar.snippet.html` | `input/chat-composer.snippet.html` |
 | "Full conversational chat window" | `beautifului-components/components/input/chat-composer.snippet.html` | `interaction/approval-card.snippet.html` |
 | "Display AI reasoning chain" | `beautifului-components/components/ai-states/thinking-state.snippet.html` | `data/records-table.snippet.html` |

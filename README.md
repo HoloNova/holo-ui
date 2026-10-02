@@ -100,6 +100,9 @@ If working from a local clone, launch directly via the bundled script:
 | [`rewampui-components`](./rewampui-components/) | [rewampui.com](https://rewampui.com/) | Kinetic Motion & Tactile Physics (`stripe-fluid`, `framer-motion`) | 30 | [`DESIGN.md`](./rewampui-components/DESIGN.md) | React 19 + Framer Motion | Complete |
 | [`loadingdev-components`](./loadingdev-components/) | [loading.dev](https://loading.dev/) | Micro-Motion Loaders & Spinners (Pure CSS/SVG, zero-runtime, a11y) | 29 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | Complete |
 | [`themetoggle-components`](./themetoggle-components/) | [toggles.dev](https://toggles.dev/) | Minimalist Theme Toggles (Pure CSS/SVG, zero-runtime, 1em vector) | 14 | `COMPONENTS_GUIDE.md` | Pure HTML/SVG + CSS Variables | Complete |
+| [`localmode-components`](./localmode-components/) | [localmode.ai](https://localmode.ai/) | Local-First & Edge AI Primitives (`local-first`, `webgpu-ai`) | 106 | [`DESIGN.md`](./localmode-components/DESIGN.md) | React + Tailwind v4 + shadcn Tokens | Complete |
+| [`arc-components`](./arc-components/) | [uiarc.dev](https://uiarc.dev/) | Arc Motion Primitives (`arc-ui`, `motion-primitives`) | 119 | [`DESIGN.md`](./arc-components/DESIGN.md) | React 19 + Motion + OKLCH | Complete |
+| [`obsidianui-components`](./obsidianui-components/) | [obsidianui.com](https://obsidianui.com/) | Obsidian Tactile Split Showcase (`obsidian-ui`) | 1 | [`DESIGN.md`](./obsidianui-components/DESIGN.md) | React + Framer Motion | Complete |
 
 ### B. Authoritative Design Systems & Tokens
 

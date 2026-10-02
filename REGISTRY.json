@@ -244,6 +244,27 @@
       "design_md": "arc-components/DESIGN.md",
       "shared_style": "arc-components/shared/base.css",
       "guide": "arc-components/COMPONENTS_GUIDE.md"
+    },
+    "localmode_edge_ai": {
+      "name": "Local-First & Edge AI Primitives (Source: LocalMode UI)",
+      "aesthetic": "shadcn/Tailwind CSS v4 tokens, local-first browser AI surfaces, WebGPU/WASM hardware awareness, token budget meters, and on-device multi-modal UI.",
+      "when_to_use": [
+        "Browser-based on-device AI inference with WebGPU, WASM, or local models",
+        "Device capability gating and hardware resource monitoring (WebGPU/IndexedDB/OPFS)",
+        "Model download progress, memory estimation, and local cache inspection",
+        "Context window token budgeting and real-time usage meters",
+        "Real-time audio waveform activity and transcription notes",
+        "Computer vision bounding box overlays, image mask canvases, and comparative viewers",
+        "Differential privacy controls, passphrase gates, and secure vault item cards"
+      ],
+      "when_not_to_use": [
+        "Static non-JavaScript plain HTML pages without React or Tailwind CSS",
+        "Monolithic cloud-only architectures that deliberately ignore client-side compute"
+      ],
+      "manifest": "localmode-components/localmode.manifest.json",
+      "design_md": "localmode-components/DESIGN.md",
+      "shared_style": "localmode-components/shared/base.css",
+      "guide": "localmode-components/COMPONENTS_GUIDE.md"
     }
   },
   "functions": {
@@ -264,7 +285,52 @@
         "slot-text",
         "text-morph",
         "text-reveal",
-        "text-shimmer"
+        "text-shimmer",
+        "agent-step-timeline",
+        "chain-of-thought",
+        "lm-code-block",
+        "conversation",
+        "in-message-error",
+        "inline-citation",
+        "loader",
+        "message",
+        "pipeline-tracker",
+        "reasoning",
+        "response",
+        "source-citation-list",
+        "sources",
+        "suggestions",
+        "system-notice-banner",
+        "task",
+        "event-log-viewer",
+        "inference-queue-monitor",
+        "model-cache-table",
+        "pipeline-run-inspector",
+        "adaptive-batch-card",
+        "browser-compat-card",
+        "cache-badge",
+        "capability-gate",
+        "chrome-ai-download-gate",
+        "context-usage-meter",
+        "device-badge",
+        "device-capability-grid",
+        "embedding-drift-banner",
+        "model-catalog-card",
+        "model-comparison-panel",
+        "model-downloader",
+        "model-loading-panel",
+        "model-metadata-card",
+        "model-recommendation-card",
+        "model-search-browser",
+        "model-selector",
+        "network-badge",
+        "provider-badge",
+        "provider-fallback-badge",
+        "semantic-cache-status-bar",
+        "storage-meter",
+        "vector-export-panel",
+        "vector-import-flow",
+        "vector-storage-observability"
       ]
     },
     "inputs_and_prompts": {
@@ -308,7 +374,20 @@
         "tag-input",
         "textarea",
         "time-picker",
-        "arc-otp-input"
+        "arc-otp-input",
+        "prompt-input",
+        "prompt-input-attachments",
+        "char-limit-indicator",
+        "lm-copy-button",
+        "language-pair-selector",
+        "mask-token-input",
+        "option-list",
+        "parameter-slider",
+        "prompt-enhance-button",
+        "segmented-mode-picker",
+        "slash-command-palette",
+        "system-prompt-editor",
+        "text-processing-panel"
       ]
     },
     "human_in_the_loop_and_tools": {
@@ -364,7 +443,16 @@
         "theme-switch-split",
         "theme-switch",
         "tooltip",
-        "user-menu"
+        "user-menu",
+        "actions",
+        "branch",
+        "tool",
+        "tool-approval",
+        "differential-privacy-controls",
+        "lock-status-badge",
+        "passphrase-gate",
+        "password-strength-bar",
+        "vault-item-card"
       ]
     },
     "data_and_diff": {
@@ -392,7 +480,32 @@
         "timeline",
         "tree-view",
         "treemap",
-        "waffle-chart"
+        "waffle-chart",
+        "code-diff-viewer",
+        "data-table-artifact",
+        "audio-scrub-player",
+        "category-facet-list",
+        "chunk-boundary-visualizer",
+        "lm-file-dropzone",
+        "format-detection-badge",
+        "indexed-document-card",
+        "model-cache-table",
+        "image-result-gallery",
+        "media-dropzone",
+        "video-canvas",
+        "confidence-score-badge",
+        "cosine-similarity-meter",
+        "editable-label-set",
+        "entity-relationship-graph",
+        "entity-stats-bar",
+        "error-alert",
+        "evaluation-metrics-dashboard",
+        "mode-error-boundary",
+        "redacted-text-display",
+        "scored-result-bar-list",
+        "threshold-calibration-panel",
+        "top-result-card",
+        "differential-privacy-controls"
       ]
     },
     "cards_and_knowledge": {
@@ -416,7 +529,17 @@
         "empty-state",
         "empty-states",
         "expandable-card",
-        "metric-card"
+        "metric-card",
+        "transcribed-note-card",
+        "category-facet-list",
+        "indexed-document-card",
+        "adaptive-batch-card",
+        "browser-compat-card",
+        "model-catalog-card",
+        "model-metadata-card",
+        "model-recommendation-card",
+        "top-result-card",
+        "vault-item-card"
       ]
     },
     "navigation_and_presentation": {
@@ -456,7 +579,24 @@
         "site-footer",
         "site-header",
         "stats-band",
-        "tabs"
+        "tabs",
+        "artifact",
+        "chart-artifact",
+        "code-diff-viewer",
+        "data-table-artifact",
+        "streaming-speech-panel",
+        "synced-transcript-viewer",
+        "voice-comparison-panel",
+        "structured-output-viewer",
+        "event-log-viewer",
+        "text-processing-panel",
+        "model-comparison-panel",
+        "model-loading-panel",
+        "vector-export-panel",
+        "before-after-image-viewer",
+        "bounding-box-overlay",
+        "image-processing-overlay",
+        "threshold-calibration-panel"
       ]
     },
     "micro_states_and_indicators": {
@@ -498,7 +638,31 @@
         "skeleton",
         "toast-stack",
         "toast",
-        "usage-meter"
+        "usage-meter",
+        "mic-selector",
+        "voice-button",
+        "voice-orb",
+        "voice-picker",
+        "waveform-activity-bars",
+        "scroll-to-bottom-button",
+        "format-detection-badge",
+        "char-limit-indicator",
+        "lm-copy-button",
+        "language-pair-selector",
+        "parameter-slider",
+        "prompt-enhance-button",
+        "segmented-mode-picker",
+        "cache-badge",
+        "context-usage-meter",
+        "device-badge",
+        "model-selector",
+        "network-badge",
+        "provider-badge",
+        "provider-fallback-badge",
+        "storage-meter",
+        "confidence-score-badge",
+        "cosine-similarity-meter",
+        "lock-status-badge"
       ]
     }
   },
@@ -511,7 +675,21 @@
     "split showcase|partner cards|sponsor cards|split-showcase|obsidian ui|obsidian": "obsidian_tactile_showcase",
     "arc": "arc_motion_primitives",
     "uiarc": "arc_motion_primitives",
-    "motion primitives": "arc_motion_primitives"
+    "motion primitives": "arc_motion_primitives",
+    "localmode": "localmode_edge_ai",
+    "local-first": "localmode_edge_ai",
+    "webgpu": "localmode_edge_ai",
+    "wasm": "localmode_edge_ai",
+    "on-device": "localmode_edge_ai",
+    "edge-ai": "localmode_edge_ai",
+    "local model": "localmode_edge_ai",
+    "model downloader": "localmode_edge_ai",
+    "context usage": "localmode_edge_ai",
+    "hardware capability": "localmode_edge_ai",
+    "device badge": "localmode_edge_ai",
+    "waveform activity": "localmode_edge_ai",
+    "bounding box": "localmode_edge_ai",
+    "differential privacy": "localmode_edge_ai"
   },
   "components": {
     "loading-state": {
@@ -5593,6 +5771,2656 @@
       ],
       "snippet": "arc-components/components/blocks/arc-otp-input/arc-otp-input.snippet.tsx",
       "route_aliases": []
+    },
+    "artifact": {
+      "id": "artifact",
+      "style": "localmode_edge_ai",
+      "name": "Artifact",
+      "snippet": "localmode-components/components/artifacts/artifact/artifact.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "artifact",
+        "localmode artifact",
+        "local artifact"
+      ],
+      "route_aliases": [
+        "localmode-artifact"
+      ],
+      "when": "Rendering artifact: A Claude-style docked side-panel/canvas shell (header, title, description, copy/download/refresh/close toolbar, scrollable content) that renders generated code, docs, SVG, or HTML beside the chat. Presentational — driven by a local model via useGenerateText/useGenerateObject. No server, no sandbox.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "chart-artifact": {
+      "id": "chart-artifact",
+      "style": "localmode_edge_ai",
+      "name": "Chart Artifact",
+      "snippet": "localmode-components/components/artifacts/chart-artifact/chart-artifact.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "chart artifact",
+        "localmode chart artifact",
+        "local chart artifact"
+      ],
+      "route_aliases": [
+        "localmode-chart-artifact"
+      ],
+      "when": "Rendering chart artifact: A dependency-free inline-SVG chart (line / bar / area / scatter / radar / gauge) for local metrics — eval curves (precision/recall/F1 radar), 2D embedding projections (scatter), drift-over-time, latency/tok-s. Driven by useEvaluateModel/useReindex or any local numbers. No charting library, no server.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "code-diff-viewer": {
+      "id": "code-diff-viewer",
+      "style": "localmode_edge_ai",
+      "name": "Code Diff Viewer",
+      "snippet": "localmode-components/components/artifacts/code-diff-viewer/code-diff-viewer.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "code",
+        "runtime": "react"
+      },
+      "aliases": [
+        "code diff viewer",
+        "localmode code diff viewer",
+        "local code diff viewer"
+      ],
+      "route_aliases": [
+        "localmode-code-diff-viewer"
+      ],
+      "when": "Rendering code diff viewer: A unified or side-by-side text/code diff of two local strings (before/after of redacted, translated, or transformed text). Additions/deletions highlighted, computed client-side via a dependency-free LCS line diff. The text analog of BeforeAfterImageViewer. No ML hook, no server.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "data-table-artifact": {
+      "id": "data-table-artifact",
+      "style": "localmode_edge_ai",
+      "name": "Data Table Artifact",
+      "snippet": "localmode-components/components/artifacts/data-table-artifact/data-table-artifact.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "data table artifact",
+        "localmode data table artifact",
+        "local data table artifact"
+      ],
+      "route_aliases": [
+        "localmode-data-table-artifact"
+      ],
+      "when": "Rendering data table artifact: A generic sortable data table for local row data — VectorDB results, model catalogs, evaluation rows, or generateObject() arrays. Click a column header to sort entirely client-side. A docked-canvas table, distinct from the inline ScoredResultBarList.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "audio-scrub-player": {
+      "id": "audio-scrub-player",
+      "style": "localmode_edge_ai",
+      "name": "Audio Scrub Player",
+      "snippet": "localmode-components/components/audio/audio-scrub-player/audio-scrub-player.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "audio scrub player",
+        "localmode audio scrub player",
+        "local audio scrub player"
+      ],
+      "route_aliases": [
+        "localmode-audio-scrub-player"
+      ],
+      "when": "Rendering audio scrub player: A composable scrubbable audio player for local Blob/object-URL audio (Kokoro TTS output or recordings) — play/pause, a draggable seek bar, and a time/duration readout, managing its own <audio> element and object-URL lifecycle. Ships a standalone, controlled ScrubBar seek sub-primitive (pointer + keyboard). Pairs with useSynthesizeSpeech output.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "mic-selector": {
+      "id": "mic-selector",
+      "style": "localmode_edge_ai",
+      "name": "Mic Selector",
+      "snippet": "localmode-components/components/audio/mic-selector/mic-selector.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "setting",
+        "runtime": "react"
+      },
+      "aliases": [
+        "mic selector",
+        "localmode mic selector",
+        "local mic selector"
+      ],
+      "route_aliases": [
+        "localmode-mic-selector"
+      ],
+      "when": "Rendering mic selector: A microphone input-device picker with permission handling and live device enumeration — fully offline, using only browser device APIs (getUserMedia for the permission prompt, enumerateDevices for the list, a devicechange listener to stay current). Emits the chosen deviceId for a getUserMedia constraint; pairs with VoiceButton / VoiceOrb / useLiveTranscribe.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "streaming-speech-panel": {
+      "id": "streaming-speech-panel",
+      "style": "localmode_edge_ai",
+      "name": "Streaming Speech Panel",
+      "snippet": "localmode-components/components/audio/streaming-speech-panel/streaming-speech-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "streaming speech panel",
+        "localmode streaming speech panel",
+        "local streaming speech panel"
+      ],
+      "route_aliases": [
+        "localmode-streaming-speech-panel"
+      ],
+      "when": "Rendering streaming speech panel: A streaming-TTS status surface: active state (WaveformActivityBars + spinner, synthesizing/playing label, processed-clause count, highlighted now-playing clause box) and finished state (clause-count summary, a generated-locally privacy note, and a Download WAV action). Driven by useStreamSpeech (isSynthesizing/isPlaying/currentClause/clauses); download via downloadBlob.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "synced-transcript-viewer": {
+      "id": "synced-transcript-viewer",
+      "style": "localmode_edge_ai",
+      "name": "Synced Transcript Viewer",
+      "snippet": "localmode-components/components/audio/synced-transcript-viewer/synced-transcript-viewer.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "synced transcript viewer",
+        "localmode synced transcript viewer",
+        "local synced transcript viewer"
+      ],
+      "route_aliases": [
+        "localmode-synced-transcript-viewer"
+      ],
+      "when": "Rendering synced transcript viewer: A karaoke-style transcript viewer that highlights words in lockstep with audio playback using word-level alignment timestamps — the playback-time -> word-index sync is pure client-side (binary search on timeupdate). Clicking a word seeks the audio to its start. Driven by useTranscribe word-level timestamps over a local audio Blob.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "transcribed-note-card": {
+      "id": "transcribed-note-card",
+      "style": "localmode_edge_ai",
+      "name": "Transcribed Note Card",
+      "snippet": "localmode-components/components/audio/transcribed-note-card/transcribed-note-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "transcribed note card",
+        "localmode transcribed note card",
+        "local transcribed note card"
+      ],
+      "route_aliases": [
+        "localmode-transcribed-note-card"
+      ],
+      "when": "Rendering transcribed note card: A transcription list item pairing transcript text with inline <audio> playback — relative timestamp (hover -> absolute), transcribed body, and a hover-revealed delete — plus a transcribing… placeholder variant (WaveformActivityBars + label) that morphs into the populated card. The canonical useOperationList-backed STT list pattern; driven by useTranscribe.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "voice-button": {
+      "id": "voice-button",
+      "style": "localmode_edge_ai",
+      "name": "Voice Button",
+      "snippet": "localmode-components/components/audio/voice-button/voice-button.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "action",
+        "runtime": "react"
+      },
+      "aliases": [
+        "voice button",
+        "localmode voice button",
+        "local voice button"
+      ],
+      "route_aliases": [
+        "localmode-voice-button"
+      ],
+      "when": "Rendering voice button: A press-to-record / release-to-transcribe push-to-talk button with an explicit visual state machine: idle -> recording (pulse rings + live waveform) -> processing (loader) -> success/error. Recording uses getUserMedia/MediaRecorder (useVoiceRecorder); transcription routes to local Whisper (useTranscribe). Controlled — the app advances the state.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "voice-comparison-panel": {
+      "id": "voice-comparison-panel",
+      "style": "localmode_edge_ai",
+      "name": "Voice Comparison Panel",
+      "snippet": "localmode-components/components/audio/voice-comparison-panel/voice-comparison-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "voice comparison panel",
+        "localmode voice comparison panel",
+        "local voice comparison panel"
+      ],
+      "route_aliases": [
+        "localmode-voice-comparison-panel"
+      ],
+      "when": "Rendering voice comparison panel: A/B voice comparison — two labeled columns, each with a language-grouped voice select (VoicePicker) and a native <audio> player shown once audio is set, a shared comparison textarea, and a Compare button with a loading state. Wire onCompare to two useSynthesizeSpeech runs and pass the resulting Blobs back per column.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "voice-orb": {
+      "id": "voice-orb",
+      "style": "localmode_edge_ai",
+      "name": "Voice Orb",
+      "snippet": "localmode-components/components/audio/voice-orb/voice-orb.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "css-loop",
+        "category": "avatar",
+        "runtime": "react"
+      },
+      "aliases": [
+        "voice orb",
+        "localmode voice orb",
+        "local voice orb"
+      ],
+      "route_aliases": [
+        "localmode-voice-orb"
+      ],
+      "when": "Rendering voice orb: An animated Canvas 2D voice-agent orb/visualizer that reflects discrete agent states (idle/connecting/listening/thinking/speaking/muted) and pulses with input/output audio volume via getInputVolume()/getOutputVolume() callbacks, with color/glow variants. Visual state is fully decoupled from the audio source — feed volume from a local AnalyserNode. Driven by useLiveTranscribe / useTurnTaker.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "voice-picker": {
+      "id": "voice-picker",
+      "style": "localmode_edge_ai",
+      "name": "Voice Picker",
+      "snippet": "localmode-components/components/audio/voice-picker/voice-picker.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "on-demand",
+        "motion": "none",
+        "category": "setting",
+        "runtime": "react"
+      },
+      "aliases": [
+        "voice picker",
+        "localmode voice picker",
+        "local voice picker"
+      ],
+      "route_aliases": [
+        "localmode-voice-picker"
+      ],
+      "when": "Rendering voice picker: Language-grouped TTS voice selection from one KokoroVoice[] contract — a compact grouped <select> (VoicePicker) plus rich VoiceCard / VoiceGrid variants with a color-coded gender badge, monospace voice id, a circular play/stop preview button with loading state, a per-group count header, and search/filter. Wire onPreview to useSynthesizeSpeech for local Kokoro samples.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "waveform-activity-bars": {
+      "id": "waveform-activity-bars",
+      "style": "localmode_edge_ai",
+      "name": "Waveform Activity Bars",
+      "snippet": "localmode-components/components/audio/waveform-activity-bars/waveform-activity-bars.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "dock",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "css-loop",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "waveform activity bars",
+        "localmode waveform activity bars",
+        "local waveform activity bars"
+      ],
+      "route_aliases": [
+        "localmode-waveform-activity-bars"
+      ],
+      "when": "Rendering waveform activity bars: A pure-CSS row of pulsing vertical bars (sinusoid-derived heights, staggered animation) that doubles as an active audio-processing indicator and an idle empty-state. Supports agent-state modes (connecting/listening/thinking/speaking), record/playback-scrub modes, and a live-volume mode that scales amplitude from a callback — decoupling the visual from the audio source. Ships its keyframe inline so it animates standalone after install.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "actions": {
+      "id": "actions",
+      "style": "localmode_edge_ai",
+      "name": "Actions",
+      "snippet": "localmode-components/components/conversation/actions/actions.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "action",
+        "runtime": "react"
+      },
+      "aliases": [
+        "actions",
+        "localmode actions",
+        "local actions"
+      ],
+      "route_aliases": [
+        "localmode-actions"
+      ],
+      "when": "Rendering actions: Message-level controls — copy (with copied state), regenerate, read-aloud (wire to local Kokoro TTS), an overflow more-menu, and an on-device FeedbackBar (thumbs up/down, no telemetry).",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "agent-step-timeline": {
+      "id": "agent-step-timeline",
+      "style": "localmode_edge_ai",
+      "name": "Agent Step Timeline",
+      "snippet": "localmode-components/components/conversation/agent-step-timeline/agent-step-timeline.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "workflow",
+        "runtime": "react"
+      },
+      "aliases": [
+        "agent step timeline",
+        "localmode agent step timeline",
+        "local agent step timeline"
+      ],
+      "route_aliases": [
+        "localmode-agent-step-timeline"
+      ],
+      "when": "Rendering agent step timeline: A vertical timeline of ReAct agent steps: collapsible per-step cards (color-coded tool badge, args, observation show-more, index, elapsed-ms), a finish final-answer card, auto-scroll, a Thinking row while running, a finish-reason badge (max_steps/timeout/loop_detected/error), and nested sub-agent/handoff rendering. Data source: useAgent.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "branch": {
+      "id": "branch",
+      "style": "localmode_edge_ai",
+      "name": "Branch",
+      "snippet": "localmode-components/components/conversation/branch/branch.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "nav",
+        "runtime": "react"
+      },
+      "aliases": [
+        "branch",
+        "localmode branch",
+        "local branch"
+      ],
+      "route_aliases": [
+        "localmode-branch"
+      ],
+      "when": "Rendering branch: A message-versioning navigator that pages between regenerated/edited assistant variants for one turn, with prev/next controls and an X of N indicator (hidden at N=1). Wraps an existing Message non-intrusively; pure client state. Data source: useChat.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "chain-of-thought": {
+      "id": "chain-of-thought",
+      "style": "localmode_edge_ai",
+      "name": "Chain of Thought",
+      "snippet": "localmode-components/components/conversation/chain-of-thought/chain-of-thought.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "chain of thought",
+        "localmode chain of thought",
+        "local chain of thought"
+      ],
+      "route_aliases": [
+        "localmode-chain-of-thought"
+      ],
+      "when": "Rendering chain of thought: A structured step-by-step reasoning timeline (distinct from free-text Reasoning): labeled steps with per-step status and icons, and nested slots for embedded retrieved sources and images, collapsing to one line on completion. Data source: useGenerateText reasoning-mode + local RAG.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "lm-code-block": {
+      "id": "lm-code-block",
+      "style": "localmode_edge_ai",
+      "name": "Code Block",
+      "snippet": "localmode-components/components/conversation/code-block/code-block.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "code",
+        "runtime": "react"
+      },
+      "aliases": [
+        "code block",
+        "localmode code block",
+        "local code block"
+      ],
+      "route_aliases": [
+        "localmode-code-block"
+      ],
+      "when": "Rendering code block: Syntax-highlighted code (lazy Shiki, plain-pre fallback) with a language label and a copy-to-clipboard control.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "conversation": {
+      "id": "conversation",
+      "style": "localmode_edge_ai",
+      "name": "Conversation",
+      "snippet": "localmode-components/components/conversation/conversation/conversation.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "conversation",
+        "localmode conversation",
+        "local conversation"
+      ],
+      "route_aliases": [
+        "localmode-conversation"
+      ],
+      "when": "Rendering conversation: Scrollable message-display surface with first-class scroll-anchoring: auto-pins to the newest content while tokens stream, releases on scroll-up with a scroll-to-bottom control, and re-pins on return. Presentational; renders useChat().messages.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "in-message-error": {
+      "id": "in-message-error",
+      "style": "localmode_edge_ai",
+      "name": "In-Message Error",
+      "snippet": "localmode-components/components/conversation/in-message-error/in-message-error.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "in message error",
+        "localmode in message error",
+        "local in message error"
+      ],
+      "route_aliases": [
+        "localmode-in-message-error"
+      ],
+      "when": "Rendering in-message error: An accessible per-message error/retry block rendered inline on a failed assistant message (not a global toast), with auto-extracted error text, a classified hint (OOM / WebGPU lost / model load), and a retry action. Data source: useChat error state.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "inline-citation": {
+      "id": "inline-citation",
+      "style": "localmode_edge_ai",
+      "name": "Inline Citation",
+      "snippet": "localmode-components/components/conversation/inline-citation/inline-citation.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "inline citation",
+        "localmode inline citation",
+        "local inline citation"
+      ],
+      "route_aliases": [
+        "localmode-inline-citation"
+      ],
+      "when": "Rendering inline citation: Inline superscript citation markers in prose that open a hovercard with the cited local chunk (title, excerpt, quoted snippet), with a carousel paging multiple sources for one claim. References locally-stored chunks only — no remote unfurl. Data source: useSemanticSearch.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "loader": {
+      "id": "loader",
+      "style": "localmode_edge_ai",
+      "name": "Loader",
+      "snippet": "localmode-components/components/conversation/loader/loader.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "transient",
+        "motion": "css-loop",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "loader",
+        "localmode loader",
+        "local loader"
+      ],
+      "route_aliases": [
+        "localmode-loader"
+      ],
+      "when": "Rendering loader: A small family of busy indicators (dots / pulse / typing / spinner) plus a Shimmer skeleton-text variant, shown while a local model warms up or streams its first token.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "message": {
+      "id": "message",
+      "style": "localmode_edge_ai",
+      "name": "Message",
+      "snippet": "localmode-components/components/conversation/message/message.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "message",
+        "localmode message",
+        "local message"
+      ],
+      "route_aliases": [
+        "localmode-message"
+      ],
+      "when": "Rendering message: Role-aware chat message (data-role) rendering string or ContentPart[] — markdown text, image thumbnails with a fullscreen dialog, and file download chips from local bytes — with contained/flat variants and an inter-message Checkpoint savepoint marker. Matches @localmode/react's message model.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "pipeline-tracker": {
+      "id": "pipeline-tracker",
+      "style": "localmode_edge_ai",
+      "name": "Multi-Step Pipeline Tracker",
+      "snippet": "localmode-components/components/conversation/pipeline-tracker/pipeline-tracker.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "workflow",
+        "runtime": "react"
+      },
+      "aliases": [
+        "pipeline tracker",
+        "localmode pipeline tracker",
+        "local pipeline tracker"
+      ],
+      "route_aliases": [
+        "localmode-pipeline-tracker"
+      ],
+      "when": "Rendering multi-step pipeline tracker: Progress surfaces for local workflows: a horizontal numbered-step indicator (active/completed/pending), a stage+percentage variant for ingest, a Steps/Plan vertical outline with expandable detail, and an inference-queue surface grouped by priority. Maps to usePipeline onProgress and useInferenceQueue.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "prompt-input": {
+      "id": "prompt-input",
+      "style": "localmode_edge_ai",
+      "name": "Prompt Input",
+      "snippet": "localmode-components/components/conversation/prompt-input/prompt-input.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "prompt input",
+        "localmode prompt input",
+        "local prompt input"
+      ],
+      "route_aliases": [
+        "localmode-prompt-input"
+      ],
+      "when": "Rendering prompt input: Form-based, auto-resizing chat composer: Enter submits, Shift+Enter inserts a newline, the submit control swaps to a stop control while streaming, with optional controlled value/onValueChange, a PromptInputProvider, a voice/dictation mic toggle (wire to local Whisper), and a slash-command / + picker.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "prompt-input-attachments": {
+      "id": "prompt-input-attachments",
+      "style": "localmode_edge_ai",
+      "name": "Prompt Input Attachments",
+      "snippet": "localmode-components/components/conversation/prompt-input-attachments/prompt-input-attachments.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "prompt input attachments",
+        "localmode prompt input attachments",
+        "local prompt input attachments"
+      ],
+      "route_aliases": [
+        "localmode-prompt-input-attachments"
+      ],
+      "when": "Rendering prompt input attachments: Attachment surface for the composer: image/file attach via picker, paste, and drag-and-drop with preview thumbnails, per-item removal, a hovercard preview, media-category auto-detection, and upload-state chips. Produces attachments via a bundled readFileAsDataUrl helper (copy-owned); the shape matches common chat image-content models.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "reasoning": {
+      "id": "reasoning",
+      "style": "localmode_edge_ai",
+      "name": "Reasoning",
+      "snippet": "localmode-components/components/conversation/reasoning/reasoning.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "ai-response",
+        "runtime": "react"
+      },
+      "aliases": [
+        "reasoning",
+        "localmode reasoning",
+        "local reasoning"
+      ],
+      "route_aliases": [
+        "localmode-reasoning"
+      ],
+      "when": "Rendering reasoning: The model's own thinking tokens (DeepSeek-R1 style) in a collapsible region: auto-expands while streaming with an elapsed timer and auto-collapses on the final answer, plus a compact ThinkingBar one-line status strip. Tier of the thinking taxonomy: ThinkingBar -> Reasoning -> ChainOfThought.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "response": {
+      "id": "response",
+      "style": "localmode_edge_ai",
+      "name": "Response",
+      "snippet": "localmode-components/components/conversation/response/response.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "ai-response",
+        "runtime": "react"
+      },
+      "aliases": [
+        "response",
+        "localmode response",
+        "local response"
+      ],
+      "route_aliases": [
+        "localmode-response"
+      ],
+      "when": "Rendering response: Streaming markdown renderer for assistant output: shows a cursor while streaming, tolerates partial/unterminated markdown without layout breakage, supports an optional typewriter reveal, and routes LaTeX/Mermaid blocks to swappable renderers gated behind props (declare katex/mermaid if used).",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "scroll-to-bottom-button": {
+      "id": "scroll-to-bottom-button",
+      "style": "localmode_edge_ai",
+      "name": "Scroll To Bottom Button",
+      "snippet": "localmode-components/components/conversation/scroll-to-bottom-button/scroll-to-bottom-button.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "dock",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "action",
+        "runtime": "react"
+      },
+      "aliases": [
+        "scroll to bottom button",
+        "localmode scroll to bottom button",
+        "local scroll to bottom button"
+      ],
+      "route_aliases": [
+        "localmode-scroll-to-bottom-button"
+      ],
+      "when": "Rendering scroll to bottom button: A floating scroll-to-bottom affordance tied to a chat container's scroll state — appears when the user scrolls up, scrolls to and pins the latest content. Pairs with a ScrollAnchor pin element. Data source: useChat.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "source-citation-list": {
+      "id": "source-citation-list",
+      "style": "localmode_edge_ai",
+      "name": "Source Citation List",
+      "snippet": "localmode-components/components/conversation/source-citation-list/source-citation-list.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "source citation list",
+        "localmode source citation list",
+        "local source citation list"
+      ],
+      "route_aliases": [
+        "localmode-source-citation-list"
+      ],
+      "when": "Rendering source citation list: In-message attributed-sources list extending Sources: numbered items, a similarity score with a radial confidence ring, and clamped body text with staggered fade-in, behind a collapsible Show N sources toggle. Data source: useSemanticSearch / useAnswerQuestion / useAskDocument.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "sources": {
+      "id": "sources",
+      "style": "localmode_edge_ai",
+      "name": "Sources",
+      "snippet": "localmode-components/components/conversation/sources/sources.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "ai-response",
+        "runtime": "react"
+      },
+      "aliases": [
+        "sources",
+        "localmode sources",
+        "local sources"
+      ],
+      "route_aliases": [
+        "localmode-sources"
+      ],
+      "when": "Rendering sources: Retrieval citations from local RAG results: a collapsible container with favicon/title/excerpt chips, a 0-1 relevance score, and an optional Web/Images/News tabbed layout. All metadata is local — no remote unfurl.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "structured-output-viewer": {
+      "id": "structured-output-viewer",
+      "style": "localmode_edge_ai",
+      "name": "Structured Output Viewer",
+      "snippet": "localmode-components/components/conversation/structured-output-viewer/structured-output-viewer.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "structured output viewer",
+        "localmode structured output viewer",
+        "local structured output viewer"
+      ],
+      "route_aliases": [
+        "localmode-structured-output-viewer"
+      ],
+      "when": "Rendering structured output viewer: A result panel for useGenerateObject extending Response: pretty-printed JSON, an independently-usable inference-stats footer (tokens, duration, attempts), and a navigable typed schema-tree view.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "suggestions": {
+      "id": "suggestions",
+      "style": "localmode_edge_ai",
+      "name": "Suggestions",
+      "snippet": "localmode-components/components/conversation/suggestions/suggestions.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "suggestions",
+        "localmode suggestions",
+        "local suggestions"
+      ],
+      "route_aliases": [
+        "localmode-suggestions"
+      ],
+      "when": "Rendering suggestions: A horizontal row of selectable prompt chips; each Suggestion invokes a callback with its text to seed the composer.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "system-notice-banner": {
+      "id": "system-notice-banner",
+      "style": "localmode_edge_ai",
+      "name": "System Notice Banner",
+      "snippet": "localmode-components/components/conversation/system-notice-banner/system-notice-banner.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "transient",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "system notice banner",
+        "localmode system notice banner",
+        "local system notice banner"
+      ],
+      "route_aliases": [
+        "localmode-system-notice-banner"
+      ],
+      "when": "Rendering system notice banner: An in-conversation info/warning banner (not a message bubble) for local-first state changes: offline/online, model switch, capability-unavailable, WebGPU->WASM fallback, cache eviction, or download-required. Data source: useNetworkStatus / useCapabilities.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "task": {
+      "id": "task",
+      "style": "localmode_edge_ai",
+      "name": "Task",
+      "snippet": "localmode-components/components/conversation/task/task.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "task",
+        "localmode task",
+        "local task"
+      ],
+      "route_aliases": [
+        "localmode-task"
+      ],
+      "when": "Rendering task: A multi-step agent process as an ordered list of steps (index, tool, status, args, observation) with the final-answer step distinguished. Its data shape aligns with @localmode/react useAgent steps so agent UIs wire up without adapters.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "tool": {
+      "id": "tool",
+      "style": "localmode_edge_ai",
+      "name": "Tool",
+      "snippet": "localmode-components/components/conversation/tool/tool.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "tool",
+        "localmode tool",
+        "local tool"
+      ],
+      "route_aliases": [
+        "localmode-tool"
+      ],
+      "when": "Rendering tool: A single tool invocation card with a status taxonomy (pending/running/streaming/completed/error), expandable ToolInput/ToolOutput, a per-tool renderer registry with a Fallback for unregistered tools, and a ToolGroup that collapses consecutive calls behind a stacked-icon summary. Data source: useAgent / wllama/transformers tool calling.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "tool-approval": {
+      "id": "tool-approval",
+      "style": "localmode_edge_ai",
+      "name": "Tool Approval",
+      "snippet": "localmode-components/components/conversation/tool-approval/tool-approval.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "tool approval",
+        "localmode tool approval",
+        "local tool approval"
+      ],
+      "route_aliases": [
+        "localmode-tool-approval"
+      ],
+      "when": "Rendering tool approval: A human-in-the-loop confirmation card that gates a tool call before execution (pending tool + args with approve/reject), then re-renders read-only as an immutable receipt. Pairs with Tool and feeds the choice back into the agent loop. Data source: useAgent.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "category-facet-list": {
+      "id": "category-facet-list",
+      "style": "localmode_edge_ai",
+      "name": "Category Facet List",
+      "snippet": "localmode-components/components/data/category-facet-list/category-facet-list.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "category facet list",
+        "localmode category facet list",
+        "local category facet list"
+      ],
+      "route_aliases": [
+        "localmode-category-facet-list"
+      ],
+      "when": "Rendering category facet list: A domain-decoupled, filterable category facet (vertical list or horizontal pills) with per-category count badges, single-select toggle (re-click deselects), an All/clear affordance, and active highlight. Takes categories/counts/selected/onSelect so it serves useSemanticSearch result filtering, zero-shot classification labels, and NER entity-type filters alike.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "chunk-boundary-visualizer": {
+      "id": "chunk-boundary-visualizer",
+      "style": "localmode_edge_ai",
+      "name": "Chunk Boundary Visualizer",
+      "snippet": "localmode-components/components/data/chunk-boundary-visualizer/chunk-boundary-visualizer.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "diagram",
+        "runtime": "react"
+      },
+      "aliases": [
+        "chunk boundary visualizer",
+        "localmode chunk boundary visualizer",
+        "local chunk boundary visualizer"
+      ],
+      "route_aliases": [
+        "localmode-chunk-boundary-visualizer"
+      ],
+      "when": "Rendering chunk boundary visualizer: Visualizes a document split into distinct chunks: alternating accent-background segments each with a monospace C1/C2 badge; in semantic mode, inter-chunk boundary similarity scores (e.g. sim: 0.74) render as faint labels between segments. Takes a decoupled ChunkInfo[] (text, chunkIndex, rightSimilarity) + the active mode, pairing with useSemanticChunk. Display-only — owns no chunking logic.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "lm-file-dropzone": {
+      "id": "lm-file-dropzone",
+      "style": "localmode_edge_ai",
+      "name": "File Dropzone",
+      "snippet": "localmode-components/components/data/file-dropzone/file-dropzone.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "file dropzone",
+        "localmode file dropzone",
+        "local file dropzone"
+      ],
+      "route_aliases": [
+        "localmode-file-dropzone"
+      ],
+      "when": "Rendering file dropzone: A generic, format-agnostic drag-and-drop + click-to-browse upload zone for non-image files (PDF/CSV/JSON/vector exports). Validates each file with a bundled validateFile helper (copy-owned — no @localmode dependency) against an accept MIME list and maxSize, emitting only valid files via onUpload; rejected files go to onReject. Disabled/processing overlay blocks input. Distinct from media-vision's MediaDropzone (no image-preview semantics).",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "format-detection-badge": {
+      "id": "format-detection-badge",
+      "style": "localmode_edge_ai",
+      "name": "Format Detection Badge",
+      "snippet": "localmode-components/components/data/format-detection-badge/format-detection-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "format detection badge",
+        "localmode format detection badge",
+        "local format detection badge"
+      ],
+      "route_aliases": [
+        "localmode-format-detection-badge"
+      ],
+      "when": "Rendering format detection badge: A small badge displaying an auto-detected data format (PINECONE / CHROMA / CSV / JSONL or custom) with a per-format color map, used to confirm a detected source format after parsing. Fully self-contained and presentational — pass a format string and an optional colorMap; unknown formats fall back to neutral and a nullish format shows a pending state. Pairs with useImportExport (parseResult.format); also consumed by the local-first VectorImportFlow as a registry dependency.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "indexed-document-card": {
+      "id": "indexed-document-card",
+      "style": "localmode_edge_ai",
+      "name": "Indexed Document Card",
+      "snippet": "localmode-components/components/data/indexed-document-card/indexed-document-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "indexed document card",
+        "localmode indexed document card",
+        "local indexed document card"
+      ],
+      "route_aliases": [
+        "localmode-indexed-document-card"
+      ],
+      "when": "Rendering indexed document card: A card for a single locally-indexed document: truncated filename (native tooltip), chunk count, optional page count and file size, and a hover/focus-revealed delete with loading state. Presentational — page/chunk counts come from the app's ingest state (e.g. useSemanticChunk output length), not a single hook.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "event-log-viewer": {
+      "id": "event-log-viewer",
+      "style": "localmode_edge_ai",
+      "name": "Event Log Viewer",
+      "snippet": "localmode-components/components/devtools/event-log-viewer/event-log-viewer.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "event log viewer",
+        "localmode event log viewer",
+        "local event log viewer"
+      ],
+      "route_aliases": [
+        "localmode-event-log-viewer"
+      ],
+      "when": "Rendering event log viewer: Newest-first devtools event log: relative timestamps (absolute on hover), namespace-colored type badges (vectordb/embedding/model/queue/pipeline/storage), serialized payloads, a case-insensitive substring type filter, a visible cap (default 100) with an overflow line, distinct no-events and no-match empty states, and an optional Clear affordance. Recommended data source: useDevToolsEvents from @localmode/devtools/react.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "inference-queue-monitor": {
+      "id": "inference-queue-monitor",
+      "style": "localmode_edge_ai",
+      "name": "Inference Queue Monitor",
+      "snippet": "localmode-components/components/devtools/inference-queue-monitor/inference-queue-monitor.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "workflow",
+        "runtime": "react"
+      },
+      "aliases": [
+        "inference queue monitor",
+        "localmode inference queue monitor",
+        "local inference queue monitor"
+      ],
+      "route_aliases": [
+        "localmode-inference-queue-monitor"
+      ],
+      "when": "Rendering inference queue monitor: Per-queue inference observability: one card per registered queue showing pending, active, completed, failed, and average latency, with a live pulsing badge + emerald accent on active counts, amber on pending, and destructive on failures. Empty state directs users to registerQueue(). Recommended data source: useDevToolsQueueStats from @localmode/devtools/react — the hook snapshot spreads straight into the queues prop.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-cache-table": {
+      "id": "model-cache-table",
+      "style": "localmode_edge_ai",
+      "name": "Model Cache Table",
+      "snippet": "localmode-components/components/devtools/model-cache-table/model-cache-table.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model cache table",
+        "localmode model cache table",
+        "local model cache table"
+      ],
+      "route_aliases": [
+        "localmode-model-cache-table"
+      ],
+      "when": "Rendering model cache table: Cached-model observability table: model ID (monospace, truncated), status badge (loaded/loading/error), load duration, and relative last-used time per model — with a human-formatted size column only when entries carry sizeBytes and a per-row evict control only when onEvict is provided. Recommended producer: useDevToolsModelCache from @localmode/devtools/react.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "pipeline-run-inspector": {
+      "id": "pipeline-run-inspector",
+      "style": "localmode_edge_ai",
+      "name": "Pipeline Run Inspector",
+      "snippet": "localmode-components/components/devtools/pipeline-run-inspector/pipeline-run-inspector.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "workflow",
+        "runtime": "react"
+      },
+      "aliases": [
+        "pipeline run inspector",
+        "localmode pipeline run inspector",
+        "local pipeline run inspector"
+      ],
+      "route_aliases": [
+        "localmode-pipeline-run-inspector"
+      ],
+      "when": "Rendering pipeline run inspector: Per-run pipeline observability cards: status badge (running pulses on primary, completed emerald, failed destructive), a completed/total progress bar, the current step while running, total duration on completion, and optional expandable per-step timing rows. The runs record mirrors the @localmode/devtools PipelineSnapshot shape, so useDevToolsPipelineRuns() output feeds it directly; works with any backend.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "char-limit-indicator": {
+      "id": "char-limit-indicator",
+      "style": "localmode_edge_ai",
+      "name": "Char Limit Indicator",
+      "snippet": "localmode-components/components/input/char-limit-indicator/char-limit-indicator.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "char limit indicator",
+        "localmode char limit indicator",
+        "local char limit indicator"
+      ],
+      "route_aliases": [
+        "localmode-char-limit-indicator"
+      ],
+      "when": "Rendering char limit indicator: A radial progress ring + n/MAX monospace counter that turns error-colored when over the limit, deriving the percentage internally from charCount + maxLength. Pure SVG, shadcn/CSS-variable themed (not daisyUI). Self-contained — sits beside any length-bounded textarea or PromptInput.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "lm-copy-button": {
+      "id": "lm-copy-button",
+      "style": "localmode_edge_ai",
+      "name": "Copy Button",
+      "snippet": "localmode-components/components/input/copy-button/copy-button.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "action",
+        "runtime": "react"
+      },
+      "aliases": [
+        "copy button",
+        "localmode copy button",
+        "local copy button"
+      ],
+      "route_aliases": [
+        "localmode-copy-button"
+      ],
+      "when": "Rendering copy button: A copy-to-clipboard button that shows a 2-second Copied confirmation, disables itself when there is nothing to copy, and treats an unavailable clipboard (insecure context or denied permission) as a silent no-op. Fully controlled via value; presentational. Pairs with any generated-text or result surface.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "language-pair-selector": {
+      "id": "language-pair-selector",
+      "style": "localmode_edge_ai",
+      "name": "Language Pair Selector",
+      "snippet": "localmode-components/components/input/language-pair-selector/language-pair-selector.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "setting",
+        "runtime": "react"
+      },
+      "aliases": [
+        "language pair selector",
+        "localmode language pair selector",
+        "local language pair selector"
+      ],
+      "route_aliases": [
+        "localmode-language-pair-selector"
+      ],
+      "when": "Rendering language pair selector: A paired source/target language picker — From/To pill toggles with flag + name + a swap button, or a compact {source} → {target} pair of selects. Fully controlled via sourceCode/targetCode and onSelectSource/onSelectTarget/onSwap. Feeds useTranslate; composes with useDetectLanguage for auto-detect source.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "mask-token-input": {
+      "id": "mask-token-input",
+      "style": "localmode_edge_ai",
+      "name": "Mask Token Input",
+      "snippet": "localmode-components/components/input/mask-token-input/mask-token-input.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "mask token input",
+        "localmode mask token input",
+        "local mask token input"
+      ],
+      "route_aliases": [
+        "localmode-mask-token-input"
+      ],
+      "when": "Rendering mask token input: A fill-mask / cloze textarea that detects a configurable mask token (default [MASK]), shows an inline highlighted preview of the mask span, a 'detected' vs 'Add [MASK]' validation hint, a randomize/sample button, and a Cmd+Enter submit badge. Presentational — feeds useFillMask.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "option-list": {
+      "id": "option-list",
+      "style": "localmode_edge_ai",
+      "name": "Option List",
+      "snippet": "localmode-components/components/input/option-list/option-list.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "option list",
+        "localmode option list",
+        "local option list"
+      ],
+      "route_aliases": [
+        "localmode-option-list"
+      ],
+      "when": "Rendering option list: An inline multi-choice selection list (shows 5–7 options then paginates) for human-in-the-loop agent inquiries, distinct from quick-reply suggestion chips. The chosen option feeds back into a local agent inquiry loop. Presentational — feeds useAgent.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "parameter-slider": {
+      "id": "parameter-slider",
+      "style": "localmode_edge_ai",
+      "name": "Parameter Slider",
+      "snippet": "localmode-components/components/input/parameter-slider/parameter-slider.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "parameter slider",
+        "localmode parameter slider",
+        "local parameter slider"
+      ],
+      "route_aliases": [
+        "localmode-parameter-slider"
+      ],
+      "when": "Rendering parameter slider: An inline range slider with a live value readout for reversible adjustment of a local generation parameter — temperature, top-k, top-p, maxTokens, nGpuLayers, KV-cache quant. Fully controlled; the emitted value feeds straight into useGenerateText/useChat options. Built on the shadcn/ui Slider primitive.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "prompt-enhance-button": {
+      "id": "prompt-enhance-button",
+      "style": "localmode_edge_ai",
+      "name": "Prompt Enhance Button",
+      "snippet": "localmode-components/components/input/prompt-enhance-button/prompt-enhance-button.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "prompt enhance button",
+        "localmode prompt enhance button",
+        "local prompt enhance button"
+      ],
+      "route_aliases": [
+        "localmode-prompt-enhance-button"
+      ],
+      "when": "Rendering prompt enhance button: A one-click 'enhance my prompt' control that hands the user's draft to a local model (via an onEnhance callback wired to useGenerateText) and applies the rewritten prompt — fully offline — with an optional few-shot example editor for interactive prompt tuning. Presentational + callback-driven.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "segmented-mode-picker": {
+      "id": "segmented-mode-picker",
+      "style": "localmode_edge_ai",
+      "name": "Segmented Mode Picker",
+      "snippet": "localmode-components/components/input/segmented-mode-picker/segmented-mode-picker.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "on-demand",
+        "motion": "none",
+        "category": "setting",
+        "runtime": "react"
+      },
+      "aliases": [
+        "segmented mode picker",
+        "localmode segmented mode picker",
+        "local segmented mode picker"
+      ],
+      "route_aliases": [
+        "localmode-segmented-mode-picker"
+      ],
+      "when": "Rendering segmented mode picker: A pill toggle for 2–4 mutually-exclusive named modes (ring-bordered container, active item tinted + ringed), plus a typed TabBar variant with disabledTabs gating. Fully controlled, generic over the id type. Covers OCR content-type, summary length, translation formality, browse/inspect modes.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "slash-command-palette": {
+      "id": "slash-command-palette",
+      "style": "localmode_edge_ai",
+      "name": "Slash Command Palette",
+      "snippet": "localmode-components/components/input/slash-command-palette/slash-command-palette.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "slash command palette",
+        "localmode slash command palette",
+        "local slash command palette"
+      ],
+      "route_aliases": [
+        "localmode-slash-command-palette"
+      ],
+      "when": "Rendering slash command palette: A '/'-triggered command palette over a local tool/command list — name, category, description, and icon — to layer onto a PromptInput Tools slot. Purely presentational; the consumer opens it (e.g. when the composer starts with '/') and supplies the query. Built on the shadcn/ui Command (cmdk) primitive.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "system-prompt-editor": {
+      "id": "system-prompt-editor",
+      "style": "localmode_edge_ai",
+      "name": "System Prompt Editor",
+      "snippet": "localmode-components/components/input/system-prompt-editor/system-prompt-editor.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "system prompt editor",
+        "localmode system prompt editor",
+        "local system prompt editor"
+      ],
+      "route_aliases": [
+        "localmode-system-prompt-editor"
+      ],
+      "when": "Rendering system prompt editor: A controlled system-prompt editor (value in, onChange out) with quick-pick presets composed via the OptionList primitive: selecting a preset replaces the textarea value; free-form edits that match no preset deselect all presets. Exports SYSTEM_PROMPT_PRESETS and DEFAULT_SYSTEM_PROMPT. Presentational: persistence and model wiring stay in the consumer. Feeds useChat / useGenerateText systemPrompt.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "text-processing-panel": {
+      "id": "text-processing-panel",
+      "style": "localmode_edge_ai",
+      "name": "Text Processing Panel",
+      "snippet": "localmode-components/components/input/text-processing-panel/text-processing-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "text processing panel",
+        "localmode text processing panel",
+        "local text processing panel"
+      ],
+      "route_aliases": [
+        "localmode-text-processing-panel"
+      ],
+      "when": "Rendering text processing panel: A two-column (stacked on mobile) single-input → single-output NLP shell: labeled textarea + live word count + optional CharLimitIndicator on the left; a result pane (spinner / pre-wrap text / empty slot) with copy-with-feedback on the right; a run/cancel/clear toolbar; and an optional header slot. Layout-only — compatible with useSummarize/useTranslate/useFillMask/useAnswerQuestion/useGenerateText.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "adaptive-batch-card": {
+      "id": "adaptive-batch-card",
+      "style": "localmode_edge_ai",
+      "name": "Adaptive Batch Card",
+      "snippet": "localmode-components/components/local-first/adaptive-batch-card/adaptive-batch-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "adaptive batch card",
+        "localmode adaptive batch card",
+        "local adaptive batch card"
+      ],
+      "route_aliases": [
+        "localmode-adaptive-batch-card"
+      ],
+      "when": "Rendering adaptive batch card: Surfaces useAdaptiveBatchSize output: a prominent computed optimal batch number, a hardware summary (cores/RAM/GPU), the detection source (detected/estimated/override), and a collapsible reasoning string. Ships a compact AdaptiveBatchBadge variant (e.g. \"Batch: 32\") with a click-to-expand device-profile popover. Data source useAdaptiveBatchSize.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "browser-compat-card": {
+      "id": "browser-compat-card",
+      "style": "localmode_edge_ai",
+      "name": "Browser Compat Card",
+      "snippet": "localmode-components/components/local-first/browser-compat-card/browser-compat-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "browser compat card",
+        "localmode browser compat card",
+        "local browser compat card"
+      ],
+      "route_aliases": [
+        "localmode-browser-compat-card"
+      ],
+      "when": "Rendering browser compat card: A per-model runnability report for the current device — the feasibility check you want before a multi-GB download: a pass/fail RAM-headroom bar (model RAM vs device RAM), available storage, threading (cross-origin-isolation) status, estimated speed, and a warnings list, with a canRun boolean gating a success/error header. Ships an independently-usable RAMUsageBar. Extends the spirit of CapabilityGate; data source useCapabilities.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "cache-badge": {
+      "id": "cache-badge",
+      "style": "localmode_edge_ai",
+      "name": "Cache Badge",
+      "snippet": "localmode-components/components/local-first/cache-badge/cache-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "cache badge",
+        "localmode cache badge",
+        "local cache badge"
+      ],
+      "route_aliases": [
+        "localmode-cache-badge"
+      ],
+      "when": "Rendering cache badge: Annotates a result as served from the semantic cache, optionally with the hit latency (e.g. \"cached · 12ms\"). Drive cached/latencyMs from a useSemanticCache lookup result. Renders nothing when cached is false, so it is safe to drop next to any result. Self-contained and presentational.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "capability-gate": {
+      "id": "capability-gate",
+      "style": "localmode_edge_ai",
+      "name": "Capability Gate",
+      "snippet": "localmode-components/components/local-first/capability-gate/capability-gate.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "overlay",
+        "interaction": "confirmation",
+        "lifecycle": "on-demand",
+        "motion": "none",
+        "category": "gate",
+        "runtime": "react"
+      },
+      "aliases": [
+        "capability gate",
+        "localmode capability gate",
+        "local capability gate"
+      ],
+      "route_aliases": [
+        "localmode-capability-gate"
+      ],
+      "when": "Rendering capability gate: A true gate: renders its children only when the device meets a stated requirement (e.g. requires=\"webgpu\"), otherwise a themed fallback slot with guidance. The capability check uses useCapabilities. Local models have hard device requirements (LiteRT Gemma is WebGPU-only), so gating prevents a broken experience. The read-only display sibling is DeviceBadge.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "chrome-ai-download-gate": {
+      "id": "chrome-ai-download-gate",
+      "style": "localmode_edge_ai",
+      "name": "Chrome AI Download Gate",
+      "snippet": "localmode-components/components/local-first/chrome-ai-download-gate/chrome-ai-download-gate.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "overlay",
+        "interaction": "confirmation",
+        "lifecycle": "on-demand",
+        "motion": "none",
+        "category": "gate",
+        "runtime": "react"
+      },
+      "aliases": [
+        "chrome ai download gate",
+        "localmode chrome ai download gate",
+        "local chrome ai download gate"
+      ],
+      "route_aliases": [
+        "localmode-chrome-ai-download-gate"
+      ],
+      "when": "Rendering chrome ai download gate: The gate a user sees when a Chrome Built-in AI capability exists but its on-device model has not been fetched yet. Chrome refuses to start the model download outside a user activation, so the button is the only way to trigger it. Renders the download prompt, in-flight progress, the failed-attempt message, and the terminal unsupported / cannot-run-here states; returns null once the model is available. Includes ChromeAIReadyBadge. Presentational — bind availability/progress to a provider-fallback hook and pass its download action as onDownload.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "context-usage-meter": {
+      "id": "context-usage-meter",
+      "style": "localmode_edge_ai",
+      "name": "Context Usage Meter",
+      "snippet": "localmode-components/components/local-first/context-usage-meter/context-usage-meter.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "context usage meter",
+        "localmode context usage meter",
+        "local context usage meter"
+      ],
+      "route_aliases": [
+        "localmode-context-usage-meter"
+      ],
+      "when": "Rendering context usage meter: A token / context-window budget meter (with composable Context/ContextTrigger/ContextContent/ContextInputUsage/ContextOutputUsage parts) breaking down input/output/reasoning/cache token usage against the model's context-window limit (a hard local GGUF/LiteRT KV-cache constraint), warning near the limit. Fed by usage.tokens from a generate result. Local-only — there is NO cost field. Complements StorageMeter (disk) with a token-budget gauge.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "device-badge": {
+      "id": "device-badge",
+      "style": "localmode_edge_ai",
+      "name": "Device Badge",
+      "snippet": "localmode-components/components/local-first/device-badge/device-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "device badge",
+        "localmode device badge",
+        "local device badge"
+      ],
+      "route_aliases": [
+        "localmode-device-badge"
+      ],
+      "when": "Rendering device badge: A local-first capability badge. Detects WebGPU / WASM / IndexedDB support via a bundled useCapabilities() hook (copy-owned, reads navigator — no @localmode dependency) and renders a themed status pill. Use it to gate model-download UIs behind device support.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "device-capability-grid": {
+      "id": "device-capability-grid",
+      "style": "localmode_edge_ai",
+      "name": "Device Capability Grid",
+      "snippet": "localmode-components/components/local-first/device-capability-grid/device-capability-grid.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "device capability grid",
+        "localmode device capability grid",
+        "local device capability grid"
+      ],
+      "route_aliases": [
+        "localmode-device-capability-grid"
+      ],
+      "when": "Rendering device capability grid: The expanded sibling of DeviceBadge: a full device-capability diagnostic card reading useCapabilities — a stats bar (cores/memory/GPU), a status row per feature flag (WebGPU/WASM/SIMD/Threads/IndexedDB/Web Workers), a storage row, and a browser/OS footer, with a spinner while detection runs. Does not replace DeviceBadge.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "embedding-drift-banner": {
+      "id": "embedding-drift-banner",
+      "style": "localmode_edge_ai",
+      "name": "Embedding Drift Banner",
+      "snippet": "localmode-components/components/local-first/embedding-drift-banner/embedding-drift-banner.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "embedding drift banner",
+        "localmode embedding drift banner",
+        "local embedding drift banner"
+      ],
+      "route_aliases": [
+        "localmode-embedding-drift-banner"
+      ],
+      "when": "Rendering embedding drift banner: A warning panel shown when the active embedding model is incompatible with vectors already stored (model changed or dimension mismatch): explains stored vs current model ids, shows a reindex progress bar + phase label while re-embedding, and offers Re-embed All / Cancel actions. Data source useReindex + compatibility check.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-catalog-card": {
+      "id": "model-catalog-card",
+      "style": "localmode_edge_ai",
+      "name": "Model Catalog Card",
+      "snippet": "localmode-components/components/local-first/model-catalog-card/model-catalog-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model catalog card",
+        "localmode model catalog card",
+        "local model catalog card"
+      ],
+      "route_aliases": [
+        "localmode-model-catalog-card"
+      ],
+      "when": "Rendering model catalog card: A rich tile for a single model catalog entry (wllama/webllm/transformers/litert/mediapipe shapes): name, a size badge, description, a metadata chip row (architecture, params, quantization, context), and a conditional capability sub-row (tools/vision/embedding/reranking/reasoning). Fires onClick(id) for selection with a selected ring. Complements (does not replace) ModelSelector; data source useModelRecommendations / model registry.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-comparison-panel": {
+      "id": "model-comparison-panel",
+      "style": "localmode_edge_ai",
+      "name": "Model Comparison Panel",
+      "snippet": "localmode-components/components/local-first/model-comparison-panel/model-comparison-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model comparison panel",
+        "localmode model comparison panel",
+        "local model comparison panel"
+      ],
+      "route_aliases": [
+        "localmode-model-comparison-panel"
+      ],
+      "when": "Rendering model comparison panel: A side-by-side comparison of two scored entries with labeled rows (Score, Size, Speed, Quality, Device, Dimensions) where winning rows are accent-highlighted and losing rows dimmed, plus an onClear dismissal. Win-highlighting is derived purely from props (no orchestration state). Data source useModelRecommendations.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-downloader": {
+      "id": "model-downloader",
+      "style": "localmode_edge_ai",
+      "name": "Model Downloader",
+      "snippet": "localmode-components/components/local-first/model-downloader/model-downloader.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "transient",
+        "motion": "css-loop",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model downloader",
+        "localmode model downloader",
+        "local model downloader"
+      ],
+      "route_aliases": [
+        "localmode-model-downloader"
+      ],
+      "when": "Rendering model downloader: The headline local-first card a user sees while a model loads on-device: model name, size, context length, category, a live progress bar, and a clear first-time-downloading vs loading-from-cache distinction (with a ready state). Includes a lower-level DownloadProgress (bar + percentage from a 0–1 fraction or {loaded,total,percent,cached}). Presentational — bind progress to useModelLoader/useModelStatus; it does not own the download. Lifted out of a chat empty-state into a reusable primitive.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-loading-panel": {
+      "id": "model-loading-panel",
+      "style": "localmode_edge_ai",
+      "name": "Model Loading Panel",
+      "snippet": "localmode-components/components/local-first/model-loading-panel/model-loading-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model loading panel",
+        "localmode model loading panel",
+        "local model loading panel"
+      ],
+      "route_aliases": [
+        "localmode-model-loading-panel"
+      ],
+      "when": "Rendering model loading panel: A full-height \"waiting for model\" splash — the richer blocking sibling of ModelDownloader — combining model metadata (size, context length, category, cached-vs-downloading badge) with a progress bar and a two-path help message (first-download vs cache-load). Composes the lower-level DownloadProgress; binds to useModelLoader/useModelStatus.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-metadata-card": {
+      "id": "model-metadata-card",
+      "style": "localmode_edge_ai",
+      "name": "Model Metadata Card",
+      "snippet": "localmode-components/components/local-first/model-metadata-card/model-metadata-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model metadata card",
+        "localmode model metadata card",
+        "local model metadata card"
+      ],
+      "route_aliases": [
+        "localmode-model-metadata-card"
+      ],
+      "when": "Rendering model metadata card: A structured key-value grid of parsed model metadata (GGUFMetadataCard, with a ModelMetadataCard alias) — architecture, parameter count, quantization, context length, embedding dimension, vocab size, head/layer counts, file size, optional author/license — driven by a field-descriptor array that skips absent fields. The GGUF shape originates from @localmode/wllama; the display is a generic metadata grid. Data source useModelStatus / model-loading metadata.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-recommendation-card": {
+      "id": "model-recommendation-card",
+      "style": "localmode_edge_ai",
+      "name": "Model Recommendation Card",
+      "snippet": "localmode-components/components/local-first/model-recommendation-card/model-recommendation-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model recommendation card",
+        "localmode model recommendation card",
+        "local model recommendation card"
+      ],
+      "route_aliases": [
+        "localmode-model-recommendation-card"
+      ],
+      "when": "Rendering model recommendation card: A single scored recommendation: a radial score dial (0–100), the model name, a monospace model id, a badge row (provider, size, speed/quality tiers, recommended device webgpu/wasm/cpu with a stable tier→color mapping), a description, and reason chips. Supports an optional onToggleCompare selection affordance. Data source useModelRecommendations.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-search-browser": {
+      "id": "model-search-browser",
+      "style": "localmode_edge_ai",
+      "name": "Model Search Browser",
+      "snippet": "localmode-components/components/local-first/model-search-browser/model-search-browser.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model search browser",
+        "localmode model search browser",
+        "local model search browser"
+      ],
+      "route_aliases": [
+        "localmode-model-search-browser"
+      ],
+      "when": "Rendering model search browser: A cmdk-based searchable model-repo browser: a controlled search input, a sort selector (downloads/likes/last-modified), result rows (repo id, author, compact download/like counts, relative last-modified, capped tag badges), load-more pagination, and a per-repo expandable file list (filename, quantization badge, human-readable size) with per-file select actions — plus loading, empty, and error-with-retry states. Purely presentational: every value arrives via props and every action leaves via a callback, so any backend can feed it (recommended wiring: the HuggingFace Hub API; a private registry or static fixtures work identically).",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "model-selector": {
+      "id": "model-selector",
+      "style": "localmode_edge_ai",
+      "name": "Model Selector",
+      "snippet": "localmode-components/components/local-first/model-selector/model-selector.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "setting",
+        "runtime": "react"
+      },
+      "aliases": [
+        "model selector",
+        "localmode model selector",
+        "local model selector"
+      ],
+      "route_aliases": [
+        "localmode-model-selector"
+      ],
+      "when": "Rendering model selector: A device-aware model picker: a list grouped by category, backend filter chips (WebGPU/ONNX/WASM/LiteRT) with live counts, per-model vision/tool-calling/cached badges, a download affordance for uncached models, and a delete-from-cache affordance for cached ones. Device-unfit models (e.g. a WebGPU-only model on a non-WebGPU device) are de-emphasized and labeled. Emits onSelect(modelId) and owns no selection state. Bind models to useModelRecommendations and hasWebGPU to useCapabilities.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "network-badge": {
+      "id": "network-badge",
+      "style": "localmode_edge_ai",
+      "name": "Network Badge",
+      "snippet": "localmode-components/components/local-first/network-badge/network-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "network badge",
+        "localmode network badge",
+        "local network badge"
+      ],
+      "route_aliases": [
+        "localmode-network-badge"
+      ],
+      "when": "Rendering network badge: A reactive online/offline indicator (NetworkBadge) sourced from useNetworkStatus, plus an OfflineReady badge that signals the app's required model is cached on-device and can run with no network. Because local models keep working offline, offline is informational, not an error.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "provider-badge": {
+      "id": "provider-badge",
+      "style": "localmode_edge_ai",
+      "name": "Provider Badge",
+      "snippet": "localmode-components/components/local-first/provider-badge/provider-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "provider badge",
+        "localmode provider badge",
+        "local provider badge"
+      ],
+      "route_aliases": [
+        "localmode-provider-badge"
+      ],
+      "when": "Rendering provider badge: Displays the RESOLVED provider identity - composing ProviderFallbackBadge for the tier and name - alongside the model id that actually served the request. While providerName is null it shows a Resolving provider placeholder, so the badge never claims a provider before one has resolved. Takes generic display props (providerName / tier / modelId / note). Distinct from ProviderFallbackBadge (the tier chip it composes): this adds the resolved provider identity plus the served model id. Data source: a provider-fallback resolver.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "provider-fallback-badge": {
+      "id": "provider-fallback-badge",
+      "style": "localmode_edge_ai",
+      "name": "Provider Fallback Badge",
+      "snippet": "localmode-components/components/local-first/provider-fallback-badge/provider-fallback-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "provider fallback badge",
+        "localmode provider fallback badge",
+        "local provider fallback badge"
+      ],
+      "route_aliases": [
+        "localmode-provider-fallback-badge"
+      ],
+      "when": "Rendering provider fallback badge: Surfaces the active AI backend tier — a zero-download built-in (Chrome AI) vs a model-download provider (Transformers.js) — plus a WASM threading variant (Multi-thread when cross-origin isolated / SharedArrayBuffer is available, else Single-thread). A software-side sibling to DeviceBadge; data source useCapabilities (crossOriginIsolated) + provider identifier.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "semantic-cache-status-bar": {
+      "id": "semantic-cache-status-bar",
+      "style": "localmode_edge_ai",
+      "name": "Semantic Cache Status Bar",
+      "snippet": "localmode-components/components/local-first/semantic-cache-status-bar/semantic-cache-status-bar.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "dock",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "semantic cache status bar",
+        "localmode semantic cache status bar",
+        "local semantic cache status bar"
+      ],
+      "route_aliases": [
+        "localmode-semantic-cache-status-bar"
+      ],
+      "when": "Rendering semantic cache status bar: A compact toolbar row for useSemanticCache complementing CacheBadge: entry count, hit-rate percentage, an icon-only clear-cache button (when entries > 0), and an enable/disable toggle (with a spinner while the embedding model loads). Pairs with a per-message CachedAnnotation (\"Cached (38ms)\"). Distinct from CacheBadge (model-download cache) — this surfaces semantic-cache hits on responses. Data source useSemanticCache.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "storage-meter": {
+      "id": "storage-meter",
+      "style": "localmode_edge_ai",
+      "name": "Storage Meter",
+      "snippet": "localmode-components/components/local-first/storage-meter/storage-meter.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "storage meter",
+        "localmode storage meter",
+        "local storage meter"
+      ],
+      "route_aliases": [
+        "localmode-storage-meter"
+      ],
+      "when": "Rendering storage meter: Shows origin/IndexedDB storage usage against quota as a meter, with a warning state past a configurable threshold and a graceful unavailable state (estimates are approximate and blocked in Safari private mode). Bind to useStorageQuota (default) or pass an explicit quota. Complements ContextUsageMeter (the token-budget gauge).",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "vector-export-panel": {
+      "id": "vector-export-panel",
+      "style": "localmode_edge_ai",
+      "name": "Vector Export Panel",
+      "snippet": "localmode-components/components/local-first/vector-export-panel/vector-export-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "vector export panel",
+        "localmode vector export panel",
+        "local vector export panel"
+      ],
+      "route_aliases": [
+        "localmode-vector-export-panel"
+      ],
+      "when": "Rendering vector export panel: An export surface for vector data — the counterpart to VectorImportFlow: a record/dimension count line, a row per export format (native JSON with vectors, CSV, JSONL — label, description, vectors-included / text-only indicator, per-format export action emitting onExport(formatId)), a busy state that disables all actions with a spinner on the active format, a zero-records disabled state, and an optional last-export banner (format, records, human-readable size, filename). Works with any backend; data source useImportExport (exportCSV, exportJSONL) plus a native JSON export.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "vector-import-flow": {
+      "id": "vector-import-flow",
+      "style": "localmode_edge_ai",
+      "name": "Vector Import Flow",
+      "snippet": "localmode-components/components/local-first/vector-import-flow/vector-import-flow.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "vector import flow",
+        "localmode vector import flow",
+        "local vector import flow"
+      ],
+      "route_aliases": [
+        "localmode-vector-import-flow"
+      ],
+      "when": "Rendering vector import flow: A guarded vector-import flow for useImportExport: a preview panel (detected-format badge, total / with-vectors / text-only counts, detected dimensions, dimension-mismatch warning, Cancel/Confirm), a phased progress bar (parsing → validating → embedding → importing), a result stats banner (imported/skipped/re-embedded counts, source format, duration), and a record-preview table for row-level sanity checks before a destructive ingest. References the cross-family FormatDetectionBadge and inlines a minimal fallback so it builds independently. Data source useImportExport.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "vector-storage-observability": {
+      "id": "vector-storage-observability",
+      "style": "localmode_edge_ai",
+      "name": "Vector Storage Observability",
+      "snippet": "localmode-components/components/local-first/vector-storage-observability/vector-storage-observability.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "vector storage observability",
+        "localmode vector storage observability",
+        "local vector storage observability"
+      ],
+      "route_aliases": [
+        "localmode-vector-storage-observability"
+      ],
+      "when": "Rendering vector storage observability: VectorDB observability complementing StorageMeter (quota): a compression-stats badge (SQ8 ratio + before/after size, e.g. \"4.0x — 15KB→3.7KB\"), a three-tier storage estimate (Raw Float32 / SQ8 4x / PQ 8–32x with the active tier highlighted), and a GPU-aware search-latency badge (accented when WebGPU-accelerated). Values derive from getCompressionStats() (a core function) + search timing, passed in as props; the nearest shipped hook is useStorageQuota.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "before-after-image-viewer": {
+      "id": "before-after-image-viewer",
+      "style": "localmode_edge_ai",
+      "name": "Before / After Image Viewer",
+      "snippet": "localmode-components/components/media-vision/before-after-image-viewer/before-after-image-viewer.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "before after image viewer",
+        "localmode before after image viewer",
+        "local before after image viewer"
+      ],
+      "route_aliases": [
+        "localmode-before-after-image-viewer"
+      ],
+      "when": "Rendering before / after image viewer: Compare an original image with a transformed result — a two-panel grid with checkerboard transparency (shipped inline) or a segmented Original / Enhanced toggle. Pairs with useImageToImage / useSegmentImage.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "bounding-box-overlay": {
+      "id": "bounding-box-overlay",
+      "style": "localmode_edge_ai",
+      "name": "Bounding Box Overlay",
+      "snippet": "localmode-components/components/media-vision/bounding-box-overlay/bounding-box-overlay.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "overlay",
+        "interaction": "output",
+        "lifecycle": "transient",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "bounding box overlay",
+        "localmode bounding box overlay",
+        "local bounding box overlay"
+      ],
+      "route_aliases": [
+        "localmode-bounding-box-overlay"
+      ],
+      "when": "Rendering bounding box overlay: Color-coded detection boxes (with a companion DetectionLabelLegend) positioned over an image as percentage offsets from its natural dimensions, so placement is display-size independent. Serves object / face / hand / pose output.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "image-processing-overlay": {
+      "id": "image-processing-overlay",
+      "style": "localmode_edge_ai",
+      "name": "Image Processing Overlay",
+      "snippet": "localmode-components/components/media-vision/image-processing-overlay/image-processing-overlay.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "overlay",
+        "interaction": "output",
+        "lifecycle": "transient",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "image processing overlay",
+        "localmode image processing overlay",
+        "local image processing overlay"
+      ],
+      "route_aliases": [
+        "localmode-image-processing-overlay"
+      ],
+      "when": "Rendering image processing overlay: A full-bleed overlay over a dimmed source image while vision inference runs — spinner ring + icon + status + optional cancel, plus an animated scan variant (keyframes shipped inline). Renders nothing when idle. Driven by any vision hook's isLoading.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "image-result-gallery": {
+      "id": "image-result-gallery",
+      "style": "localmode_edge_ai",
+      "name": "Image Result Gallery",
+      "snippet": "localmode-components/components/media-vision/image-result-gallery/image-result-gallery.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "image result gallery",
+        "localmode image result gallery",
+        "local image result gallery"
+      ],
+      "route_aliases": [
+        "localmode-image-result-gallery"
+      ],
+      "when": "Rendering image result gallery: A responsive grid / list of image result cards sharing one data contract — in-flight overlay, hover metadata, confidence score, multi-select, delete, and staggered fade-in. Composes ConfidenceScoreBadge (Results family) via a registry dependency, with a minimal score-badge fallback inlined so it builds independently. Pairs with useClassifyImageZeroShot / useEmbedImage / useCaptionImage.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "media-dropzone": {
+      "id": "media-dropzone",
+      "style": "localmode_edge_ai",
+      "name": "Media Dropzone",
+      "snippet": "localmode-components/components/media-vision/media-dropzone/media-dropzone.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "input",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "composer",
+        "runtime": "react"
+      },
+      "aliases": [
+        "media dropzone",
+        "localmode media dropzone",
+        "local media dropzone"
+      ],
+      "route_aliases": [
+        "localmode-media-dropzone"
+      ],
+      "when": "Rendering media dropzone: A drag-and-drop + click-to-browse image upload zone with idle / drag-over / processing states, accept-list + max-size validation via validateFile, an \"add another\" variant, and an onFiles(File[]) callback.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "video-canvas": {
+      "id": "video-canvas",
+      "style": "localmode_edge_ai",
+      "name": "Video Canvas",
+      "snippet": "localmode-components/components/media-vision/video-canvas/video-canvas.snippet.tsx",
+      "tokens": {
+        "scale": "viewport",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "transition",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "video canvas",
+        "localmode video canvas",
+        "local video canvas"
+      ],
+      "route_aliases": [
+        "localmode-video-canvas"
+      ],
+      "when": "Rendering video canvas: A mirrored 16:9 webcam surface — a video element with a pixel-aligned transparent canvas overlay for landmark / skeleton drawing, an FPS badge, and a child slot. A shell for the MediaPipe streaming trackers (useDetectHands / useDetectPose / useDetectFace / useRecognizeGesture); the app supplies the stream and draw callback.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "confidence-score-badge": {
+      "id": "confidence-score-badge",
+      "style": "localmode_edge_ai",
+      "name": "Confidence Score Badge",
+      "snippet": "localmode-components/components/results/confidence-score-badge/confidence-score-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "confidence score badge",
+        "localmode confidence score badge",
+        "local confidence score badge"
+      ],
+      "route_aliases": [
+        "localmode-confidence-score-badge"
+      ],
+      "when": "Rendering confidence score badge: Maps a 0–1 score to a semantic color tier (configurable thresholds; default high ≥ 0.8 success, medium ≥ 0.5 warning, low muted) and renders the formatted percentage as a flat pill badge or a radial dial (conic-gradient ring wired to CSS variables, not daisyUI). The shared scored-output atom replacing 12 copied score-color helpers; consumed cross-family by media-vision's ImageResultGallery. Pairs with useClassify / useClassifyZeroShot / useSemanticSearch / useAnswerQuestion. Self-contained and presentational; exports resolveTier().",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "cosine-similarity-meter": {
+      "id": "cosine-similarity-meter",
+      "style": "localmode_edge_ai",
+      "name": "Cosine Similarity Meter",
+      "snippet": "localmode-components/components/results/cosine-similarity-meter/cosine-similarity-meter.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "state-driven",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "cosine similarity meter",
+        "localmode cosine similarity meter",
+        "local cosine similarity meter"
+      ],
+      "route_aliases": [
+        "localmode-cosine-similarity-meter"
+      ],
+      "when": "Rendering cosine similarity meter: A display card showing a cosine similarity (0–1) as a large numeric value with a human-readable bucket label (Very similar … Unrelated) using configurable thresholds, plus a proportional half-ring SVG arc gauge. Derived from two embeddings (useEmbed / useEmbedImage). Self-contained; exports resolveBucket().",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "editable-label-set": {
+      "id": "editable-label-set",
+      "style": "localmode_edge_ai",
+      "name": "Editable Label Set",
+      "snippet": "localmode-components/components/results/editable-label-set/editable-label-set.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "navigation",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "editable label set",
+        "localmode editable label set",
+        "local editable label set"
+      ],
+      "route_aliases": [
+        "localmode-editable-label-set"
+      ],
+      "when": "Rendering editable label set: An editable set of color-cycling removable chips managing a candidate-label list (zero-shot candidate labels or any string-tag collection): hover-reveal remove, inline add input (Enter to commit, Backspace-on-empty to remove last). Fully controlled via labels / onAdd / onRemove, cycling a CSS-variable palette by index. Feeds useClassifyZeroShot candidate labels.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "entity-relationship-graph": {
+      "id": "entity-relationship-graph",
+      "style": "localmode_edge_ai",
+      "name": "Entity Relationship Graph",
+      "snippet": "localmode-components/components/results/entity-relationship-graph/entity-relationship-graph.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "entity relationship graph",
+        "localmode entity relationship graph",
+        "local entity relationship graph"
+      ],
+      "route_aliases": [
+        "localmode-entity-relationship-graph"
+      ],
+      "when": "Rendering entity relationship graph: An interactive force-directed graph of typed nodes + relationship-labeled edges with drag / zoom / pan / hover / click and SVG/PNG export — for visualizing VectorDB entity relationships, agent-memory connections, embedding clusters, or useExtractEntities (NER) co-occurrences. The layout runs entirely client-side over local data via a lightweight in-component force simulation (no d3-force, no network). Exports layoutGraph().",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "entity-stats-bar": {
+      "id": "entity-stats-bar",
+      "style": "localmode_edge_ai",
+      "name": "Entity Stats Bar",
+      "snippet": "localmode-components/components/results/entity-stats-bar/entity-stats-bar.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "dock",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "entity stats bar",
+        "localmode entity stats bar",
+        "local entity stats bar"
+      ],
+      "route_aliases": [
+        "localmode-entity-stats-bar"
+      ],
+      "when": "Rendering entity stats bar: A horizontal stats bar showing the total detected-entity count plus per-type breakdown badges (PER / LOC / ORG / MISC — colored dot + count + label), computing counts internally from a DetectedEntity[] (or a pre-computed counts map) against a color/label registry. Pairs with useExtractEntities. Self-contained; exports countByType().",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "error-alert": {
+      "id": "error-alert",
+      "style": "localmode_edge_ai",
+      "name": "Error Alert",
+      "snippet": "localmode-components/components/results/error-alert/error-alert.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "transient",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "error alert",
+        "localmode error alert",
+        "local error alert"
+      ],
+      "route_aliases": [
+        "localmode-error-alert"
+      ],
+      "when": "Rendering error alert: A compact, dismissible error surface with an optional retry action - a role=alert region showing the message, a Retry button (only when onRetry is provided), and a dismiss control. Presentational: the consumer owns the operation state and decides what retry and dismiss do. The deduped shared alert for operation feedback near a result. Pairs with any hook that surfaces an error string.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "evaluation-metrics-dashboard": {
+      "id": "evaluation-metrics-dashboard",
+      "style": "localmode_edge_ai",
+      "name": "Evaluation Metrics Dashboard",
+      "snippet": "localmode-components/components/results/evaluation-metrics-dashboard/evaluation-metrics-dashboard.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "evaluation metrics dashboard",
+        "localmode evaluation metrics dashboard",
+        "local evaluation metrics dashboard"
+      ],
+      "route_aliases": [
+        "localmode-evaluation-metrics-dashboard"
+      ],
+      "when": "Rendering evaluation metrics dashboard: A composite evaluation dashboard: a KPI/stat-tile row (value + delta), a grid of metric cards (accuracy / precision / recall / F1), a color-coded N×N confusion matrix (diagonal success-tinted, off-diagonal error-tinted, intensity scaled to max cell, with legend), a radar/spider sub-view, and a threshold-calibration panel. Driven by useEvaluateModel + useCalibrateThreshold. All charts are minimal in-component SVG — no external chart library. Each section is optional.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "mode-error-boundary": {
+      "id": "mode-error-boundary",
+      "style": "localmode_edge_ai",
+      "name": "Mode Error Boundary",
+      "snippet": "localmode-components/components/results/mode-error-boundary/mode-error-boundary.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "mode error boundary",
+        "localmode mode error boundary",
+        "local mode error boundary"
+      ],
+      "route_aliases": [
+        "localmode-mode-error-boundary"
+      ],
+      "when": "Rendering mode error boundary: A React error boundary that isolates a render failure in its subtree: it catches the error, renders a compact recoverable role=alert notice with the message and a Reset button that clears the error and re-renders the children, so one failing surface cannot blank the whole page. A structural copy-owned utility with local prop shapes.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "redacted-text-display": {
+      "id": "redacted-text-display",
+      "style": "localmode_edge_ai",
+      "name": "Redacted Text Display",
+      "snippet": "localmode-components/components/results/redacted-text-display/redacted-text-display.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "redacted text display",
+        "localmode redacted text display",
+        "local redacted text display"
+      ],
+      "route_aliases": [
+        "localmode-redacted-text-display"
+      ],
+      "when": "Rendering redacted text display: An inline-annotated text renderer interleaving plain text with color-coded redaction tokens (e.g. [PER], [LOC]) styled per entity type with native tooltips, including a scanning loading skeleton and an empty placeholder. Takes source text + detected entity spans (start/end) from useExtractEntities; segments internally (overlaps resolved by earliest). Exports segmentText().",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "scored-result-bar-list": {
+      "id": "scored-result-bar-list",
+      "style": "localmode_edge_ai",
+      "name": "Scored Result Bar List",
+      "snippet": "localmode-components/components/results/scored-result-bar-list/scored-result-bar-list.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "dock",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "scored result bar list",
+        "localmode scored result bar list",
+        "local scored result bar list"
+      ],
+      "route_aliases": [
+        "localmode-scored-result-bar-list"
+      ],
+      "when": "Rendering scored result bar list: A ranked vertical list of {label, score} pairs — each row shows the label, a confidence percentage (via ConfidenceScoreBadge), and an animated horizontal fill bar proportional to the 0–1 score, with the top row highlighted. Ships skeleton-loading and empty-state slots. One data contract serves useClassify / useClassifyZeroShot / useDetectObjects / useFillMask / useSemanticSearch.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "threshold-calibration-panel": {
+      "id": "threshold-calibration-panel",
+      "style": "localmode_edge_ai",
+      "name": "Threshold Calibration Panel",
+      "snippet": "localmode-components/components/results/threshold-calibration-panel/threshold-calibration-panel.snippet.tsx",
+      "tokens": {
+        "scale": "region",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "threshold calibration panel",
+        "localmode threshold calibration panel",
+        "local threshold calibration panel"
+      ],
+      "route_aliases": [
+        "localmode-threshold-calibration-panel"
+      ],
+      "when": "Rendering threshold calibration panel: A presentational panel for similarity-threshold calibration results: the empirically calibrated threshold shown side-by-side with the model's preset default (or an explicit no-preset state), calibration metadata (percentile, sample size, model ID, distance function), the pairwise similarity-distribution statistics (mean / median / std-dev / min / max / pair count), and a reference list of known-good preset thresholds with the active model highlighted. Loading and empty states carry optional calibrate / cancel affordances. Designed from the ThresholdCalibration result shape; the full-fidelity standalone complement to evaluation-metrics-dashboard's embedded calibration sub-view. Driven by useCalibrateThreshold (pair presetThreshold with getDefaultThreshold and presets with MODEL_THRESHOLD_PRESETS). All in-component SVG-free token styling — no chart library.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "top-result-card": {
+      "id": "top-result-card",
+      "style": "localmode_edge_ai",
+      "name": "Top Result Card",
+      "snippet": "localmode-components/components/results/top-result-card/top-result-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "data",
+        "runtime": "react"
+      },
+      "aliases": [
+        "top result card",
+        "localmode top result card",
+        "local top result card"
+      ],
+      "route_aliases": [
+        "localmode-top-result-card"
+      ],
+      "when": "Rendering top result card: A hero card highlighting the single winning classification result — large label, prominent radial confidence dial (via ConfidenceScoreBadge), and a tier-tinted gradient-border glow. Designed to pair above a ScoredResultBarList; serves any single-winner output (sentiment, intent, language detection, gesture, zero-shot). Pairs with useClassifyZeroShot (top result).",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "differential-privacy-controls": {
+      "id": "differential-privacy-controls",
+      "style": "localmode_edge_ai",
+      "name": "Differential Privacy Controls",
+      "snippet": "localmode-components/components/security/differential-privacy-controls/differential-privacy-controls.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "embedded",
+        "interaction": "control",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "code",
+        "runtime": "react"
+      },
+      "aliases": [
+        "differential privacy controls",
+        "localmode differential privacy controls",
+        "local differential privacy controls"
+      ],
+      "route_aliases": [
+        "localmode-differential-privacy-controls"
+      ],
+      "when": "Rendering differential privacy controls: A collapsible DP settings panel (enable toggle, epsilon slider with derived High/Balanced/Low label, privacy-budget bar that warns/errors as budget is consumed) plus a compact \"DP Applied\" provenance badge (epsilon used, embedding dimensionality). Driven by the app's dpEmbeddingMiddleware/dpClassificationMiddleware + DP-budget state; the component only renders. No turnkey hook.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "lock-status-badge": {
+      "id": "lock-status-badge",
+      "style": "localmode_edge_ai",
+      "name": "Lock Status Badge",
+      "snippet": "localmode-components/components/security/lock-status-badge/lock-status-badge.snippet.tsx",
+      "tokens": {
+        "scale": "micro",
+        "placement": "embedded",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "status",
+        "runtime": "react"
+      },
+      "aliases": [
+        "lock status badge",
+        "localmode lock status badge",
+        "local lock status badge"
+      ],
+      "route_aliases": [
+        "localmode-lock-status-badge"
+      ],
+      "when": "Rendering lock status badge: A compact session-lock indicator accepting a status of locked, unlocked, or no-vault, with distinct iconography per state and an accessible text label (never color alone). Purely presentational — holds no key material. Pairs with the status field of useEncryptedVault.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "passphrase-gate": {
+      "id": "passphrase-gate",
+      "style": "localmode_edge_ai",
+      "name": "Passphrase Gate",
+      "snippet": "localmode-components/components/security/passphrase-gate/passphrase-gate.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "overlay",
+        "interaction": "confirmation",
+        "lifecycle": "on-demand",
+        "motion": "none",
+        "category": "gate",
+        "runtime": "react"
+      },
+      "aliases": [
+        "passphrase gate",
+        "localmode passphrase gate",
+        "local passphrase gate"
+      ],
+      "route_aliases": [
+        "localmode-passphrase-gate"
+      ],
+      "when": "Rendering passphrase gate: A controlled passphrase screen with create and unlock modes: create renders passphrase + confirmation with a minimum-length gate and composes the password-strength-bar from caller-computed strength props; unlock renders a single field with an error surface (e.g. wrong passphrase) and busy state. Submits the passphrase via onSubmit; performs no crypto and retains no passphrase. Pairs with useEncryptedVault.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "password-strength-bar": {
+      "id": "password-strength-bar",
+      "style": "localmode_edge_ai",
+      "name": "Password Strength Bar",
+      "snippet": "localmode-components/components/security/password-strength-bar/password-strength-bar.snippet.tsx",
+      "tokens": {
+        "scale": "compact",
+        "placement": "dock",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "password strength bar",
+        "localmode password strength bar",
+        "local password strength bar"
+      ],
+      "route_aliases": [
+        "localmode-password-strength-bar"
+      ],
+      "when": "Rendering password strength bar: A presentational password/passphrase strength meter — a themed bar + label driven by a caller-computed 0–100 strength score. The app computes strength (pairs with @localmode/core deriveKey/crypto); the component only renders. No turnkey hook.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
+    },
+    "vault-item-card": {
+      "id": "vault-item-card",
+      "style": "localmode_edge_ai",
+      "name": "Vault Item Card",
+      "snippet": "localmode-components/components/security/vault-item-card/vault-item-card.snippet.tsx",
+      "tokens": {
+        "scale": "standard",
+        "placement": "flow",
+        "interaction": "output",
+        "lifecycle": "persistent",
+        "motion": "none",
+        "category": "content",
+        "runtime": "react"
+      },
+      "aliases": [
+        "vault item card",
+        "localmode vault item card",
+        "local vault item card"
+      ],
+      "route_aliases": [
+        "localmode-vault-item-card"
+      ],
+      "when": "Rendering vault item card: A lock-state-aware card for an encrypted note or text document: locked renders a masked body with disabled actions (no plaintext in the DOM); unlocked renders title/timestamp with reveal/hide toggling of caller-supplied decrypted content and a delete action, all via callbacks. Never receives ciphertext or key material. Pairs with useEncryptedVault.",
+      "when_not": "Non-React plain HTML pages or heavy monolithic cloud-only backends without browser AI awareness."
     }
   }
 }
